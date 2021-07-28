@@ -9,6 +9,7 @@ import author from './documents/author'
 import category from './documents/category'
 import post from './documents/post'
 import siteSettings from './documents/siteSettings'
+import page from './documents/page'
 
 // Object types
 import bodyPortableText from './objects/bodyPortableText'
@@ -16,6 +17,10 @@ import bioPortableText from './objects/bioPortableText'
 import excerptPortableText from './objects/excerptPortableText'
 import mainImage from './objects/mainImage'
 import authorReference from './objects/authorReference'
+import pageBuilder from './objects/pageBuilder'
+import pageBuilderColumns from './objects/pageBuilderColumns'
+import pageBuilderContent from './objects/pageBuilderContent'
+import column from './objects/column'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -27,9 +32,14 @@ export default createSchema({
     // The following are document types which will appear
     // in the studio.
     siteSettings,
+    page,
     post,
     category,
     author,
+    pageBuilder,
+    pageBuilderColumns,
+    pageBuilderContent,
+    column,
     mainImage,
     authorReference,
     bodyPortableText,
