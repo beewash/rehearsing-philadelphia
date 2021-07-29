@@ -21,7 +21,7 @@ const Header = () => (
     <Link to="/">Home</Link>
     <Link to="/blog">Blog</Link>
     <Link to="/contact">Contact</Link>
-    <Link to="/page">Test Page Builder</Link>
+    <Link to="/test-page">Test Page Builder</Link>
   </HeaderStyles>
 )
 

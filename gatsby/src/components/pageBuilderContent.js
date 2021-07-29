@@ -7,7 +7,7 @@ const PageBuilderContent = ({ block, raw, index }) => {
 
   return (
     <section>
-      <Img fluid={image.asset.fluid} alt={image.alt} />
+      <Image fluid={image.asset.fluid} alt={image.alt} />
       <h1>{title}</h1>
       <PortableText blocks={raw.body} />
     </section>

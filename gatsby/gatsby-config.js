@@ -8,6 +8,12 @@ const clientConfig = require('./client-config')
 const isProd = process.env.NODE_ENV === 'production'
 
 module.exports = {
+  siteMetadata: {
+    // convert to dynamic (this should be sourced from Sanity)
+    title: 'Rehearsing Philadelphia',
+    description: 'A metascore by Ari Benjamin',
+    author: 'Bryan Washington: bryanwashington.000 | bryanwashington@gmail.com'
+  },
   plugins: [
     'gatsby-plugin-styled-components',
     'gatsby-plugin-react-helmet',

@@ -23,3 +23,5 @@ function PageBuilder(props) {
     }
   });
 }
+
+export default PageBuilder
