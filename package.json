@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "gatsby-sanity-minimal-starter",
+  "name": "rehearsing-philadelphia",
   "version": "1.0.17",
   "scripts": {
     "build": "lerna run build --parallel",

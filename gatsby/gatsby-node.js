@@ -52,9 +52,7 @@ async function createSanityPage (graphql, actions) {
   const {createPage} = actions
   const result = await graphql(`
     {
-      allSanityPage(
-        filter: { slug: { current: { ne: null } } }
-      ) {
+      allSanityPage(filter: { slug: { current: { ne: null } } }) {
         edges {
           node {
             id
