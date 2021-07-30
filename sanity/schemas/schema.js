@@ -10,6 +10,7 @@ import category from './documents/category'
 import post from './documents/post'
 import siteSettings from './documents/siteSettings'
 import page from './documents/page'
+import nav from './documents/navigation'
 
 // Object types
 import bodyPortableText from './objects/bodyPortableText'
@@ -21,6 +22,8 @@ import pageBuilder from './objects/pageBuilder'
 import pageBuilderColumns from './objects/pageBuilderColumns'
 import pageBuilderContent from './objects/pageBuilderContent'
 import column from './objects/column'
+import link from './objects/link'
+import navItem from './objects/navItem'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -32,10 +35,13 @@ export default createSchema({
     // The following are document types which will appear
     // in the studio.
     siteSettings,
+    nav,
     page,
     post,
     category,
     author,
+    link,
+    navItem,
     pageBuilder,
     pageBuilderColumns,
     pageBuilderContent,
