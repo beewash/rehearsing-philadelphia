@@ -16,10 +16,10 @@ export default {
       description: 'The main site url. Used to create canonical url'
     },
     {
-      name: 'frontpage',
+      name: 'homepage',
       type: 'reference',
-      description: 'Choose page to be the frontpage',
-      to: {type: 'page'}
+      description: 'Choose page to be the homepage',
+      to: {type: 'homePage'}
     },
     {
       name: 'description',

@@ -5,12 +5,19 @@ import createSchema from 'part:@sanity/base/schema-creator'
 import schemaTypes from 'all:part:@sanity/base/schema-type'
 
 // document schemas
+import siteSettings from './documents/siteSettings'
+import nav from './documents/navigation'
+import homepage from './documents/homepage'
+import page from './documents/page'
+import people from './documents/people'
+import performanceCat from './documents/performanceCat'
+import performances from './documents/performances'
+import sponsors from './documents/sponsors'
+import venues from './documents/venues'
 import author from './documents/author'
 import category from './documents/category'
 import post from './documents/post'
-import siteSettings from './documents/siteSettings'
-import page from './documents/page'
-import nav from './documents/navigation'
+import legal from './documents/legal'
 
 // Object types
 import bodyPortableText from './objects/bodyPortableText'
@@ -24,6 +31,10 @@ import pageBuilderContent from './objects/pageBuilderContent'
 import column from './objects/column'
 import link from './objects/link'
 import navItem from './objects/navItem'
+import emailEval from './objects/emailEval'
+import role from './objects/role'
+import socialLinks from './objects/socialLinks'
+import performanceObject from './objects/performanceObject'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -36,7 +47,14 @@ export default createSchema({
     // in the studio.
     siteSettings,
     nav,
+    homepage,
     page,
+    people,
+    venues,
+    performanceCat,
+    performances,
+    sponsors,
+    legal,
     post,
     category,
     author,
@@ -50,7 +68,11 @@ export default createSchema({
     authorReference,
     bodyPortableText,
     bioPortableText,
-    excerptPortableText
+    excerptPortableText,
+    emailEval,
+    role,
+    socialLinks,
+    performanceObject
     // When added to this list, object types can be used as
     // { type: 'typename' } in other document schemas
   ])

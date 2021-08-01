@@ -4,7 +4,7 @@ import {MdSettings, MdPerson, MdDescription, MdLocalOffer} from 'react-icons/md'
 import IframePreview from '../previews/IframePreview'
 
 // Web preview configuration
-const remoteURL = 'https://jaydanurwin-com-sanity.netlify.app'
+const remoteURL = 'https://rehearsingphiladelphia.sanity.studio'
 const localURL = 'http://localhost:8000'
 const previewURL = window.location.hostname === 'localhost' ? localURL : remoteURL
 
@@ -17,7 +17,7 @@ export const getDefaultDocumentNode = props => {
    * https://www.sanity.io/docs/structure-builder-reference#getdefaultdocumentnode-97e44ce262c9
    */
   const {schemaType} = props
-  if (schemaType == 'post') {
+  if (schemaType === 'post') {
     return S.document().views([
       S.view.form(),
       S.view
@@ -43,7 +43,7 @@ export default () =>
     .title('Content')
     .items([
       S.listItem()
-        .title('Settings')
+        .title('Site Settings')
         .icon(MdSettings)
         .child(
           S.editor()
