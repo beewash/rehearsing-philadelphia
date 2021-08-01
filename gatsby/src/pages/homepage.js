@@ -3,18 +3,18 @@ import {graphql} from 'gatsby'
 // import Layout from '../containers/layout'
 // import PageBuilder from '../components/pageBuilder'
 
-export const query = graphql`
-  query HomePageTemplateQuery($id: String!) {
-    homepage: sanityHomePage(id: {eq: $id}) {
-      id
-      ...HomePageBuilder
-      title
-      slug {
-        current
-      }
-    }
-  }
-`
+// export const query = graphql`
+//   query HomePageTemplateQuery($id: String!) {
+//     homepage: sanityHomePage(id: {eq: $id}) {
+//       id
+//       ...HomePageBuilder
+//       title
+//       slug {
+//         current
+//       }
+//     }
+//   }
+// `
 
 const Homepage = props => {
   // const {data} = props
