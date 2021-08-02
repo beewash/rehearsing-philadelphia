@@ -1,15 +1,17 @@
-import React from "react";
-import PageBuilderContent from "./pageBuilderContent";
-import PageBuilderColumns from "./pageBuilderColumns";
+import React from "react"
+import PageBuilderContent from "./pageBuilderContent"
+import PageBuilderColumns from "./pageBuilderColumns"
 
 function PageBuilder(props) {
-  const { type, pageBuilder, _rawPageBuilder } = props;
+  const { type, pageBuilder, _rawPageBuilder } = props
+
+  console.log('pageBuilder: ', pageBuilder);
 
   // Load the right component, based on the _type from Sanity
   const Components = {
     pageBuilderContent: PageBuilderContent,
-    pageBuilderColumns: PageBuilderColumns,
-  };
+    pageBuilderColumns: PageBuilderColumns
+  }
 
   // 'raw' content needs to be passed in for the PortableText Component
   return pageBuilder.map((block, index) => {

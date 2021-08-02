@@ -5,43 +5,27 @@ import GraphQLErrorList from "../components/graphql-error-list"
 import SEO from "../components/SEO/SEO"
 import Layout from "../containers/layout"
 // import Homepage from "./homepage"
-
-
+import PageBuilder from "../components/pageBuilder"
 
 export const query = graphql`
-fragment SanityImage on SanityMainImage {
-    crop {
-      _key
-      _type
-      top
-      bottom
-      left
-      right
-    }
-    hotspot {
-      _key
-      _type
-      x
-      y
-      height
-      width
-    }
-    asset {
-      _id
-    }
-  }
-  
   query IndexPageQuery {
-    site: sanitySiteSettings(_id: { regex: "/(drafts.|)siteSettings/" }) {
+    site: sanityHomePage {
+      id
+      ...HomePageBuilder
       title
-      description
-      keywords
+      slug {
+        current
+      }
     }
   }
 `
 
 const IndexPage = (props) => {
   const { data, errors } = props
+  const site = data && data.site
+  const {pageBuilder, _rawPageBuilder} = site
+
+  console.log('index: ', site);
 
   if (errors) {
     return (
@@ -51,7 +35,7 @@ const IndexPage = (props) => {
     )
   }
 
-  const site = (data || {}).site
+  // const site = (data || {}).site
 
   if (!site) {
     throw new Error(
@@ -67,10 +51,52 @@ const IndexPage = (props) => {
         keywords={site.keywords}
       />
       <Container>
-        <p>Home Page</p>
+        {/* <p>Home Page</p> */}
+        <PageBuilder pageBuilder={pageBuilder} _rawPageBuilder={_rawPageBuilder} />
       </Container>
     </Layout>
   )
 }
 
 export default IndexPage
+
+
+// export const query = graphql`
+//   query IndexPageQuery {
+//     site: sanitySiteSettings {
+//       title
+//       description
+//       keywords
+//       homepage {
+//         id
+//         title
+//         slug {
+//           current
+//         }
+//         _rawPageBuilder
+//         pageBuilder {
+//           ... on SanityPageBuilderColumns {
+//             _key
+//             _type
+//             columns {
+//               title
+//             }
+//           }
+//           ... on SanityPageBuilderContent {
+//             _key
+//             _type
+//             title
+//             image {
+//               alt
+//               asset {
+//                 fluid(maxWidth: 800) {
+//                   ...GatsbySanityImageFluid
+//                 }
+//               }
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// `
