@@ -26,7 +26,7 @@ export default {
     {
       name: 'bio',
       type: 'bioPortableText',
-      title: 'Biography'
+      title: 'Biography!'
     }
   ],
   preview: {
