@@ -4,6 +4,10 @@ export default {
   title: 'Page Builder',
   of: [
     {
+      type: 'pageBuilderHero',
+      title: 'Hero'
+    },
+    {
       type: 'pageBuilderContent',
       title: 'Content'
     },

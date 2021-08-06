@@ -2,11 +2,11 @@ import React from "react";
 import Image from "gatsby-image";
 import PortableText from "./portableText";
 
-const PageBuilderContent = ({ block, raw, index }) => {
+const PageBuilderHero = ({ block, raw, index }) => {
   const { image, title } = block;
 
   return (
-    <section id="pageBuilderContent" className="max-w-6xl mx-auto px-2.5 pb-28">
+    <section id="pageBuilderHero" className="w-screen mb-28 h-screen overflow-hidden">
       <Image fluid={image.asset.fluid} alt={image.alt} />
       <h1>{title}</h1>
       <PortableText blocks={raw.body} />
@@ -14,4 +14,4 @@ const PageBuilderContent = ({ block, raw, index }) => {
   );
 };
 
-export default PageBuilderContent;
+export default PageBuilderHero;

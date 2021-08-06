@@ -1,20 +1,5 @@
 import React from 'react'
 import { Link, StaticQuery, graphql } from 'gatsby'
-// import styled from 'styled-components'
-
-// const HeaderStyles = styled.div`
-//   padding: 1rem 0 0.5rem 0;
-//   display: flex;
-//   flex-direction: row;
-//   align-items: center;
-//   justify-content: center;
-//   a{
-//     margin-right: 1rem;
-//     &::last-of-type{
-//       margin-right: 0;
-//     }
-//   }
-// `
 
 const HEADER_QUERY = graphql`
   query HeaderNav {
@@ -44,21 +29,19 @@ const Header = () => (
   <StaticQuery
     query={HEADER_QUERY}
     render={data => (
-      <header>
+      <header className="w-screen h-20 p-4 sticky top-0 z-50 flex shadow-xl bg-white">
       {data && data.headernav.edges.map(({node: headernav}) => (
         <>
-          <div>
-            <h1>
-              <Link title={headernav.title} to="/">{headernav.title}</Link>
-            </h1>
+          <div className="flex-initial">
+            <Link className="font-black text-3xl" title={headernav.title} to="/">{headernav.title}</Link>
           </div>
-          <nav role='navigation'>
+          <nav role='navigation' className="flex-1">
                   {headernav.mainNavigation ? (
-                    <ul role='menubar'>
+                    <ul role='menubar' className="flex flex-row">
                       {headernav.mainNavigation.map(mainNav => (
                         <>
                         {mainNav.navItems.map(navItems => (
-                        <li key={navItems._key}>
+                        <li key={navItems._key} className="w-1/3">
                           {navItems.navItemUrl.externalContent ? (
                             <a href={navItems.navItemUrl.linkUrl} target='_blank' rel='noopener noreferer'>{navItems.text}</a>
                           )

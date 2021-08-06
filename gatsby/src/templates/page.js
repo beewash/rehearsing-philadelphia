@@ -25,7 +25,9 @@ const PageTemplate = props => {
 
   return (
     <Layout>
-      <PageBuilder pageBuilder={pageBuilder} _rawPageBuilder={_rawPageBuilder} />
+      <div className="">
+        <PageBuilder pageBuilder={pageBuilder} _rawPageBuilder={_rawPageBuilder} />
+      </div>
     </Layout>
   )
 }

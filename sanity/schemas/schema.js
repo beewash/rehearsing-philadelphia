@@ -28,6 +28,7 @@ import authorReference from './objects/authorReference'
 import pageBuilder from './objects/pageBuilder'
 import pageBuilderColumns from './objects/pageBuilderColumns'
 import pageBuilderContent from './objects/pageBuilderContent'
+import pageBuilderHero from './objects/pageBuilderHero'
 import column from './objects/column'
 import link from './objects/link'
 import navItem from './objects/navItem'
@@ -63,6 +64,7 @@ export default createSchema({
     pageBuilder,
     pageBuilderColumns,
     pageBuilderContent,
+    pageBuilderHero,
     column,
     mainImage,
     authorReference,

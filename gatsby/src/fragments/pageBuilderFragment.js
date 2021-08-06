@@ -17,6 +17,19 @@ export const query = graphql`
           }
         }
       }
+      ... on SanityPageBuilderHero {
+        _key
+        _type
+        title
+        image {
+          alt
+          asset {
+            fluid(maxWidth: 800) {
+              ...GatsbySanityImageFluid
+            }
+          }
+        }
+      }
       ... on SanityPageBuilderColumns {
         _key
         _type
