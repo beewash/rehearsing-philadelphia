@@ -1,13 +1,13 @@
 import {MdLocalOffer} from 'react-icons/md'
 
 export default {
-  name: 'performanceCat',
-  title: 'Performance Category',
+  name: 'performanceModules',
+  title: 'The Modules',
   type: 'document',
   icon: MdLocalOffer,
   preview: {
     select: {
-      title: 'category',
+      title: 'moduleName',
       media: 'performanceIcon'
     },
     prepare ({title, media}) {
@@ -19,19 +19,14 @@ export default {
   },
   fields: [
     {
-      name: 'category',
+      name: 'moduleName',
       type: 'string',
-      title: 'Category'
-    },
-    {
-      name: 'headline',
-      title: 'Headline',
-      type: 'excerptPortableText'
+      title: 'Module Name'
     },
     {
       name: 'description',
       type: 'bodyPortableText',
-      title: 'Category Description'
+      title: 'Module Description'
     },
     {
       name: 'performanceIcon',

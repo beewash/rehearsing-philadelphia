@@ -79,7 +79,43 @@ async function createSanityPage (graphql, actions) {
     })
 }
 
+async function createSanityPeople (graphql, actions) {
+  const {createPage} = actions
+  const result = await graphql(`
+    {
+      allSanityPeople(filter: { slug: { current: { ne: null } } }) {
+        edges {
+          node {
+            id
+            slug {
+              current
+            }
+          }
+        }
+      }
+    }
+  `)
+
+  if (result.errors) throw result.errors
+
+  const pageEdges = (result.data.allSanityPeople || {}).edges || []
+
+  pageEdges
+    .forEach((edge, index) => {
+      const {id, slug = {}} = edge.node
+      const path = `/${slug.current}/`
+      console.log(path)
+
+      createPage({
+        path,
+        component: require.resolve('./src/templates/people.js'),
+        context: {id}
+      })
+    })
+}
+
 exports.createPages = async ({graphql, actions}) => {
   await createBlogPostPages(graphql, actions)
   await createSanityPage(graphql, actions)
+  await createSanityPeople(graphql, actions)
 }

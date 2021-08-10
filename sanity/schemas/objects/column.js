@@ -4,6 +4,7 @@ export default {
   type: 'object',
   fields: [
     {name: 'title', title: 'Title', type: 'string'},
-    {name: 'body', title: 'Body', type: 'bodyPortableText'}
+    {name: 'body', title: 'Body', type: 'bodyPortableText'},
+    {name: 'image', title: 'Image', type: 'mainImage'}
   ]
 }

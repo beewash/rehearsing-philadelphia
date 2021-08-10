@@ -10,10 +10,10 @@ import nav from './documents/navigation'
 import homepage from './documents/homepage'
 import page from './documents/page'
 import people from './documents/people'
-import performanceCat from './documents/performanceCat'
+import performanceModules from './documents/performanceModules'
 import performances from './documents/performances'
 import sponsors from './documents/sponsors'
-import venues from './documents/venues'
+import locations from './documents/locations'
 import author from './documents/author'
 import category from './documents/category'
 import post from './documents/post'
@@ -29,6 +29,9 @@ import pageBuilder from './objects/pageBuilder'
 import pageBuilderColumns from './objects/pageBuilderColumns'
 import pageBuilderContent from './objects/pageBuilderContent'
 import pageBuilderHero from './objects/pageBuilderHero'
+import pageBuilderPageTitle from './objects/pageBuilderPageTitle'
+import pageBuilderBody from './objects/pageBuilderBody'
+import pageBuilderRoster from './objects/pageBuilderRoster'
 import column from './objects/column'
 import link from './objects/link'
 import navItem from './objects/navItem'
@@ -51,8 +54,8 @@ export default createSchema({
     homepage,
     page,
     people,
-    venues,
-    performanceCat,
+    locations,
+    performanceModules,
     performances,
     sponsors,
     legal,
@@ -65,6 +68,9 @@ export default createSchema({
     pageBuilderColumns,
     pageBuilderContent,
     pageBuilderHero,
+    pageBuilderPageTitle,
+    pageBuilderBody,
+    pageBuilderRoster,
     column,
     mainImage,
     authorReference,

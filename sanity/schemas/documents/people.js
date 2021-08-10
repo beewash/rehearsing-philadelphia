@@ -27,15 +27,12 @@ export default {
       validation: (Rule) => Rule.required()
     },
     {
-      title: 'slug',
       name: 'slug',
       type: 'slug',
+      title: 'Slug',
       options: {
         source: 'personName',
-        slugify: input => input
-          .toLowerCase()
-          .replace(/\s+/g, '-')
-          .slice(0, 200)
+        maxLength: 96
       }
     },
     {
@@ -59,10 +56,9 @@ export default {
       validation: (Rule) => Rule.required()
     },
     {
-      title: 'Bio',
-      name: 'bio',
-      type: 'bioPortableText',
-      validation: (Rule) => Rule.required()
+      name: 'pageBuilder',
+      type: 'pageBuilder',
+      title: 'Page Builder'
     },
     {
       name: 'socialLinks',
@@ -76,10 +72,10 @@ export default {
     {
       title: 'Tags',
       name: 'tags',
-      description: 'Add all appropriate performance types.',
+      description: 'Add all appropriate modules.',
       type: 'array',
       of: [{type: 'reference',
-        to: [{type: 'performanceCat'}]}]
+        to: [{type: 'performanceModules'}]}]
     },
     {
       title: 'List of Performances',

@@ -41,7 +41,7 @@ const Header = () => (
                       {headernav.mainNavigation.map(mainNav => (
                         <>
                         {mainNav.navItems.map(navItems => (
-                        <li key={navItems._key} className="w-1/3">
+                        <li key={navItems._key} className="flex-1">
                           {navItems.navItemUrl.externalContent ? (
                             <a href={navItems.navItemUrl.linkUrl} target='_blank' rel='noopener noreferer'>{navItems.text}</a>
                           )

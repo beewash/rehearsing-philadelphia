@@ -22,6 +22,14 @@ fragment HomePageBuilder on SanityHomePage {
       _type
       columns {
         title
+        image {
+          alt
+          asset {
+            fluid(maxWidth: 800) {
+              ...GatsbySanityImageFluid
+            }
+          }
+        }
       }
     }
   }

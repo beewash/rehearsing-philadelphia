@@ -2,6 +2,9 @@ import React from "react"
 import PageBuilderContent from "./pageBuilderContent"
 import PageBuilderColumns from "./pageBuilderColumns"
 import PageBuilderHero from "./pageBuilderHero"
+import PageBuilderBody from "./pageBuilderBody"
+import PageBuilderPageTitle from "./pageBuilderPageTitle"
+import PageBuilderRoster from "./pageBuilderRoster"
 
 function PageBuilder(props) {
   const { type, pageBuilder, _rawPageBuilder } = props
@@ -10,9 +13,12 @@ function PageBuilder(props) {
 
   // Load the right component, based on the _type from Sanity
   const Components = {
+    pageBuilderHero: PageBuilderHero,
+    pageBuilderPageTitle: PageBuilderPageTitle,
+    pageBuilderBody: PageBuilderBody,
     pageBuilderContent: PageBuilderContent,
     pageBuilderColumns: PageBuilderColumns,
-    pageBuilderHero: PageBuilderHero
+    pageBuilderRoster: PageBuilderRoster
   }
 
   // 'raw' content needs to be passed in for the PortableText Component

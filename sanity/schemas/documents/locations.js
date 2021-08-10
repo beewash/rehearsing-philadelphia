@@ -1,27 +1,39 @@
 import {MdLocationCity} from 'react-icons/md'
 
 export default {
-  name: 'venues',
-  title: 'Venues',
+  name: 'locations',
+  title: 'Locations',
   type: 'document',
   icon: MdLocationCity,
+  preview: {
+    select: {
+      title: 'location',
+      media: 'locationImage'
+    },
+    prepare ({title, media}) {
+      return {
+        title,
+        media
+      }
+    }
+  },
   fields: [
     {
-      name: 'venue',
-      title: 'Venue',
+      name: 'location',
+      title: 'Location',
       type: 'string',
       validation: (Rule) => Rule.required()
     },
     {
-      name: 'venueImage',
+      name: 'locationImage',
       type: 'mainImage',
       title: 'Image',
       validation: (Rule) => Rule.required()
     },
     {
-      name: 'venueDes',
+      name: 'locationDescription',
       type: 'bodyPortableText',
-      title: 'Venue Description',
+      title: 'Location Description',
       validation: (Rule) => Rule.required()
     },
     {

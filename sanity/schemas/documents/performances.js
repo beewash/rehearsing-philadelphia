@@ -22,7 +22,7 @@ export default {
       title: 'Location',
       name: 'performanceLocation',
       type: 'reference',
-      to: [{type: 'venues'}],
+      to: [{type: 'locations'}],
       validation: (Rule) => Rule.required()
     },
     {
@@ -30,7 +30,7 @@ export default {
       name: 'performanceType',
       description: 'Pick one performance type associated with this performance',
       type: 'reference',
-      to: [{type: 'performanceCat'}]
+      to: [{type: 'performanceModules'}]
     },
     {
       title: 'Credits',

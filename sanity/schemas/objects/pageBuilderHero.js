@@ -12,11 +12,10 @@ export default {
       title: 'title',
       media: 'image'
     },
-    prepare ({title, media}) {
+    prepare ({media}) {
       return {
-        title,
-        media,
-        subtitle: 'Hero'
+        title: 'Hero',
+        media
       }
     }
   }

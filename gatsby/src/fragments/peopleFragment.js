@@ -1,7 +1,7 @@
 import { graphql } from "gatsby";
 
 export const query = graphql`
-  fragment PageBuilder on SanityPage {
+  fragment PeopleBuilder on SanityPeople {
     _rawPageBuilder(resolveReferences: { maxDepth: 10 })
     pageBuilder {
       ... on SanityPageBuilderContent {
@@ -52,25 +52,6 @@ export const query = graphql`
                 ...GatsbySanityImageFluid
               }
             }
-          }
-        }
-      }
-      ... on SanityPageBuilderRoster {
-        _key
-        _type
-        title
-        roster {
-          personName
-          headshot {
-            alt
-            asset {
-              fluid(maxWidth: 800) {
-                ...GatsbySanityImageFluid
-              }
-            }
-          }
-          slug {
-            current
           }
         }
       }
