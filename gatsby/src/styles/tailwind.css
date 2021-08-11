@@ -23,6 +23,12 @@
   p {
     @apply text-normal;
   }
+  h5 {
+    @apply text-small;
+  }
+  h6 {
+    @apply text-tiny;
+  }
 
   .hover-trigger .hover-target {
     display: none;

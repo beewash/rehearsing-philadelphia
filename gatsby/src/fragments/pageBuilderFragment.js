@@ -74,6 +74,18 @@ export const query = graphql`
           }
         }
       }
+      ... on SanityPageBuilderBreak {
+        _key
+        _type
+        pageBreak {
+          alt
+          asset {
+            fluid(maxWidth: 800) {
+              ...GatsbySanityImageFluid
+            }
+          }
+        }
+      }
     }
   }
 `;

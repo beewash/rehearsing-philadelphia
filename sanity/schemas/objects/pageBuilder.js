@@ -26,6 +26,10 @@ export default {
     {
       type: 'pageBuilderRoster',
       title: 'Roster'
+    },
+    {
+      type: 'pageBuilderBreak',
+      title: 'Page Break'
     }
   ]
 }

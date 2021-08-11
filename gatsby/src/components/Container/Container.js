@@ -1,7 +1,7 @@
 import React from "react"
 
 const Container = ({ children }) => {
-  return <div>{children}</div>
+  return <div id="container">{children}</div>
 }
 
 export default Container

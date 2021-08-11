@@ -32,6 +32,7 @@ import pageBuilderHero from './objects/pageBuilderHero'
 import pageBuilderPageTitle from './objects/pageBuilderPageTitle'
 import pageBuilderBody from './objects/pageBuilderBody'
 import pageBuilderRoster from './objects/pageBuilderRoster'
+import pageBuilderPageBreak from './objects/pageBuilderPageBreak'
 import column from './objects/column'
 import link from './objects/link'
 import navItem from './objects/navItem'
@@ -71,6 +72,7 @@ export default createSchema({
     pageBuilderPageTitle,
     pageBuilderBody,
     pageBuilderRoster,
+    pageBuilderPageBreak,
     column,
     mainImage,
     authorReference,

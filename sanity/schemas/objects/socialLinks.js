@@ -3,24 +3,31 @@ export default {
   type: 'object',
   fields: [
     {
-      title: 'Instagram',
-      name: 'instagram',
+      title: 'Link Text',
+      name: 'linkText',
+      type: 'string'
+    },
+    {
+      title: 'Link',
+      name: 'socialLink',
       type: 'link'
     },
     {
-      title: 'Twitter',
-      name: 'twitter',
-      type: 'link'
-    },
-    {
-      title: 'Facebook',
-      name: 'facebook',
-      type: 'link'
-    },
-    {
-      title: 'Youtube',
-      name: 'youtubeSocialLink',
-      type: 'link'
+      title: 'Social Icon',
+      name: 'socialIcon',
+      type: 'image'
     }
-  ]
+  ],
+  preview: {
+    select: {
+      title: 'linkText',
+      media: 'socialIcon'
+    },
+    prepare ({title, media}) {
+      return {
+        title,
+        media
+      }
+    }
+  }
 }

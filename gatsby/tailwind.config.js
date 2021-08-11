@@ -9,7 +9,7 @@ module.exports = {
         normal: ['1.75rem',{lineHeight: '2.188rem'}],
         H3: ['2.625rem', {lineHeight: '3.063rem'}],
         H2: ['4rem', {lineHeight: '5rem'}],
-        H1: ['5.25rem', {lineHeight: '4.375rem'}]
+        H1: '5.25rem'
       }
     }
   },

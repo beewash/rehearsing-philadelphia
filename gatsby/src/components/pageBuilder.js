@@ -5,6 +5,7 @@ import PageBuilderHero from "./pageBuilderHero"
 import PageBuilderBody from "./pageBuilderBody"
 import PageBuilderPageTitle from "./pageBuilderPageTitle"
 import PageBuilderRoster from "./pageBuilderRoster"
+import PageBuilderPageBreak from "./pageBuilderPageBreak"
 
 function PageBuilder(props) {
   const { type, pageBuilder, _rawPageBuilder } = props
@@ -18,7 +19,8 @@ function PageBuilder(props) {
     pageBuilderBody: PageBuilderBody,
     pageBuilderContent: PageBuilderContent,
     pageBuilderColumns: PageBuilderColumns,
-    pageBuilderRoster: PageBuilderRoster
+    pageBuilderRoster: PageBuilderRoster,
+    pageBuilderBreak: PageBuilderPageBreak
   }
 
   // 'raw' content needs to be passed in for the PortableText Component

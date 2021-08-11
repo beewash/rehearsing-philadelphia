@@ -74,16 +74,34 @@ export default {
       ]
     },
     {
+      name: 'social',
+      type: 'array',
+      fieldset: 'footer',
+      of: [
+        {
+          type: 'socialLinks'
+        }
+      ]
+    },
+    {
       name: 'footerText',
-      type: 'excerptPortableText',
+      type: 'bodyPortableText',
       fieldset: 'footer'
     },
     {
-      name: 'author',
-      type: 'reference',
-      description: 'Publish an author and set a reference to them here.',
-      title: 'Author',
-      to: [{type: 'author'}]
+      name: 'sponsorText',
+      type: 'bodyPortableText',
+      fieldset: 'footer'
+    },
+    {
+      name: 'sponsorLogos',
+      type: 'array',
+      of: [
+        {
+          type: 'image'
+        }
+      ],
+      fieldset: 'footer'
     }
   ]
 }
