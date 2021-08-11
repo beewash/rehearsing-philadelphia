@@ -1,7 +1,7 @@
 import React from "react"
 import { Link, navigate } from "@reach/router"
 import { getCurrentUser, isLoggedIn, logout } from "../../utils/auth"
-import { status, status__text } from "./status.module.css"
+// import { status, status__text } from "./status.module.css"
 
 export default () => {
   let details
