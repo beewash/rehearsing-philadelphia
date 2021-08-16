@@ -4,7 +4,7 @@ import Layout from "../components/Layout/Layout"
 import Profile from "../components/Profile"
 import Login from "../components/Login"
 import PrivateRoute from "../components/PrivateRoute"
-import Status from "../components/Status"
+import Status from "../components/Status/Index"
 
 const App = () => (
   <Layout>

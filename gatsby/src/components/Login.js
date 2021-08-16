@@ -1,6 +1,6 @@
 import React from "react"
 import { navigate } from "gatsby"
-import Form from "./Form"
+import Form from "./Form/Index"
 import { handleLogin, isLoggedIn } from "../utils/auth"
 
 class Login extends React.Component {
