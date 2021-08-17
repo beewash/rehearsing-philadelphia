@@ -13,6 +13,15 @@ export default {
       validation: (Rule) => Rule.required()
     },
     {
+      name: 'slug',
+      type: 'slug',
+      title: 'Slug',
+      options: {
+        source: 'title',
+        maxLength: 96
+      }
+    },
+    {
       title: 'Date',
       name: 'performanceDate',
       type: 'date',
@@ -31,6 +40,11 @@ export default {
       description: 'Pick one performance type associated with this performance',
       type: 'reference',
       to: [{type: 'performanceModules'}]
+    },
+    {
+      title: 'Performance Description',
+      name: 'performanceDesc',
+      type: 'bodyPortableText'
     },
     {
       title: 'Credits',
