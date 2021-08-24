@@ -8,9 +8,6 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
-      fontFamily: {
-        'main': ['Sainte-Colombe']
-      },
       fontSize: {
         tiny: ['1rem', {lineHeight: '1.5rem'}],
         small: ['1.313rem', {lineHeight: '1.625rem'}],
