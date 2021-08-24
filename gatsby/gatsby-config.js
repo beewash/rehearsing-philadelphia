@@ -17,6 +17,7 @@ module.exports = {
   plugins: [
     'gatsby-plugin-styled-components',
     'gatsby-plugin-react-helmet',
+    'gatsby-plugin-react-leaflet',
     {
       resolve: 'gatsby-source-sanity',
       options: {
@@ -38,12 +39,6 @@ module.exports = {
         printRejected: false,
         develop: false,
         tailwind: true,
-      }
-    },
-    {
-      resolve: 'gatsby-plugin-react-leaflet',
-      options: {
-        linkStyles: true // (default: true) Enable/disable loading stylesheets via CDN
       }
     }
   ]
