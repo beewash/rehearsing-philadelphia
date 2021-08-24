@@ -1,8 +1,19 @@
+@import '~leaflet/dist/leaflet.css';
+
 @tailwind base;
 @tailwind components;
+
+@font-face {
+  font-family: 'Sainte-Colombe';
+  src: local('Sainte-Colombe'), url(../fonts/saintecolombe-regular-TRIAL.otf) format('otf');
+}
+
 @tailwind utilities;
 
 @layer utilities {
+  body {
+    font-family: 'main';
+  }
   .h-screen-80 {
     height: calc(100vh - 80px);
   }
@@ -28,6 +39,12 @@
   }
   h6 {
     @apply text-tiny;
+  }
+
+  .leaflet-container {
+    z-index: 1;
+    width: 100%;
+    height: 100%;
   }
 
   .hover-trigger .hover-target {

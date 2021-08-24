@@ -19,10 +19,10 @@ class Layout extends React.Component {
     const { children } = this.props
     return (
       <>
-    {this.props.noHeader ? null : <Header />}
-      {children}
-    {this.props.noFooter ? null : <Footer />}
-  </>
+        {this.props.noHeader ? null : <Header />}
+          {children}
+        {this.props.noFooter ? null : <Footer />}
+      </>
     )
   }
 }

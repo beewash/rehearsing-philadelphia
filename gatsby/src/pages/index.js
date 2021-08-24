@@ -4,8 +4,8 @@ import Container from "../components/Container/Container"
 import GraphQLErrorList from "../components/graphql-error-list"
 import SEO from "../components/SEO/SEO"
 import Layout from "../containers/layout"
-// import Homepage from "./homepage"
-import PageBuilder from "../components/pageBuilder"
+import MapComp from "../components/Map/map"
+import Helmet from 'react-helmet'
 
 export const query = graphql`
   query IndexPageQuery {
@@ -23,7 +23,7 @@ export const query = graphql`
 const IndexPage = (props) => {
   const { data, errors } = props
   const site = data && data.site
-  const {pageBuilder, _rawPageBuilder} = site
+  // const {pageBuilder, _rawPageBuilder} = site
 
   console.log('index: ', site);
 
@@ -44,17 +44,27 @@ const IndexPage = (props) => {
   }
 
   return (
-    <Layout>
-      <SEO
-        title={site.title}
-        description={site.description}
-        keywords={site.keywords}
-      />
-      <Container>
-        {/* <p>Home Page</p> */}
-        <PageBuilder pageBuilder={pageBuilder} _rawPageBuilder={_rawPageBuilder} />
-      </Container>
-    </Layout>
+    <>
+      <Helmet>
+        <link
+          rel="stylesheet"
+          href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+          integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+          crossorigin=""
+        />
+      </Helmet>
+      <Layout>
+        <SEO
+          title={site.title}
+          description={site.description}
+          keywords={site.keywords}
+        />
+        <Container>
+          <MapComp />
+          {/* <PageBuilder pageBuilder={pageBuilder} _rawPageBuilder={_rawPageBuilder} /> */}
+        </Container>
+      </Layout>
+    </>
   )
 }
 

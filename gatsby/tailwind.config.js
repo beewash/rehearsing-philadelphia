@@ -1,8 +1,16 @@
 module.exports = {
-  purge: [],
+  purge: [
+    './pages/**/*.{js,ts,jsx,tsx}',
+    './components/**/*.{js,ts,jsx,tsx}',
+    './containers/**/*.{js,ts,jsx,tsx}',
+    './templates/**/*.{js,ts,jsx,tsx}'
+  ],
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      fontFamily: {
+        'main': ['Sainte-Colombe']
+      },
       fontSize: {
         tiny: ['1rem', {lineHeight: '1.5rem'}],
         small: ['1.313rem', {lineHeight: '1.625rem'}],
