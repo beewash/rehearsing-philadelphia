@@ -1,11 +1,5 @@
 @tailwind base;
 @tailwind components;
-
-@font-face {
-  font-family: 'Sainte-Colombe';
-  src: local('Sainte-Colombe'), url(../fonts/saintecolombe-regular-TRIAL.otf) format('otf');
-}
-
 @tailwind utilities;
 
 @layer utilities {
@@ -52,7 +46,4 @@
   .hover-trigger:hover .hover-target {
       display: block;
   }
-
 }
-
-/* @import '~leaflet/dist/leaflet.css'; */
