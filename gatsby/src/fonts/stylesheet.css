@@ -1,0 +1,110 @@
+@font-face {
+    font-family: 'Sainte Colombe';
+    src: local('Sainte Colombe Md It'), local('SainteColombe-MediumItalic'),
+        url('SainteColombe-MediumItalic.woff2') format('woff2'),
+        url('SainteColombe-MediumItalic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Sainte Colombe';
+    src: local('Sainte Colombe It'), local('SainteColombe-Italic'),
+        url('SainteColombe-Italic.woff2') format('woff2'),
+        url('SainteColombe-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Sainte Colombe';
+    src: local('Sainte Colombe Rg'), local('SainteColombe-Regular'),
+        url('SainteColombe-Regular.woff2') format('woff2'),
+        url('SainteColombe-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Sainte Colombe';
+    src: local('Sainte Colombe ExLt'), local('SainteColombe-ExtraLight'),
+        url('SainteColombe-ExtraLight.woff2') format('woff2'),
+        url('SainteColombe-ExtraLight.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Sainte Colombe';
+    src: local('Sainte Colombe Rg'), local('SainteColombe-Regular'),
+        url('SainteColombe-Regular.woff2') format('woff2'),
+        url('SainteColombe-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Sainte Colombe';
+    src: local('Sainte Colombe ExLt It'), local('SainteColombe-ExtraLightItalic'),
+        url('SainteColombe-ExtraLightItalic.woff2') format('woff2'),
+        url('SainteColombe-ExtraLightItalic.woff') format('woff');
+    font-weight: 200;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Sainte Colombe';
+    src: local('Sainte Colombe Lt'), local('SainteColombe-Light'),
+        url('SainteColombe-Light.woff2') format('woff2'),
+        url('SainteColombe-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Sainte Colombe';
+    src: local('Sainte Colombe Lt It'), local('SainteColombe-LightItalic'),
+        url('SainteColombe-LightItalic.woff2') format('woff2'),
+        url('SainteColombe-LightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Sainte Colombe';
+    src: local('Sainte Colombe Bd It'), local('SainteColombe-BoldItalic'),
+        url('SainteColombe-BoldItalic.woff2') format('woff2'),
+        url('SainteColombe-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Sainte Colombe';
+    src: local('Sainte Colombe Bd'), local('SainteColombe-Bold'),
+        url('SainteColombe-Bold.woff2') format('woff2'),
+        url('SainteColombe-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Sainte Colombe';
+    src: local('Sainte Colombe Md'), local('SainteColombe-Medium'),
+        url('SainteColombe-Medium.woff2') format('woff2'),
+        url('SainteColombe-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+

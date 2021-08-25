@@ -5,7 +5,7 @@ import { handleLogin, isLoggedIn } from "../utils/auth"
 
 class Login extends React.Component {
   state = {
-    username: ``,
+    // username: ``,
     password: ``,
   }
 

@@ -3,6 +3,10 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      fontFamily: {
+        acuminPro: ['Acumin Pro', 'sans-serif'],
+        sainteColombe: ['Sainte Colombe', 'serif']
+      },
       fontSize: {
         tiny: ['1rem', {lineHeight: '1.5rem'}],
         small: ['1.313rem', {lineHeight: '1.625rem'}],
@@ -18,5 +22,9 @@ module.exports = {
       flexDirection: ['odd', 'even']
     },
   },
-  plugins: [],
+  plugins: [
+    require( 'tailwindcss' ),
+    require( 'postcss' ),
+    require( 'autoprefixer' ),
+  ],
 }

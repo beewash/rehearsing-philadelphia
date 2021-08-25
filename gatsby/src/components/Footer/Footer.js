@@ -91,7 +91,7 @@ const Footer = () => (
                       {footernav.footerNavigation.map(footerNav => (
                         <>
                         {footerNav.navItems.map(footerItems => (
-                        <li key={footerItems._key}>
+                        <li key={footerItems._key} className="font-acuminPro font-bold">
                           {footerItems.navItemUrl.externalContent ? (
                             <a href={footerItems.navItemUrl.linkUrl} target='_blank' rel='noopener noreferer'>{footerItems.text}</a>
                           )
@@ -104,7 +104,7 @@ const Footer = () => (
                     </ul>
                   ) : null}
                     <div>
-                      <Link to="/app/profile">Artist Portal</Link>
+                      <Link className="font-acuminPro font-bold" to="/app/profile">Artist Portal</Link>
                     </div>
                 </>
             </nav>

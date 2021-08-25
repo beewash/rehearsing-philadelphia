@@ -61,6 +61,11 @@ export default {
       title: 'Page Builder'
     },
     {
+      name: 'bio',
+      type: 'bodyPortableText',
+      title: 'Bio'
+    },
+    {
       name: 'socialLinks',
       type: 'socialLinks'
     },

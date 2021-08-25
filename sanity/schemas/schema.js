@@ -18,6 +18,7 @@ import author from './documents/author'
 import category from './documents/category'
 import post from './documents/post'
 import legal from './documents/legal'
+import artistPortal from './documents/artistPortal'
 
 // Object types
 import bodyPortableText from './objects/bodyPortableText'
@@ -40,6 +41,8 @@ import emailEval from './objects/emailEval'
 import role from './objects/role'
 import socialLinks from './objects/socialLinks'
 import performanceObject from './objects/performanceObject'
+import moduleFiles from './objects/moduleFiles'
+import moduleSection from './objects/moduleSection'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -52,6 +55,7 @@ export default createSchema({
     // in the studio.
     siteSettings,
     nav,
+    artistPortal,
     homepage,
     page,
     people,
@@ -82,7 +86,9 @@ export default createSchema({
     emailEval,
     role,
     socialLinks,
-    performanceObject
+    performanceObject,
+    moduleFiles,
+    moduleSection
     // When added to this list, object types can be used as
     // { type: 'typename' } in other document schemas
   ])

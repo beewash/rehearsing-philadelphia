@@ -10,7 +10,7 @@ import PageBuilderPageBreak from "./pageBuilderPageBreak"
 function PageBuilder(props) {
   const { type, pageBuilder, _rawPageBuilder } = props
 
-  console.log('pageBuilder: ', pageBuilder);
+  // console.log('pageBuilder: ', pageBuilder);
 
   // Load the right component, based on the _type from Sanity
   const Components = {
@@ -30,7 +30,7 @@ function PageBuilder(props) {
         key: block._key,
         block: block,
         type,
-        raw: _rawPageBuilder[index],
+        raw: _rawPageBuilder[index]
       });
     }
   });

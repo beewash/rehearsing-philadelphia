@@ -6,20 +6,16 @@ export default () => {
   let details
   if (!isLoggedIn()) {
     details = (
-      <p className="mx-auto w-3/4 p-1 text-white text-center">
-        To get the full app experience, you’ll need to
-        {` `}
-        <Link to="/app/login">log in</Link>.
-      </p>
+      <div className="mx-auto w-3/4 text-center mb-20">
+        <h1>Artist Portal</h1>
+      </div>
     )
   } else {
     const { name, email } = getCurrentUser()
 
     details = (
-      <p className="mx-auto w-3/4 p-1 text-white text-center">
-        Logged in as {name} ({email}
-        )!
-        {` `}
+      <div className="mx-auto w-3/4 text-center mb-20">
+        <h1>Artist Portal</h1>
         <a
           href="/"
           onClick={event => {
@@ -29,9 +25,9 @@ export default () => {
         >
           log out
         </a>
-      </p>
+      </div>
     )
   }
 
-  return <div className="bg-black p-1">{details}</div>
+  return <div className="p-1 mt-32">{details}</div>
 }

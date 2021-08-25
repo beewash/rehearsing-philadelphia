@@ -61,6 +61,12 @@ export const query = graphql`
         title
         roster {
           personName
+          _rawBio (resolveReferences: {maxDepth: 10})
+          bio {
+            children {
+              text
+            }
+          }
           headshot {
             alt
             asset {

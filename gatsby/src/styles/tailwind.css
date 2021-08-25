@@ -1,10 +1,13 @@
+@import url("https://use.typekit.net/hdp1bnn.css");
+@import url('../fonts/stylesheet.css');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer utilities {
-  body {
-    font-family: 'main';
+  html, body {
+    @apply font-sainteColombe;
   }
   .h-screen-80 {
     height: calc(100vh - 80px);
@@ -32,9 +35,19 @@
   h6 {
     @apply text-tiny;
   }
+  .mt-18 {
+    margin-top: 4.5rem;
+  }
+
+  input:focus,
+  select:focus,
+  textarea:focus,
+  button:focus {
+      outline: none;
+  }
 
   .leaflet-container {
-    z-index: 2;
+    z-index: 1;
     width: 100%;
     height: 100%;
   }
