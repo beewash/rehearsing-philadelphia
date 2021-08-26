@@ -1,28 +1,35 @@
 import React, { useState } from 'react'
 import { Link, StaticQuery, graphql } from 'gatsby'
+import { Image } from 'gatsby-image'
+import { AiOutlineMenu } from 'react-icons/ai'
 
 const HEADER_QUERY = graphql`
-  query HeaderNav {
-    headernav: allSanitySiteSettings(
-      filter: {mainNavigation: {elemMatch: {title: {eq: "Header Nav"}}}}
-    ) {
-      edges {
-        node {
-          mainNavigation {
-            navItems {
-              text
-              _key
-              navItemUrl {
-                linkUrl
-                externalContent
-              }
+query HeaderNav {
+  headernav: allSanitySiteSettings {
+    edges {
+      node {
+        logo {
+          asset {
+            fluid(maxWidth: 800) {
+              ...GatsbySanityImageFluid
             }
           }
-          title
         }
+        mainNavigation {
+          navItems {
+            text
+            _key
+            navItemUrl {
+              linkUrl
+              externalContent
+            }
+          }
+        }
+        title
       }
     }
   }
+}
 `;
 
 const Header = () => {
@@ -36,18 +43,21 @@ const Header = () => {
         {data && data.headernav.edges.map(({node: headernav}) => (
           <nav role='navigation' className="w-full flex flex-wrap">
             <div id="navMain" className="w-full flex justify-between p-4">
-              <div className="">
-                <Link className="font-black text-3xl font-sainteColombe" title={headernav.title} to="/">{headernav.title}</Link>
-              </div>
-              <div className="flex flex-row space-x-10">
+                <div className="">
+                  <Link className="font-black text-3xl font-sainteColombe" to="/">
+                    {headernav.title}
+                    {/* <Image fluid={headernav.logo.asset.fluid} className="" /> */}
+                  </Link>
+                </div>
+              <div className="flex flex-row space-x-10 items-center">
                 <div>
                   <button>
-                    <Link to="/open-call">Open Call</Link>
+                    <Link to="/open-call" className="py-2 px-4 font-acuminPro font-medium uppercase text-white bg-orchestra-green border-black border-2 rounded-full hover:bg-black hover:text-white">Open Call</Link>
                   </button>
                 </div>
                 <div className="w-10 h-10">
                   <button onClick={() => toggleExpansion(!isExpanded)}>
-                    <div>Menu</div>
+                    <div><AiOutlineMenu className="w-10 h-10" /></div>
                   </button>
                 </div>
               </div>

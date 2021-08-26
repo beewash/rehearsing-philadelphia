@@ -28,8 +28,8 @@ export default {
       description: 'Describe your blog for search engines and social media.'
     },
     {
-      name: 'Logo',
-      type: 'mainImage',
+      name: 'logo',
+      type: 'image',
       title: 'Main image'
     },
     {

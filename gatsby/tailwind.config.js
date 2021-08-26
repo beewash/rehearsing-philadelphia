@@ -14,6 +14,12 @@ module.exports = {
         H3: ['2.625rem', {lineHeight: '3.063rem'}],
         H2: ['4rem', {lineHeight: '5rem'}],
         H1: '5.25rem'
+      },
+      colors: {
+        'solo-yellow': '#FFC20E',
+        'duet-red': '#ED1C24',
+        'ensemble-blue': '#000F9F',
+        'orchestra-green': '#009245',
       }
     }
   },
