@@ -6,7 +6,7 @@ const PageBuilderHero = ({ block, raw, index }) => {
   const { image, title } = block;
 
   return (
-    <section id="pageBuilderHero" className="w-screen mb-28 h-screen-80 overflow-hidden">
+    <section id="pageBuilderHero" className="w-screen h-screen mb-28 overflow-hidden">
       <div className="relative z-20 text-center mt-32">
         <h1 className="text-white">{title}</h1>
         <div className="text-white w-3/5 mt-24 mx-auto">

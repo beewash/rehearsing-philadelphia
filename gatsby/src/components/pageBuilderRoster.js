@@ -10,7 +10,9 @@ const PageBuilderRoster = ({block, raw}) => {
   return (
     <section id="Roster" className='max-w-6xl mx-auto px-2.5 pb-28'>
       <div className='container mx-auto flex flex-col py-4'>
-        <h4 className="normal-case" >{title}</h4>
+        <div className="mb-8">
+          <h4 className="normal-case" >{title}</h4>
+        </div>
         <div id="rosterList" className="flex flex-row flex-wrap">
         {roster && roster.map((rosterItem, index) =>
           <div className='w-1/3 mb-1 p-4'>
@@ -19,7 +21,7 @@ const PageBuilderRoster = ({block, raw}) => {
                   <div>
                     <p className="text-small font-acuminPro font-bold text-center">{rosterItem.personName}</p>
                   </div>
-                  <div id="popUp" className="absolute w-full z-50 bg-white border-black border-2 rounded-3xl hover-target overflow-hidden flex flex-column">
+                  <div id="popUp" className="hidden absolute w-full z-50 bg-white border-black border-2 rounded-3xl hover-target overflow-hidden flex flex-column">
                     <div className="w-full h-72 mb-4">
                       <Image fluid={rosterItem.headshot.asset.fluid} alt={rosterItem.headshot.alt} className="w-full h-full object-cover" />
                     </div>
