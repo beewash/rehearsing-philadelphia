@@ -115,8 +115,8 @@ const Footer = () => (
               {footernav.sponsorLogos ? (
                 <div className="flex space-x-4">
                   {footernav.sponsorLogos.map(logo => (
-                    <div className="inline">
-                      <Image fluid={logo.asset.fluid} className="object-contain h-12 w-48" />
+                    <div className="inline h-12 w-full">
+                      <Image fluid={logo.asset.fluid} className="object-contain h-full" />
                     </div>
                   ))}
                 </div>

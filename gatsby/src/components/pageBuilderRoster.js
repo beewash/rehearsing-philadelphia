@@ -21,7 +21,7 @@ const PageBuilderRoster = ({block, raw}) => {
                   <div>
                     <p className="text-small font-acuminPro font-bold text-center">{rosterItem.personName}</p>
                   </div>
-                  <div id="popUp" className="hidden absolute w-full z-50 bg-white border-black border-2 rounded-3xl hover-target overflow-hidden flex flex-column">
+                  <div id="popUp" className="hidden absolute w-full z-50 bg-white border-black border-2 rounded-3xl hover-target overflow-hidden flex-column">
                     <div className="w-full h-72 mb-4">
                       <Image fluid={rosterItem.headshot.asset.fluid} alt={rosterItem.headshot.alt} className="w-full h-full object-cover" />
                     </div>

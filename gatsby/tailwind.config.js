@@ -9,6 +9,7 @@ module.exports = {
       },
       fontSize: {
         tiny: ['1rem', {lineHeight: '1.5rem'}],
+        H5: ['1.313rem', {lineHeight: '1.625rem'}],
         small: ['1.313rem', {lineHeight: '1.625rem'}],
         normal: ['1.75rem',{lineHeight: '2.188rem'}],
         H3: ['2.625rem', {lineHeight: '3.063rem'}],
@@ -25,7 +26,8 @@ module.exports = {
   },
   variants: {
     extend: {
-      flexDirection: ['odd', 'even']
+      flexDirection: ['odd', 'even', 'first', 'last'],
+      width: ['first', 'last']
     },
   },
   plugins: [

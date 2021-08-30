@@ -12,8 +12,14 @@ export default {
       type: 'string'
     },
     {
+      name: 'generalInfo',
+      title: 'General Info',
+      type: 'array',
+      of: [{type: 'moduleDocuments'}]
+    },
+    {
       name: 'portalInfo',
-      title: 'Info',
+      title: 'Module Info',
       type: 'array',
       of: [{type: 'moduleSection'}]
     }

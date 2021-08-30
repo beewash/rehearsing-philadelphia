@@ -4,6 +4,7 @@ import React from "react"
 // import Typography from "../../styles/Typography"
 import Header from "../Header/Header"
 import Footer from "../Footer/Footer"
+import Radio from "../Radio/radio"
 
 // const ContentStyles = styled.div`
 //   background: var(--dark-theme-background);
@@ -21,6 +22,7 @@ class Layout extends React.Component {
       <>
         {this.props.noHeader ? null : <Header />}
           {children}
+        {this.props.noRadio ? null : <Radio />}
         {this.props.noFooter ? null : <Footer />}
       </>
     )

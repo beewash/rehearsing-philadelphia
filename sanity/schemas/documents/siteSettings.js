@@ -30,7 +30,7 @@ export default {
     {
       name: 'logo',
       type: 'image',
-      title: 'Main image'
+      title: 'Logo'
     },
     {
       name: 'keywords',

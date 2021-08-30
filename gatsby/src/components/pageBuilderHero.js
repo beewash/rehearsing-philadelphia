@@ -1,6 +1,6 @@
-import React from "react";
-import Image from "gatsby-image";
-import PortableText from "./portableText";
+import React from 'react'
+import Image from 'gatsby-image'
+import PortableText from './portableText'
 
 const PageBuilderHero = ({ block, raw, index }) => {
   const { image, title } = block;

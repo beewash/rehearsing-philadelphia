@@ -1,6 +1,7 @@
 export default {
   name: 'emailVal',
   type: 'string',
+  title: 'Email Evaluation',
   validation: (Rule) =>
     Rule.regex(
       /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/,

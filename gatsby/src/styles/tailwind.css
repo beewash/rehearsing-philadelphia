@@ -30,7 +30,7 @@
     @apply text-normal;
   }
   h5 {
-    @apply text-small;
+    @apply text-H5;
   }
   h6 {
     @apply text-tiny;

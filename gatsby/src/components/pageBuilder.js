@@ -6,6 +6,7 @@ import PageBuilderBody from "./pageBuilderBody"
 import PageBuilderPageTitle from "./pageBuilderPageTitle"
 import PageBuilderRoster from "./pageBuilderRoster"
 import PageBuilderPageBreak from "./pageBuilderPageBreak"
+import CTA from "./cta"
 
 function PageBuilder(props) {
   const { type, pageBuilder, _rawPageBuilder } = props
@@ -20,7 +21,8 @@ function PageBuilder(props) {
     pageBuilderContent: PageBuilderContent,
     pageBuilderColumns: PageBuilderColumns,
     pageBuilderRoster: PageBuilderRoster,
-    pageBuilderBreak: PageBuilderPageBreak
+    pageBuilderBreak: PageBuilderPageBreak,
+    cta: CTA
   }
 
   // 'raw' content needs to be passed in for the PortableText Component

@@ -14,9 +14,6 @@ import performanceModules from './documents/performanceModules'
 import performances from './documents/performances'
 import sponsors from './documents/sponsors'
 import locations from './documents/locations'
-import author from './documents/author'
-import category from './documents/category'
-import post from './documents/post'
 import legal from './documents/legal'
 import artistPortal from './documents/artistPortal'
 
@@ -25,7 +22,6 @@ import bodyPortableText from './objects/bodyPortableText'
 import bioPortableText from './objects/bioPortableText'
 import excerptPortableText from './objects/excerptPortableText'
 import mainImage from './objects/mainImage'
-import authorReference from './objects/authorReference'
 import pageBuilder from './objects/pageBuilder'
 import pageBuilderColumns from './objects/pageBuilderColumns'
 import pageBuilderContent from './objects/pageBuilderContent'
@@ -43,6 +39,7 @@ import socialLinks from './objects/socialLinks'
 import performanceObject from './objects/performanceObject'
 import moduleFiles from './objects/moduleFiles'
 import moduleSection from './objects/moduleSection'
+import cta from './objects/cta'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -64,9 +61,6 @@ export default createSchema({
     performances,
     sponsors,
     legal,
-    post,
-    category,
-    author,
     link,
     navItem,
     pageBuilder,
@@ -79,7 +73,6 @@ export default createSchema({
     pageBuilderPageBreak,
     column,
     mainImage,
-    authorReference,
     bodyPortableText,
     bioPortableText,
     excerptPortableText,
@@ -88,7 +81,8 @@ export default createSchema({
     socialLinks,
     performanceObject,
     moduleFiles,
-    moduleSection
+    moduleSection,
+    cta
     // When added to this list, object types can be used as
     // { type: 'typename' } in other document schemas
   ])

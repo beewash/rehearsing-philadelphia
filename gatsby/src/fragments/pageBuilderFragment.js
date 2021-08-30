@@ -92,6 +92,15 @@ export const query = graphql`
           }
         }
       }
+      ... on SanityCta {
+        _key
+        _type
+        linkText
+        linkTo {
+          externalContent
+          linkUrl
+        }
+      }
     }
   }
 `;

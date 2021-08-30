@@ -9,14 +9,14 @@ export default {
       title: 'Document Name'
     },
     {
-      name: 'externalContent',
-      type: 'boolean',
-      title: 'Content is from an external source'
-    },
-    {
       name: 'document',
       type: 'file',
       title: 'Document'
+    },
+    {
+      name: 'externalContent',
+      type: 'boolean',
+      title: 'Content is from an external source'
     },
     {
       name: 'externalLink',

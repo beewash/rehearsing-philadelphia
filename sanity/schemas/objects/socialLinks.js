@@ -1,6 +1,7 @@
 export default {
   name: 'socialLinks',
   type: 'object',
+  title: 'Social Links',
   fields: [
     {
       title: 'Link Text',

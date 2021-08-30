@@ -9,6 +9,11 @@ export default {
       title: 'Module Name'
     },
     {
+      name: 'icon',
+      type: 'mainImage',
+      title: 'Module Icon'
+    },
+    {
       name: 'documents',
       title: 'Documents',
       type: 'array',

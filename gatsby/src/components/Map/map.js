@@ -53,15 +53,15 @@ function MapComp() {
   }
 
   return (
-    <div id="map" className="w-full h-screen-80 p-8">
+    <div id="map" className="w-full h-screen relative">
       <MapContainer center={location} zoom={zoom} scrollWheelZoom={false} className="z-10 w-full h-full relative">
         <TileLayer 
           url="https://api.mapbox.com/styles/v1/gentry19/ckst13rdw3r9q17nkjcoagb88/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiZ2VudHJ5MTkiLCJhIjoiY2tzcWg4ZmxuMGNzNDJ1bzVuZTJpNWl4byJ9.Dbjod75IraKTOV48WuQjNQ" 
           attribution="© <a href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>" 
         />
         <GeoJSON data={locations} key={geoJsonKey} onEachFeature={createPopups} />
-        {/* <MapFilter /> */}
       </MapContainer>
+      <MapFilter />
     </div>
   )
 }

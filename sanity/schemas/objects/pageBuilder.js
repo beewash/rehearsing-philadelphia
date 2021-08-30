@@ -30,6 +30,10 @@ export default {
     {
       type: 'pageBuilderBreak',
       title: 'Page Break'
+    },
+    {
+      type: 'cta',
+      title: 'CTA'
     }
   ]
 }

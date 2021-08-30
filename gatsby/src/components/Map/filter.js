@@ -2,7 +2,7 @@ import React from 'react'
 
 function MapFilter() {
 return (
-  <div className="z-20 absolute bottom-4 left-4 opacity-1 bg-white border-2 border-black p-4">
+  <div className="z-20 absolute top-4 right-4 opacity-1 bg-white border-2 border-black p-4">
     <div>
       <div>
         <p>Filter</p>
