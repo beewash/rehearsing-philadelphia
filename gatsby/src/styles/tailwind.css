@@ -4,36 +4,69 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@tailwind screens;
 
 @layer utilities {
+  @screen md {
+    h1 {
+    @apply text-cfs2XL;
+    }
+    h2 {
+      @apply text-cfsXL;
+    }
+    h3 {
+      @apply text-cfsL;
+    }
+    h4 {
+      @apply text-cfs;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+    p {
+      @apply text-cfs;
+    }
+    h5 {
+      @apply text-cfsSM1;
+    }
+    h6 {
+      @apply text-cfsSM2;
+    }
+  }
+}
+
+@layer base {
   html, body {
     @apply font-sainteColombe;
   }
   .h-screen-80 {
     height: calc(100vh - 80px);
   }
+  .h-screen-48 {
+    height: calc(100vh - 48px);
+  }
   h1 {
-    @apply text-H1;
+    @apply text-4xl;
   }
   h2 {
-    @apply text-H2;
+    @apply text-cfsL;
   }
   h3 {
-    @apply text-H3;
+    @apply text-cfs;
   }
   h4 {
-    @apply text-normal;
+    @apply text-cfs;
     text-transform: uppercase;
     font-weight: bold;
   }
   p {
-    @apply text-normal;
+    @apply text-cfsSM;
+    @apply break-words;
   }
   h5 {
-    @apply text-H5;
+    @apply text-cfsSM2;
   }
   h6 {
-    @apply text-tiny;
+    @apply text-cfsSM2;
   }
   .mt-18 {
     margin-top: 4.5rem;

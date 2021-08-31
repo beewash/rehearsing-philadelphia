@@ -40,6 +40,27 @@ export const query = graphql`
           }
         }
       }
+      ... on SanityPageBuilderArtistHero {
+        _key
+        _type
+        title
+        image {
+          alt
+          asset {
+            fluid(maxWidth: 800) {
+              ...GatsbySanityImageFluid
+            }
+          }
+        }
+        bkgImage {
+          alt
+          asset {
+            fluid(maxWidth: 800) {
+              ...GatsbySanityImageFluid
+            }
+          }
+        }
+      }
       ... on SanityPageBuilderColumns {
         _key
         _type

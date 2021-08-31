@@ -67,7 +67,7 @@ const Footer = () => (
     render={data => (
       <footer id="footerWrapper" className="w-screen bg-white p-4 border-t-2 border-black">
       {data && data.footernav.edges.map(({node: footernav}) => (
-        <div id="footerContainer" className="flex flex-row">
+        <div id="footerContainer" className="flex flex-col space-y-4 md:space-y-0 md:flex-row">
           {/* // Dynamically generate Footer Text here 
           <div>
           {footernav.footerText ? (
@@ -78,12 +78,12 @@ const Footer = () => (
             </div>
           ) : null}
           </div> */}
-          <div id="footerColumnOne" className="w-1/2">
+          <div id="footerColumnOne" className="w-full md:w-1/2">
             <div className="">
               <PortableText blocks={footernav._rawFooterText} />
             </div>
           </div>
-          <div id="footerColumnTwo" className="w-1/2 flex flex-col">
+          <div id="footerColumnTwo" className="w-full space-y-4 md:w-1/2 flex flex-col">
             <nav role='navigation' id="footerNav" className="flex-grow">
                 <>
                   {footernav.footerNavigation ? (

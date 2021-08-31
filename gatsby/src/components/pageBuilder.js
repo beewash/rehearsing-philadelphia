@@ -6,6 +6,7 @@ import PageBuilderBody from "./pageBuilderBody"
 import PageBuilderPageTitle from "./pageBuilderPageTitle"
 import PageBuilderRoster from "./pageBuilderRoster"
 import PageBuilderPageBreak from "./pageBuilderPageBreak"
+import PageBuilderArtistHero from "./pageBuilderArtistHero"
 import CTA from "./cta"
 
 function PageBuilder(props) {
@@ -16,6 +17,7 @@ function PageBuilder(props) {
   // Load the right component, based on the _type from Sanity
   const Components = {
     pageBuilderHero: PageBuilderHero,
+    pageBuilderArtistHero: PageBuilderArtistHero,
     pageBuilderPageTitle: PageBuilderPageTitle,
     pageBuilderBody: PageBuilderBody,
     pageBuilderContent: PageBuilderContent,

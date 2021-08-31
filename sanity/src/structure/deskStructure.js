@@ -1,5 +1,5 @@
 import S from '@sanity/desk-tool/structure-builder'
-import {MdSettings, MdDashboard} from 'react-icons/md'
+import {MdSettings} from 'react-icons/md'
 import {GiPortal} from 'react-icons/gi'
 
 import IframePreview from '../previews/IframePreview'
@@ -62,15 +62,15 @@ export default () =>
             .documentId('artistPortal')
         ),
       S.divider(),
-      S.listItem()
-        .title('Pages')
-        .icon(MdDashboard)
-        .schemaType('page')
-        .child(S.documentTypeList('page').title('Pages')),
+      // S.listItem()
+      //   .title('Pages')
+      //   .icon(MdDashboard)
+      //   .schemaType('page')
+      //   .child(S.documentTypeList('page').title('Pages')),
       // `S.documentTypeListItems()` returns an array of all the document types
       // defined in schema.js. We filter out those that we have
       // defined the structure above.
       ...S.documentTypeListItems().filter(
-        listItem => !['page', 'siteSettings', 'artistPortal'].includes(listItem.getId())
+        listItem => !['siteSettings', 'artistPortal'].includes(listItem.getId())
       )
     ])

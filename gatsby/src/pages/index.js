@@ -9,13 +9,10 @@ import Helmet from 'react-helmet'
 
 export const query = graphql`
   query IndexPageQuery {
-    site: sanityHomePage {
-      id
-      ...HomePageBuilder
+    site: sanitySiteSettings {
       title
-      slug {
-        current
-      }
+      description
+      keywords
     }
   }
 `
@@ -68,44 +65,3 @@ const IndexPage = (props) => {
 }
 
 export default IndexPage
-
-
-// export const query = graphql`
-//   query IndexPageQuery {
-//     site: sanitySiteSettings {
-//       title
-//       description
-//       keywords
-//       homepage {
-//         id
-//         title
-//         slug {
-//           current
-//         }
-//         _rawPageBuilder
-//         pageBuilder {
-//           ... on SanityPageBuilderColumns {
-//             _key
-//             _type
-//             columns {
-//               title
-//             }
-//           }
-//           ... on SanityPageBuilderContent {
-//             _key
-//             _type
-//             title
-//             image {
-//               alt
-//               asset {
-//                 fluid(maxWidth: 800) {
-//                   ...GatsbySanityImageFluid
-//                 }
-//               }
-//             }
-//           }
-//         }
-//       }
-//     }
-//   }
-// `

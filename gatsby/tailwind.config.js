@@ -8,19 +8,28 @@ module.exports = {
         sainteColombe: ['Sainte Colombe', 'serif']
       },
       fontSize: {
-        tiny: ['1rem', {lineHeight: '1.5rem'}],
-        H5: ['1.313rem', {lineHeight: '1.625rem'}],
-        small: ['1.313rem', {lineHeight: '1.625rem'}],
-        normal: ['1.75rem',{lineHeight: '2.188rem'}],
-        H3: ['2.625rem', {lineHeight: '3.063rem'}],
-        H2: ['4rem', {lineHeight: '5rem'}],
-        H1: '5.25rem'
+        cfsSM2: ['0.875rem', {lineHeight: '1.25rem'}],
+        cfsSM1: ['1rem', {lineHeight: '1.5rem'}],
+        cfsSM: ['1.313rem', {lineHeight: '1.8rem'}],
+        cfs: ['1.75rem',{lineHeight: '2.5rem'}],
+        cfsL: ['2.625rem', {lineHeight: '3.063rem'}],
+        cfsXL: ['4rem', {lineHeight: '5rem'}],
+        cfs2XL: '5.25rem'
       },
       colors: {
         'solo-yellow': '#FFC20E',
         'duet-red': '#ED1C24',
         'ensemble-blue': '#000F9F',
         'orchestra-green': '#009245',
+      },
+      gridTemplateColumns: {
+        '150': 'repeat(auto-fill, 150px)',
+        '100': 'repeat(auto-fill, 100px)'
+      },
+      height: {
+        '24.5': '6.25rem',
+        '36.5': '9.375rem',
+        'm-80' : 'calc(-80px + 100vh)'
       }
     }
   },

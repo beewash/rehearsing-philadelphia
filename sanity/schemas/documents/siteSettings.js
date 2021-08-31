@@ -15,12 +15,12 @@ export default {
       type: 'url',
       description: 'The main site url. Used to create canonical url'
     },
-    {
-      name: 'homepage',
-      type: 'reference',
-      description: 'Choose page to be the homepage',
-      to: {type: 'homePage'}
-    },
+    // {
+    //   name: 'homepage',
+    //   type: 'reference',
+    //   description: 'Choose page to be the homepage',
+    //   to: {type: 'homePage'}
+    // },
     {
       name: 'description',
       type: 'text',
@@ -29,7 +29,7 @@ export default {
     },
     {
       name: 'logo',
-      type: 'image',
+      type: 'mainImage',
       title: 'Logo'
     },
     {

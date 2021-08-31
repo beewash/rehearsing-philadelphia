@@ -7,7 +7,7 @@ import schemaTypes from 'all:part:@sanity/base/schema-type'
 // document schemas
 import siteSettings from './documents/siteSettings'
 import nav from './documents/navigation'
-import homepage from './documents/homepage'
+// import homepage from './documents/homepage'
 import page from './documents/page'
 import people from './documents/people'
 import performanceModules from './documents/performanceModules'
@@ -26,6 +26,7 @@ import pageBuilder from './objects/pageBuilder'
 import pageBuilderColumns from './objects/pageBuilderColumns'
 import pageBuilderContent from './objects/pageBuilderContent'
 import pageBuilderHero from './objects/pageBuilderHero'
+import pageBuilderArtistHero from './objects/pageBuilderArtistHero'
 import pageBuilderPageTitle from './objects/pageBuilderPageTitle'
 import pageBuilderBody from './objects/pageBuilderBody'
 import pageBuilderRoster from './objects/pageBuilderRoster'
@@ -53,11 +54,11 @@ export default createSchema({
     siteSettings,
     nav,
     artistPortal,
-    homepage,
+    // homepage,
     page,
     people,
-    locations,
     performanceModules,
+    locations,
     performances,
     sponsors,
     legal,
@@ -67,6 +68,7 @@ export default createSchema({
     pageBuilderColumns,
     pageBuilderContent,
     pageBuilderHero,
+    pageBuilderArtistHero,
     pageBuilderPageTitle,
     pageBuilderBody,
     pageBuilderRoster,

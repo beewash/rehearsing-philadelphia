@@ -8,6 +8,10 @@ export default {
       title: 'Hero'
     },
     {
+      type: 'pageBuilderArtistHero',
+      title: 'Artist Hero'
+    },
+    {
       type: 'pageBuilderPageTitle',
       title: 'Page Title'
     },
