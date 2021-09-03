@@ -66,13 +66,29 @@ export default {
       title: 'Bio'
     },
     {
-      name: 'socialLinks',
-      type: 'socialLinks'
+      name: 'hoverColor',
+      title: 'Hover Color',
+      type: 'string',
+      options: {
+        list: [
+          {title: 'Solo', value: 'solo-yellow'},
+          {title: 'Duet', value: 'duet-red'},
+          {title: 'Ensemble', value: 'ensemble-blue'},
+          {title: 'Orchestra', value: 'orchestra-green'}
+        ],
+        layout: 'radio'
+      }
+    },
+    {
+      name: 'social',
+      title: 'Social',
+      type: 'array',
+      of: [{type: 'socialLinks'}]
     },
     {
       title: 'Website/Portfolio',
       name: 'website',
-      type: 'string'
+      type: 'navItem'
     },
     {
       title: 'Tags',

@@ -46,6 +46,7 @@
   }
   h1 {
     @apply text-4xl;
+    line-height: 1;
   }
   h2 {
     @apply text-cfsL;
@@ -76,14 +77,18 @@
   select:focus,
   textarea:focus,
   button:focus {
-      outline: none;
+    outline: none;
   }
+  
+  /* #map iframe {
+    pointer-events: none;
+  } */
 
-  .leaflet-container {
+  /* .leaflet-container {
     z-index: 1;
     width: 100%;
     height: 100%;
-  }
+  } */
 
   /* .hover-trigger .hover-target {
     display: none;

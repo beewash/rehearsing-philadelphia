@@ -31,9 +31,12 @@ import pageBuilderPageTitle from './objects/pageBuilderPageTitle'
 import pageBuilderBody from './objects/pageBuilderBody'
 import pageBuilderRoster from './objects/pageBuilderRoster'
 import pageBuilderPageBreak from './objects/pageBuilderPageBreak'
+import pageBuilderSocial from './objects/pageBuilderSocial'
 import column from './objects/column'
 import link from './objects/link'
+// import navBuilder from './objects/navBuilder'
 import navItem from './objects/navItem'
+// import navGroup from './objects/navGroup'
 import emailEval from './objects/emailEval'
 import role from './objects/role'
 import socialLinks from './objects/socialLinks'
@@ -63,7 +66,9 @@ export default createSchema({
     sponsors,
     legal,
     link,
+    // navBuilder,
     navItem,
+    // navGroup,
     pageBuilder,
     pageBuilderColumns,
     pageBuilderContent,
@@ -73,6 +78,7 @@ export default createSchema({
     pageBuilderBody,
     pageBuilderRoster,
     pageBuilderPageBreak,
+    pageBuilderSocial,
     column,
     mainImage,
     bodyPortableText,

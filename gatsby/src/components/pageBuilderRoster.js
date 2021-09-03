@@ -1,21 +1,32 @@
-import React from 'react'
+import React, {useState} from 'react'
 import Image from "gatsby-image"
 import PortableText from './portableText'
 
 const PageBuilderRoster = ({block, raw}) => {
   const {title, roster} = block
 
-  console.log('roster: ', raw.roster[1])
+  console.log('roster: ', roster)
+
+  const [rosterItem, setRoster] = useState([]);
 
   return (
-    <section id="Roster" className='max-w-6xl mx-auto px-4 md:px-2.5 pb-28'>
+    <section id="Roster" className='max-w-6xl mx-auto px-6 pb-28'>
       <div className='container mx-auto flex flex-col py-4'>
         <div className="mb-8">
           <h4 className="normal-case" >{title}</h4>
         </div>
-        <div id="rosterList" className="grid gap-4 justify-between grid-cols-100 md:grid-cols-150">
+        <div className="hidden">
+          <select>
+            <option value="">Select a Module</option>
+            <option value="solo-yellow">Solo</option>
+            <option value="duet-red">Duet</option>
+            <option value="ensemble-blue">Ensemble</option>
+            <option value="orchestra-green">Orchestra</option>
+          </select>
+        </div>
+        <div id="rosterList" className="grid gap-y-4 gap-x-2 md:gap-4 justify-between grid-cols-100 md:grid-cols-150">
         {roster && roster.map((rosterItem, index) =>
-          <div id="rosterItem" className='relative hover-trigger w-full h-24.5 md:h-36.5 flex items-center justify-center bg-white border-black border-2 rounded-full hover:bg-black hover:text-white'>
+          <div id="rosterItem" key={rosterItem.slug.current} className={`relative hover-trigger w-full h-24.5 md:h-36.5 flex items-center justify-center bg-white border-black border-2 rounded-full hover:bg-${rosterItem.hoverColor} hover:text-white`}>
               <div id="textContainer" className="">
                 <a href={rosterItem.slug.current}>
                   <div className="w-4/5 mx-auto">

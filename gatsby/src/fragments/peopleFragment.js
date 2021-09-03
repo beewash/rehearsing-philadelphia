@@ -61,6 +61,24 @@ export const query = graphql`
           }
         }
       }
+      ... on SanityPageBuilderSocial {
+        _key
+        _type
+        socialList {
+          linkText
+          socialIcon {
+            asset {
+              fluid(maxWidth: 800) {
+                ...GatsbySanityImageFluid
+              }
+            }
+          }
+          socialLink {
+            externalContent
+            linkUrl
+          }
+        }
+      }
       ... on SanityPageBuilderColumns {
         _key
         _type

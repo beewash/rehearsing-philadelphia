@@ -28,9 +28,14 @@ export default {
       description: 'Describe your blog for search engines and social media.'
     },
     {
-      name: 'logo',
-      type: 'mainImage',
-      title: 'Logo'
+      name: 'rhLogo',
+      title: 'Logo',
+      type: 'array',
+      of: [
+        {
+          type: 'image'
+        }
+      ]
     },
     {
       name: 'keywords',
@@ -85,6 +90,11 @@ export default {
     },
     {
       name: 'footerText',
+      type: 'bodyPortableText',
+      fieldset: 'footer'
+    },
+    {
+      name: 'contactText',
       type: 'bodyPortableText',
       fieldset: 'footer'
     },

@@ -18,8 +18,8 @@ export default {
     },
     {
       name: 'navItems',
-      type: 'array',
       title: 'Navigation Items',
+      type: 'array',
       of: [{type: 'navItem'}]
     }
   ],

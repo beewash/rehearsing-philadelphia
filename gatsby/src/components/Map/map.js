@@ -52,16 +52,31 @@ function MapComp() {
     layer.bindPopup(popup)
   }
 
+  // $(document).ready( function() {
+  //   $('.i4ewOd-pzNkMb-nK2kYb').css('display','none');
+  //   // find the name of the class using inspect element and then replace
+  //   // it with the class name it will work 100%
+  // });
+
+  // function removeStyle() {
+  //   document.querySelector('.i4ewOd-pzNkMb-nK2kYb').style.display = "none"
+  // }
+
+  const mapStyle = document.querySelector('.i4ewOd-pzNkMb-nK2kYb')
+
+  console.log('googlemaps: ', mapStyle)
+
   return (
     <div id="map" className="w-full h-screen relative">
-      <MapContainer center={location} zoom={zoom} scrollWheelZoom={false} className="z-10 w-full h-full relative">
+      {/* <MapContainer center={location} zoom={zoom} scrollWheelZoom={false} className="z-10 w-full h-full relative">
         <TileLayer 
           url="https://api.mapbox.com/styles/v1/gentry19/ckst13rdw3r9q17nkjcoagb88/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiZ2VudHJ5MTkiLCJhIjoiY2tzcWg4ZmxuMGNzNDJ1bzVuZTJpNWl4byJ9.Dbjod75IraKTOV48WuQjNQ" 
           attribution="© <a href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>" 
         />
         <GeoJSON data={locations} key={geoJsonKey} onEachFeature={createPopups} />
       </MapContainer>
-      <MapFilter />
+      <MapFilter /> */}
+      <iframe src="https://www.google.com/maps/d/embed?mid=1FSPWxGN0wsw4IMNu0dK1yoYIxSmp_LVA" width="100%" height="100%"></iframe>
     </div>
   )
 }

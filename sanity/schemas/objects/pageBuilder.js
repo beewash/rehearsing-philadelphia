@@ -38,6 +38,10 @@ export default {
     {
       type: 'cta',
       title: 'CTA'
+    },
+    {
+      type: 'pageBuilderSocial',
+      title: 'Social'
     }
   ]
 }

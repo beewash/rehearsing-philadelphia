@@ -15,7 +15,7 @@ export default () => {
 
     details = (
       <div className="mx-auto w-3/4 text-center mb-20">
-        <h1>Artist Portal</h1>
+        <h1 className="mb-8">Artist Portal</h1>
         <a
           href="/"
           onClick={event => {
@@ -23,7 +23,7 @@ export default () => {
             logout(() => navigate(`/app/login`))
           }}
         >
-          log out
+          <p>log out</p>
         </a>
       </div>
     )

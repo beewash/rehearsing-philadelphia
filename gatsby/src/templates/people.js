@@ -5,7 +5,7 @@ import PageBuilder from '../components/pageBuilder'
 
 export const query = graphql`
   query PeopleTemplateQuery($id: String!) {
-    page: sanityPeople(id: {eq: $id}) {
+    people: sanityPeople(id: {eq: $id}) {
       id
       ...PeopleBuilder
       title
@@ -18,10 +18,10 @@ export const query = graphql`
 
 const PageTemplate = props => {
   const {data} = props
-  const page = data && data.page
-  const {pageBuilder, _rawPageBuilder} = page
+  const people = data && data.people
+  const {pageBuilder, _rawPageBuilder} = people
 
-  console.log('page: ', page);
+  console.log('people: ', people);
 
   return (
     <Layout>

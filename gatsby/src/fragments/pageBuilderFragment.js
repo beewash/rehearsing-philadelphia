@@ -60,7 +60,9 @@ export const query = graphql`
         _type
         title
         roster {
+          _key
           personName
+          hoverColor
           _rawBio (resolveReferences: {maxDepth: 10})
           bio {
             children {

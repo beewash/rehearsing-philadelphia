@@ -52,7 +52,7 @@ const Profile = () => (
     <StaticQuery
       query={ARTIST_PORTAL_QUERY}
       render={data => (
-        <div className="max-w-6xl mx-auto px-2.5 pb-28">
+        <div className="max-w-6xl mx-auto px-6 pb-28">
           {data && data.artistPortal.edges.map(({node: artistPortal}) => (
             <>
             {artistPortal.generalInfo ? (
@@ -108,7 +108,7 @@ const Profile = () => (
                             </>
                           ) : <>
                                 <AiTwotoneFilePdf className="w-7 h-7"/>
-                                <Link rel="noopener noreferrer" to={`/${docItem.document.asset.url}`} target="_blank"><p>{docItem.docName}</p></Link>
+                                <a rel="noopener noreferrer" href={docItem.document.asset.url} target="_blank"><p>{docItem.docName}</p></a>
                               </>
                           }
                           </div>
