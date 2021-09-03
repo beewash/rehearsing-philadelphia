@@ -62,10 +62,6 @@ function MapComp() {
   //   document.querySelector('.i4ewOd-pzNkMb-nK2kYb').style.display = "none"
   // }
 
-  const mapStyle = document.querySelector('.i4ewOd-pzNkMb-nK2kYb')
-
-  console.log('googlemaps: ', mapStyle)
-
   return (
     <div id="map" className="w-full h-screen relative">
       {/* <MapContainer center={location} zoom={zoom} scrollWheelZoom={false} className="z-10 w-full h-full relative">
