@@ -1,5 +1,9 @@
 module.exports = {
-  purge: [],
+  purge: {
+    safelist: [
+      'hover:bg-solo-yellow'
+    ]
+  },
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
