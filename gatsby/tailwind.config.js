@@ -1,8 +1,12 @@
 module.exports = {
-  purge: [
-    './pages/**/*.js', 
-    './components/**/*.js'
-  ],
+  purge: {
+    safelist: [
+      'hover:bg-solo-yellow',
+      'hover:bg-duet-red',
+      'hover:bg-ensemble-blue',
+      'hover:bg-orchestra-green'
+    ]
+  },
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
@@ -20,11 +24,11 @@ module.exports = {
         cfs2XL: '5.25rem'
       },
       colors: {
-        'solo-yellow': { DEFAULT: "#FFC20E"},
-        'duet-red': { DEFAULT: "#ED1C24"},
-        'ensemble-blue': { DEFAULT: "#000F9F"},
-        'orchestra-green': { DEFAULT: "#009245"},
-        'that-gray': { DEFAULT: "#DADADA"}
+        'solo-yellow': '#FFC20E"',
+        'duet-red': '#ED1C24',
+        'ensemble-blue': '#000F9F',
+        'orchestra-green': '#009245',
+        'that-gray': '#DADADA'
       },
       gridTemplateColumns: {
         '150': 'repeat(auto-fill, 150px)',
