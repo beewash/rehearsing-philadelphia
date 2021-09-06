@@ -42,6 +42,12 @@ const PageBuilderRoster = ({block, raw}) => {
                     <div className="w-full h-full">
                       <PortableText blocks={raw.roster[index].raw} />
                     </div>
+                    <div className="hidden">
+                      <span className="bg-solo-yellow"></span>
+                      <span className="bg-duet-red"></span>
+                      <span className="bg-ensemble-blue"></span>
+                      <span className="bg-orchestra-green"></span>
+                    </div>
                   </div>
                 </a>
               </div>
