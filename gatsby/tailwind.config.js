@@ -1,9 +1,7 @@
+const { yearsToMonths } = require('date-fns');
+
 module.exports = {
-  purge: {
-    safelist: [
-      'hover:bg-solo-yellow'
-    ]
-  },
+  purge: [],
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
