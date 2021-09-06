@@ -80,6 +80,19 @@
     outline: none;
   }
 
+  ..hover\:bg-solo-yellow:hover {
+    background-color: rgba(255, 194, 14, var(--tw-bg-opacity));
+  }
+  .hover\:bg-duet-red:hover:hover {
+    background-color: rgba(237, 28, 36, var(--tw-bg-opacity));
+  }
+  .hover\:bg-orchestra-green:hover {
+    background-color: rgba(255, 194, 14, var(--tw-bg-opacity));
+  }
+  .hover\:bg-orchestra-green:hover {
+    background-color: rgba(0, 146, 69, var(--tw-bg-opacity));
+  }
+
   /* .leaflet-container {
     z-index: 1;
     width: 100%;
