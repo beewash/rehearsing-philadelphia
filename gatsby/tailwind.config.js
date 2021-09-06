@@ -4,7 +4,7 @@ module.exports = {
       'hover:bg-solo-yellow',
       'hover:bg-duet-red',
       'hover:bg-ensemble-blue',
-      'hover:bg-orchestra-green'
+      'hover:bg-orchestra-green',
     ]
   },
   darkMode: false, // or 'media' or 'class'
