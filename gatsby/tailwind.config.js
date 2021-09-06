@@ -1,7 +1,7 @@
 const { yearsToMonths } = require('date-fns');
 
 module.exports = {
-  purge: {},
+  purge: [],
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
