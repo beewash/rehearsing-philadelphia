@@ -1,5 +1,8 @@
 module.exports = {
-  purge: [],
+  purge: [
+    './pages/**/*.js', 
+    './components/**/*.js'
+  ],
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
@@ -17,11 +20,11 @@ module.exports = {
         cfs2XL: '5.25rem'
       },
       colors: {
-        'solo-yellow': '#FFC20E',
-        'duet-red': '#ED1C24',
-        'ensemble-blue': '#000F9F',
-        'orchestra-green': '#009245',
-        'that-gray': '#DADADA'
+        'solo-yellow': { DEFAULT: "#FFC20E"},
+        'duet-red': { DEFAULT: "#ED1C24"},
+        'ensemble-blue': { DEFAULT: "#000F9F"},
+        'orchestra-green': { DEFAULT: "#009245"},
+        'that-gray': { DEFAULT: "#DADADA"}
       },
       gridTemplateColumns: {
         '150': 'repeat(auto-fill, 150px)',
