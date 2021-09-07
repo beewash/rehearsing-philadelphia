@@ -52,43 +52,6 @@ const IndexPage = (props) => {
     )
   }
 
-  /**
-   * mapEffect
-   * @description Fires a callback once the page renders
-   * @example Here this is and example of being used to zoom in and set a popup on load
-   */
-
-  //  function mapEffect({ leafletElement: map } = {}) {
-  //   console.log(map)
-
-  //   if ( !map ) return
-
-  //   map.eachLayer((layer) => map.removeLayer(layer))
-
-  //   const tripPoints = createTripPointsGeoJson({ locations })
-  //   const tripLines = createTripLinesGeoJson({ locations })
-
-  //   const tripPointsGeoJsonLayers = new L.geoJson(tripPoints, {
-  //     pointToLayer: tripStopPointToLayer
-  //   })
-
-  //   const tripLinesGeoJsonLayers = new L.geoJson(tripLines)
-
-  //   const bounds = tripPointsGeoJsonLayers.getBounds()
-
-  //   tripPointsGeoJsonLayers.addTo(map)
-  //   tripLinesGeoJsonLayers.addTo(map)
-
-  //   map.fitBounds(bounds)
-  // }
-
-  // const mapSettings = {
-  //   center: CENTER,
-  //   defaultBaseMap: 'OpenStreetMap',
-  //   zoom: DEFAULT_ZOOM,
-  //   mapEffect
-  // }
-
   return (
     <>
       <Helmet>
@@ -107,7 +70,6 @@ const IndexPage = (props) => {
         />
         <Container>
           <MapComp />
-          {/* <Map {...mapSettings} /> */}
         </Container>
       </Layout>
     </>
