@@ -1,0 +1,142 @@
+[
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "modType": "Duet",
+      "coordinates": [-75.19345873102985, 39.9527866174533]
+    },
+    "properties": {
+      "name": "University of Pennsylvania",
+      "address": "University of Pennsylvania, University of the Sciences in Philadelphia, 5214-30 Baltimore Ave",
+      "module": "Orchestra",
+      "description": "Historically, the section of road now called Baltimore Ave. was a portion of the larger Baltimore Pike, once connecting Baltimore, MD to Philadelphia. Today, this stretch of road is mostly commercial properties. We will begin our DUET walk at 52nd and Baltimore and travel east toward Clark Park, a West Philadelphia community hub that plays host to a variety of events from farmers markets to live theatre productions. From there we will continue to the University of the Sciences, founded in 1821 as the Philadelphia College of Pharmacy. Finally, we continue northeast on Woodland Ave. toward the campus of the University of Pennsylvania, a private Ivy League research institution founded in 1740."
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "modType": "Duet",
+      "coordinates": [-75.20697475576824, 39.94769029015476]
+    },
+    "properties": {
+      "name": "University of The Sciences in Philadelphia",
+      "address": "University of Pennsylvania, University of the Sciences in Philadelphia, 5214-30 Baltimore Ave",
+      "module": "Orchestra",
+      "description": "Historically, the section of road now called Baltimore Ave. was a portion of the larger Baltimore Pike, once connecting Baltimore, MD to Philadelphia. Today, this stretch of road is mostly commercial properties. We will begin our DUET walk at 52nd and Baltimore and travel east toward Clark Park, a West Philadelphia community hub that plays host to a variety of events from farmers markets to live theatre productions. From there we will continue to the University of the Sciences, founded in 1821 as the Philadelphia College of Pharmacy. Finally, we continue northeast on Woodland Ave. toward the campus of the University of Pennsylvania, a private Ivy League research institution founded in 1740."
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "modType": "Duet",
+      "coordinates": [-75.22730762878071, 39.94797378027824]
+    },
+    "properties": {
+      "name": "52nd and Baltimore",
+      "address": "University of Pennsylvania, University of the Sciences in Philadelphia, 5214-30 Baltimore Ave",
+      "module": "Orchestra",
+      "description": "Historically, the section of road now called Baltimore Ave. was a portion of the larger Baltimore Pike, once connecting Baltimore, MD to Philadelphia. Today, this stretch of road is mostly commercial properties. We will begin our DUET walk at 52nd and Baltimore and travel east toward Clark Park, a West Philadelphia community hub that plays host to a variety of events from farmers markets to live theatre productions. From there we will continue to the University of the Sciences, founded in 1821 as the Philadelphia College of Pharmacy. Finally, we continue northeast on Woodland Ave. toward the campus of the University of Pennsylvania, a private Ivy League research institution founded in 1740."
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "modType": "Duet",
+      "coordinates": [-75.1591884585702, 39.94505843808253]
+    },
+    "properties": {
+      "name": "Washington Square",
+      "address": "Washington Square, Franklin Square, Independence Hall, The Olde Bar, Christ Church",
+      "module": "Duet",
+      "description": "The Washington Square West district follows the early development of the city from the eighteenth century. As the Delaware riverfront and adjacent lands became increasingly crowded, residents and businesses moved further west. The neighborhood is a dense patchwork composed of mostly residential rowhouses  alongside some commercial properties, places of worship, and restaurants. The DUET walk will travel north east toward Old City, Philadelphia's most historic square mile. Home to attractions like Independence Hall and the Liberty Bell, Old City today also features an array of restaurants, bars, and nightlife."
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "modType": "Duet",
+      "coordinates": [-75.1504394729576, 39.95575795649635]
+    },
+    "properties": {
+      "name": "Franklin Square",
+      "address": "Washington Square, Franklin Square, Independence Hall, The Olde Bar, Christ Church",
+      "module": "Duet",
+      "description": "The Washington Square West district follows the early development of the city from the eighteenth century. As the Delaware riverfront and adjacent lands became increasingly crowded, residents and businesses moved further west. The neighborhood is a dense patchwork composed of mostly residential rowhouses  alongside some commercial properties, places of worship, and restaurants. The DUET walk will travel north east toward Old City, Philadelphia's most historic square mile. Home to attractions like Independence Hall and the Liberty Bell, Old City today also features an array of restaurants, bars, and nightlife."
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "modType": "Duet",
+      "coordinates": [-75.14998038645145, 39.949013502844494]
+    },
+    "properties": {
+      "name": "Independence Hall",
+      "address": "Washington Square, Franklin Square, Independence Hall, The Olde Bar, Christ Church",
+      "module": "Duet",
+      "description": "The Washington Square West district follows the early development of the city from the eighteenth century. As the Delaware riverfront and adjacent lands became increasingly crowded, residents and businesses moved further west. The neighborhood is a dense patchwork composed of mostly residential rowhouses  alongside some commercial properties, places of worship, and restaurants. The DUET walk will travel north east toward Old City, Philadelphia's most historic square mile. Home to attractions like Independence Hall and the Liberty Bell, Old City today also features an array of restaurants, bars, and nightlife."
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "modType": "Duet",
+      "coordinates": [-75.14404878645148, 39.947089157677496]
+    },
+    "properties": {
+      "name": "The Olde Bar",
+      "address": "Washington Square, Franklin Square, Independence Hall, The Olde Bar, Christ Church",
+      "module": "Duet",
+      "description": "The Washington Square West district follows the early development of the city from the eighteenth century. As the Delaware riverfront and adjacent lands became increasingly crowded, residents and businesses moved further west. The neighborhood is a dense patchwork composed of mostly residential rowhouses  alongside some commercial properties, places of worship, and restaurants. The DUET walk will travel north east toward Old City, Philadelphia's most historic square mile. Home to attractions like Independence Hall and the Liberty Bell, Old City today also features an array of restaurants, bars, and nightlife."
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "modType": "Duet",
+      "coordinates": [-75.14413894195299, 39.95116669707763]
+    },
+    "properties": {
+      "name": "Christ Church",
+      "address": "Washington Square, Franklin Square, Independence Hall, The Olde Bar, Christ Church",
+      "module": "Duet",
+      "description": "The Washington Square West district follows the early development of the city from the eighteenth century. As the Delaware riverfront and adjacent lands became increasingly crowded, residents and businesses moved further west. The neighborhood is a dense patchwork composed of mostly residential rowhouses  alongside some commercial properties, places of worship, and restaurants. The DUET walk will travel north east toward Old City, Philadelphia's most historic square mile. Home to attractions like Independence Hall and the Liberty Bell, Old City today also features an array of restaurants, bars, and nightlife."
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "modType": "Duet",
+      "coordinates": [-75.16564901958411, 39.95428925975284]
+    },
+    "properties": {
+      "name": "Love Park",
+      "address": "Love Park, Franklin Square, Philadelphia Museum of Art",
+      "module": "Duet",
+      "description": "At the heart of Center City Philadelphia, the Benjamin Franklin Parkway today exists as an animated, pedestrian friendly cultural campus. The DUET walk will begin at John F. Kennedy Plaza, also known as Love Park, home of Robert Indiana’s iconic (and highly Instagrammable!) LOVE statue and located near City Hall. The walk will travel north on the Parkway, passing many cultural institutions, residences, restaurants and more, to culminate at the Philadelphia Museum of Art, known world-wide not only for its impressive collection, but also as the site of the famous Rocky steps run in the ROCKY movie starring Sylvester Stallone."
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "modType": "Duet",
+      "coordinates": [-75.18101974596968, 39.965758806037464]
+    },
+    "properties": {
+      "name": "Philadelphia Museum of Art",
+      "address": "Love Park, Franklin Square, Philadelphia Museum of Art",
+      "module": "Duet",
+      "description": "At the heart of Center City Philadelphia, the Benjamin Franklin Parkway today exists as an animated, pedestrian friendly cultural campus. The DUET walk will begin at John F. Kennedy Plaza, also known as Love Park, home of Robert Indiana’s iconic (and highly Instagrammable!) LOVE statue and located near City Hall. The walk will travel north on the Parkway, passing many cultural institutions, residences, restaurants and more, to culminate at the Philadelphia Museum of Art, known world-wide not only for its impressive collection, but also as the site of the famous Rocky steps run in the ROCKY movie starring Sylvester Stallone."
+    }
+  }
+]

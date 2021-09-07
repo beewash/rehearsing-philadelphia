@@ -1,0 +1,58 @@
+[
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "modType": "Solo",
+      "coordinates": [-75.1622, 39.9613]
+    },
+    "properties": {
+      "name": "School District of Philadelphia",
+      "address": "440 N. Broad Street",
+      "module": "solo",
+      "description": "The School District of Philadelphia is the eighth largest school district in the United States, with more than  203,000 students enrolled in 325 schools, and more than 19,000 employees. Their mission is to deliver on the civil right of every child in Philadelphia to an excellent public school education and ensure all children graduate from high school ready to succeed, fully engaged as a citizen of our world."
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "modType": "Solo",
+      "coordinates": [-75.16283770166594, 39.96033637392007]
+    },
+    "properties": {
+      "name": "Philadelphia Police Department",
+      "address": "400 N. Broad Street",
+      "module": "solo",
+      "description": "The Philadelphia Police Department is the fourth largest in the nation, serving approximately 1.5 million people in Philadelphia County across 21 police districts. The department employs more than 6,300 sworn members and 800 civilian personnel."
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "modType": "Solo",
+      "coordinates": [-75.19231752197673, 39.94886028958337]
+    },
+    "properties": {
+      "name": "Penn Medicine",
+      "address": "3400 Civic Center Blvd",
+      "module": "solo",
+      "description": "The history of Penn Medicine grows from the founding of Pennsylvania Hospital, the first hospital in the United States established in 1751, and the nation's first medical school, the University of Pennsylvania, established in 1756. Today, Penn Medicine includes six acute-care hospitals and hundreds of outpatient locations throughout the Philadelphia region, as well as educational facilities at the Perelman School of Medicine. The top health care employer in Philadelphia, Penn Medicine cites $15.1 Billion in economic impact to the region annually."
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "modType": "Solo",
+      "coordinates": [-75.16403524889435, 39.9525827985846]
+    },
+    "properties": {
+      "name": "City Hall",
+      "address": "Broad and Market",
+      "module": "solo",
+      "description": "Philadelphia City Hall is the center of government in the city, housing the supreme court, council chambers, and the mayor's office, among many more public and private spaces. From the outset, this extravagant monument was controversial for its location and its architecture, but has since been embraced as a distinctive emblem at the heart of the historic city. Topped by an iconic Philadelphia landmark, the statue of William Penn, the City Hall building is the largest municipal building in the United States and was the tallest building in the city of Philadelphia until 1987."
+    }
+  }
+]

@@ -1,0 +1,21 @@
+[
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "LineString",
+      "modType": "Duet",
+      "coordinates": [
+        [-75.19345873102985, 39.9527866174533],
+        [-75.20697475576824, 39.94769029015476],
+        [-75.22730762878071, 39.94797378027824]
+      ]
+    },
+    "properties": {
+      "name": "Baltimore Avenue Walk",
+      "address": "University of Pennsylvania, University of the Sciences in Philadelphia, 5214-30 Baltimore Ave",
+      "module": "Duet",
+      "description": "Historically, the section of road now called Baltimore Ave. was a portion of the larger Baltimore Pike, once connecting Baltimore, MD to Philadelphia. Today, this stretch of road is mostly commercial properties. We will begin our DUET walk at 52nd and Baltimore and travel east toward Clark Park, a West Philadelphia community hub that plays host to a variety of events from farmers markets to live theatre productions. From there we will continue to the University of the Sciences, founded in 1821 as the Philadelphia College of Pharmacy. Finally, we continue northeast on Woodland Ave. toward the campus of the University of Pennsylvania, a private Ivy League research institution founded in 1740.",
+      "stroke": "#00000"
+    }
+  }
+]
