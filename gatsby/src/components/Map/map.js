@@ -47,35 +47,35 @@ function MapComp() {
   //   iconUrl: require("../../images/solo.png")
   // });
   
-  const iconSolo = new L.Icon({
-    iconUrl: soloIcon,
-    iconRetinaUrl: soloIcon,
-    iconAnchor: [10, 25],
-    popupAnchor: [3, -25],
-    iconSize: [25, 25],
-    shadowSize: [68, 95],
-    shadowAnchor: [20, 92]
-  })
+  // const iconSolo = new L.Icon({
+  //   iconUrl: soloIcon,
+  //   iconRetinaUrl: soloIcon,
+  //   iconAnchor: [10, 25],
+  //   popupAnchor: [3, -25],
+  //   iconSize: [25, 25],
+  //   shadowSize: [68, 95],
+  //   shadowAnchor: [20, 92]
+  // })
 
-  const iconDuet = new L.Icon({
-    iconUrl: duetIcon,
-    iconRetinaUrl: duetIcon,
-    iconAnchor: [10, 25],
-    popupAnchor: [3, -25],
-    iconSize: [25, 25],
-    shadowSize: [68, 95],
-    shadowAnchor: [20, 92]
-  })
+  // const iconDuet = new L.Icon({
+  //   iconUrl: duetIcon,
+  //   iconRetinaUrl: duetIcon,
+  //   iconAnchor: [10, 25],
+  //   popupAnchor: [3, -25],
+  //   iconSize: [25, 25],
+  //   shadowSize: [68, 95],
+  //   shadowAnchor: [20, 92]
+  // })
 
-  const iconOrchestra = new L.Icon({
-    iconUrl: orchestraIcon,
-    iconRetinaUrl: orchestraIcon,
-    iconAnchor: [25, 25],
-    popupAnchor: [0, -25],
-    iconSize: [50, 25],
-    shadowSize: [68, 95],
-    shadowAnchor: [20, 92]
-  })
+  // const iconOrchestra = new L.Icon({
+  //   iconUrl: orchestraIcon,
+  //   iconRetinaUrl: orchestraIcon,
+  //   iconAnchor: [25, 25],
+  //   popupAnchor: [0, -25],
+  //   iconSize: [50, 25],
+  //   shadowSize: [68, 95],
+  //   shadowAnchor: [20, 92]
+  // })
 
   const createPopups = (feature = {}, layer) => {
     const { properties = {} } = feature
@@ -103,71 +103,103 @@ function MapComp() {
     <div id="map" className="w-full relative">
       <div className="h-20"></div>
       <div className="p-8 h-screen-80">
-      <MapContainer center={location} zoom={zoom} scrollWheelZoom={false} className="z-10 w-full h-full relative">
-        <LayersControl position="topright">
-          <TileLayer 
-            url="https://api.mapbox.com/styles/v1/gentry19/ckst13rdw3r9q17nkjcoagb88/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiZ2VudHJ5MTkiLCJhIjoiY2tzcWg4ZmxuMGNzNDJ1bzVuZTJpNWl4byJ9.Dbjod75IraKTOV48WuQjNQ" 
-            attribution="© <a href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>" 
-          />
-          <LayersControl.Overlay checked name="Solo">
-            <LayerGroup>
-              {solo.map(solo => (
-                <Marker position={[solo.geometry.coordinates.lat, solo.geometry.coordinates.lon]} icon={iconSolo}>
+        {(typeof window !== 'undefined') ? (
+        <MapContainer center={location} zoom={zoom} scrollWheelZoom={false} className="z-10 w-full h-full relative">
+          <LayersControl position="topright">
+            <TileLayer 
+              url="https://api.mapbox.com/styles/v1/gentry19/ckst13rdw3r9q17nkjcoagb88/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiZ2VudHJ5MTkiLCJhIjoiY2tzcWg4ZmxuMGNzNDJ1bzVuZTJpNWl4byJ9.Dbjod75IraKTOV48WuQjNQ" 
+              attribution="© <a href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>" 
+            />
+            <LayersControl.Overlay checked name="Solo">
+              <LayerGroup>
+                {solo.map(solo => (
+                  <Marker 
+                    position={[solo.geometry.coordinates.lat, solo.geometry.coordinates.lon]} 
+                    icon={new L.Icon({
+                      iconUrl: soloIcon,
+                      iconRetinaUrl: soloIcon,
+                      iconAnchor: [10, 25],
+                      popupAnchor: [3, -25],
+                      iconSize: [25, 25],
+                      shadowSize: [68, 95],
+                      shadowAnchor: [20, 92]
+                    })}>
+                    <Popup>
+                      <div className="mb-2 italic font-sainteColombe">{solo.properties.module}</div>
+                      <div className="mb-2 font-semibold font-acuminPro uppercase">{solo.properties.name}</div>
+                      <div className="mb-2 font-sainteColombe">{solo.properties.address}</div>
+                      <div className="mb-2 font-sainteColombe">{solo.properties.description}</div>
+                    </Popup>
+                  </Marker>
+                ))}
+              </LayerGroup>
+            </LayersControl.Overlay>
+            <LayersControl.Overlay checked name="Duet">
+              <LayerGroup>
+                {duet.map(duet => (
+                  <Marker 
+                    position={[duet.geometry.coordinates.lat, duet.geometry.coordinates.lon]} 
+                    icon={new L.Icon({
+                      iconUrl: duetIcon,
+                      iconRetinaUrl: duetIcon,
+                      iconAnchor: [10, 25],
+                      popupAnchor: [3, -25],
+                      iconSize: [25, 25],
+                      shadowSize: [68, 95],
+                      shadowAnchor: [20, 92]
+                    })}>
+                    <Popup>
+                      <div className="mb-2 italic font-sainteColombe">{duet.properties.module}</div>
+                      <div className="mb-2 font-semibold font-acuminPro uppercase">{duet.properties.name}</div>
+                      <div className="mb-2 font-sainteColombe">{duet.properties.address}</div>
+                      <div className="mb-2 font-sainteColombe">{duet.properties.description}</div>
+                    </Popup>
+                  </Marker>
+                ))}
+              </LayerGroup>
+            </LayersControl.Overlay>
+            <LayersControl.Overlay checked name="Orchestra">
+              <LayerGroup>
+                {orchestra.map(orchestra => (
+                  <Marker 
+                    position={[orchestra.geometry.coordinates.lat, orchestra.geometry.coordinates.lon]} 
+                    icon={new L.Icon({
+                      iconUrl: orchestraIcon,
+                      iconRetinaUrl: orchestraIcon,
+                      iconAnchor: [25, 25],
+                      popupAnchor: [0, -25],
+                      iconSize: [50, 25],
+                      shadowSize: [68, 95],
+                      shadowAnchor: [20, 92]
+                    })}>
                   <Popup>
-                    <div className="mb-2 italic font-sainteColombe">{solo.properties.module}</div>
-                    <div className="mb-2 font-semibold font-acuminPro uppercase">{solo.properties.name}</div>
-                    <div className="mb-2 font-sainteColombe">{solo.properties.address}</div>
-                    <div className="mb-2 font-sainteColombe">{solo.properties.description}</div>
+                    <div className="mb-2 italic font-sainteColombe">{orchestra.properties.module}</div>
+                    <div className="mb-2 font-semibold font-acuminPro uppercase">{orchestra.properties.name}</div>
+                    <div className="mb-2 font-sainteColombe">{orchestra.properties.address}</div>
+                    <div className="mb-2 font-sainteColombe">{orchestra.properties.description}</div>
                   </Popup>
                 </Marker>
-              ))}
-            </LayerGroup>
-          </LayersControl.Overlay>
-          <LayersControl.Overlay checked name="Duet">
-            <LayerGroup>
-              {duet.map(duet => (
-                <Marker position={[duet.geometry.coordinates.lat, duet.geometry.coordinates.lon]} icon={iconDuet}>
-                  <Popup>
-                    <div className="mb-2 italic font-sainteColombe">{duet.properties.module}</div>
-                    <div className="mb-2 font-semibold font-acuminPro uppercase">{duet.properties.name}</div>
-                    <div className="mb-2 font-sainteColombe">{duet.properties.address}</div>
-                    <div className="mb-2 font-sainteColombe">{duet.properties.description}</div>
-                  </Popup>
-                </Marker>
-              ))}
-            </LayerGroup>
-          </LayersControl.Overlay>
-          <LayersControl.Overlay checked name="Orchestra">
-            <LayerGroup>
-              {orchestra.map(orchestra => (
-                <Marker position={[orchestra.geometry.coordinates.lat, orchestra.geometry.coordinates.lon]} icon={iconOrchestra}>
-                <Popup>
-                  <div className="mb-2 italic font-sainteColombe">{orchestra.properties.module}</div>
-                  <div className="mb-2 font-semibold font-acuminPro uppercase">{orchestra.properties.name}</div>
-                  <div className="mb-2 font-sainteColombe">{orchestra.properties.address}</div>
-                  <div className="mb-2 font-sainteColombe">{orchestra.properties.description}</div>
-                </Popup>
-              </Marker>
-              ))}
-            </LayerGroup>
-          </LayersControl.Overlay>
-          <LayersControl.Overlay checked name="Baltimore Ave Walk">
-            <LayerGroup>
-              <GeoJSON data={baltimore_ave_route} key="baltimore_ave_route" pathOptions={duetOptions} />
-            </LayerGroup>
-          </LayersControl.Overlay>
-          <LayersControl.Overlay checked name="Washington Square and Olde City Walk">
-            <LayerGroup>
-              <GeoJSON data={washington_sq_route} key="washington_sq_route" onEachFeature={createPopups} pathOptions={duetOptions} />
-            </LayerGroup>
-          </LayersControl.Overlay>
-          <LayersControl.Overlay checked name="Walk from Love Park to Philadelphia Museum of Art">
-            <LayerGroup>
-              <GeoJSON data={lovepark_route} key="lovepark_route" onEachFeature={createPopups} pathOptions={duetOptions} />
-            </LayerGroup>
-          </LayersControl.Overlay>
-        </LayersControl>
-      </MapContainer>
+                ))}
+              </LayerGroup>
+            </LayersControl.Overlay>
+            <LayersControl.Overlay checked name="Baltimore Ave Walk">
+              <LayerGroup>
+                <GeoJSON data={baltimore_ave_route} key="baltimore_ave_route" pathOptions={duetOptions} />
+              </LayerGroup>
+            </LayersControl.Overlay>
+            <LayersControl.Overlay checked name="Washington Square and Olde City Walk">
+              <LayerGroup>
+                <GeoJSON data={washington_sq_route} key="washington_sq_route" onEachFeature={createPopups} pathOptions={duetOptions} />
+              </LayerGroup>
+            </LayersControl.Overlay>
+            <LayersControl.Overlay checked name="Walk from Love Park to Philadelphia Museum of Art">
+              <LayerGroup>
+                <GeoJSON data={lovepark_route} key="lovepark_route" onEachFeature={createPopups} pathOptions={duetOptions} />
+              </LayerGroup>
+            </LayersControl.Overlay>
+          </LayersControl>
+        </MapContainer>
+        ) : null}
       </div>
     </div>
   )
