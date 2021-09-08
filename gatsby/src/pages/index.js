@@ -6,6 +6,8 @@ import SEO from "../components/SEO/SEO"
 import Layout from "../containers/layout"
 import MapComp from "../components/Map/map"
 import Helmet from 'react-helmet'
+import logo from '../images/Logo_Symbols.png'
+import {BsArrowDown} from 'react-icons/bs'
 
 // import L from 'leaflet'
 // import 'leaflet/dist/leaflet.css'
@@ -69,6 +71,22 @@ const IndexPage = (props) => {
           keywords={site.keywords}
         />
         <Container>
+          <div className="mb-32">
+            <div className="w-screen mb-20 md:mb-48">
+              <div className="w-10/12 mx-auto mt-16 md:mt-32">
+                <img src={logo} />
+              </div>
+            </div>
+            <div className="text-center px-8 mt-12 md:mt-24 lg:w-9/12 mx-auto">
+              <div className="mb-20">
+                <p>Created by Ari Benjamin Meyers and jointly produced and presented by the Curtis Institute of Music and Drexel University’s Westphal College of Media Arts & Design, this large-scale public project explores how we can come together as a city through musical rehearsal. The traditional musical preparation process focuses on rehearsing as a way to attain perfection, which is then repeated in performance. This is not how we live modern life in a rapidly changing world of social upheaval. The future will be rehearsed, not perfected. Rehearsing Philadelphia re-examines the rehearsal processes which allow people to act together and be empowered to create new realities.</p>
+              </div>
+              <div className="flex-col text-center justify-center items-center space-y-4">
+                <h4>Continue to the Map</h4>
+                <BsArrowDown className="mx-auto w-16 h-20" />
+              </div>
+            </div>
+          </div>
           <MapComp />
         </Container>
       </Layout>

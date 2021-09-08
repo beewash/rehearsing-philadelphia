@@ -44,11 +44,11 @@ function MapComp() {
     const { name, address, module, description } = properties
     const popup = L.popup()
     const html = `
-     <div class="popup-container">
+     <div class="popup-container" style="">
      <ul>
-     <li><strong>${name.toString()}</strong></li>
-     <li>${address.toString()}</li>
-     <li>${module.toString()}</li>
+     <li style="margin-bottom:.5rem;font-style:italic;">${module.toString()}</li>
+     <li style="margin-bottom:.5rem;text-transform:uppercase"><strong>${name.toString()}</strong></li>
+     <li style="margin-bottom:.5rem;">${address.toString()}</li>
      <li>${description.toString()}</li>
      </div>
      `
@@ -62,7 +62,7 @@ function MapComp() {
   const orchestraOptions = { color: '#009245' }
 
   return (
-    <div id="map" className="w-full h-screen relative">
+    <div id="map" className="w-full h-screen p-8 relative">
       <MapContainer center={location} zoom={zoom} scrollWheelZoom={false} className="z-10 w-full h-full relative">
         <LayersControl position="topright">
           <TileLayer 
