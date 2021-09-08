@@ -4,7 +4,10 @@
     "geometry": {
       "type": "Point",
       "modType": "Solo",
-      "coordinates": [-75.1622, 39.9613]
+      "coordinates": {
+        "lat": 39.9613, 
+        "lon":-75.1622
+      }
     },
     "properties": {
       "name": "School District of Philadelphia",
@@ -18,7 +21,10 @@
     "geometry": {
       "type": "Point",
       "modType": "Solo",
-      "coordinates": [-75.16283770166594, 39.96033637392007]
+      "coordinates": {
+        "lat": 39.96033637392007, 
+        "lon": -75.16283770166594
+      }
     },
     "properties": {
       "name": "Philadelphia Police Department",
@@ -32,7 +38,10 @@
     "geometry": {
       "type": "Point",
       "modType": "Solo",
-      "coordinates": [-75.19231752197673, 39.94886028958337]
+      "coordinates": {
+        "lat": 39.94886028958337, 
+        "lon": -75.19231752197673
+      }
     },
     "properties": {
       "name": "Penn Medicine",
@@ -46,7 +55,10 @@
     "geometry": {
       "type": "Point",
       "modType": "Solo",
-      "coordinates": [-75.16403524889435, 39.9525827985846]
+      "coordinates": {
+        "lat": 39.9525827985846, 
+        "lon": -75.16403524889435
+      }
     },
     "properties": {
       "name": "City Hall",

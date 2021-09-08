@@ -1,16 +1,14 @@
 import React from 'react'
 import L from 'leaflet'
 import { makeKey } from "../../lib/makeKey"
-import { MapContainer, TileLayer, GeoJSON, LayersControl, LayerGroup } from 'react-leaflet'
+import { MapContainer, TileLayer, GeoJSON, LayersControl, LayerGroup, Marker, Popup } from 'react-leaflet'
 import 'leaflet/dist/leaflet.css'
-// import locations from './locations.json'
 import solo from './solo.json'
 import duet from './duet.json'
 import baltimore_ave_route from './baltimore_ave_route.json'
 import washington_sq_route from './washington_sq_route.json'
 import lovepark_route from './lovepark_route.json'
 import orchestra from './orchestra.json'
-// import locationMarker from '../../images/maps-and-flags.png'
 
 const location = [39.9526, -75.1652]
 const zoom = 14
@@ -38,6 +36,22 @@ function MapComp() {
   //   const newKey = makeKey(10)
   //   setGeoJsonKey(newKey)
   // }, [displayedMarkers])
+
+  // delete L.Icon.Default.prototype._getIconUrl;
+  // L.Icon.Default.mergeOptions({
+  //   iconRetinaUrl: require("../../images/solo.png"),
+  //   iconUrl: require("../../images/solo.png")
+  // });
+
+  const pointerIcon = new L.Icon({
+    iconUrl: require("../../images/solo.png"),
+    iconRetinaUrl: require("../../images/solo.png"),
+    iconAnchor: [5, 55],
+    popupAnchor: [10, -44],
+    iconSize: [25, 55],
+    shadowSize: [68, 95],
+    shadowAnchor: [20, 92]
+  })
 
   const createPopups = (feature = {}, layer) => {
     const { properties = {} } = feature
@@ -71,7 +85,16 @@ function MapComp() {
           />
           <LayersControl.Overlay checked name="Solo">
             <LayerGroup>
-              <GeoJSON data={solo} key="solo" onEachFeature={createPopups} />
+              {solo.map(solo => (
+                <Marker position={[solo.geometry.coordinates.lat, solo.geometry.coordinates.lon]} icon={pointerIcon}>
+                  <Popup>
+                    <div className="mb-2 italic font-sainteColombe">{solo.properties.module}</div>
+                    <div className="mb-2 font-semibold font-acuminPro uppercase">{solo.properties.name}</div>
+                    <div className="mb-2 font-sainteColombe">{solo.properties.address}</div>
+                    <div className="mb-2 font-sainteColombe">{solo.properties.description}</div>
+                  </Popup>
+                </Marker>
+              ))}
             </LayerGroup>
           </LayersControl.Overlay>
           <LayersControl.Overlay checked name="Duet">
