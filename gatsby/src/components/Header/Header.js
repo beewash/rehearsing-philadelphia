@@ -52,11 +52,13 @@ const Header = props => {
             <div id="navMain" className="w-full flex relative justify-between p-4">
               <div className="flex items-center">
                 {headernav.rhLogo ? (
-                <Link className="" to="/">
-                  {/* {headernav.title} */}
+                <Link className="flex flex-row md:space-x-2 items-center justify-items-center justify-center" to="/">
                   {headernav.rhLogo.map(logo => (
-                    <Image fluid={logo.asset.fluid} className="w-12" />
+                    <Image fluid={logo.asset.fluid} className="w-12 inline" />
                   ))}
+                    <div className="inline">
+                      <p className="font-medium">{headernav.title}</p>
+                    </div>
                 </Link>
                 ) : null}
               </div>
