@@ -4,7 +4,10 @@
     "geometry": {
       "type": "Point",
       "modType": "Duet",
-      "coordinates": [-75.19345873102985, 39.9527866174533]
+      "coordinates": {
+        "lat": 39.9527866174533, 
+        "lon": -75.19345873102985
+      }
     },
     "properties": {
       "name": "University of Pennsylvania",
@@ -18,7 +21,10 @@
     "geometry": {
       "type": "Point",
       "modType": "Duet",
-      "coordinates": [-75.20697475576824, 39.94769029015476]
+      "coordinates": {
+        "lat": 39.94769029015476,
+        "lon": -75.20697475576824
+      }
     },
     "properties": {
       "name": "University of The Sciences in Philadelphia",
@@ -32,7 +38,10 @@
     "geometry": {
       "type": "Point",
       "modType": "Duet",
-      "coordinates": [-75.22730762878071, 39.94797378027824]
+      "coordinates": {
+        "lat": 39.94797378027824,
+        "lon": -75.22730762878071
+      }
     },
     "properties": {
       "name": "52nd and Baltimore",
@@ -46,7 +55,10 @@
     "geometry": {
       "type": "Point",
       "modType": "Duet",
-      "coordinates": [-75.1591884585702, 39.94505843808253]
+      "coordinates": {
+        "lat": 39.94505843808253, 
+        "lon": -75.1591884585702
+      }
     },
     "properties": {
       "name": "Washington Square",
@@ -60,7 +72,10 @@
     "geometry": {
       "type": "Point",
       "modType": "Duet",
-      "coordinates": [-75.1504394729576, 39.95575795649635]
+      "coordinates": {
+        "lat": 39.95575795649635, 
+        "lon": -75.1504394729576
+      }
     },
     "properties": {
       "name": "Franklin Square",
@@ -74,7 +89,10 @@
     "geometry": {
       "type": "Point",
       "modType": "Duet",
-      "coordinates": [-75.14998038645145, 39.949013502844494]
+      "coordinates": {
+        "lat": 39.949013502844494, 
+        "lon": -75.14998038645145
+      }
     },
     "properties": {
       "name": "Independence Hall",
@@ -88,7 +106,10 @@
     "geometry": {
       "type": "Point",
       "modType": "Duet",
-      "coordinates": [-75.14404878645148, 39.947089157677496]
+      "coordinates": {
+        "lat": 39.947089157677496, 
+        "lon": -75.14404878645148
+      }
     },
     "properties": {
       "name": "The Olde Bar",
@@ -102,7 +123,10 @@
     "geometry": {
       "type": "Point",
       "modType": "Duet",
-      "coordinates": [-75.14413894195299, 39.95116669707763]
+      "coordinates": {
+        "lat": 39.95116669707763, 
+        "lon": -75.14413894195299
+      }
     },
     "properties": {
       "name": "Christ Church",
@@ -116,7 +140,10 @@
     "geometry": {
       "type": "Point",
       "modType": "Duet",
-      "coordinates": [-75.16564901958411, 39.95428925975284]
+      "coordinates": {
+        "lat": 39.95428925975284, 
+        "lon": -75.16564901958411
+      }
     },
     "properties": {
       "name": "Love Park",
@@ -130,7 +157,10 @@
     "geometry": {
       "type": "Point",
       "modType": "Duet",
-      "coordinates": [-75.18101974596968, 39.965758806037464]
+      "coordinates": {
+        "lat": 39.965758806037464,
+        "lon": -75.18101974596968
+      }
     },
     "properties": {
       "name": "Philadelphia Museum of Art",

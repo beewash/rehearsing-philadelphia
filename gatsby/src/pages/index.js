@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import Container from "../components/Container/Container"
 import GraphQLErrorList from "../components/graphql-error-list"
 import SEO from "../components/SEO/SEO"
@@ -71,7 +71,7 @@ const IndexPage = (props) => {
           keywords={site.keywords}
         />
         <Container>
-          <div className="mb-32">
+          <div className="">
             <div className="w-screen mb-20 md:mb-48">
               <div className="w-10/12 mx-auto mt-16 md:mt-32">
                 <img src={logo} alt="Rehearsing Philadelphia Logo" />
@@ -82,12 +82,14 @@ const IndexPage = (props) => {
                 <p>Created by Ari Benjamin Meyers and jointly produced and presented by the Curtis Institute of Music and Drexel University’s Westphal College of Media Arts & Design, this large-scale public project explores how we can come together as a city through musical rehearsal. The traditional musical preparation process focuses on rehearsing as a way to attain perfection, which is then repeated in performance. This is not how we live modern life in a rapidly changing world of social upheaval. The future will be rehearsed, not perfected. Rehearsing Philadelphia re-examines the rehearsal processes which allow people to act together and be empowered to create new realities.</p>
               </div>
               <div className="flex-col text-center justify-center items-center space-y-4">
-                <h4>Explore the Rehearsing Philadelphia Performance Map</h4>
-                <BsArrowDown className="mx-auto w-16 h-20" />
+                <h4>Explore the Map</h4>
+                <Link to="#map">
+                  <BsArrowDown className="mx-auto w-16 h-20" />
+                </Link>
               </div>
             </div>
           </div>
-          <MapComp />
+          <MapComp/>
         </Container>
       </Layout>
     </>

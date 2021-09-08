@@ -4,7 +4,10 @@
     "geometry": {
       "type": "Point",
       "modType": "Orchestra",
-      "coordinates": [-75.13972703050233, 39.95270111977888]
+      "coordinates": {
+        "lat": 39.95270111977888, 
+        "lon": -75.13972703050233
+      }
     },
     "properties": {
       "name": "Cherry Street Pier",

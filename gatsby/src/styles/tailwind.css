@@ -41,6 +41,9 @@
   .h-screen-80 {
     height: calc(100vh - 80px);
   }
+  .h-screen-60 {
+    height: calc(100vh - 60px);
+  }
   .h-screen-48 {
     height: calc(100vh - 48px);
   }
