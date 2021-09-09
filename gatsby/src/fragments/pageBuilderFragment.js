@@ -63,12 +63,8 @@ export const query = graphql`
           _key
           personName
           hoverColor
-          _rawBio (resolveReferences: {maxDepth: 10})
-          bio {
-            children {
-              text
-            }
-          }
+          roleList
+          moduleList
           headshot {
             alt
             asset {

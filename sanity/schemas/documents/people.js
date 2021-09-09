@@ -42,28 +42,36 @@ export default {
       validation: (Rule) => Rule.required()
     },
     {
-      title: 'Role list',
-      name: 'roleList',
-      description: 'Used for internal indexing',
-      type: 'array',
-      of: [{type: 'roleObject'}]
-    },
-    {
-      title: 'Title',
-      name: 'title',
-      description: 'Persons official title.  Examples: Technology Consultant, Marketing Coordinator, Cellist, Composer, etc.',
-      type: 'string',
-      validation: (Rule) => Rule.required()
-    },
-    {
       name: 'pageBuilder',
       type: 'pageBuilder',
       title: 'Page Builder'
     },
     {
-      name: 'bio',
-      type: 'bodyPortableText',
-      title: 'Bio'
+      title: 'Role list',
+      name: 'roleList',
+      description: 'Used for internal indexing',
+      type: 'string',
+      options: {
+        list: [
+          {title: 'Composer', value: 'composer'},
+          {title: 'Participating Artist', value: 'participating_artist'}
+        ],
+        layout: 'radio'
+      }
+    },
+    {
+      title: 'Module',
+      name: 'moduleList',
+      type: 'string',
+      options: {
+        list: [
+          {title: 'Solo', value: 'solo'},
+          {title: 'Duet', value: 'duet'},
+          {title: 'Ensemble', value: 'ensemble'},
+          {title: 'Orchestra', value: 'orchestra'}
+        ],
+        layout: 'radio'
+      }
     },
     {
       name: 'hoverColor',

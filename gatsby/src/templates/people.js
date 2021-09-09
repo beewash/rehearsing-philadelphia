@@ -8,7 +8,6 @@ export const query = graphql`
     people: sanityPeople(id: {eq: $id}) {
       id
       ...PeopleBuilder
-      title
       slug {
         current
       }

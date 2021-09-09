@@ -56,7 +56,7 @@ const Header = props => {
                   {headernav.rhLogo.map(logo => (
                     <Image fluid={logo.asset.fluid} className="w-12 inline" />
                   ))}
-                    <div className="inline">
+                    <div className="hidden md:inline">
                       <p className="font-medium">{headernav.title}</p>
                     </div>
                 </Link>
