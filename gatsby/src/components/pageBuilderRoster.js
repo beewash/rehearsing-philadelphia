@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import Image from "gatsby-image"
+import {Link} from 'gatsby'
 import PortableText from './portableText'
 
 const PageBuilderRoster = ({block, raw}) => {
@@ -28,11 +29,11 @@ const PageBuilderRoster = ({block, raw}) => {
         {roster && roster.map((rosterItem, index) =>
           <div id="rosterItem" key={rosterItem.slug.current} className={`relative hover-trigger w-full h-24.5 md:h-36.5 flex items-center justify-center bg-white border-black border-2 rounded-full hover:bg-${rosterItem.hoverColor} hover:text-white`}>
               <div id="textContainer" className="relative">
-                <a href={rosterItem.slug.current}>
+                <Link href={rosterItem.slug.current}>
                   <div className="w-4/5 mx-auto">
                     <p className="text-cfsSM2 md:text-cfsSM font-acuminPro font-medium text-center">{rosterItem.personName}</p>
                   </div>
-                </a>
+                </Link>
               </div>
               <div id="popUp" className="hidden absolute top-50 bottom-50 right-100 w-full z-50 bg-white border-black border-2 rounded-3xl hover-target overflow-hidden flex-column">
                 <div className="w-300 h-500">
