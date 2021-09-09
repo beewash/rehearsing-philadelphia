@@ -1,6 +1,5 @@
 import React from 'react'
 import L from 'leaflet'
-import { makeKey } from "../../lib/makeKey"
 import { MapContainer, TileLayer, GeoJSON, LayersControl, LayerGroup, Marker, Popup } from 'react-leaflet'
 import 'leaflet/dist/leaflet.css'
 import solo from './solo.json'
@@ -10,72 +9,15 @@ import washington_sq_route from './washington_sq_route.json'
 import lovepark_route from './lovepark_route.json'
 import orchestra from './orchestra.json'
 
-import soloIcon from '../../images/solo.png'
-import duetIcon from '../../images/duet.png'
-import orchestraIcon from '../../images/orchestra.png'
+import soloIcon from '../../images/soloPin.png'
+import duetIcon from '../../images/duetPin.png'
+import orchestraIcon from '../../images/orchestraPin.png'
+import pinShadow from '../../images/pinShadow.png'
 
 const location = [39.9526, -75.1652]
 const zoom = 14
 
 function MapComp() {
-
-  // // REFS
-  // // Initiate refs to the feature group and cluster group
-  // const groupRef = useRef()
-  // const clusterRef = useRef()
-
-  // // STATE
-  // // GeoJson Key to handle updating geojson inside react-leaflet
-  // const [geoJsonKey, setGeoJsonKey] = useState("initialKey123abc")
-
-  // //Track which markers are being actively displayed on the map
-  // const [displayedMarkers, setDisplayedMarkers] = useState(solo)
-
-  // //Track which markers are visible on the map
-  // const [visibleMarkers, setVisibleMarkers] = useState(solo)
-
-  // // FUNCTIONS
-  // // Generate a new key to force an update to GeoJson Layer
-  // useEffect(() => {
-  //   const newKey = makeKey(10)
-  //   setGeoJsonKey(newKey)
-  // }, [displayedMarkers])
-
-  // delete L.Icon.Default.prototype._getIconUrl;
-  // L.Icon.Default.mergeOptions({
-  //   iconRetinaUrl: require("../../images/solo.png"),
-  //   iconUrl: require("../../images/solo.png")
-  // });
-  
-  // const iconSolo = new L.Icon({
-  //   iconUrl: soloIcon,
-  //   iconRetinaUrl: soloIcon,
-  //   iconAnchor: [10, 25],
-  //   popupAnchor: [3, -25],
-  //   iconSize: [25, 25],
-  //   shadowSize: [68, 95],
-  //   shadowAnchor: [20, 92]
-  // })
-
-  // const iconDuet = new L.Icon({
-  //   iconUrl: duetIcon,
-  //   iconRetinaUrl: duetIcon,
-  //   iconAnchor: [10, 25],
-  //   popupAnchor: [3, -25],
-  //   iconSize: [25, 25],
-  //   shadowSize: [68, 95],
-  //   shadowAnchor: [20, 92]
-  // })
-
-  // const iconOrchestra = new L.Icon({
-  //   iconUrl: orchestraIcon,
-  //   iconRetinaUrl: orchestraIcon,
-  //   iconAnchor: [25, 25],
-  //   popupAnchor: [0, -25],
-  //   iconSize: [50, 25],
-  //   shadowSize: [68, 95],
-  //   shadowAnchor: [20, 92]
-  // })
 
   const createPopups = (feature = {}, layer) => {
     const { properties = {} } = feature
@@ -118,11 +60,12 @@ function MapComp() {
                     icon={new L.Icon({
                       iconUrl: soloIcon,
                       iconRetinaUrl: soloIcon,
-                      iconAnchor: [10, 25],
-                      popupAnchor: [3, -25],
-                      iconSize: [25, 25],
-                      shadowSize: [68, 95],
-                      shadowAnchor: [20, 92]
+                      shadowUrl: pinShadow,
+                      iconAnchor: [12, 38],
+                      popupAnchor: [1, -37],
+                      iconSize: [25, 38],
+                      shadowSize: [18, 25],
+                      shadowAnchor: [0, 25]
                     })}>
                     <Popup>
                       <div className="mb-2 italic font-sainteColombe">{solo.properties.module}</div>
@@ -142,11 +85,12 @@ function MapComp() {
                     icon={new L.Icon({
                       iconUrl: duetIcon,
                       iconRetinaUrl: duetIcon,
-                      iconAnchor: [10, 25],
-                      popupAnchor: [3, -25],
-                      iconSize: [25, 25],
-                      shadowSize: [68, 95],
-                      shadowAnchor: [20, 92]
+                      shadowUrl: pinShadow,
+                      iconAnchor: [12, 38],
+                      popupAnchor: [1, -37],
+                      iconSize: [25, 38],
+                      shadowSize: [18, 25],
+                      shadowAnchor: [0, 25]
                     })}>
                     <Popup>
                       <div className="mb-2 italic font-sainteColombe">{duet.properties.module}</div>
@@ -166,11 +110,12 @@ function MapComp() {
                     icon={new L.Icon({
                       iconUrl: orchestraIcon,
                       iconRetinaUrl: orchestraIcon,
-                      iconAnchor: [25, 25],
-                      popupAnchor: [0, -25],
-                      iconSize: [50, 25],
-                      shadowSize: [68, 95],
-                      shadowAnchor: [20, 92]
+                      shadowUrl: pinShadow,
+                      iconAnchor: [12, 38],
+                      popupAnchor: [1, -37],
+                      iconSize: [25, 38],
+                      shadowSize: [18, 25],
+                      shadowAnchor: [0, 25]
                     })}>
                   <Popup>
                     <div className="mb-2 italic font-sainteColombe">{orchestra.properties.module}</div>
