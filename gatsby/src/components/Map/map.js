@@ -42,9 +42,8 @@ function MapComp() {
   // const orchestraOptions = { color: '#009245' }
 
   return (
-    <div id="map" className="w-full h-screen relative">
-      <div className="h-20"></div>
-      <div className="p-8 mx-auto w-4/5 h-4/5">
+    <div id="map" className="w-full h-screen relative flex justify-center items-center">
+      <div className="p-8 mx-auto w-full md:w-4/5 h-4/5">
         {(typeof window !== 'undefined') ? (
         <MapContainer center={location} zoom={zoom} scrollWheelZoom={false} className="z-10 w-full h-full relative">
           <LayersControl position="topright">

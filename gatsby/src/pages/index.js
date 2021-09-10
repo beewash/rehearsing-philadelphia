@@ -90,12 +90,12 @@ const IndexPage = (props) => {
                   Created by Ari Benjamin Meyers and jointly produced and presented by the Curtis Institute of Music and Drexel University’s Westphal College of Media Arts & Design, this large-scale public project explores how we can come together as a city through musical rehearsal. The traditional musical preparation process focuses on rehearsing as a way to attain perfection, which is then repeated in performance. This is not how we live modern life in a rapidly changing world of social upheaval. The future will be rehearsed, not perfected. Rehearsing Philadelphia re-examines the rehearsal processes which allow people to act together and be empowered to create new realities.
                 </p>
               </div>
-              <div className="flex-col text-center justify-around space-x-28">
-                <button className="inline-flex">
-                  <Link to="#map" className="pt-2 pb-1 px-4 font-acuminPro font-medium uppercase text-black text-cfsSM bg-white border-black border-2 rounded-full hover:bg-black hover:text-white">Explore the Map</Link>
+              <div className="flex-col md:flex-row text-center md:justify-around space-y-16 md:space-y-0 md:space-x-28">
+                <button className="inline w-full md:w-auto">
+                  <Link to="#map" className="pt-2 pb-1 px-4 font-acuminPro font-medium uppercase text-black text-cfsSM1 md:text-cfsSM bg-white border-black border-2 rounded-full hover:bg-black hover:text-white">Explore the Map</Link>
                 </button>
-                <button className="inline-flex">
-                  <Link to="/artist-directory" className="pt-2 pb-1 px-4 font-acuminPro font-medium uppercase text-black text-cfsSM bg-white border-black border-2 rounded-full hover:bg-black hover:text-white">Explore the Artists</Link>
+                <button className="inline w-full md:w-auto ">
+                  <Link to="/artist-directory" className="pt-2 pb-1 px-4 font-acuminPro font-medium uppercase text-black text-cfsSM1 md:text-cfsSM bg-white border-black border-2 rounded-full hover:bg-black hover:text-white">Explore the Artists</Link>
                 </button>
               </div>
             </div>
