@@ -1,6 +1,6 @@
 import React from "react"
-import { Link, navigate } from "@reach/router"
-import { getCurrentUser, isLoggedIn, logout } from "../../utils/auth"
+import { navigate } from "@reach/router"
+import { isLoggedIn, logout } from "../../utils/auth"
 
 export default () => {
   let details
@@ -11,7 +11,6 @@ export default () => {
       </div>
     )
   } else {
-    const { name, email } = getCurrentUser()
 
     details = (
       <div className="mx-auto w-3/4 text-center mb-20">

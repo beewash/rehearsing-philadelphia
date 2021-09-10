@@ -66,14 +66,14 @@ export const query = graphql`
         _type
         socialList {
           linkText
-          socialIcon {
+          thumbNail {
             asset {
               fluid(maxWidth: 800) {
                 ...GatsbySanityImageFluid
               }
             }
           }
-          socialLink {
+          link {
             externalContent
             linkUrl
           }

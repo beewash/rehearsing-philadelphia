@@ -6,4 +6,10 @@
 
 // You can delete this file if you're not using it
 
+import React from 'react'
+import {AnimatePresence} from 'framer-motion'
 import "./src/styles/tailwind.css"
+
+export const wrapPageElement = ({element}) => (
+  <AnimatePresence exitBeforeEnter>{element}</AnimatePresence>
+)

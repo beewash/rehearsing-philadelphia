@@ -13,8 +13,8 @@ const NotFoundPage = () => (
           <h3 className="mt-24">Page Not Found</h3>
         </div>
         <div className="text-black w-3/5 mt-24 mx-auto">
-          <p>For general information please email <strong><a href="mailto:info@rehearsingphiladelphia.org" target="_blank">info@rehearsingphiladelphia.org</a></strong> or call us at <strong>215-895-ARTS</strong>, Monday-Friday 10am-6pm.</p>
-          <p className="mt-8">All press and media inquiries please email <strong><a href="mailto:tbarnes@a-g.com" target="_blank">tbarnes@a-g.com</a></strong>.</p>
+          <p>For general information please email <strong><a href="mailto:info@rehearsingphiladelphia.org" target="_blank" rel="noreferrer">info@rehearsingphiladelphia.org</a></strong> or call us at <strong>215-895-ARTS</strong>, Monday-Friday 10am-6pm.</p>
+          <p className="mt-8">All press and media inquiries please email <strong><a href="mailto:tbarnes@a-g.com" target="_blank" rel="noreferrer">tbarnes@a-g.com</a></strong>.</p>
         </div>
       </div>
     </section>

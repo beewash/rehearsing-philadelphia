@@ -9,10 +9,10 @@ const PageBuilderSocial = ({ block }) => {
     <section id="pageBuilderSocial" className="max-w-6xl mx-auto px-6 pb-28" key={socialList.key}>
       <p className="font-medium mb-4">Social</p>
       <div>
-        {socialList[0].socialLink.externalContent ? (
-          <a href={socialList[0].socialLink.linkUrl} target='_blank' rel='noopener noreferer'><p>{socialList[0].linkText}</p></a>
+        {socialList[0].link.externalContent ? (
+          <a href={socialList[0].link.linkUrl} target='_blank' rel="noreferrer"><p>{socialList[0].linkText}</p></a>
         ) 
-          : <Link to={`/${socialList[0].socialLink.linkUrl}`}><p>{socialList[0].linkText}</p></Link>
+          : <Link to={`/${socialList[0].link.linkUrl}`}><p>{socialList[0].linkText}</p></Link>
         }
       </div>
     </section>

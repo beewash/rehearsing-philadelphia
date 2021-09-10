@@ -1,7 +1,7 @@
 export default {
-  name: 'socialLinks',
+  name: 'imgLink',
   type: 'object',
-  title: 'Social Links',
+  title: 'Image Link',
   fields: [
     {
       title: 'Link Text',
@@ -10,19 +10,19 @@ export default {
     },
     {
       title: 'Link',
-      name: 'socialLink',
+      name: 'link',
       type: 'link'
     },
     {
-      title: 'Social Icon',
-      name: 'socialIcon',
+      title: 'Image',
+      name: 'thumbNail',
       type: 'image'
     }
   ],
   preview: {
     select: {
       title: 'linkText',
-      media: 'socialIcon'
+      media: 'thumbNail'
     },
     prepare ({title, media}) {
       return {

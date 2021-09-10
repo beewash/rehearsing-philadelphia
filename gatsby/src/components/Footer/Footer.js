@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link, StaticQuery, graphql } from 'gatsby'
-import Image from "gatsby-image"
+import Image from "gatsby-image/withIEPolyfill"
 import PortableText from '../portableText'
 
 const FOOTER_QUERY = graphql`
@@ -30,16 +30,16 @@ const FOOTER_QUERY = graphql`
           social {
             _key
             linkText
-            socialIcon {
+            link {
+              externalContent
+              linkUrl
+            }
+            thumbNail {
               asset {
                 fluid(maxWidth: 800){
                   ...GatsbySanityImageFluid
                 }
               }
-            }
-            socialLink {
-              externalContent
-              linkUrl
             }
           }
           _rawSponsorText
@@ -55,9 +55,16 @@ const FOOTER_QUERY = graphql`
             }
           }
           sponsorLogos {
-            asset {
-              fluid(maxWidth: 800){
-                ...GatsbySanityImageFluid
+            linkText
+            link {
+              externalContent
+              linkUrl
+            }
+            thumbNail {
+              asset {
+                fluid(maxWidth: 800){
+                  ...GatsbySanityImageFluid
+                }
               }
             }
           }
@@ -73,30 +80,29 @@ const Footer = () => (
     render={data => (
       <footer id="footerWrapper" className="w-screen bg-white p-4 border-t-2 border-black">
       {data && data.footernav.edges.map(({node: footernav}) => (
-        <div id="footerContainer" className="flex flex-col space-y-4 md:space-y-0 md:space-x-8 md:flex-row">
-          {/* // Dynamically generate Footer Text here 
-          <div>
-          {footernav.footerText ? (
-            <div>
-              {footernav.footerText.map(footerTextBlock => (
-                <p>{footerTextBlock.children.text}</p>
-              ))}
-            </div>
-          ) : null}
-          </div> */}
-          <div id="footerColumnOne" className="flex items-stretch w-full md:w-1/2">
-            <div className="flex flex-col h-full content-between space-y-4 md:space-y-0">
-              <div className="w-full flex-grow">
-                <PortableText blocks={footernav._rawFooterText} />
-              </div>
-              <div className="w-full flex-none">
-                <PortableText blocks={footernav._rawContactText} />
-              </div>
-            </div>
-          </div>
-          <div id="footerColumnTwo" className="w-full space-y-4 md:w-1/2 flex flex-col">
-            <nav role='navigation' id="footerNav" className="flex-grow">
+        <div id="footerContainer" className="flex flex-col space-y-4 md:space-y-0 md:flex-row md:space-x-4">
+          <div id="footerColumnOne" className="flex items-stretch w-full">
+            <div className="flex flex-col h-full content-between space-y-4">
+              <nav role='navigation' id="footerNav" className="flex-grow">
                 <>
+                  <div id="socialContainer" className="mb-2">
+                  {footernav.social ? (
+                    <ul className="flex flex-row space-x-4">
+                    {footernav.social.map(socialItem => (
+                      <li key={socialItem._key}>
+                      {socialItem.link.externalContent ? (
+                        <a href={socialItem.link.linkUrl} target='_blank' rel="noreferrer">
+                          <Image fluid={socialItem.thumbNail.asset.fluid} className="w-5 h-5" />
+                        </a>
+                      ) : <Link to={`/${socialItem.link.linkUrl}`}>
+                            <Image fluid={socialItem.thumbNail.asset.fluid} className="w-5 h-5" />
+                          </Link>
+                      }
+                      </li>
+                    ))}
+                    </ul>
+                  ) : null}
+                  </div>
                   {footernav.footerNavigation ? (
                     <ul role='menubar'>
                       {footernav.footerNavigation.map(footerNav => (
@@ -104,7 +110,7 @@ const Footer = () => (
                         {footerNav.navItems.map(footerItems => (
                         <li key={footerItems._key} className="font-acuminPro font-bold">
                           {footerItems.navItemUrl.externalContent ? (
-                            <a href={footerItems.navItemUrl.linkUrl} target='_blank' rel='noopener noreferer'>{footerItems.text}</a>
+                            <a href={footerItems.navItemUrl.linkUrl} target='_blank' rel="noreferrer">{footerItems.text}</a>
                           )
                             : <Link to={`/${footerItems.navItemUrl.linkUrl}`}>{footerItems.text}</Link>
                           }
@@ -118,17 +124,26 @@ const Footer = () => (
                       <Link className="font-acuminPro font-bold" to="/app/profile">Artist Portal</Link>
                     </div>
                 </>
-            </nav>
+              </nav>
+              <div className="w-full flex-grow">
+                <PortableText blocks={footernav._rawFooterText} />
+              </div>
+              <div className="w-full flex-none">
+                <PortableText blocks={footernav._rawContactText} />
+              </div>
+            </div>
+          </div>
+          <div id="footerColumnTwo" className="w-full space-y-4 flex flex-col">
             <div id="sponsorContainer" className="flex-grow-0">
               <div className="mb-4">
                 <PortableText blocks={footernav._rawSponsorText} />
               </div>
               {footernav.sponsorLogos ? (
-                <div className="flex space-x-8">
+                <div className="space-x-8 flex">
                   {footernav.sponsorLogos.map(logo => (
-                    <div className="w-24 h-24 inline-flex items-center justify-center">
-                      <Image fluid={logo.asset.fluid} className="w-24" />
-                    </div>
+                    <a href={logo.link.linkUrl} target="_blank" rel="noreferrer">
+                      <Image fluid={logo.thumbNail.asset.fluid} className="h-48 w-72 object-contain" width="auto" objectFit="contain" />
+                    </a>
                   ))}
                 </div>
               ) : null}

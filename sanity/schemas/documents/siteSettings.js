@@ -84,7 +84,7 @@ export default {
       fieldset: 'footer',
       of: [
         {
-          type: 'socialLinks'
+          type: 'imgLink'
         }
       ]
     },
@@ -108,7 +108,7 @@ export default {
       type: 'array',
       of: [
         {
-          type: 'image'
+          type: 'imgLink'
         }
       ],
       fieldset: 'footer'

@@ -65,7 +65,9 @@ const Header = props => {
               <div className="flex flex-row space-x-2.5 lg:space-x-10 items-center justify-items-center justify-center">
                 <div>
                   <button className="flex">
-                    <Link to="/open-call" className="py-1 px-4 font-acuminPro font-medium uppercase text-white text-sm bg-orchestra-green border-black border-2 rounded-full hover:bg-black hover:text-white">Orchestra Open Call</Link>
+                    <Link to="/open-call" className="py-1 px-4 font-acuminPro font-medium uppercase text-white text-sm bg-orchestra-green border-black border-2 rounded-full hover:bg-black hover:text-white">
+                      Orchestra Open Call
+                    </Link>
                   </button>
                 </div>
                 <div className="flex">
@@ -75,16 +77,20 @@ const Header = props => {
                 </div>
               </div>
             </div>
-            <div id="navMenu" className={`z-40 w-full relative transition delay-150 duration-300 ease-in-out ${ isExpanded ? `block` : `hidden` }`}>
+            <div 
+              id="navMenu" 
+              className={`z-40 w-full relative transition delay-150 duration-300 ease-in-out ${ isExpanded ? `block` : `hidden` }`}
+            >
               <div className="w-full absolute top-0 flex p-4 text-center bg-white shadow-lg transform">
+                <ul role='menubar' className="flex flex-col mx-auto">
                 {headernav.mainNavigation ? (
-                  <ul role='menubar' className="flex flex-col mx-auto">
+                  <>
                     {headernav.mainNavigation.map(mainNav => (
                       <>
                       {mainNav.navItems.map(navItems => (
                       <li key={navItems._key} className="text-cfsL md:text-6xl mb-8">
                         {navItems.navItemUrl.externalContent ? (
-                          <a href={navItems.navItemUrl.linkUrl} target='_blank' rel='noopener noreferer'>{navItems.text}</a>
+                          <a href={navItems.navItemUrl.linkUrl} target='_blank' rel="noreferrer">{navItems.text}</a>
                         )
                           : <Link to={`/${navItems.navItemUrl.linkUrl}`}>{navItems.text}</Link>
                         }
@@ -92,8 +98,9 @@ const Header = props => {
                       ))}
                       </>
                     ))}
-                  </ul>
+                    </>
                 ) : null}
+                </ul>
               </div>
             </div>
           </nav>

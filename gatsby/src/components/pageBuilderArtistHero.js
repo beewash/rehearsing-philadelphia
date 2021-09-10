@@ -1,6 +1,5 @@
 import React from 'react'
 import Image from 'gatsby-image'
-import PortableText from './portableText'
 
 const PageBuilderArtistHero = ({ block, raw, index }) => {
   const { image, title, bkgImage } = block;

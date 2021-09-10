@@ -7,19 +7,8 @@ import Layout from "../containers/layout"
 import MapComp from "../components/Map/map"
 import Helmet from 'react-helmet'
 import logo from '../images/Logo_Symbols.png'
-import {BsArrowDown} from 'react-icons/bs'
-
-// import L from 'leaflet'
-// import 'leaflet/dist/leaflet.css'
-// import Map from '../components/Map'
-// import { locations } from '../data/locations'
-
-// const LOCATION = {
-//   lat: 38.9072,
-//   lng: -77.0369
-// };
-// const CENTER = [LOCATION.lat, LOCATION.lng];
-// const DEFAULT_ZOOM = 5;
+import { useInView } from 'react-intersection-observer'
+import {motion} from 'framer-motion'
 
 export const query = graphql`
   query IndexPageQuery {
@@ -32,6 +21,24 @@ export const query = graphql`
 `
 
 const IndexPage = (props) => {
+
+  const [ref, inView, entry] = useInView({
+    /* Optional options */
+    threshold: 0.5,
+    triggerOnce: false
+  })
+
+  console.log(entry)
+
+  const variants = {
+    visible: { opacity: 1, scale: 1, y: 0 },
+    hidden: {
+      opacity: 0,
+      scale: 0.65,
+      y: 50
+    }
+  }
+  
   const { data, errors } = props
   const site = data && data.site
   // const {pageBuilder, _rawPageBuilder} = site
@@ -71,7 +78,7 @@ const IndexPage = (props) => {
           keywords={site.keywords}
         />
         <Container>
-          <div className="">
+          <div className="mb-8">
             <div className="w-screen mb-20 md:mb-48">
               <div className="w-10/12 mx-auto mt-16 md:mt-32">
                 <img src={logo} alt="Rehearsing Philadelphia Logo" />
@@ -79,17 +86,29 @@ const IndexPage = (props) => {
             </div>
             <div className="text-center px-8 mt-12 md:mt-24 lg:w-9/12 mx-auto">
               <div className="mb-32">
-                <p>Created by Ari Benjamin Meyers and jointly produced and presented by the Curtis Institute of Music and Drexel University’s Westphal College of Media Arts & Design, this large-scale public project explores how we can come together as a city through musical rehearsal. The traditional musical preparation process focuses on rehearsing as a way to attain perfection, which is then repeated in performance. This is not how we live modern life in a rapidly changing world of social upheaval. The future will be rehearsed, not perfected. Rehearsing Philadelphia re-examines the rehearsal processes which allow people to act together and be empowered to create new realities.</p>
+                <p>
+                  Created by Ari Benjamin Meyers and jointly produced and presented by the Curtis Institute of Music and Drexel University’s Westphal College of Media Arts & Design, this large-scale public project explores how we can come together as a city through musical rehearsal. The traditional musical preparation process focuses on rehearsing as a way to attain perfection, which is then repeated in performance. This is not how we live modern life in a rapidly changing world of social upheaval. The future will be rehearsed, not perfected. Rehearsing Philadelphia re-examines the rehearsal processes which allow people to act together and be empowered to create new realities.
+                </p>
               </div>
-              <div className="flex-col text-center justify-center items-center space-y-4">
-                <h4>Explore the Map</h4>
-                <Link to="#map">
-                  <BsArrowDown className="mx-auto w-16 h-20" />
-                </Link>
+              <div className="flex-col text-center justify-around space-x-28">
+                <button className="inline-flex">
+                  <Link to="#map" className="pt-2 pb-1 px-4 font-acuminPro font-medium uppercase text-black text-cfsSM bg-white border-black border-2 rounded-full hover:bg-black hover:text-white">Explore the Map</Link>
+                </button>
+                <button className="inline-flex">
+                  <Link to="/artist-directory" className="pt-2 pb-1 px-4 font-acuminPro font-medium uppercase text-black text-cfsSM bg-white border-black border-2 rounded-full hover:bg-black hover:text-white">Explore the Artists</Link>
+                </button>
               </div>
             </div>
-          </div>
-          <MapComp/>
+          </div>    
+          <motion.div
+            animate={inView ? 'visible' : 'hidden'}
+            variants={variants}
+            transition={{ duration: 2, ease: 'easeOut' }}
+            ref={ref}
+            className="magic"
+          >
+            <MapComp />
+          </motion.div>
         </Container>
       </Layout>
     </>
@@ -97,116 +116,3 @@ const IndexPage = (props) => {
 }
 
 export default IndexPage
-
-// function createTripPointsGeoJson({ locations } = {}) {
-//   return {
-//     "type": "FeatureCollection",
-//     "features": locations.map(({ placename, location = {}, image, date, todo = [] } = {}) => {
-//       const { lat, lng } = location;
-//       return {
-//         "type": "Feature",
-//         "properties": {
-//           placename,
-//           todo,
-//           date,
-//           image
-//         },
-//         "geometry": {
-//           "type": "Point",
-//           "coordinates": [ lng, lat ]
-//         }
-//       }
-//     })
-//   }
-// }
-
-// /**
-//  * tripStopPointToLayer
-//  */
-
-// function createTripLinesGeoJson({ locations } = {}) {
-//   return {
-//     "type": "FeatureCollection",
-//     "features": locations.map((stop = {}, index) => {
-//       const prevStop = locations[index - 1];
-
-//       if ( !prevStop ) return [];
-
-//       const { placename, location = {}, date, todo = [] } = stop;
-//       const { lat, lng } = location;
-//       const properties = {
-//         placename,
-//         todo,
-//         date
-//       };
-
-//       const { location: prevLocation = {} } = prevStop;
-//       const { lat: prevLat, lng: prevLng } = prevLocation;
-
-//       return {
-//         type: 'Feature',
-//         properties,
-//         geometry: {
-//           type: 'LineString',
-//           coordinates: [
-//             [ prevLng, prevLat ],
-//             [ lng, lat ]
-//           ]
-//         }
-//       }
-//     })
-//   }
-// }
-
-// /**
-//  * tripStopPointToLayer
-//  */
-
-// function tripStopPointToLayer( feature = {}, latlng ) {
-//   const { properties = {} } = feature;
-//   const { placename, todo = [], image, date } = properties;
-
-//   const list = todo.map(what => `<li>${ what }</li>`);
-//   let listString = '';
-//   let imageString = '';
-
-//   if ( Array.isArray(list) && list.length > 0 ) {
-//     listString = list.join('');
-//     listString = `
-//       <p>Things we will or have done...</p>
-//       <ul>${listString}</ul>
-//     `
-//   }
-
-//   if ( image ) {
-//     imageString = `
-//       <span class="trip-stop-image" style="background-image: url(${image})">${placename}</span>
-//     `;
-//   }
-
-//   const text = `
-//     <div class="trip-stop">
-//       ${ imageString }
-//       <div class="trip-stop-content">
-//         <h2>${placename}</h2>
-//         <p class="trip-stop-date">${date}</p>
-//         ${ listString }
-//       </div>
-//     </div>
-//   `;
-
-//   const popup = L.popup({
-//     maxWidth: 400
-//   }).setContent(text);
-
-//   const layer = L.marker( latlng, {
-//     icon: L.divIcon({
-//       className: 'icon',
-//       html: `<span class="icon-trip-stop"></span>`,
-//       iconSize: 20
-//     }),
-//     riseOnHover: true
-//   }).bindPopup(popup);
-
-//   return layer;
-// }

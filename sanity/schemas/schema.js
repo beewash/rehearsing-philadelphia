@@ -39,7 +39,7 @@ import navItem from './objects/navItem'
 // import navGroup from './objects/navGroup'
 import emailEval from './objects/emailEval'
 import role from './objects/role'
-import socialLinks from './objects/socialLinks'
+import imgLink from './objects/imgLink'
 import performanceObject from './objects/performanceObject'
 import moduleFiles from './objects/moduleFiles'
 import moduleSection from './objects/moduleSection'
@@ -86,7 +86,7 @@ export default createSchema({
     excerptPortableText,
     emailEval,
     role,
-    socialLinks,
+    imgLink,
     performanceObject,
     moduleFiles,
     moduleSection,

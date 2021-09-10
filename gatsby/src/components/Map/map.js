@@ -36,15 +36,15 @@ function MapComp() {
     layer.bindPopup(popup)
   }
 
-  const soloOptions = { fillColor: '#FFC20E' }
+  // const soloOptions = { fillColor: '#FFC20E' }
   const duetOptions = { color: 'rgba(0, 0, 0, 0.5)' }
-  const ensembleOptions = { color: '#000F9F' }
-  const orchestraOptions = { color: '#009245' }
+  // const ensembleOptions = { color: '#000F9F' }
+  // const orchestraOptions = { color: '#009245' }
 
   return (
-    <div id="map" className="w-full relative">
+    <div id="map" className="w-full h-screen relative">
       <div className="h-20"></div>
-      <div className="p-8 h-screen-80">
+      <div className="p-8 mx-auto w-4/5 h-4/5">
         {(typeof window !== 'undefined') ? (
         <MapContainer center={location} zoom={zoom} scrollWheelZoom={false} className="z-10 w-full h-full relative">
           <LayersControl position="topright">

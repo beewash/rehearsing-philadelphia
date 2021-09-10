@@ -91,7 +91,7 @@ export default {
       name: 'social',
       title: 'Social',
       type: 'array',
-      of: [{type: 'socialLinks'}]
+      of: [{type: 'imgLink'}]
     },
     {
       title: 'Website/Portfolio',

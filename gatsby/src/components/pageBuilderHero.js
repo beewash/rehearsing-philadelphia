@@ -1,6 +1,5 @@
 import React from 'react'
 import Image from 'gatsby-image'
-import PortableText from './portableText'
 
 const PageBuilderHero = ({ block, raw, index }) => {
   const { image, title } = block;
@@ -9,9 +8,6 @@ const PageBuilderHero = ({ block, raw, index }) => {
     <section id="pageBuilderHero" className="relative w-screen h-60 md:h-screen mb-10 md:mb-28 overflow-hidden">
       <div className="relative z-20 text-center mt-16 md:mt-32">
         <h1 className="text-white">{title}</h1>
-        {/* <div className="text-white w-3/5 mt-24 mx-auto">
-          <PortableText blocks={raw.body} />
-        </div> */}
       </div>
       {image ? (
       <div className="absolute w-screen top-0 left-0">

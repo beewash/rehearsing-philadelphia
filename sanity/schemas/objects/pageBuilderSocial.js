@@ -7,7 +7,7 @@ export default {
       title: 'Social',
       name: 'socialList',
       type: 'array',
-      of: [{type: 'socialLinks'}]
+      of: [{type: 'imgLink'}]
     }
   ],
   preview: {
