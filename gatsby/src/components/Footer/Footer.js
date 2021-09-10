@@ -80,8 +80,8 @@ const Footer = () => (
     render={data => (
       <footer id="footerWrapper" className="w-screen bg-white p-4 border-t-2 border-black">
       {data && data.footernav.edges.map(({node: footernav}) => (
-        <div id="footerContainer" className="flex flex-col space-y-4 md:space-y-0 md:flex-row md:space-x-4">
-          <div id="footerColumnOne" className="flex items-stretch w-full">
+        <div id="footerContainer" className="flex flex-col space-y-4 xl:space-y-0 xl:flex-row xl:space-x-4">
+          <div id="footerColumnOne" className="flex items-stretch w-full xl:w-1/2">
             <div className="flex flex-col h-full content-between space-y-4">
               <nav role='navigation' id="footerNav" className="flex-grow">
                 <>
@@ -133,16 +133,16 @@ const Footer = () => (
               </div>
             </div>
           </div>
-          <div id="footerColumnTwo" className="w-full space-y-4 flex flex-col">
+          <div id="footerColumnTwo" className="w-full xl:w-1/2 space-y-4 flex flex-col">
             <div id="sponsorContainer" className="flex-grow-0">
               <div className="mb-4">
                 <PortableText blocks={footernav._rawSponsorText} />
               </div>
               {footernav.sponsorLogos ? (
-                <div className="space-x-8 flex">
+                <div className="space-x-8 flex w-full justify-between">
                   {footernav.sponsorLogos.map(logo => (
                     <a href={logo.link.linkUrl} target="_blank" rel="noreferrer">
-                      <Image fluid={logo.thumbNail.asset.fluid} className="h-48 w-72 object-contain" width="auto" objectFit="contain" />
+                      <Image fluid={logo.thumbNail.asset.fluid} className="w-20 h-20 md:h-48 md:w-48 lg:w-72 object-contain" width="auto" objectFit="contain" />
                     </a>
                   ))}
                 </div>
