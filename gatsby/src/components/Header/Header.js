@@ -106,7 +106,7 @@ const Header = props => {
           </nav>
         ))}
         </header>
-        <div className="z-1 absolute w-full h-1 top-0 left-0 flex-row space-x-4">
+        <div className="z-1 absolute w-1/2 h-1 top-0 left-0 flex-row space-x-4">
           <div className="w-full h-full hover:bg-solo-yellow"></div>
           <div className="w-full h-full hover:bg-duet-red"></div>
           <div className="w-full h-full hover:bg-ensemble-blue"></div>

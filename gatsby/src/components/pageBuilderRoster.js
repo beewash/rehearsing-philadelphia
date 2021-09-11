@@ -33,6 +33,7 @@ const PageBuilderRoster = ({block, raw}) => {
           <h4 className="normal-case" >{title}</h4>
         </div>
         <Button button={buttons} filter={filter} />
+        <div className="h-0.5 w-16 bg-black mb-8"></div>
         <Roster rosterItem={rosterItem} />
       </div>
     </section>

@@ -18,6 +18,7 @@ module.exports = {
     'gatsby-plugin-styled-components',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-react-leaflet',
+    `gatsby-plugin-scroll-reveal`,
     {
       resolve: 'gatsby-source-sanity',
       options: {

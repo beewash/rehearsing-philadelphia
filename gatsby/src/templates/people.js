@@ -2,6 +2,7 @@ import React from 'react'
 import {graphql} from 'gatsby'
 import Layout from '../components/Layout/Layout'
 import PageBuilder from '../components/pageBuilder'
+import SEO from '../components/SEO/SEO'
 
 export const query = graphql`
   query PeopleTemplateQuery($id: String!) {
@@ -24,6 +25,7 @@ const PageTemplate = props => {
 
   return (
     <Layout>
+      <SEO title={people.slug.current} />
       <div className="">
         <PageBuilder pageBuilder={pageBuilder} _rawPageBuilder={_rawPageBuilder} />
       </div>

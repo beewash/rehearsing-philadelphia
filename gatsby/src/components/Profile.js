@@ -2,6 +2,7 @@ import React from "react"
 import { Link, graphql, StaticQuery } from 'gatsby'
 import Image from 'gatsby-image'
 import { AiTwotoneFilePdf, AiOutlineLink } from 'react-icons/ai'
+import SEO from './SEO/SEO'
 
 const ARTIST_PORTAL_QUERY = graphql`
   query ArtistPortal { 
@@ -49,6 +50,8 @@ const ARTIST_PORTAL_QUERY = graphql`
 `
 
 const Profile = () => (
+    <>
+    <SEO title="Artist Portal" />
     <StaticQuery
       query={ARTIST_PORTAL_QUERY}
       render={data => (
@@ -127,6 +130,7 @@ const Profile = () => (
         </div>
       )}
     />
+    </>
 )
 
 export default Profile
