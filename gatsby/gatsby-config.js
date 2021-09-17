@@ -57,7 +57,11 @@ module.exports = {
             'slick-track',
             'slick-slide',
             'slick-active',
-            'slick-current'
+            'slick-current',
+            'slick-prev',
+            'slick-prev:before',
+            'slick-next',
+            'slick-next:before'
           ]
       }
     }
