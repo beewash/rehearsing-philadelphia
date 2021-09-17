@@ -107,10 +107,10 @@ const Header = props => {
         ))}
         </header>
         <div className="z-1 absolute w-1/2 h-1 top-0 left-0 flex-row space-x-4">
-          <div className="w-full h-full hover:bg-solo-yellow"></div>
-          <div className="w-full h-full hover:bg-duet-red"></div>
-          <div className="w-full h-full hover:bg-ensemble-blue"></div>
-          <div className="w-full h-full hover:bg-orchestra-green"></div>
+          <div className="w-full h-full bg-solo-yellow hover:bg-solo-yellow"></div>
+          <div className="w-full h-full bg-duet-red hover:bg-duet-red"></div>
+          <div className="w-full h-full bg-ensemble-blue hover:bg-ensemble-blue"></div>
+          <div className="w-full h-full bg-orchestra-green hover:bg-orchestra-green"></div>
         </div>
         </>
       )}
