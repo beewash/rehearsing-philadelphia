@@ -24,7 +24,7 @@ const PageBuilderColumns = ({block, raw}) => {
       <Slider {...settings}>
         {columns && columns.map((column, index) => (
         <div>
-          <div id="column" className={`bg-${column.bgColor} text-${column.textColor.colorPicker} w-full h-full px-8 md:px-32 py-16 mx-auto flex flex-col lg:flex-row lg:odd:flex-row-reverse items-center`}>
+          <div id="column" className={`bg-${column.bgColor} text-${column.textColor} w-full h-full px-8 md:px-32 py-16 mx-auto flex flex-col lg:flex-row lg:odd:flex-row-reverse items-center`}>
             {column.image ? (
             <div id="imageContainer" className="w-full h-full mb-8 lg:mb-0">
                 <Image fluid={column.image.asset.fluid} alt={column.image.alt} className="w-8/12 object-cover mx-auto justify-items-center items-center" />

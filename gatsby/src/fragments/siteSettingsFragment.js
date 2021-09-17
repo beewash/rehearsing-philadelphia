@@ -133,9 +133,7 @@ export const query = graphql`
         columns {
           title
           bgColor
-          textColor {
-            colorPicker
-          }
+          textColor
           image {
             alt
             asset {
