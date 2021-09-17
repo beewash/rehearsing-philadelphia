@@ -19,22 +19,22 @@ const zoom = 14
 
 function MapComp() {
 
-  const createPopups = (feature = {}, layer) => {
-    const { properties = {} } = feature
-    const { name, address, module, description } = properties
-    const popup = L.popup()
-    const html = `
-     <div class="popup-container" style="">
-     <ul>
-     <li style="margin-bottom:.5rem;font-style:italic;">${module.toString()}</li>
-     <li style="margin-bottom:.5rem;text-transform:uppercase"><strong>${name.toString()}</strong></li>
-     <li style="margin-bottom:.5rem;">${address.toString()}</li>
-     <li>${description.toString()}</li>
-     </div>
-     `
-    popup.setContent(html)
-    layer.bindPopup(popup)
-  }
+  // const createPopups = (feature = {}, layer) => {
+  //   const { properties = {} } = feature
+  //   const { name, address, module, description } = properties
+  //   const popup = L.popup()
+  //   const html = `
+  //    <div class="popup-container" style="">
+  //    <ul>
+  //    <li style="margin-bottom:.5rem;font-style:italic;">${module.toString()}</li>
+  //    <li style="margin-bottom:.5rem;text-transform:uppercase"><strong>${name.toString()}</strong></li>
+  //    <li style="margin-bottom:.5rem;">${address.toString()}</li>
+  //    <li>${description.toString()}</li>
+  //    </div>
+  //    `
+  //   popup.setContent(html)
+  //   layer.bindPopup(popup)
+  // }
 
   // const soloOptions = { fillColor: '#FFC20E' }
   const duetOptions = { color: 'rgba(0, 0, 0, 0.5)' }
@@ -42,8 +42,8 @@ function MapComp() {
   // const orchestraOptions = { color: '#009245' }
 
   return (
-    <div id="map" className="w-full h-screen relative flex justify-center items-center">
-      <div className="p-8 mx-auto w-full md:w-4/5 h-4/5">
+    <div id="map" className="w-full h-full relative flex justify-center items-center">
+      <div className="w-screen h-screen px-4 pb-4">
         {(typeof window !== 'undefined') ? (
         <MapContainer center={location} zoom={zoom} scrollWheelZoom={false} className="z-10 w-full h-full relative">
           <LayersControl position="topright">
@@ -133,12 +133,12 @@ function MapComp() {
             </LayersControl.Overlay>
             <LayersControl.Overlay checked name="Washington Square and Olde City Walk">
               <LayerGroup>
-                <GeoJSON data={washington_sq_route} key="washington_sq_route" onEachFeature={createPopups} pathOptions={duetOptions} />
+                <GeoJSON data={washington_sq_route} key="washington_sq_route" pathOptions={duetOptions} />
               </LayerGroup>
             </LayersControl.Overlay>
             <LayersControl.Overlay checked name="Walk from Love Park to Philadelphia Museum of Art">
               <LayerGroup>
-                <GeoJSON data={lovepark_route} key="lovepark_route" onEachFeature={createPopups} pathOptions={duetOptions} />
+                <GeoJSON data={lovepark_route} key="lovepark_route" pathOptions={duetOptions} />
               </LayerGroup>
             </LayersControl.Overlay>
           </LayersControl>

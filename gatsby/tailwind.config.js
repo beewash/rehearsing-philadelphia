@@ -12,11 +12,11 @@ module.exports = {
       fontSize: {
         cfsSM2: ['0.875rem', {lineHeight: '1.25rem'}],
         cfsSM1: ['1rem', {lineHeight: '1.5rem'}],
-        cfsSM: ['1.313rem', {lineHeight: '1.8rem'}],
+        cfsSM: ['1.313rem', {lineHeight: '2rem'}],
         cfs: ['1.75rem',{lineHeight: '2.5rem'}],
         cfsL: ['2.625rem', {lineHeight: '3.063rem'}],
-        cfsXL: ['4rem', {lineHeight: '5rem'}],
-        cfs2XL: '5.25rem'
+        cfsXL: ['4rem', {lineHeight: '5.5rem'}],
+        cfs2XL: ['5.25rem', {lineHeight: '7rem'}]
       },
       colors: {
         'solo-yellow': '#FFC20E',
@@ -32,6 +32,7 @@ module.exports = {
       height: {
         '24.5': '6.25rem',
         '36.5': '9.375rem',
+        '148': '37rem',
         'm-80' : 'calc(-80px + 100vh)'
       }
     }
@@ -39,7 +40,10 @@ module.exports = {
   variants: {
     extend: {
       flexDirection: ['odd', 'even', 'first', 'last'],
-      width: ['first', 'last']
+      width: ['first', 'last'],
+      textAlign: ['odd', 'even'],
+      textColor: ['odd', 'even'],
+      margin: ['last']
     },
   },
   plugins: [

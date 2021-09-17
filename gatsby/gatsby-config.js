@@ -15,9 +15,11 @@ module.exports = {
     author: 'Bryan Washington: bryanwashington.000 | bryanwashington@gmail.com'
   },
   plugins: [
-    'gatsby-plugin-styled-components',
-    'gatsby-plugin-react-helmet',
-    'gatsby-plugin-react-leaflet',
+    `gatsby-plugin-styled-components`,
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-react-leaflet`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     `gatsby-plugin-scroll-reveal`,
     {
       resolve: 'gatsby-source-sanity',
@@ -27,6 +29,13 @@ module.exports = {
         watchMode: !isProd,
         overlayDrafts: !isProd
       }
+    },
+    {
+      resolve: 'gatsby-background-image',
+      options: {
+        // add your own characters to escape, replacing the default ':/'
+        specialChars: ['/:', '\:', '/'],
+      },
     },
     {
       resolve: `gatsby-plugin-postcss`,
@@ -40,6 +49,16 @@ module.exports = {
         printRejected: false,
         develop: false,
         tailwind: true,
+        whitelist: 
+          [
+            'slick-slider',
+            'slick-initialized',
+            'slick-list',
+            'slick-track',
+            'slick-slide',
+            'slick-active',
+            'slick-current'
+          ]
       }
     }
   ]

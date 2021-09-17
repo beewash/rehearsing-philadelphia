@@ -32,6 +32,10 @@ export default {
       title: 'Roster'
     },
     {
+      type: 'pageBuilderGrid01',
+      title: 'Grid 01'
+    },
+    {
       type: 'pageBuilderBreak',
       title: 'Page Break'
     },

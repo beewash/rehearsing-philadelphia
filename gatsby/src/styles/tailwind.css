@@ -1,5 +1,7 @@
 @import url("https://use.typekit.net/hdp1bnn.css");
 @import url('../fonts/stylesheet.css');
+/* @import url('https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css'); */
 
 @tailwind base;
 @tailwind components;
@@ -23,7 +25,8 @@
       font-weight: bold;
     }
     p {
-      @apply text-cfs;
+      @apply text-cfsSM;
+      @apply break-words;
     }
     h5 {
       @apply text-cfsSM1;
@@ -70,7 +73,7 @@
     font-weight: bold;
   }
   p {
-    @apply text-cfsSM;
+    @apply text-cfsSM1;
     @apply break-words;
   }
   h5 {
@@ -96,6 +99,32 @@
     height: 100%;
   }
 
+  #locationInfo {
+    display: none;
+  }
+
+  #tileLocation:hover #locationInfo {
+    display: block;
+  }
+
+  .slick-prev:before,
+  .slick-next:before {
+    color: grey !important;
+  }
+
+  .slick-prev {
+    left: 25px !important;
+    z-index: 10;
+  }
+  
+  .slick-next {
+    right: 25px !important
+  }
+
+  #column {
+    min-height: 37rem;
+  }
+
   /* .hover-trigger .hover-target {
     display: none;
   }
@@ -103,4 +132,13 @@
   .hover-trigger:hover .hover-target {
       display: block;
   } */
+}
+
+@media (max-width:767px) {
+  .slick-prev {
+    left: 6px !important;
+  }
+  .slick-next {
+    right: 6px !important
+  }
 }

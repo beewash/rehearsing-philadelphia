@@ -1,16 +1,15 @@
 export default {
-  name: 'column',
-  title: 'Column',
+  title: 'Color Picker',
+  name: 'colorPickerParent',
   type: 'object',
+  options: {
+    collapsible: true,
+    collapsed: true
+  },
   fields: [
     {
-      name: 'title',
-      title: 'Title',
-      type: 'string'
-    },
-    {
-      name: 'bgColor',
-      title: 'Background Color',
+      name: 'colorPicker',
+      title: 'Color Picker',
       type: 'string',
       options: {
         list: [
@@ -21,24 +20,8 @@ export default {
           {title: 'Duet', value: 'duet-red'},
           {title: 'Ensemble', value: 'ensemble-blue'},
           {title: 'Orchestra', value: 'orchestra-green'}
-        ],
-        layout: 'radio'
+        ]
       }
-    },
-    {
-      name: 'textColor',
-      title: 'Text Color',
-      type: 'colorPickerParent'
-    },
-    {
-      name: 'body',
-      title: 'Body',
-      type: 'bodyPortableText'
-    },
-    {
-      name: 'image',
-      title: 'Image',
-      type: 'mainImage'
     }
   ]
 }

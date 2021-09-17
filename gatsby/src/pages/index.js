@@ -1,51 +1,61 @@
 import React from "react"
-import { graphql, Link } from "gatsby"
+import { graphql } from "gatsby"
+import Image from 'gatsby-image'
 import Container from "../components/Container/Container"
 import GraphQLErrorList from "../components/graphql-error-list"
 import SEO from "../components/SEO/SEO"
 import Layout from "../containers/layout"
+import PageBuilder from "../components/pageBuilder"
 import MapComp from "../components/Map/map"
 import Helmet from 'react-helmet'
 import logo from '../images/Logo_Symbols.png'
-import { Spring, animated } from 'react-spring'
-import VisibilitySensor from "react-visibility-sensor"
-import { useInView } from 'react-intersection-observer'
-import {motion} from 'framer-motion'
+// import { Spring, animated } from 'react-spring'
+// import VisibilitySensor from "react-visibility-sensor"
+// import { useInView } from 'react-intersection-observer'
+// import {motion} from 'framer-motion'
 
 export const query = graphql`
   query IndexPageQuery {
     site: sanitySiteSettings {
+      ...IndexBuilder
       title
       description
       keywords
+      moduleIcons {
+        asset {
+          fluid(maxWidth: 800) {
+            ...GatsbySanityImageFluid
+          }
+        }
+      }
     }
   }
 `
 
 const IndexPage = (props) => {
 
-  const [ref, inView, entry] = useInView({
-    /* Optional options */
-    threshold: 0.5,
-    triggerOnce: false
-  })
+  // const [ref, inView, entry] = useInView({
+  //   /* Optional options */
+  //   threshold: 0.5,
+  //   triggerOnce: false
+  // })
 
-  console.log(entry)
+  // console.log(entry)
 
-  const variants = {
-    visible: { opacity: 1, scale: 1, y: 0 },
-    hidden: {
-      opacity: 0,
-      scale: 0.65,
-      y: 50
-    }
-  }
+  // const variants = {
+  //   visible: { opacity: 1, scale: 1, y: 0 },
+  //   hidden: {
+  //     opacity: 0,
+  //     scale: 0.65,
+  //     y: 50
+  //   }
+  // }
   
   const { data, errors } = props
   const site = data && data.site
-  // const {pageBuilder, _rawPageBuilder} = site
+  const {pageBuilder, _rawPageBuilder} = site
 
-  console.log('index: ', site);
+  console.log('index: ', site)
 
   if (errors) {
     return (
@@ -72,6 +82,8 @@ const IndexPage = (props) => {
           integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
           crossorigin=""
         />
+        <link rel="stylesheet" type="text/css" charset="UTF-8" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" /> 
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
       </Helmet>
       <Layout>
         <SEO
@@ -80,42 +92,40 @@ const IndexPage = (props) => {
           keywords={site.keywords}
         />
         <Container>
-          <div className="mb-8">
-            <div className="w-screen mb-20 md:mb-48">
-              <div className="w-10/12 mx-auto mt-16 md:mt-32">
+          <div className="my-16 lg:m-0 lg:min-h-screen flex justify-items-center items-center">
+            <div className="w-screen h-full">
+              <div className="w-10/12 mx-auto">
                 <img src={logo} alt="Rehearsing Philadelphia Logo" />
               </div>
             </div>
-            <div className="text-center px-8 mt-12 md:mt-24 lg:w-9/12 mx-auto">
-              <div 
-                className="mb-32"
+          </div>
+          <div className="min-h-screen p-4 mb-32 flex flex-col  justify-items-center items-center lg:m-0 lg:flex-row lg:space-x-4">
+            <div className="w-full h-full lg:w-1/2 items-stretch">
+              <div className="w-full h-full grid grid-cols-2 grid-rows-2 gap-4 p-8 md:p-28">
+                {site.moduleIcons.map(icon => (
+                  <div className="w-full h-full">
+                    <Image fluid={icon.asset.fluid} />
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="w-full h-full lg:w-1/2 text-center">
+              <div
+                className="w-4/5 mx-auto"
                 data-sal="slide-up"
                 data-sal-delay="300"
                 data-sal-easing="ease"
               >
+                <h2 className="mb-8">About</h2>
                 <p>
                   Created by Ari Benjamin Meyers and jointly produced and presented by the Curtis Institute of Music and Drexel University’s Westphal College of Media Arts & Design, this large-scale public project explores how we can come together as a city through musical rehearsal. The traditional musical preparation process focuses on rehearsing as a way to attain perfection, which is then repeated in performance. This is not how we live modern life in a rapidly changing world of social upheaval. The future will be rehearsed, not perfected. Rehearsing Philadelphia re-examines the rehearsal processes which allow people to act together and be empowered to create new realities.
                 </p>
               </div>
-              <VisibilitySensor>
-                {({ isVisible }) => (
-                  <Spring delay={300} to={{ opacity: isVisible ? 1 : 0 }}>
-                    {styles => (
-                      <animated.div style={styles} className="flex-col md:flex-row text-center md:justify-around space-y-16 md:space-y-0 md:space-x-28">
-                        <button className="inline w-full md:w-auto">
-                          <Link to="#map" className="pt-2 pb-1 px-4 font-acuminPro font-medium uppercase text-black text-cfsSM1 md:text-cfsSM bg-white border-black border-2 rounded-full hover:bg-black hover:text-white">Explore the Map</Link>
-                        </button>
-                        <button className="inline w-full md:w-auto">
-                          <Link to="/artist-directory" className="pt-2 pb-1 px-4 font-acuminPro font-medium uppercase text-black text-cfsSM1 md:text-cfsSM bg-white border-black border-2 rounded-full hover:bg-black hover:text-white">Explore the Artists</Link>
-                        </button>
-                      </animated.div>
-                    )}
-                  </Spring>
-                )}
-              </VisibilitySensor>
             </div>
-          </div>    
-          <motion.div
+          </div>
+          <PageBuilder pageBuilder={pageBuilder} _rawPageBuilder={_rawPageBuilder} />
+          <MapComp />
+          {/* <motion.div
             animate={inView ? 'visible' : 'hidden'}
             variants={variants}
             transition={{ duration: 2, ease: 'easeOut' }}
@@ -123,7 +133,7 @@ const IndexPage = (props) => {
             className="magic"
           >
             <MapComp />
-          </motion.div>
+          </motion.div> */}
         </Container>
       </Layout>
     </>

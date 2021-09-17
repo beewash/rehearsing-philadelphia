@@ -31,6 +31,7 @@ import pageBuilderPageTitle from './objects/pageBuilderPageTitle'
 import pageBuilderBody from './objects/pageBuilderBody'
 import pageBuilderRoster from './objects/pageBuilderRoster'
 import pageBuilderPageBreak from './objects/pageBuilderPageBreak'
+import pageBuilderGrid01 from './objects/pageBuilderGrid01'
 import pageBuilderSocial from './objects/pageBuilderSocial'
 import column from './objects/column'
 import link from './objects/link'
@@ -38,6 +39,13 @@ import link from './objects/link'
 import navItem from './objects/navItem'
 // import navGroup from './objects/navGroup'
 import emailEval from './objects/emailEval'
+import colorPicker from './objects/colorPicker'
+import colLayout from './objects/colLayout'
+import rowLayout from './objects/rowLayout'
+import tileAbout from './objects/tileAbout'
+import tileBasic from './objects/tileBasic'
+import tileDescription from './objects/tileDescription'
+import tileLocation from './objects/tileLocation'
 import role from './objects/role'
 import imgLink from './objects/imgLink'
 import performanceObject from './objects/performanceObject'
@@ -77,6 +85,7 @@ export default createSchema({
     pageBuilderPageTitle,
     pageBuilderBody,
     pageBuilderRoster,
+    pageBuilderGrid01,
     pageBuilderPageBreak,
     pageBuilderSocial,
     column,
@@ -85,6 +94,13 @@ export default createSchema({
     bioPortableText,
     excerptPortableText,
     emailEval,
+    colorPicker,
+    colLayout,
+    rowLayout,
+    tileAbout,
+    tileBasic,
+    tileDescription,
+    tileLocation,
     role,
     imgLink,
     performanceObject,

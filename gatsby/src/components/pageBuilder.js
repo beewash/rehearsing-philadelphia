@@ -8,6 +8,7 @@ import PageBuilderRoster from "./pageBuilderRoster"
 import PageBuilderPageBreak from "./pageBuilderPageBreak"
 import PageBuilderArtistHero from "./pageBuilderArtistHero"
 import PageBuilderSocial from "./pageBuilderSocial"
+import PageBuilderGrid01 from "./pageBuilderGrid01"
 import CTA from "./cta"
 
 function PageBuilder(props) {
@@ -26,6 +27,7 @@ function PageBuilder(props) {
     pageBuilderRoster: PageBuilderRoster,
     pageBuilderBreak: PageBuilderPageBreak,
     pageBuilderSocial: PageBuilderSocial,
+    pageBuilderGrid01: PageBuilderGrid01,
     cta: CTA
   }
 

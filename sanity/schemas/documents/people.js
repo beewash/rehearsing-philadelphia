@@ -74,17 +74,35 @@ export default {
       }
     },
     {
+      name: 'textColor',
+      title: 'Text Color',
+      type: 'string',
+      options: {
+        list: [
+          {title: 'Transparent', value: 'transparent'},
+          {title: 'White', value: 'white'},
+          {title: 'Black', value: 'black'},
+          {title: 'Solo', value: 'solo-yellow'},
+          {title: 'Duet', value: 'duet-red'},
+          {title: 'Ensemble', value: 'ensemble-blue'},
+          {title: 'Orchestra', value: 'orchestra-green'}
+        ]
+      }
+    },
+    {
       name: 'hoverColor',
       title: 'Hover Color',
       type: 'string',
       options: {
         list: [
+          {title: 'Transparent', value: 'transparent'},
+          {title: 'White', value: 'white'},
+          {title: 'Black', value: 'black'},
           {title: 'Solo', value: 'solo-yellow'},
           {title: 'Duet', value: 'duet-red'},
           {title: 'Ensemble', value: 'ensemble-blue'},
           {title: 'Orchestra', value: 'orchestra-green'}
-        ],
-        layout: 'radio'
+        ]
       }
     },
     {

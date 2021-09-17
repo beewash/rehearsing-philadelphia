@@ -15,18 +15,6 @@ export default {
       type: 'url',
       description: 'The main site url. Used to create canonical url'
     },
-    // {
-    //   name: 'homepage',
-    //   type: 'reference',
-    //   description: 'Choose page to be the homepage',
-    //   to: {type: 'homePage'}
-    // },
-    {
-      name: 'description',
-      type: 'text',
-      title: 'Description',
-      description: 'Describe your blog for search engines and social media.'
-    },
     {
       name: 'rhLogo',
       title: 'Logo',
@@ -36,6 +24,26 @@ export default {
           type: 'image'
         }
       ]
+    },
+    {
+      name: 'moduleIcons',
+      title: 'Module Icons',
+      type: 'array',
+      of: [
+        {
+          type: 'image'
+        }
+      ]
+    },
+    {
+      name: 'pageBuilder',
+      type: 'pageBuilder'
+    },
+    {
+      name: 'description',
+      type: 'text',
+      title: 'Description',
+      description: 'Describe your blog for search engines and social media.'
     },
     {
       name: 'keywords',
