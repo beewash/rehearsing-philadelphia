@@ -58,10 +58,11 @@ module.exports = {
             'slick-slide',
             'slick-active',
             'slick-current',
-            'slick-prev',
-            'slick-prev:before',
-            'slick-next',
-            'slick-next:before'
+            '.slick-prev',
+            '.slick-prev:before',
+            '.slick-next',
+            '.slick-next:before',
+            '.slick-dots'
           ]
       }
     }

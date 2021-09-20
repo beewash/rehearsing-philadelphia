@@ -5,30 +5,13 @@
       "type": "Point",
       "modType": "Duet",
       "coordinates": {
-        "lat": 39.9527866174533, 
-        "lon": -75.19345873102985
-      }
-    },
-    "properties": {
-      "name": "University of Pennsylvania",
-      "address": "Stop 1 of 3",
-      "module": "Duet",
-      "description": "Historically, the section of road now called Baltimore Ave. was a portion of the larger Baltimore Pike, once connecting Baltimore, MD to Philadelphia. Today, this stretch of road is mostly commercial properties. We will begin our DUET walk at 52nd and Baltimore and travel east toward Clark Park, a West Philadelphia community hub that plays host to a variety of events from farmers markets to live theatre productions. From there we will continue to the University of the Sciences, founded in 1821 as the Philadelphia College of Pharmacy. Finally, we continue northeast on Woodland Ave. toward the campus of the University of Pennsylvania, a private Ivy League research institution founded in 1740."
-    }
-  },
-  {
-    "type": "Feature",
-    "geometry": {
-      "type": "Point",
-      "modType": "Duet",
-      "coordinates": {
         "lat": 39.94769029015476,
         "lon": -75.20697475576824
       }
     },
     "properties": {
       "name": "University of The Sciences in Philadelphia",
-      "address": "Stop 2 of 3",
+      "address": "Stop 1 of 2",
       "module": "Duet",
       "description": "Historically, the section of road now called Baltimore Ave. was a portion of the larger Baltimore Pike, once connecting Baltimore, MD to Philadelphia. Today, this stretch of road is mostly commercial properties. We will begin our DUET walk at 52nd and Baltimore and travel east toward Clark Park, a West Philadelphia community hub that plays host to a variety of events from farmers markets to live theatre productions. From there we will continue to the University of the Sciences, founded in 1821 as the Philadelphia College of Pharmacy. Finally, we continue northeast on Woodland Ave. toward the campus of the University of Pennsylvania, a private Ivy League research institution founded in 1740."
     }
@@ -45,7 +28,7 @@
     },
     "properties": {
       "name": "52nd and Baltimore",
-      "address": "Stop 3 of 3",
+      "address": "Stop 2 of 2",
       "module": "Duet",
       "description": "Historically, the section of road now called Baltimore Ave. was a portion of the larger Baltimore Pike, once connecting Baltimore, MD to Philadelphia. Today, this stretch of road is mostly commercial properties. We will begin our DUET walk at 52nd and Baltimore and travel east toward Clark Park, a West Philadelphia community hub that plays host to a variety of events from farmers markets to live theatre productions. From there we will continue to the University of the Sciences, founded in 1821 as the Philadelphia College of Pharmacy. Finally, we continue northeast on Woodland Ave. toward the campus of the University of Pennsylvania, a private Ivy League research institution founded in 1740."
     }

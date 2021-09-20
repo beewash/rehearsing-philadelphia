@@ -65,24 +65,31 @@ const Profile = () => (
                   <div className="mb-6">
                     <h3 className="">General Information</h3>
                   </div>
-                    <div>
-                      <ul className="space-y-4">
-                        <li>
-                          <div className="flex flex-row space-x-2 items-center justify-items-center">
-                          {generalInfo.externalContent ? (
-                            <>
-                              <AiOutlineLink className="w-7 h-7"/>
-                              <a rel="noopener noreferrer" href={generalInfo.externalLink} target="_blank"><p>{generalInfo.docName}</p></a>
-                            </>
-                          ) : <>
-                                <AiTwotoneFilePdf className="w-7 h-7"/>
-                                <Link rel="noopener noreferrer" to={`/${generalInfo.document.asset.url}`} target="_blank"><p>{generalInfo.docName}</p></Link>
+                  {generalInfo.externalContent ? (
+                    <>
+                      <div>
+                        <ul className="space-y-4">
+                          <li>
+                            <div className="flex flex-row space-x-2 items-center justify-items-center">
+                            {generalInfo.externalContent ? (
+                              <>
+                                <AiOutlineLink className="w-7 h-7"/>
+                                <a rel="noopener noreferrer" href={generalInfo.externalLink} target="_blank"><p>{generalInfo.docName}</p></a>
                               </>
-                          }
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
+                            ) : <>
+                                  <AiTwotoneFilePdf className="w-7 h-7"/>
+                                  <Link rel="noopener noreferrer" to={`/${generalInfo.document.asset.url}`} target="_blank"><p>{generalInfo.docName}</p></Link>
+                                </>
+                            }
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </>
+                  ) : <div>
+                        <p className="italic">*Nothing here yet.  Check the modules to see module specific information.</p>
+                      </div>
+                  }
                 </div>
               ))}
               </>

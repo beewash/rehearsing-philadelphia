@@ -9,7 +9,7 @@ const PageBuilderColumns = ({block, raw}) => {
   const {columns} = block
 
   const settings = {
-    dots: false,
+    dots: true,
     adaptiveHeight: true,
     fade: true,
     infinite: true,

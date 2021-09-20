@@ -97,6 +97,10 @@ const IndexPage = (props) => {
               <div className="w-10/12 mx-auto">
                 <img src={logo} alt="Rehearsing Philadelphia Logo" />
               </div>
+              <div className="w-10/12 mx-auto">
+                <p>March 25 - April 10, 2022</p>
+                <p>Philadelphia, PA</p>
+              </div>
             </div>
           </div>
           <div className="min-h-screen p-4 mb-32 flex flex-col  justify-items-center items-center lg:m-0 lg:flex-row lg:space-x-4">

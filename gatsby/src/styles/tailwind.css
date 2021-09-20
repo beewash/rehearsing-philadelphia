@@ -119,7 +119,11 @@
   }
   
   .slick-next {
-    right: 25px !important
+    right: 25px !important;
+  }
+
+  .slick-dots {
+    bottom: 10px !important;
   }
 
   #column {
