@@ -108,24 +108,6 @@
     display: block;
   } */
 
-  .slick-prev:before,
-  .slick-next:before {
-    color: grey !important;
-  }
-
-  .slick-prev {
-    left: 25px !important;
-    z-index: 10;
-  }
-  
-  .slick-next {
-    right: 25px !important;
-  }
-
-  .slick-dots {
-    bottom: 10px !important;
-  }
-
   #column {
     min-height: 37rem;
   }
@@ -137,6 +119,24 @@
   .hover-trigger:hover .hover-target {
       display: block;
   } */
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: grey !important;
+}
+
+.slick-prev {
+  left: 25px !important;
+  z-index: 10;
+}
+
+.slick-next {
+  right: 25px !important;
+}
+
+.slick-dots {
+  bottom: 10px !important;
 }
 
 @media (max-width:767px) {

@@ -10,6 +10,7 @@ const PageBuilderColumns = ({block, raw}) => {
 
   const settings = {
     dots: true,
+    arrows: true,
     adaptiveHeight: true,
     fade: true,
     infinite: true,
