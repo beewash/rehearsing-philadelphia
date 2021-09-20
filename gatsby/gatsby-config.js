@@ -49,21 +49,10 @@ module.exports = {
         printRejected: false,
         develop: false,
         tailwind: true,
-        whitelist: 
-          [
-            'slick-slider',
-            'slick-initialized',
-            'slick-list',
-            'slick-track',
-            'slick-slide',
-            'slick-active',
-            'slick-current',
-            'slick-prev',
-            'slick-prev:before',
-            'slick-next',
-            'slick-next:before',
-            'slick-dots'
-          ]
+        ignore: [
+          '/node_modules/slick-carousel/slick/slick.css',
+          '/node_modules/slick-carousel/slick/slick-theme.css'
+        ]
       }
     }
   ]
