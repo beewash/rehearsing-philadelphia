@@ -40,6 +40,7 @@
 @layer base {
   html, body {
     @apply font-sainteColombe;
+    @apply subpixel-antialiased;
     width: 100%;
     height: 100vh;
     -ms-overflow-style: none;  /* IE and Edge */
@@ -99,13 +100,13 @@
     height: 100%;
   }
 
-  #locationInfo {
+  /* #locationInfo {
     display: none;
   }
 
   #tileLocation:hover #locationInfo {
     display: block;
-  }
+  } */
 
   .slick-prev:before,
   .slick-next:before {

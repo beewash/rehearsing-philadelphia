@@ -13,7 +13,13 @@
       "name": "Cherry Street Pier",
       "address": "121 N Christopher Columbus Blvd",
       "module": "Orchestra",
-      "description": "Cherry Street Pier is a 65,000 square foot warehouse and former shipping pier which was a vibrant part of Philadelphia’s shipping industry. Originally built in 1919 as Shipping Pier 9, it has been carefully repurposed to preserve and celebrate its historic value. Now open year-round, Cherry Street Pier operates as a mixed-use public space hosting artist studios, a public market, an open-air garden, multidisciplinary performances and art displays, and food and drink. The site is a reflection of Philadelphia today—creative, diverse, historic, adaptable, and inspired."
+      "facts": [
+        {"fact": "City Hall was the tallest habitable building in the world from 1894 to 1908."},
+        {"fact": "The 5.5 mile Delaware River Trail project connects to the Cherry Street Peer."},
+        {"fact": "Cherry Street Peer houses close to a dozen artist studios in addition to an outdoor restaurant and bar and open performance venue."}
+      ],
+      "question": "A transparent space open to all, a framework on the water.  ",
+      "statement": "The first public home of the Public Orchestra of Philadelphia."
     }
   }
 ]

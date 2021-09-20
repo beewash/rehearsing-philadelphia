@@ -13,7 +13,13 @@
       "name": "School District of Philadelphia",
       "address": "440 N. Broad Street",
       "module": "Solo",
-      "description": "The School District of Philadelphia is the eighth largest school district in the United States, with more than  203,000 students enrolled in 325 schools, and more than 19,000 employees. Their mission is to deliver on the civil right of every child in Philadelphia to an excellent public school education and ensure all children graduate from high school ready to succeed, fully engaged as a citizen of our world."
+      "facts": [
+        {"fact": "The School District of Philadelphia serves over 200,000 students in 339 schools and is the 8th largest in the nation."},
+        {"fact": "The School District of Philadelphia’s annual budget is 3 billion dollars."},
+        {"fact": "As of the 2014–2015 school year, there were 107 languages other than English spoken at home by district students."}
+      ],
+      "question": "Who learns, who teaches?  ",
+      "statement": "Performance as knowledge production."
     }
   },
   {
@@ -30,7 +36,13 @@
       "name": "Philadelphia Police Department",
       "address": "400 N. Broad Street",
       "module": "Solo",
-      "description": "The Philadelphia Police Department is the fourth largest in the nation, serving approximately 1.5 million people in Philadelphia County across 21 police districts. The department employs more than 6,300 sworn members and 800 civilian personnel."
+      "facts": [
+        {"fact": "The Philadelphia Police Department is the fourth largest in the nation."},
+        {"fact": "The department proposed an annual budget of $270 million for the 2022 year."},
+        {"fact": "The department employs more than 6,300 sworn members and 800 civilian personnel."}
+      ],
+      "question": "A transfer of power through an unlikely transformation of performer.  ",
+      "statement": "Performance as agency."
     }
   },
   {
@@ -47,7 +59,13 @@
       "name": "Penn Medicine",
       "address": "3400 Civic Center Blvd",
       "module": "Solo",
-      "description": "The history of Penn Medicine grows from the founding of Pennsylvania Hospital, the first hospital in the United States established in 1751, and the nation's first medical school, the University of Pennsylvania, established in 1756. Today, Penn Medicine includes six acute-care hospitals and hundreds of outpatient locations throughout the Philadelphia region, as well as educational facilities at the Perelman School of Medicine. The top health care employer in Philadelphia, Penn Medicine cites $15.1 Billion in economic impact to the region annually."
+      "facts": [
+        {"fact": "The University of Pennsylvania was the nation’s first hospital, founded in 1751, and the first medical school in the US opening in 1765."},
+        {"fact": "The hospital of the University of Pennsylvania is the #1 ranked hospital in the US."},
+        {"fact": "In Philadelphia, nearly 40 percent of non-citizen immigrants are uninsured — over four times the rate of the general population."}
+      ],
+      "question": "The medical laboratory as a metabolic theater of the body.",
+      "statement": "Performance as experiment."
     }
   },
   {
@@ -64,7 +82,13 @@
       "name": "City Hall",
       "address": "Broad and Market",
       "module": "Solo",
-      "description": "Philadelphia City Hall is the center of government in the city, housing the supreme court, council chambers, and the mayor's office, among many more public and private spaces. From the outset, this extravagant monument was controversial for its location and its architecture, but has since been embraced as a distinctive emblem at the heart of the historic city. Topped by an iconic Philadelphia landmark, the statue of William Penn, the City Hall building is the largest municipal building in the United States and was the tallest building in the city of Philadelphia until 1987."
+      "facts": [
+        {"fact": "City Hall was the tallest habitable building in the world from 1894 to 1908."},
+        {"fact": "The building structure used over 88 million bricks and thousands of tons of marble and granite. With almost 700 rooms, City Hall is the largest municipal building in the United States and one of the largest in the world."},
+        {"fact": "The building houses three branches of government: the city's executive branch (Mayor’s Office), its legislature (Philadelphia City Council), and a substantial portion of the judicial activity in the city."}
+      ],
+      "question": "Who speaks for whom, who performs for whom?",
+      "statement": "Performance as civic duty."
     }
   }
 ]

@@ -13,7 +13,6 @@ const PageBuilderColumns = ({block, raw}) => {
     adaptiveHeight: true,
     fade: true,
     infinite: true,
-    touchMove: true,
     slidesToShow: 1,
     slidesToScroll: 1
   }

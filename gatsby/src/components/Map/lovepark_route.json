@@ -2,12 +2,12 @@
   {
     "type": "Feature",
     "geometry": {
-      "type": "LineString",
+      "type": "Polygon",
       "modType": "Duet",
-      "coordinates": [
+      "coordinates": [[
         [-75.16564901958411, 39.95428925975284],
         [-75.18101974596968, 39.965758806037464]
-      ]
+      ]]
     },
     "properties": {
       "name": "Love Park to Philadelphia Museum of Art",

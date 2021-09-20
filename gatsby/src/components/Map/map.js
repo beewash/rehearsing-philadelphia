@@ -19,6 +19,10 @@ const zoom = 14
 
 function MapComp() {
 
+  {orchestra.map(orchestra => (
+    console.log(orchestra.properties.facts)
+  ))}
+
   // const createPopups = (feature = {}, layer) => {
   //   const { properties = {} } = feature
   //   const { name, address, module, description } = properties
@@ -67,10 +71,15 @@ function MapComp() {
                       shadowAnchor: [0, 25]
                     })}>
                     <Popup>
-                      <div className="mb-2 italic font-sainteColombe">{solo.properties.module}</div>
-                      <div className="mb-2 font-semibold font-acuminPro uppercase">{solo.properties.name}</div>
+                      <div className="mb-2 uppercase font-acuminPro text-solo-yellow">{solo.properties.module}</div>
+                      <div className="mb-2 text-sm font-semibold font-sainteColombe">{solo.properties.name}</div>
                       <div className="mb-2 font-sainteColombe">{solo.properties.address}</div>
-                      <div className="mb-2 font-sainteColombe">{solo.properties.description}</div>
+                      <ol className="mt-3.5 pt-3.5 pl-3.5 list-outside list-decimal font-sainteColombe border-t-2 border-black">
+                        {solo.properties.facts.map(fact => (
+                          <li className="mb-2.5">{fact.fact}</li>
+                        ))}
+                      </ol>
+                      <div className="mb-2 font-sainteColombe">{solo.properties.question}  <span className="font-semibold">{solo.properties.statement}</span></div>
                     </Popup>
                   </Marker>
                 ))}
@@ -92,10 +101,10 @@ function MapComp() {
                       shadowAnchor: [0, 25]
                     })}>
                     <Popup>
-                      <div className="mb-2 italic font-sainteColombe">{duet.properties.module}</div>
-                      <div className="mb-2 font-semibold font-acuminPro uppercase">{duet.properties.name}</div>
+                      <div className="mb-2 uppercase font-acuminPro text-duet-red">{duet.properties.module}</div>
+                      <div className="mb-2 text-sm font-semibold font-sainteColombe">{duet.properties.name}</div>
                       <div className="mb-2 font-sainteColombe">{duet.properties.address}</div>
-                      <div className="mb-2 font-sainteColombe">{duet.properties.description}</div>
+                      <div className="mt-3.5 pt-3.5 font-sainteColombe border-t-2 border-black mb-2">{duet.properties.description}</div>
                     </Popup>
                   </Marker>
                 ))}
@@ -117,10 +126,15 @@ function MapComp() {
                       shadowAnchor: [0, 25]
                     })}>
                   <Popup>
-                    <div className="mb-2 italic font-sainteColombe">{orchestra.properties.module}</div>
-                    <div className="mb-2 font-semibold font-acuminPro uppercase">{orchestra.properties.name}</div>
+                    <div className="mb-2 uppercase font-acuminPro text-orchestra-green">{orchestra.properties.module}</div>
+                    <div className="mb-2 text-sm font-semibold font-sainteColombe">{orchestra.properties.name}</div>
                     <div className="mb-2 font-sainteColombe">{orchestra.properties.address}</div>
-                    <div className="mb-2 font-sainteColombe">{orchestra.properties.description}</div>
+                    <ol className="mt-3.5 pt-3.5 pl-3.5 list-outside list-decimal font-sainteColombe border-t-2 border-black">
+                    {orchestra.properties.facts.map(fact => (
+                      <li className="mb-2.5">{fact.fact}</li>
+                    ))}
+                    </ol>
+                    <div className="mb-2 font-sainteColombe">{orchestra.properties.question}<span className="font-semibold">{orchestra.properties.statement}</span></div>
                   </Popup>
                 </Marker>
                 ))}

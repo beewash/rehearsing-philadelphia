@@ -17,7 +17,7 @@ const {title, tileColor, _rawBody, image, cta, colLayoutSection, rowLayoutSectio
       fluid={image.asset.fluid}
       backgroundColor={`#fff`}
       grayscale={true}
-      title="Fullscreen Background"
+      title={title}
       role="img"
       aria-label="Fullscreen Background"
       preserveStackingContext={true}
@@ -26,9 +26,9 @@ const {title, tileColor, _rawBody, image, cta, colLayoutSection, rowLayoutSectio
         <div>
           <p className="text-cfsL font-acuminPro uppercase font-light">{title}</p>
         </div>
-        <div id="locationInfo">
+        {/* <div id="locationInfo">
           <PortableText blocks={raw.body} />
-        </div>
+        </div> */}
       </div>
       <div className={`absolute top-0 left-0 w-full h-full bg-${tileColor} bg-opacity-70 hover:bg-${tileColor}`}></div>
     </BackgroundImage>
