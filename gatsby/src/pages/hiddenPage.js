@@ -23,6 +23,21 @@ const HiddenPage = () => (
     <div class="slick-prev"></div>
     <div class="slick-next"></div>
     <div class="slick-dots"></div>
+    <div class="w-1/2"></div>
+    <div class="w-3/5"></div>
+    <div class="w-2/5"></div>
+    <div class="w-1/5"></div>
+    <div class="border-t-0"></div>
+    <div class="border-t-1"></div>
+    <div class="border-t-2"></div>
+    <div class="border-t-3"></div>
+    <div class="border-t-4"></div>
+    <div class="my-8"></div>
+    <div class="my-16"></div>
+    <div class="my-24"></div>
+    <div class="my-32"></div>
+    <div class="my-40"></div>
+    <div class="my-48"></div>
   </div>
 )
 
