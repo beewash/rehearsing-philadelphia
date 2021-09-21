@@ -89,6 +89,32 @@ export const query = graphql`
               }
             }
           }
+          ... on SanityPageBuilderColumns {
+            _key
+            _type
+            colLayoutSection {
+              colSm
+              colMd
+              colLg
+            }
+            rowLayoutSection {
+              rowMd
+              rowLg
+            }
+            columns {
+              title
+              bgColor
+              textColor
+              image {
+                alt
+                asset {
+                  fluid(maxWidth: 800) {
+                    ...GatsbySanityImageFluid
+                  }
+                }
+              }
+            }
+          }
           ... on SanityTileLocation {
             _key
             _type
@@ -127,19 +153,13 @@ export const query = graphql`
           }
         }
       }
-      ... on SanityPageBuilderColumns {
+      ... on SanityPageBuilderBreak {
         _key
         _type
-        columns {
-          title
-          bgColor
-          textColor
-          image {
-            alt
-            asset {
-              fluid(maxWidth: 800) {
-                ...GatsbySanityImageFluid
-              }
+        pageBreak {
+          asset {
+            fluid(maxWidth: 800) {
+              ...GatsbySanityImageFluid
             }
           }
         }

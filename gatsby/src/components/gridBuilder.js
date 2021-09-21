@@ -3,6 +3,7 @@ import GridBuilderTileAbout from "./gridBuilderTileAbout"
 import GridBuilderTileBasic from "./gridBuilderTileBasic"
 import GridBuilderTileDesc from "./gridBuilderTileDesc"
 import GridBuilderTileLocation from "./gridBuilderTileLocation"
+import PageBuilderColumns from "./pageBuilderColumns"
 
 function GridBuilder(props) {
   const { type, gridItems, _rawGridItems, globalStyles} = props
@@ -14,7 +15,8 @@ function GridBuilder(props) {
     tileAbout: GridBuilderTileAbout,
     tileBasic: GridBuilderTileBasic,
     tileDescription: GridBuilderTileDesc,
-    tileLocation: GridBuilderTileLocation
+    tileLocation: GridBuilderTileLocation,
+    pageBuilderColumns: PageBuilderColumns
   }
 
   // 'raw' content needs to be passed in for the PortableText Component

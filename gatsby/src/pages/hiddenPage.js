@@ -2,6 +2,7 @@ import React from 'react'
 
 const HiddenPage = () => (
   <div className="z-1 absolute w-1/2 h-1 top-0 left-0 flex-row space-x-4">
+    <div className="w-full h-full bg-that-grey hover:bg-that-grey"></div>
     <div className="w-full h-full bg-solo-yellow hover:bg-solo-yellow"></div>
     <div className="w-full h-full bg-duet-red hover:bg-duet-red"></div>
     <div className="w-full h-full bg-ensemble-blue hover:bg-ensemble-blue"></div>
@@ -19,6 +20,8 @@ const HiddenPage = () => (
     <h3>h3</h3>
     <h4>h4</h4>
     <h5>h5</h5>
+    <div class="slick-prev"></div>
+    <div class="slick-next"></div>
   </div>
 )
 

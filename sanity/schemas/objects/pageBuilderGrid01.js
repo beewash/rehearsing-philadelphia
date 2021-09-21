@@ -57,6 +57,10 @@ export default {
         {
           type: 'tileLocation',
           title: 'Location Tile'
+        },
+        {
+          type: 'pageBuilderColumns',
+          title: 'Slider Tile'
         }
       ]
     }

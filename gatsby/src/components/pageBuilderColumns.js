@@ -5,8 +5,8 @@ import { Spring, animated } from 'react-spring'
 import VisibilitySensor from "react-visibility-sensor"
 import Slider from 'react-slick'
 
-const PageBuilderColumns = ({block, raw}) => {
-  const {columns} = block
+const PageBuilderColumns = ({block, raw, globalStyles}) => {
+  const {columns, colLayoutSection, rowLayoutSection} = block
 
   const settings = {
     dots: true,
@@ -20,13 +20,13 @@ const PageBuilderColumns = ({block, raw}) => {
 
   return (
     
-    <section id="columns" className='w-full h-full px-4 pb-4'>
+    <section id="columns" className={`${colLayoutSection.colSm} md:${colLayoutSection.colMd} lg:${colLayoutSection.colLg} md:${rowLayoutSection.rowMd} lg:${rowLayoutSection.rowLg}`}>
       <Slider {...settings}>
         {columns && columns.map((column, index) => (
-        <div>
-          <div id="column" className={`bg-${column.bgColor} text-${column.textColor} w-full h-full px-8 md:px-32 py-16 mx-auto flex flex-col lg:flex-row lg:odd:flex-row-reverse items-center`}>
+        <div className="h-full flex items-center">
+          <div id="column" className={`bg-${column.bgColor} text-${column.textColor} w-full h-full px-8 md:px-32 py-16 mx-auto flex flex-col items-center`}>
             {column.image ? (
-            <div id="imageContainer" className="w-full h-full mb-8 lg:mb-0">
+            <div id="imageContainer" className="w-full h-full mb-8">
                 <Image fluid={column.image.asset.fluid} alt={column.image.alt} className="w-8/12 object-cover mx-auto justify-items-center items-center" />
             </div>
             ) : null}

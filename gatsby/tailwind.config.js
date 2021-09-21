@@ -23,7 +23,7 @@ module.exports = {
         'duet-red': '#ED1C24',
         'ensemble-blue': '#000F9F',
         'orchestra-green': '#009245',
-        'that-gray': '#DADADA'
+        'that-grey': '#dadada'
       },
       gridTemplateColumns: {
         '150': 'repeat(auto-fill, 150px)',
