@@ -90,6 +90,18 @@ export const query = graphql`
           }
         }
       }
+      ... on SanityDocAttachment {
+        _key
+        _type
+        docName
+        externalContent
+        externalLink
+        document {
+          asset {
+            url
+          }
+        }
+      }
       ... on SanityCta {
         _key
         _type

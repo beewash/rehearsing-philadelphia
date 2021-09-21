@@ -13,7 +13,7 @@ const {title, tileColor, _rawBody, image, cta, colLayoutSection, rowLayoutSectio
     <BackgroundImage
       Tag="section"
       id="tileLocation"
-      className={`relative z-20 flex p-4 w-full h-full text-white items-end rounded-full`}
+      className={`relative z-20 flex p-4 w-full h-full  text-white items-end rounded-full`}
       fluid={image.asset.fluid}
       backgroundColor={`#fff`}
       grayscale={true}
@@ -22,7 +22,7 @@ const {title, tileColor, _rawBody, image, cta, colLayoutSection, rowLayoutSectio
       aria-label="Fullscreen Background"
       preserveStackingContext={true}
     >
-      <div className="z-10 relative">
+      <div className="z-10 relative mt-12">
         <div>
           <p className="text-cfsL font-acuminPro uppercase font-light">{title}</p>
         </div>

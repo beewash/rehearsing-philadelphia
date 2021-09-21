@@ -3,7 +3,7 @@ import React from 'react'
 const Radio = () => {
 
   return (
-    <section id="radio" className="z-30 h-12 sticky bottom-0 bg-white border-t-2 border-black w-full flex justify-items-center items-center">
+    <section id="radio" className="z-30 h-12 sticky bottom-0 bg-white border-t-2 border-black w-full flex justify-items-center items-center overflow-hidden">
       {/* <View>
         <MarqueeText
           duration={3000}

@@ -31,6 +31,7 @@ import pageBuilderPageTitle from './objects/pageBuilderPageTitle'
 import pageBuilderBody from './objects/pageBuilderBody'
 import pageBuilderRoster from './objects/pageBuilderRoster'
 import pageBuilderPageBreak from './objects/pageBuilderPageBreak'
+import pageBuilderLineBreak from './objects/pageBuilderLineBreak'
 import pageBuilderGrid01 from './objects/pageBuilderGrid01'
 import pageBuilderSocial from './objects/pageBuilderSocial'
 import column from './objects/column'
@@ -49,7 +50,7 @@ import tileLocation from './objects/tileLocation'
 import role from './objects/role'
 import imgLink from './objects/imgLink'
 import performanceObject from './objects/performanceObject'
-import moduleFiles from './objects/moduleFiles'
+import docAttachment from './objects/docAttachment'
 import moduleSection from './objects/moduleSection'
 import cta from './objects/cta'
 
@@ -87,6 +88,7 @@ export default createSchema({
     pageBuilderRoster,
     pageBuilderGrid01,
     pageBuilderPageBreak,
+    pageBuilderLineBreak,
     pageBuilderSocial,
     column,
     mainImage,
@@ -104,7 +106,7 @@ export default createSchema({
     role,
     imgLink,
     performanceObject,
-    moduleFiles,
+    docAttachment,
     moduleSection,
     cta
     // When added to this list, object types can be used as

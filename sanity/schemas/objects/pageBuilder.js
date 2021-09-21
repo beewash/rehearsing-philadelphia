@@ -40,12 +40,20 @@ export default {
       title: 'Page Break'
     },
     {
+      type: 'pageBuilderLineBreak',
+      title: 'Line Break'
+    },
+    {
       type: 'cta',
       title: 'CTA'
     },
     {
       type: 'pageBuilderSocial',
       title: 'Social'
+    },
+    {
+      type: 'docAttachment',
+      title: 'Document'
     }
   ]
 }

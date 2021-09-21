@@ -17,7 +17,7 @@ export default {
       name: 'documents',
       title: 'Documents',
       type: 'array',
-      of: [{type: 'moduleDocuments'}]
+      of: [{type: 'docAttachment'}]
     }
   ]
 }

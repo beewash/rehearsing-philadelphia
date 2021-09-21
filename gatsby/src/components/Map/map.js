@@ -104,7 +104,11 @@ function MapComp() {
                       <div className="mb-2 uppercase font-acuminPro text-duet-red">{duet.properties.module}</div>
                       <div className="mb-2 text-sm font-semibold font-sainteColombe">{duet.properties.name}</div>
                       <div className="mb-2 font-sainteColombe">{duet.properties.address}</div>
-                      <div className="mt-3.5 pt-3.5 font-sainteColombe border-t-2 border-black mb-2">{duet.properties.description}</div>
+                      <ol className="mt-3.5 pt-3.5 pl-3.5 list-outside list-decimal font-sainteColombe border-t-2 border-black">
+                        {duet.properties.facts.map(fact => (
+                          <li className="mb-2.5">{fact.fact}</li>
+                        ))}
+                      </ol>
                     </Popup>
                   </Marker>
                 ))}

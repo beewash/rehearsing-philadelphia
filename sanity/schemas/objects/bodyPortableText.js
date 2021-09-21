@@ -19,7 +19,7 @@ export default {
         {title: 'H5', value: 'h5'},
         {title: 'H6', value: 'h6'},
         {title: 'Quote', value: 'blockquote'},
-        {title: 'Break', value: '<br />'}
+        {title: 'Break', value: '<br>'}
       ],
       lists: [
         {title: 'Bullet', value: 'bullet'},

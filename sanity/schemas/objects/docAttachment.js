@@ -1,6 +1,6 @@
 export default {
-  title: 'Module Documents',
-  name: 'moduleDocuments',
+  title: 'Documents',
+  name: 'docAttachment',
   type: 'object',
   fields: [
     {

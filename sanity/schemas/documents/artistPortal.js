@@ -15,7 +15,7 @@ export default {
       name: 'generalInfo',
       title: 'General Info',
       type: 'array',
-      of: [{type: 'moduleDocuments'}]
+      of: [{type: 'docAttachment'}]
     },
     {
       name: 'portalInfo',

@@ -153,6 +153,14 @@ export const query = graphql`
           }
         }
       }
+      ... on SanityPageBuilderLineBreak {
+        _key
+        _type
+        borderColor
+        borderLength
+        borderMargin
+        borderWidth
+      }
       ... on SanityPageBuilderBreak {
         _key
         _type

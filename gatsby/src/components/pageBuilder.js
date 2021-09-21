@@ -6,9 +6,11 @@ import PageBuilderBody from "./pageBuilderBody"
 import PageBuilderPageTitle from "./pageBuilderPageTitle"
 import PageBuilderRoster from "./pageBuilderRoster"
 import PageBuilderPageBreak from "./pageBuilderPageBreak"
+import PageBuilderLineBreak from "./pageBuilderLineBreak"
 import PageBuilderArtistHero from "./pageBuilderArtistHero"
 import PageBuilderSocial from "./pageBuilderSocial"
 import PageBuilderGrid01 from "./pageBuilderGrid01"
+import PageBuilderDocAttachment from "./pageBuilderDocAttachment"
 import CTA from "./cta"
 
 function PageBuilder(props) {
@@ -26,8 +28,10 @@ function PageBuilder(props) {
     pageBuilderColumns: PageBuilderColumns,
     pageBuilderRoster: PageBuilderRoster,
     pageBuilderBreak: PageBuilderPageBreak,
+    pageBuilderLineBreak: PageBuilderLineBreak,
     pageBuilderSocial: PageBuilderSocial,
     pageBuilderGrid01: PageBuilderGrid01,
+    docAttachment: PageBuilderDocAttachment,
     cta: CTA
   }
 
