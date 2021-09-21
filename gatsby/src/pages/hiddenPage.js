@@ -22,6 +22,7 @@ const HiddenPage = () => (
     <h5>h5</h5>
     <div class="slick-prev"></div>
     <div class="slick-next"></div>
+    <div class="slick-dots"></div>
   </div>
 )
 

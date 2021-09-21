@@ -119,13 +119,27 @@
   .slick-prev {
     left: 6px !important;
   }
-  
+
   .slick-next {
     right: 6px !important
   }
 
   .slick-dots {
     bottom: 10px !important;
+  }
+
+  @keyframes ticker-kf {
+    0% {
+      transform: translate3d(0, 0, 0);
+    }
+  
+    100% {
+      transform: translate3d(-108rem, 0, 0);
+    }
+  }
+  
+  .radio-ticker {
+    animation: ticker-kf 18s linear infinite;
   }
 
   /* #locationInfo {
