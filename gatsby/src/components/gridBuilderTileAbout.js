@@ -12,7 +12,7 @@ const GridBuilderTileAbout = ({block, raw, globalStyles}) => {
     >
       <div className={`text-${textColor}`}>
         <div className="mb-8">
-          <h1 className="">{title}</h1>
+          <p className="text-center lg:text-left text-4xl md:text-6xl">{title}</p>
         </div>
         <div>
           <PortableText blocks={raw.description} />

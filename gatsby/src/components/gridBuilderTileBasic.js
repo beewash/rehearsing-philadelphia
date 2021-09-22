@@ -13,7 +13,7 @@ const GridBuilderTileBasic = ({block, raw, globalStyles}) => {
         {tileItem.map(item => (
           <div id="basicTileItem" className={`w-full font-acuminPro uppercase font-light text-${item.textColor} hover:text-${item.hoverColor} even:text-right`}>
             <Link to={`/${item.slug.current}`}>
-              <p className="text-cfsL">{item.personName}</p>
+              <p className="text-cfs md:text-cfsL">{item.personName}</p>
             </Link>
           </div>
         ))}

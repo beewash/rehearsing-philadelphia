@@ -24,7 +24,7 @@ const {title, tileColor, _rawBody, image, cta, colLayoutSection, rowLayoutSectio
     >
       <div className="z-10 relative mt-12">
         <div>
-          <p className="text-cfsL font-acuminPro uppercase font-light">{title}</p>
+          <p className="text-cfs md:text-cfsL font-acuminPro uppercase font-light">{title}</p>
         </div>
         {/* <div id="locationInfo">
           <PortableText blocks={raw.body} />

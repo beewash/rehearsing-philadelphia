@@ -9,10 +9,6 @@ import PageBuilder from "../components/pageBuilder"
 import MapComp from "../components/Map/map"
 import Helmet from 'react-helmet'
 import logo from '../images/Logo_Symbols.png'
-// import { Spring, animated } from 'react-spring'
-// import VisibilitySensor from "react-visibility-sensor"
-// import { useInView } from 'react-intersection-observer'
-// import {motion} from 'framer-motion'
 
 export const query = graphql`
   query IndexPageQuery {
@@ -33,29 +29,9 @@ export const query = graphql`
 `
 
 const IndexPage = (props) => {
-
-  // const [ref, inView, entry] = useInView({
-  //   /* Optional options */
-  //   threshold: 0.5,
-  //   triggerOnce: false
-  // })
-
-  // console.log(entry)
-
-  // const variants = {
-  //   visible: { opacity: 1, scale: 1, y: 0 },
-  //   hidden: {
-  //     opacity: 0,
-  //     scale: 0.65,
-  //     y: 50
-  //   }
-  // }
-  
   const { data, errors } = props
   const site = data && data.site
   const {pageBuilder, _rawPageBuilder} = site
-
-  console.log('index: ', site)
 
   if (errors) {
     return (
@@ -113,11 +89,11 @@ const IndexPage = (props) => {
                 ))}
               </div>
             </div>
-            <div className="w-full h-full lg:w-1/2 text-center">
+            <div className="w-full h-full lg:w-1/2 text-center --sal-duration:3s --sal-delay:2s">
               <div
                 className="w-4/5 mx-auto"
                 data-sal="slide-up"
-                data-sal-delay="300"
+                // data-sal-delay="300"
                 data-sal-easing="ease"
               >
                 <h2 className="mb-8">About</h2>
