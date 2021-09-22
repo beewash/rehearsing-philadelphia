@@ -4,16 +4,6 @@ export default {
   type: 'object',
   fields: [
     {
-      name: 'colLayoutSection',
-      title: 'Column Layout (Width)',
-      type: 'colLayout'
-    },
-    {
-      name: 'rowLayoutSection',
-      title: 'Row Layout (Height)',
-      type: 'rowLayout'
-    },
-    {
       name: 'columns',
       title: 'Columns',
       type: 'array',

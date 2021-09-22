@@ -6,7 +6,7 @@ const PageBuilderPageTitle = ({ block, raw, index }) => {
 
   return (
     <section id="pageBuilderPageTitle" className="w-screen mb-20 md:mb-48">
-      <div className="text-center mt-16 md:mt-32">
+      <div className="text-center px-4 mt-16 md:px-8 md:mt-32">
         {title ? (
           <h1 className="text-black">{title}</h1>
         ) : null}

@@ -12,13 +12,13 @@ const GridBuilderTileAbout = ({block, raw, globalStyles}) => {
     >
       <div className={`text-${textColor}`}>
         <div className="mb-8">
-          <p className="text-cfsL font-bold">{title}</p>
+          <h1 className="">{title}</h1>
         </div>
         <div>
           <PortableText blocks={raw.description} />
         </div>
         {cta ? (
-          <div className="mt-8 w-max py-1 px-4 font-acuminPro font-medium uppercase text-sm border-black border-2 rounded-full hover:bg-black hover:text-white">
+          <div className={`mt-8 w-max py-1 px-4 font-acuminPro font-medium uppercase text-sm text-${cta.textColor} bg-${cta.bgColor} border-${cta.borderColor} border-${cta.borderWidth} rounded-full hover:bg-${cta.bgHoverColor} hover:text-${cta.textHoverColor}`}>
             {cta.linkTo.externalContent ? (
               <a href={cta.linkTo.linkUrl} target='_blank' rel="noreferrer">{cta.linkText}</a>
             ) 

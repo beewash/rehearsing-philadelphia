@@ -23,23 +23,6 @@ function MapComp() {
     console.log(orchestra.properties.facts)
   ))}
 
-  // const createPopups = (feature = {}, layer) => {
-  //   const { properties = {} } = feature
-  //   const { name, address, module, description } = properties
-  //   const popup = L.popup()
-  //   const html = `
-  //    <div class="popup-container" style="">
-  //    <ul>
-  //    <li style="margin-bottom:.5rem;font-style:italic;">${module.toString()}</li>
-  //    <li style="margin-bottom:.5rem;text-transform:uppercase"><strong>${name.toString()}</strong></li>
-  //    <li style="margin-bottom:.5rem;">${address.toString()}</li>
-  //    <li>${description.toString()}</li>
-  //    </div>
-  //    `
-  //   popup.setContent(html)
-  //   layer.bindPopup(popup)
-  // }
-
   // const soloOptions = { fillColor: '#FFC20E' }
   const duetOptions = { color: 'rgba(0, 0, 0, 0.5)' }
   // const ensembleOptions = { color: '#000F9F' }
@@ -47,7 +30,7 @@ function MapComp() {
 
   return (
     <div id="map" className="w-full h-full relative flex justify-center items-center">
-      <div className="w-screen h-screen px-4 pb-4">
+      <div className="w-screen h-96 lg:h-screen px-4 pb-4">
         {(typeof window !== 'undefined') ? (
         <MapContainer center={location} zoom={zoom} scrollWheelZoom={false} className="z-10 w-full h-full relative">
           <LayersControl position="topright">

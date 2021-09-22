@@ -66,8 +66,7 @@
     height: calc(100vh - 48px);
   }
   h1 {
-    @apply text-4xl;
-    line-height: 1;
+    @apply text-3xl;
   }
   h2 {
     @apply text-cfsL;
@@ -76,7 +75,7 @@
     @apply text-cfs;
   }
   h4 {
-    @apply text-cfs;
+    @apply text-cfsSM;
     text-transform: uppercase;
     font-weight: bold;
   }

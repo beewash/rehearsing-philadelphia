@@ -1,10 +1,8 @@
-import React from "react";
-import {Link} from "gatsby";
+import React from "react"
+import {Link} from "gatsby"
 
 const CTA = ({ block }) => {
-  const { linkText, linkTo } = block;
-
-  console.log('link: ', linkTo)
+  const { linkText, linkTo } = block
 
   return (
     <section id="cta" className="max-w-6xl mx-auto px-4 md:px-2.5 pb-28">
@@ -16,7 +14,7 @@ const CTA = ({ block }) => {
         }
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default CTA;
+export default CTA

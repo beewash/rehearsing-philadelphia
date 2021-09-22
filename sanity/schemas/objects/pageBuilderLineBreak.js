@@ -48,6 +48,7 @@ export default {
       type: 'string',
       options: {
         list: [
+          {title: 'X-small', value: '4'},
           {title: 'Small', value: '8'},
           {title: 'Medium', value: '16'},
           {title: 'Large', value: '24'},

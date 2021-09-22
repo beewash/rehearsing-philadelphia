@@ -2,11 +2,11 @@ import React from 'react'
 
 const HiddenPage = () => (
   <div className="z-1 absolute w-1/2 h-1 top-0 left-0 flex-row space-x-4">
-    <div className="w-full h-full bg-that-grey hover:bg-that-grey"></div>
-    <div className="w-full h-full bg-solo-yellow hover:bg-solo-yellow"></div>
-    <div className="w-full h-full bg-duet-red hover:bg-duet-red"></div>
-    <div className="w-full h-full bg-ensemble-blue hover:bg-ensemble-blue"></div>
-    <div className="w-full h-full bg-orchestra-green hover:bg-orchestra-green"></div>
+    <div className="w-full h-full text-that-grey bg-that-grey hover:bg-that-grey hover:text-that-grey"></div>
+    <div className="w-full h-full text-solo-yellow bg-solo-yellow hover:bg-solo-yellow hover:text-solo-yellow"></div>
+    <div className="w-full h-full text-duet-red bg-duet-red hover:bg-duet-red hover:text-duet-red"></div>
+    <div className="w-full h-full text-ensemble-blue bg-ensemble-blue hover:bg-ensemble-blue hover:text-ensemble-blue"></div>
+    <div className="w-full h-full text-orchestra-green bg-orchestra-green hover:bg-orchestra-green hover:text-orchestra-green"></div>
     <div className="row-span-1 md:row-span-1 lg:row-span-1"></div>
     <div className="row-span-2 md:row-span-2 lg:row-span-2"></div>
     <div className="col-span-1 md:col-span-1 lg:col-span-1 "></div>
@@ -32,6 +32,7 @@ const HiddenPage = () => (
     <div class="border-t-2"></div>
     <div class="border-t-3"></div>
     <div class="border-t-4"></div>
+    <div class="my-4"></div>
     <div class="my-8"></div>
     <div class="my-16"></div>
     <div class="my-24"></div>

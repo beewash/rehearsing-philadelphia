@@ -30,7 +30,7 @@ const {title, tileColor, _rawBody, image, cta, colLayoutSection, rowLayoutSectio
           <PortableText blocks={raw.body} />
         </div> */}
       </div>
-      <div className={`absolute top-0 left-0 w-full h-full bg-${tileColor} bg-opacity-70 hover:bg-${tileColor}`}></div>
+      <div className={`absolute top-0 left-0 w-full h-full bg-${tileColor} bg-opacity-70`}></div>
     </BackgroundImage>
     </div>
   )

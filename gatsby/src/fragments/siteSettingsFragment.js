@@ -25,6 +25,14 @@ export const query = graphql`
               rowMd
             }
             cta {
+              _key
+              _type
+              bgColor
+              bgHoverColor
+              textColor
+              textHoverColor
+              borderColor
+              borderWidth
               linkText
               linkTo {
                 externalContent
@@ -92,15 +100,6 @@ export const query = graphql`
           ... on SanityPageBuilderColumns {
             _key
             _type
-            colLayoutSection {
-              colSm
-              colMd
-              colLg
-            }
-            rowLayoutSection {
-              rowMd
-              rowLg
-            }
             columns {
               title
               bgColor
@@ -148,6 +147,23 @@ export const query = graphql`
               linkTo {
                 externalContent
                 linkUrl
+              }
+            }
+          }
+        }
+      }
+      ... on SanityPageBuilderColumns {
+        _key
+        _type
+        columns {
+          title
+          bgColor
+          textColor
+          image {
+            alt
+            asset {
+              fluid(maxWidth: 800) {
+                ...GatsbySanityImageFluid
               }
             }
           }

@@ -30,7 +30,7 @@ query HeaderNav {
     }
   }
 }
-`;
+`
 
 const Header = props => {
   const [isExpanded, toggleExpansion] = useState(false)
@@ -38,8 +38,6 @@ const Header = props => {
   
   const {data} = props
   const headernav = data && data.headernav
-
-  console.log('header: ', headernav);
 
   return (
     <StaticQuery
@@ -78,21 +76,21 @@ const Header = props => {
               </div>
             </div>
             <div 
-              id="navMenu" 
+              id="navMenu"
               className={`z-40 w-full relative transition delay-150 duration-300 ease-in-out ${ isExpanded ? `block` : `hidden` }`}
             >
-              <div className="w-full absolute top-0 flex text-center bg-white shadow-lg transform">
+              <div className="w-full absolute top-0 flex text-center p-4 bg-white shadow-lg transform">
                 <ul role='menubar' className="w-full flex flex-col mx-auto space-y-8 last:mb-8">
                 {headernav.mainNavigation ? (
                   <>
                     {headernav.mainNavigation.map(mainNav => (
                       <>
                       {mainNav.navItems.map(navItems => (
-                      <li key={navItems._key} className="w-full text-cfsL md:text-6xl">
+                      <li key={navItems._key} className="w-full">
                         {navItems.navItemUrl.externalContent ? (
-                          <a href={navItems.navItemUrl.linkUrl} target='_blank' rel="noreferrer" className="text-cfsL md:text-6xl">{navItems.text}</a>
+                          <a href={navItems.navItemUrl.linkUrl} target='_blank' rel="noreferrer" className="text-4xl md:text-6xl">{navItems.text}</a>
                         )
-                          : <Link to={`/${navItems.navItemUrl.linkUrl}`}>{navItems.text}</Link>
+                          : <Link to={`/${navItems.navItemUrl.linkUrl}`} className="text-3xl md:text-5xl lg:text-6xl">{navItems.text}</Link>
                         }
                       </li>
                       ))}
