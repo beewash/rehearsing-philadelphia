@@ -51,7 +51,8 @@ module.exports = {
         tailwind: true,
         ignore: [
           '/node_modules/slick-carousel/slick/slick.css',
-          '/node_modules/slick-carousel/slick/slick-theme.css'
+          '/node_modules/slick-carousel/slick/slick-theme.css',
+          '/node_modules/sal.js/dist/sal.css'
         ]
       }
     }
