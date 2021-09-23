@@ -26,9 +26,6 @@ const {title, tileColor, _rawBody, image, cta, colLayoutSection, rowLayoutSectio
         <div>
           <p className="text-cfs md:text-cfsL font-acuminPro uppercase font-light">{title}</p>
         </div>
-        {/* <div id="locationInfo">
-          <PortableText blocks={raw.body} />
-        </div> */}
       </div>
       <div className={`absolute top-0 left-0 w-full h-full bg-${tileColor} bg-opacity-70`}></div>
     </BackgroundImage>
