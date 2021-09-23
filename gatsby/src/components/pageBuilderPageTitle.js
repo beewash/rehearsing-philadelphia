@@ -20,4 +20,4 @@ const PageBuilderPageTitle = ({ block, raw, index }) => {
   );
 };
 
-export default PageBuilderPageTitle;
+export default PageBuilderPageTitle
