@@ -19,6 +19,7 @@ class Layout extends React.Component {
             ease: "easeInOut",
             duration: .75
           }}
+          className="min-h-screen"
         >
           {children}
         </motion.div>

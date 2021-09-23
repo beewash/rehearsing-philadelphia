@@ -17,22 +17,22 @@ const Radio = () => {
       </View> */}
       <div className="w-full text-center whitespace-nowrap radio-ticker">
           <p className="inline font-acuminPro uppercase text-cfsSM1 mr-2">
-            REHEARSAL RADIO COMING SOON — MARCH 2022 — ALWAYS REHEARSING HOW TO BE TOGETHER — HOW ARE YOU REHEARSING EVERY DAY?
+            REHEARSAL RADIO COMING SOON — MARCH 2022 — HOW CAN WE BE TOGETHER? — HOW ARE YOU REHEARSING EVERY DAY? — 
           </p>
           <p className="inline font-acuminPro uppercase text-cfsSM1 mr-2">
-            REHEARSAL RADIO COMING SOON — MARCH 2022 — ALWAYS REHEARSING HOW TO BE TOGETHER — HOW ARE YOU REHEARSING EVERY DAY?
+            REHEARSAL RADIO COMING SOON — MARCH 2022 — HOW CAN WE BE TOGETHER? — HOW ARE YOU REHEARSING EVERY DAY? — 
           </p>
           <p className="inline font-acuminPro uppercase text-cfsSM1 mr-2">
-            REHEARSAL RADIO COMING SOON — MARCH 2022 — ALWAYS REHEARSING HOW TO BE TOGETHER — HOW ARE YOU REHEARSING EVERY DAY?
+            REHEARSAL RADIO COMING SOON — MARCH 2022 — HOW CAN WE BE TOGETHER? — HOW ARE YOU REHEARSING EVERY DAY? — 
           </p>
           <p className="inline font-acuminPro uppercase text-cfsSM1 mr-2">
-            REHEARSAL RADIO COMING SOON — MARCH 2022 — ALWAYS REHEARSING HOW TO BE TOGETHER — HOW ARE YOU REHEARSING EVERY DAY?
+            REHEARSAL RADIO COMING SOON — MARCH 2022 — HOW CAN WE BE TOGETHER? — HOW ARE YOU REHEARSING EVERY DAY? — 
           </p>
           <p className="inline font-acuminPro uppercase text-cfsSM1 mr-2">
-            REHEARSAL RADIO COMING SOON — MARCH 2022 — ALWAYS REHEARSING HOW TO BE TOGETHER — HOW ARE YOU REHEARSING EVERY DAY?
+            REHEARSAL RADIO COMING SOON — MARCH 2022 — HOW CAN WE BE TOGETHER? — HOW ARE YOU REHEARSING EVERY DAY? — 
           </p>
           <p className="inline font-acuminPro uppercase text-cfsSM1 mr-2">
-            REHEARSAL RADIO COMING SOON — MARCH 2022 — ALWAYS REHEARSING HOW TO BE TOGETHER — HOW ARE YOU REHEARSING EVERY DAY?
+            REHEARSAL RADIO COMING SOON — MARCH 2022 — HOW CAN WE BE TOGETHER? — HOW ARE YOU REHEARSING EVERY DAY? — 
           </p>
       </div>
     </section>
