@@ -18,6 +18,6 @@ const PageBuilderPageTitle = ({ block, raw, index }) => {
       </div>
     </section>
   );
-};
+}
 
 export default PageBuilderPageTitle
