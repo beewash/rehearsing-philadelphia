@@ -17,7 +17,7 @@ const PageBuilderPageTitle = ({ block, raw, index }) => {
         ) : null}
       </div>
     </section>
-  );
+  )
 }
 
 export default PageBuilderPageTitle
