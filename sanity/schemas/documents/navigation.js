@@ -12,7 +12,7 @@ export default {
       title: 'Title'
     },
     {
-      name: 'id',
+      name: 'navId',
       type: 'string',
       title: 'Id'
     },
@@ -26,7 +26,7 @@ export default {
   preview: {
     select: {
       title: 'title',
-      subtitle: 'id'
+      subtitle: 'navId'
     }
   }
 }

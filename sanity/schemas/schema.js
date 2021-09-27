@@ -7,7 +7,6 @@ import schemaTypes from 'all:part:@sanity/base/schema-type'
 // document schemas
 import siteSettings from './documents/siteSettings'
 import nav from './documents/navigation'
-// import homepage from './documents/homepage'
 import page from './documents/page'
 import people from './documents/people'
 import performanceModules from './documents/performanceModules'
@@ -66,7 +65,6 @@ export default createSchema({
     siteSettings,
     nav,
     artistPortal,
-    // homepage,
     page,
     people,
     performanceModules,
