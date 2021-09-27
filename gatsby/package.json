@@ -32,7 +32,6 @@
     "gatsby-plugin-react-native-web": "^3.1.0",
     "gatsby-plugin-scroll-reveal": "^0.0.7",
     "gatsby-plugin-sharp": "^3.13.0",
-    "gatsby-plugin-styled-components": "^3.3.10",
     "gatsby-source-sanity": "^7.0.0",
     "gatsby-transformer-sharp": "^3.13.0",
     "hamburger-react": "^2.4.1",
@@ -51,7 +50,6 @@
     "react-spring": "^9.2.4",
     "react-visibility-sensor": "^5.1.1",
     "slick-carousel": "^1.8.1",
-    "styled-components": "^5.2.0",
     "tailwindcss": "^2.2.7"
   },
   "devDependencies": {

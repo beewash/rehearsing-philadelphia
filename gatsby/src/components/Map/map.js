@@ -14,25 +14,21 @@ import duetIcon from '../../images/duetPin.png'
 import orchestraIcon from '../../images/orchestraPin.png'
 import pinShadow from '../../images/pinShadow.png'
 
-const location = [39.9526, -75.1652]
-const zoom = 14
-
 function MapComp() {
-
-  {orchestra.map(orchestra => (
-    console.log(orchestra.properties.facts)
-  ))}
 
   // const soloOptions = { fillColor: '#FFC20E' }
   const duetOptions = { color: 'rgba(0, 0, 0, 0.5)' }
   // const ensembleOptions = { color: '#000F9F' }
   // const orchestraOptions = { color: '#009245' }
 
+  const location = [39.9526, -75.1652]
+  const zoom = 13
+
   return (
     <div id="map" className="w-full h-full relative flex justify-center items-center">
       <div className="w-screen h-96 lg:h-screen px-4 pb-4">
         {(typeof window !== 'undefined') ? (
-        <MapContainer center={location} zoom={zoom} scrollWheelZoom={false} className="z-10 w-full h-full relative">
+        <MapContainer id="mapEl" center={location} zoom={zoom} scrollWheelZoom={false} className="z-10 w-full h-full relative">
           <LayersControl position="topright">
             <TileLayer 
               url="https://api.mapbox.com/styles/v1/gentry19/ckst13rdw3r9q17nkjcoagb88/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiZ2VudHJ5MTkiLCJhIjoiY2tzcWg4ZmxuMGNzNDJ1bzVuZTJpNWl4byJ9.Dbjod75IraKTOV48WuQjNQ" 

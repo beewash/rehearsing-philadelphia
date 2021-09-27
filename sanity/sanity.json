@@ -2,7 +2,8 @@
   "root": true,
   "api": {
     "projectId": "ibfjhn1r",
-    "dataset": "production"
+    "dataset": "production",
+    "apiVersion": "2021-08-31"
   },
   "project": {
     "name": "Rehearsing Philadelphia"

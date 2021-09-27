@@ -15,7 +15,6 @@ module.exports = {
     author: 'Bryan Washington: bryanwashington.000 | bryanwashington@gmail.com'
   },
   plugins: [
-    `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-react-leaflet`,
     `gatsby-transformer-sharp`,
