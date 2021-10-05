@@ -25,6 +25,7 @@ module.exports = {
       options: {
         ...clientConfig.sanity,
         token: process.env.SANITY_READ_TOKEN,
+        apiVersion: '2021-08-31',
         watchMode: !isProd,
         overlayDrafts: !isProd
       }
