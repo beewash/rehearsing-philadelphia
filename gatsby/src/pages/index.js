@@ -82,8 +82,8 @@ const IndexPage = (props) => {
           <div className="min-h-screen p-4 mb-32 flex flex-col  justify-items-center items-center lg:m-0 lg:flex-row lg:space-x-4">
             <div className="w-full h-full lg:w-1/2 items-stretch">
               <div className="w-full h-full grid grid-cols-2 grid-rows-2 gap-4 p-8 md:p-28">
-                {site.moduleIcons.map(icon => (
-                  <div className="w-full h-full">
+                {site.moduleIcons.map((icon, index) => (
+                  <div key={index} className="w-full h-full">
                     <Image fluid={icon.asset.fluid} />
                   </div>
                 ))}

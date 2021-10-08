@@ -1,9 +1,8 @@
 import React from 'react'
-import Image from 'gatsby-image'
 import PortableText from './portableText'
 import BackgroundImage from 'gatsby-background-image'
 
-const PageBuilderHero = ({ block, raw, index }) => {
+const PageBuilderHero = ({ block, raw }) => {
   const { image, title } = block;
 
   return (
@@ -29,9 +28,6 @@ const PageBuilderHero = ({ block, raw, index }) => {
           ) : null}
         </div>
       </BackgroundImage>
-      {/* <div className="z-10 absolute w-screen top-0 left-0">
-        <div className="absolute w-screen h-full md:h-screen top-0 left-0 bg-black bg-opacity-20"></div>
-      </div> */}
     </section>
   )
 }

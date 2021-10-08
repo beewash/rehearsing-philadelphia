@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import Button from './button'
 import Roster from './roster'
 
-const PageBuilderRoster = ({block, raw}) => {
+const PageBuilderRoster = ({block}) => {
   const {title, roster} = block
 
   const allCategories = ['All', ...new Set(roster.map(roster => roster.moduleList))]
@@ -10,7 +10,8 @@ const PageBuilderRoster = ({block, raw}) => {
   console.log('roster: ', roster)
 
   const [rosterItem, setRosterItem] = useState(roster)
-  const [buttons, setButtons] = useState(allCategories)
+  // const [buttons, setButtons] = useState(allCategories)
+  const [buttons] = useState(allCategories)
 
   //Filter Function
   const filter = (button) =>{

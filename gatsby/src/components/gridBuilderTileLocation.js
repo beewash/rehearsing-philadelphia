@@ -1,9 +1,8 @@
 import React from 'react'
-import PortableText from './portableText'
 import BackgroundImage from 'gatsby-background-image'
 
-const GridBuilderTileLocation = ({block, raw}) => {
-const {title, tileColor, _rawBody, image, cta, colLayoutSection, rowLayoutSection} = block
+const GridBuilderTileLocation = ({block}) => {
+const {title, tileColor, image, colLayoutSection, rowLayoutSection} = block
 
   return (
     <div

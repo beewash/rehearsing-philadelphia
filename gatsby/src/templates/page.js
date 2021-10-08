@@ -22,7 +22,7 @@ const PageTemplate = props => {
   const page = data && data.page
   const {pageBuilder, _rawPageBuilder} = page
 
-  console.log('page: ', page);
+  // console.log('page: ', page);
 
   return (
     <Layout>

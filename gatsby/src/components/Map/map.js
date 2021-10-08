@@ -34,10 +34,11 @@ function MapComp() {
               url="https://api.mapbox.com/styles/v1/gentry19/ckst13rdw3r9q17nkjcoagb88/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiZ2VudHJ5MTkiLCJhIjoiY2tzcWg4ZmxuMGNzNDJ1bzVuZTJpNWl4byJ9.Dbjod75IraKTOV48WuQjNQ" 
               attribution="© <a href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>" 
             />
-            <LayersControl.Overlay checked name="Solo">
-              <LayerGroup>
-                {solo.map(solo => (
+            <LayersControl.Overlay checked name="Solo" key="solo-layer">
+              <LayerGroup key="solo-group">
+                {solo.map((solo, index) => (
                   <Marker 
+                    key={index}
                     position={[solo.geometry.coordinates.lat, solo.geometry.coordinates.lon]} 
                     icon={new L.Icon({
                       iconUrl: soloIcon,
@@ -49,13 +50,13 @@ function MapComp() {
                       shadowSize: [18, 25],
                       shadowAnchor: [0, 25]
                     })}>
-                    <Popup>
+                    <Popup key={index}>
                       <div className="mb-2 uppercase font-acuminPro text-solo-yellow">{solo.properties.module}</div>
                       <div className="mb-2 text-sm font-semibold font-sainteColombe">{solo.properties.name}</div>
                       <div className="mb-2 font-sainteColombe">{solo.properties.address}</div>
                       <ol className="mt-3.5 pt-3.5 pl-3.5 list-outside list-decimal font-sainteColombe border-t-2 border-black">
-                        {solo.properties.facts.map(fact => (
-                          <li className="mb-2.5">{fact.fact}</li>
+                        {solo.properties.facts.map((fact, index) => (
+                          <li key={index} className="mb-2.5">{fact.fact}</li>
                         ))}
                       </ol>
                       <div className="mb-2 font-sainteColombe">{solo.properties.question}  <span className="font-semibold">{solo.properties.statement}</span></div>
@@ -64,10 +65,11 @@ function MapComp() {
                 ))}
               </LayerGroup>
             </LayersControl.Overlay>
-            <LayersControl.Overlay checked name="Duet">
-              <LayerGroup>
-                {duet.map(duet => (
+            <LayersControl.Overlay checked name="Duet" key="duet-layer">
+              <LayerGroup key="duet-group">
+                {duet.map((duet, index) => (
                   <Marker 
+                    key={index}
                     position={[duet.geometry.coordinates.lat, duet.geometry.coordinates.lon]} 
                     icon={new L.Icon({
                       iconUrl: duetIcon,
@@ -79,13 +81,13 @@ function MapComp() {
                       shadowSize: [18, 25],
                       shadowAnchor: [0, 25]
                     })}>
-                    <Popup>
+                    <Popup key={index}>
                       <div className="mb-2 uppercase font-acuminPro text-duet-red">{duet.properties.module}</div>
                       <div className="mb-2 text-sm font-semibold font-sainteColombe">{duet.properties.name}</div>
                       <div className="mb-2 font-sainteColombe">{duet.properties.address}</div>
                       <ol className="mt-3.5 pt-3.5 pl-3.5 list-outside list-decimal font-sainteColombe border-t-2 border-black">
-                        {duet.properties.facts.map(fact => (
-                          <li className="mb-2.5">{fact.fact}</li>
+                        {duet.properties.facts.map((fact, index) => (
+                          <li key={index} className="mb-2.5">{fact.fact}</li>
                         ))}
                       </ol>
                     </Popup>
@@ -93,10 +95,11 @@ function MapComp() {
                 ))}
               </LayerGroup>
             </LayersControl.Overlay>
-            <LayersControl.Overlay checked name="Orchestra">
-              <LayerGroup>
-                {orchestra.map(orchestra => (
+            <LayersControl.Overlay checked name="Orchestra" key="orchestra-layer">
+              <LayerGroup key="orchestra-group">
+                {orchestra.map((orchestra, index) => (
                   <Marker 
+                    key={index}
                     position={[orchestra.geometry.coordinates.lat, orchestra.geometry.coordinates.lon]} 
                     icon={new L.Icon({
                       iconUrl: orchestraIcon,
@@ -108,13 +111,13 @@ function MapComp() {
                       shadowSize: [18, 25],
                       shadowAnchor: [0, 25]
                     })}>
-                  <Popup>
+                  <Popup key={index}>
                     <div className="mb-2 uppercase font-acuminPro text-orchestra-green">{orchestra.properties.module}</div>
                     <div className="mb-2 text-sm font-semibold font-sainteColombe">{orchestra.properties.name}</div>
                     <div className="mb-2 font-sainteColombe">{orchestra.properties.address}</div>
                     <ol className="mt-3.5 pt-3.5 pl-3.5 list-outside list-decimal font-sainteColombe border-t-2 border-black">
-                    {orchestra.properties.facts.map(fact => (
-                      <li className="mb-2.5">{fact.fact}</li>
+                    {orchestra.properties.facts.map((fact, index) => (
+                      <li key={index} className="mb-2.5">{fact.fact}</li>
                     ))}
                     </ol>
                     <div className="mb-2 font-sainteColombe">{orchestra.properties.question}<span className="font-semibold">{orchestra.properties.statement}</span></div>

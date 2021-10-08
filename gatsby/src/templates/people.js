@@ -21,7 +21,7 @@ const PageTemplate = props => {
   const people = data && data.people
   const {pageBuilder, _rawPageBuilder} = people
 
-  console.log('people: ', people);
+  // console.log('people: ', people);
 
   return (
     <Layout>

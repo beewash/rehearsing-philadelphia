@@ -104,7 +104,7 @@ const Footer = () => (
                   ) : null}
                   </div>
                   {footernav.footerNavigation ? (
-                    <ul role='menubar'>
+                    <ul>
                       {footernav.footerNavigation.map(footerNav => (
                         <>
                         {footerNav.navItems.map(footerItems => (

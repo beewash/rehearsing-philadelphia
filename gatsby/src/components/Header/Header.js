@@ -35,24 +35,22 @@ query HeaderNav {
 const Header = props => {
   const [isExpanded, toggleExpansion] = useState(false)
   const [isOpen, setOpen] = useState(false)
-  
-  const {data} = props
-  const headernav = data && data.headernav
 
   return (
     <StaticQuery
+      key="header_query"
       query={HEADER_QUERY}
       render={data => (
         <>
         <header className="w-screen sticky top-0 z-50 flex shadow-lg bg-white flex-wrap">
         {data && data.headernav.edges.map(({node: headernav}) => (
-          <nav role='navigation' className="z-45 w-full flex flex-wrap relative">
+          <nav key={headernav.title} role='navigation' className="z-45 w-full flex flex-wrap relative">
             <div id="navMain" className="w-full flex relative justify-between p-4">
               <div className="flex items-center">
                 {headernav.rhLogo ? (
                 <Link className="flex flex-row md:space-x-2 items-center justify-items-center justify-center" to="/">
-                  {headernav.rhLogo.map(logo => (
-                    <Image fluid={logo.asset.fluid} className="w-12 inline" />
+                  {headernav.rhLogo.map((logo, index) => (
+                    <Image key={index} fluid={logo.asset.fluid} className="w-12 inline" />
                   ))}
                     <div className="hidden md:inline">
                       <p className="font-medium">{headernav.title}</p>
@@ -80,7 +78,7 @@ const Header = props => {
               className={`z-40 w-full relative transition delay-150 duration-300 ease-in-out ${ isExpanded ? `block` : `hidden` }`}
             >
               <div className="w-full absolute top-0 flex text-center p-4 bg-white shadow-lg transform">
-                <ul role='menubar' className="w-full flex flex-col mx-auto space-y-8 last:mb-8">
+                <ul className="w-full flex flex-col mx-auto space-y-8 last:mb-8">
                 {headernav.mainNavigation ? (
                   <>
                     {headernav.mainNavigation.map(mainNav => (
