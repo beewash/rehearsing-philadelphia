@@ -18,8 +18,8 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-react-leaflet`,
     `gatsby-plugin-image`,
-    `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     `gatsby-plugin-scroll-reveal`,
     {
       resolve: 'gatsby-source-sanity',
@@ -30,6 +30,15 @@ module.exports = {
         watchMode: !isProd,
         overlayDrafts: !isProd
       }
+    },
+    {
+      resolve: "gatsby-plugin-sanity-image",
+      options: {
+        // Sanity project info (required)
+        projectId: "ibfjhn1r",
+        dataset: "production",
+        token: process.env.SANITY_READ_TOKEN
+      },
     },
     {
       resolve: 'gatsby-background-image',

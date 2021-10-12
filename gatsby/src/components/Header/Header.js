@@ -62,7 +62,7 @@ const Header = props => {
                 <div>
                   <button className="flex">
                     <Link to="/open-call" className="py-1 px-4 font-acuminPro font-medium uppercase text-white text-xs md:text-sm bg-orchestra-green border-black border-2 rounded-full hover:bg-black hover:text-white">
-                      Join Us!
+                      Join the Orchestra
                     </Link>
                   </button>
                 </div>

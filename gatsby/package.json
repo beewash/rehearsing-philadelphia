@@ -29,7 +29,7 @@
     "gatsby-plugin-purgecss": "^6.0.2",
     "gatsby-plugin-react-helmet": "^3.2.4",
     "gatsby-plugin-react-leaflet": "^3.0.2",
-    "gatsby-plugin-react-native-web": "^3.1.0",
+    "gatsby-plugin-sanity-image": "^0.8.0",
     "gatsby-plugin-scroll-reveal": "^0.0.7",
     "gatsby-plugin-sharp": "^3.13.0",
     "gatsby-source-sanity": "^7.0.0",

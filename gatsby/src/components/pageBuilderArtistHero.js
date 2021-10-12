@@ -1,7 +1,8 @@
 import React from 'react'
+// import SanityImage from 'gatsby-plugin-sanity-image';
 import Image from 'gatsby-image'
 
-const PageBuilderArtistHero = ({ block, raw, index }) => {
+const PageBuilderArtistHero = ({ block, raw, index, }) => {
   const { image, title, bkgImage } = block;
 
   return (
@@ -15,6 +16,7 @@ const PageBuilderArtistHero = ({ block, raw, index }) => {
           <div className="p-8 md:p-0 w-full h-full flex justify-items-center items-center">
             <div className="z-20 relative w-full md:w-4/5 lg:w-2/5 h-3/5 h-min mx-auto border-black border-2">
               {image ? (
+                // <SanityImage {...image} width={500} />
                 <Image fluid={image.asset.fluid} alt={image.alt} className="object-contain w-full h-full" />
               ) : null}
               <div className="hidden md:block absolute -bottom-5 md:-bottom-10 -left-10 z-30 p-2 md:p-4 bg-white border-black border-2 border-r-2 rounded-full">
