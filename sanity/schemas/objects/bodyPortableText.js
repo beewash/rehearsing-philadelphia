@@ -39,7 +39,7 @@ export default {
           {
             name: 'link',
             type: 'object',
-            title: 'URL',
+            title: 'External Link',
             fields: [
               {
                 title: 'URL',
@@ -49,6 +49,12 @@ export default {
                   scheme: ['http', 'https', 'mailto', 'tel'],
                   allowRelative: true
                 })
+              },
+              {
+                title: 'Open in new tab',
+                name: 'blank',
+                description: 'Read https://css-tricks.com/use-target_blank/',
+                type: 'boolean'
               }
             ]
           }

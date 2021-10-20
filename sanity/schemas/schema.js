@@ -52,6 +52,7 @@ import performanceObject from './objects/performanceObject'
 import docAttachment from './objects/docAttachment'
 import moduleSection from './objects/moduleSection'
 import cta from './objects/cta'
+import video from './objects/video'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -106,7 +107,8 @@ export default createSchema({
     performanceObject,
     docAttachment,
     moduleSection,
-    cta
+    cta,
+    video
     // When added to this list, object types can be used as
     // { type: 'typename' } in other document schemas
   ])

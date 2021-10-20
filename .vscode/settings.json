@@ -28,5 +28,6 @@
     "semibold",
     "tbarnes",
     "topright"
-  ]
+  ],
+  "editor.tabSize": 2
 }
