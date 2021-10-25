@@ -19,11 +19,11 @@ export default {
         {title: 'H5', value: 'h5'},
         {title: 'H6', value: 'h6'},
         {title: 'Quote', value: 'blockquote'},
-        {title: 'Break', value: '<br>'}
+        {title: 'Break', value: 'break'}
       ],
       lists: [
-        {title: 'Bullet', value: 'bullet'},
-        {title: 'Number', value: 'number'}
+        {name: 'bullet', title: 'Bullet', value: 'bullet'},
+        {name: 'number', title: 'Number', value: 'number'}
       ],
       // Marks let you mark up inline text in the block editor.
       marks: {
