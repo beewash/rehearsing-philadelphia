@@ -7,7 +7,7 @@ const PageBuilderRoster = ({block}) => {
 
   const allCategories = ['All', ...new Set(roster.map(roster => roster.moduleList))]
 
-  console.log('roster: ', roster)
+  console.log('roster: ', roster.personName)
 
   const [rosterItem, setRosterItem] = useState(roster)
   // const [buttons, setButtons] = useState(allCategories)
