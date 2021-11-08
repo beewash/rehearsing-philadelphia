@@ -65,6 +65,13 @@ module.exports = {
           '/node_modules/sal.js/dist/sal.css'
         ]
       }
+    },
+    {
+      resolve: 'gatsby-plugin-klaviyo',
+      options: {
+        klaviyoKey: 'T6mASD',
+        enableDuringDevelop: true, // Optional. Disables Klaviyo when running Gatsby dev server. Defaults to true.
+      },
     }
   ]
 }
