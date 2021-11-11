@@ -150,6 +150,37 @@ export const query = graphql`
               }
             }
           }
+          ... on SanityTileArtist {
+            _key
+            _type
+            title
+            tileColor
+            colLayoutSection {
+              colLg
+              colMd
+              colSm
+            }
+            rowLayoutSection {
+              rowLg
+              rowMd
+            }
+            tileItem {
+              personName
+              textColor
+              hoverColor
+              slug {
+                current
+              }
+              headshot {
+                alt
+                asset {
+                  fluid(maxWidth: 800) {
+                    ...GatsbySanityImageFluid
+                  }
+                }
+              }
+            }
+          }
         }
       }
       ... on SanityPageBuilderColumns {

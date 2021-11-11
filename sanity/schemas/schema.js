@@ -43,6 +43,7 @@ import colorPicker from './objects/colorPicker'
 import colLayout from './objects/colLayout'
 import rowLayout from './objects/rowLayout'
 import tileAbout from './objects/tileAbout'
+import tileArtist from './objects/tileArtist'
 import tileBasic from './objects/tileBasic'
 import tileDescription from './objects/tileDescription'
 import tileLocation from './objects/tileLocation'
@@ -99,6 +100,7 @@ export default createSchema({
     colLayout,
     rowLayout,
     tileAbout,
+    tileArtist,
     tileBasic,
     tileDescription,
     tileLocation,
