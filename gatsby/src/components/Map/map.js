@@ -130,7 +130,7 @@ function MapComp() {
           </div>
         </div>
         <div className="w-full md:w-1/2 h-m-174">
-          <div id="map" className="w-full h-full">
+          <div id="map" className="w-full h-m-174">
             {(typeof window !== 'undefined') ? (
             <MapContainer id="mapEl" center={location} zoom={zoom} scrollWheelZoom={false} className="z-10">
               <TileLayer 
