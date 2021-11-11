@@ -27,6 +27,7 @@ const HiddenPage = () => (
     <div class="w-3/5"></div>
     <div class="w-2/5"></div>
     <div class="w-1/5"></div>
+    <div class="h-m-174"></div>
     <div class="border-t-0"></div>
     <div class="border-t-1"></div>
     <div class="border-t-2"></div>

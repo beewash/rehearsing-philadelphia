@@ -79,7 +79,6 @@ function PointMarker(props) {
 
   useEffect(() => {
     if (openPopup) markerRef.current.openPopup();
-    console.log(icon)
   }, [openPopup]);
 
   return (
@@ -130,7 +129,8 @@ function MapComp() {
           </div>
         </div>
         <div className="w-full md:w-1/2 h-m-174">
-          <div id="map" className="w-full h-m-174">
+          <div id="map" className="w-full h-full">
+            {(typeof window !== 'undefined') ? (
             <MapContainer id="mapEl" center={location} zoom={zoom} scrollWheelZoom={false} className="z-10">
               <TileLayer 
                 url="https://api.mapbox.com/styles/v1/gentry19/ckst13rdw3r9q17nkjcoagb88/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiZ2VudHJ5MTkiLCJhIjoiY2tzcWg4ZmxuMGNzNDJ1bzVuZTJpNWl4byJ9.Dbjod75IraKTOV48WuQjNQ" 
@@ -147,6 +147,7 @@ function MapComp() {
                 <Tooltip sticky>Love Park Route</Tooltip>
               </GeoJSON>
             </MapContainer>
+            ) : null}
           </div>
         </div>
       </div>
