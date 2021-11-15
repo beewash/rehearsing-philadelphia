@@ -2,6 +2,10 @@ export default {
   name: 'cta',
   type: 'object',
   title: 'Call To Action',
+  options: {
+    collapsible: true,
+    collapsed: true
+  },
   fields: [
     {
       name: 'linkText',

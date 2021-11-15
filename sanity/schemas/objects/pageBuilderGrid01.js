@@ -4,6 +4,11 @@ export default {
   title: 'Grid 01',
   fields: [
     {
+      title: 'Section Title',
+      name: 'sectionTitle',
+      type: 'string'
+    },
+    {
       title: 'Grid Items',
       name: 'gridItems',
       description: 'Add tiles to the grid',
@@ -38,11 +43,11 @@ export default {
   ],
   preview: {
     select: {
-      title: 'title'
+      title: 'sectionTitle'
     },
-    prepare () {
+    prepare ({title}) {
       return {
-        title: 'Grid 01'
+        title
       }
     }
   }

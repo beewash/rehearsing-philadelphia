@@ -22,8 +22,7 @@ export default {
           {title: 'Duet', value: 'duet-red'},
           {title: 'Ensemble', value: 'ensemble-blue'},
           {title: 'Orchestra', value: 'orchestra-green'}
-        ],
-        layout: 'radio'
+        ]
       }
     },
     {
@@ -39,8 +38,7 @@ export default {
           {title: 'Duet', value: 'duet-red'},
           {title: 'Ensemble', value: 'ensemble-blue'},
           {title: 'Orchestra', value: 'orchestra-green'}
-        ],
-        layout: 'radio'
+        ]
       }
     },
     {

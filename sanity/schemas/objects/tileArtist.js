@@ -4,12 +4,6 @@ export default {
   type: 'object',
   fields: [
     {
-      name: 'tileLabel',
-      title: 'Label',
-      type: 'string',
-      description: 'Label this tile to easily discern its contents'
-    },
-    {
       name: 'title',
       type: 'string',
       title: 'Title'
@@ -39,21 +33,6 @@ export default {
           {title: 'Orchestra', value: 'orchestra-green'}
         ]
       }
-    },
-    {
-      name: 'body',
-      title: 'Body',
-      type: 'bodyPortableText'
-    },
-    {
-      name: 'image',
-      type: 'mainImage',
-      title: 'Image'
-    },
-    {
-      name: 'cta',
-      type: 'cta',
-      title: 'CTA'
     },
     {
       name: 'colLayoutSection',
