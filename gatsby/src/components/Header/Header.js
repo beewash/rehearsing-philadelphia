@@ -42,7 +42,7 @@ const Header = props => {
       query={HEADER_QUERY}
       render={data => (
         <>
-        <header className="w-screen sticky top-0 z-50 flex shadow-lg bg-white flex-wrap">
+        <header className="w-screen sticky top-0 z-30 flex shadow-lg bg-white flex-wrap">
         {data && data.headernav.edges.map(({node: headernav}) => (
           <nav key={headernav.title} role='navigation' className="z-45 w-full flex flex-wrap relative">
             <div id="navMain" className="w-full flex relative justify-between p-4">

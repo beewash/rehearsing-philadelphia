@@ -1,4 +1,5 @@
 import React, {useRef, useEffect, useState} from 'react'
+import Modal from '../Modal/modal'
 import L from 'leaflet'
 import { MapContainer, TileLayer, GeoJSON, Marker, Popup, Tooltip } from 'react-leaflet'
 import 'leaflet/dist/leaflet.css'
@@ -90,6 +91,8 @@ function PointMarker(props) {
 
 // Map Component
 function MapComp() {
+  const modalRef1 = useRef()
+
   const [selected, setSelected] = useState()
 
   function handleItemClick(index) {
@@ -108,18 +111,34 @@ function MapComp() {
     <section id="mapComponent" className="w-full">
       <div className="flex flex-col md:flex-row px-4 pb-4 space-y-4 md:space-x-4 md:space-y-0">
         <div className="w-full md:w-1/2 h-m-174 flex flex-col border-2 border-black">
-          <div className="h-full md:h-1/2 p-4 overflow-hidden">
-            <div className="mb-6">
-              <p className="text-4xl md:text-6xl">Locations</p>
+          <div className="h-full md:h-1/2 p-4 overflow-hidden flex flex-col">
+            <div className="flex-grow">
+              <div className="mb-6">
+                <p className="text-4xl md:text-6xl">Locations</p>
+              </div>
+              <p className="text-base line-clamp-3">Addressing the question “What can be the space today for coming together?” the four modules of the project intersect conceptually within the city-space of Philadelphia: Solo and Duet spanning across the entire city, each with a different focus on private and public spaces; Ensemble existing as both a seminar and durational exhibition in three discrete locations; and Orchestra culminating in one large, open gathering place. This use of space is designed to symbolically activate the city and then gather it together. Take a peek into some of the locations on the map below. All locations to be announced January 2022.</p>
+              <button className="mt-4 uppercase font-acuminPro text-xs" onClick={() => modalRef1.current.openModal()}>Read More</button>
+              <Modal ref={modalRef1}>
+                <p className="text-base">Addressing the question “What can be the space today for coming together?” the four modules of the project intersect conceptually within the city-space of Philadelphia: Solo and Duet spanning across the entire city, each with a different focus on private and public spaces; Ensemble existing as both a seminar and durational exhibition in three discrete locations; and Orchestra culminating in one large, open gathering place. This use of space is designed to symbolically activate the city and then gather it together. Take a peek into some of the locations on the map below. All locations to be announced January 2022.</p>
+              </Modal>
             </div>
-            <p className="text-base">Addressing the question “What can be the space today for coming together?” the four modules of the project intersect conceptually within the city-space of Philadelphia: Solo and Duet spanning across the entire city, each with a different focus on private and public spaces; Ensemble existing as both a seminar and durational exhibition in three discrete locations; and Orchestra culminating in one large, open gathering place. This use of space is designed to symbolically activate the city and then gather it together. Take a peek into some of the locations on the map below. All locations to be announced January 2022.</p>
-            <div className="hidden">
-              <ul>
-                <li>
-                  <img src={soloIcon} className="inline-block w-4 h-auto" alt="solo" />
-                  <div className="inline-block">
-                    <p>Solo</p>
-                  </div>
+            <div className="mb-2 max-w-xl">
+              <ul className="flex flex-row flex-wrap justify-between">
+                <li className="flex flex-row items-center space-x-2 mb-4">
+                  <img src={soloIcon} className="w-4 h-auto" alt="solo" />
+                  <p className="font-acuminPro uppercase text-cfsSM1">Solo</p>
+                </li>
+                <li className="flex flex-row items-center space-x-2 mb-4">
+                  <img src={duetIcon} className="w-4 h-auto" alt="solo" />
+                  <p className="font-acuminPro uppercase text-cfsSM1">Duet</p>
+                </li>
+                <li className="flex flex-row items-center space-x-2 mb-4">
+                  <img src={ensembleIcon} className="w-4 h-auto" alt="solo" />
+                  <p className="font-acuminPro uppercase text-cfsSM1">Ensemble</p>
+                </li>
+                <li className="flex flex-row items-center space-x-2 mb-4">
+                  <img src={orchestraIcon} className="w-4 h-auto" alt="solo" />
+                  <p className="font-acuminPro uppercase text-cfsSM1">Orchestra</p>
                 </li>
               </ul>
             </div>

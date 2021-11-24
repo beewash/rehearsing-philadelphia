@@ -21,6 +21,7 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-scroll-reveal`,
+    `gatsby-plugin-portal`,
     {
       resolve: 'gatsby-source-sanity',
       options: {
