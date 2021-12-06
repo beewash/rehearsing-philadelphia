@@ -35,7 +35,7 @@ const serializers = {
           return <hr className="my-10 border-black border-opacity-20"></hr>
         
         case "normal":
-          return  <p className="mb-6">{props.children}</p>
+          return  <p className="mb-5">{props.children}</p>
         
         default:
           return <p className="">{props.children}</p>

@@ -106,6 +106,19 @@ export default {
       }
     },
     {
+      name: 'rosterColor',
+      title: 'Roster Color',
+      type: 'string',
+      options: {
+        list: [
+          {title: 'Solo', value: 'solo-yellow'},
+          {title: 'Duet', value: 'duet-red'},
+          {title: 'Ensemble', value: 'ensemble-blue'},
+          {title: 'Orchestra', value: 'orchestra-green'}
+        ]
+      }
+    },
+    {
       name: 'social',
       title: 'Social',
       type: 'array',

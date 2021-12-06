@@ -40,6 +40,8 @@ import navItem from './objects/navItem'
 // import navGroup from './objects/navGroup'
 import emailEval from './objects/emailEval'
 import colorPicker from './objects/colorPicker'
+import gridCols from './objects/gridCols'
+import gridRow from './objects/gridRow'
 import colLayout from './objects/colLayout'
 import rowLayout from './objects/rowLayout'
 import tileAbout from './objects/tileAbout'
@@ -97,6 +99,8 @@ export default createSchema({
     excerptPortableText,
     emailEval,
     colorPicker,
+    gridCols,
+    gridRow,
     colLayout,
     rowLayout,
     tileAbout,

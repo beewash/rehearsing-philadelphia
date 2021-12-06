@@ -4,9 +4,9 @@ import Image from "gatsby-image"
 
 function Roster({rosterItem}) {
   return (
-    <div id="rosterList" className="grid gap-y-4 gap-x-2 md:gap-4 justify-between grid-cols-100 md:grid-cols-150">
+    <div id="rosterList" className="grid gap-6 justify-between grid-cols-2 md:grid-cols-150">
         {rosterItem && rosterItem.map((rosterItem, index) =>
-          <div id="rosterItem" key={rosterItem.slug.current} className={`relative hover-trigger w-full h-24.5 md:h-36.5 flex items-center justify-center bg-white border-black border-2 rounded-full hover:bg-${rosterItem.hoverColor} hover:text-white`}>
+          <div id="rosterItem" key={rosterItem.slug.current} className={`relative hover-trigger w-full h-24.5 md:h-36.5 flex items-center justify-center bg-white border-black border-2 rounded-2xl hover:bg-${rosterItem.rosterColor} hover:text-white`}>
               <div id="textContainer" className="relative">
                 <Link to={`/${rosterItem.slug.current}`}>
                   <div className="w-4/5 mx-auto">

@@ -111,7 +111,7 @@ function MapComp() {
     <section id="mapComponent" className="w-full">
       <div className="flex flex-col md:flex-row px-4 pb-4 space-y-4 md:space-x-4 md:space-y-0">
         <div className="w-full md:w-1/2 h-m-174 flex flex-col border-2 border-black">
-          <div className="h-full md:h-1/2 p-4 overflow-hidden flex flex-col">
+          <div className="h-1/2 p-4 overflow-hidden flex flex-col space-y-6 md:space-y-0">
             <div className="flex-grow">
               <div className="mb-6">
                 <p className="text-4xl md:text-6xl">Locations</p>

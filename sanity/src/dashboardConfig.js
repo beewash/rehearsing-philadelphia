@@ -24,7 +24,7 @@ export default {
         data: [
           {
             title: 'GitHub repo',
-            value: 'https://github.com/jaydanurwin/gatsby-sanity-starter',
+            value: 'https://github.com/beewash/rehearsing-philadelphia',
             category: 'Code'
           }
           // Add your own hosted website url here if you'd like a quick link to the frontend
@@ -37,6 +37,12 @@ export default {
       name: 'document-list',
       options: {title: 'Recently created pages', order: '_createdAt desc', types: ['page']},
       layout: {width: 'medium'}
+    },
+    {
+      name: 'vercel',
+      layout: {
+        width: 'full'
+      }
     }
   ]
 }

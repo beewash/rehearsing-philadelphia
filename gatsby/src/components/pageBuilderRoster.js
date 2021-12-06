@@ -7,8 +7,6 @@ const PageBuilderRoster = ({block}) => {
 
   const allCategories = ['All', ...new Set(roster.map(roster => roster.moduleList))]
 
-  console.log('roster: ', roster.personName)
-
   const [rosterItem, setRosterItem] = useState(roster)
   // const [buttons, setButtons] = useState(allCategories)
   const [buttons] = useState(allCategories)
@@ -31,7 +29,7 @@ const PageBuilderRoster = ({block}) => {
         <div className="mb-8">
           <h4 className="normal-case" >{title}</h4>
         </div>
-        <Button button={buttons} filter={filter} />
+        <Button button={buttons} filter={filter} roster={roster} />
         <div className="h-0.5 w-16 bg-black mb-8"></div>
         <Roster rosterItem={rosterItem} />
       </div>

@@ -1,6 +1,6 @@
 export default {
   title: 'Row Layout (Height)',
-  name: 'rowLayout',
+  name: 'gridRow',
   type: 'object',
   options: {
     collapsible: true,
@@ -14,11 +14,12 @@ export default {
       type: 'string',
       options: {
         list: [
-          {title: '1', value: 'row-span-1'},
-          {title: '2', value: 'row-span-2'},
-          {title: '3', value: 'row-span-3'},
-          {title: '4', value: 'row-span-4'},
-          {title: '5', value: 'row-span-5'}
+          {title: '1', value: 'grid-row-1'},
+          {title: '2', value: 'grid-row-2'},
+          {title: '3', value: 'grid-row-3'},
+          {title: '4', value: 'grid-row-4'},
+          {title: '5', value: 'grid-row-5'},
+          {title: '6', value: 'grid-row-6'}
         ]
       }
     },
@@ -29,8 +30,8 @@ export default {
       type: 'string',
       options: {
         list: [
-          {title: '1', value: 'row-span-1'},
-          {title: '2', value: 'row-span-2'}
+          {title: '1', value: 'grid-row-1'},
+          {title: '2', value: 'grid-row-2'}
         ]
       }
     }

@@ -23,7 +23,11 @@ module.exports = {
         'duet-red': '#ED1C24',
         'ensemble-blue': '#000F9F',
         'orchestra-green': '#009245',
-        'that-grey': '#dadada'
+        'that-grey': '#dadada',
+        'solo': '#FFC20E',
+        'duet': '#ED1C24',
+        'ensemble': '#000F9F',
+        'orchestra': '#009245'
       },
       gridTemplateColumns: {
         '150': 'repeat(auto-fill, 150px)',
@@ -35,6 +39,18 @@ module.exports = {
         '148': '37rem',
         'm-174' : 'calc(-174px + 100vh)',
         'm-80' : 'calc(-80px + 100vh)'
+      },
+      minHeight: {
+        '1/4': '25%',
+        '1/2': '50%',
+        '3/4': '75%',
+        '400': '25rem'
+      },
+      minWidth: {
+        '1/4': '25%',
+        '1/2': '50%',
+        '3/4': '75%',
+        '400': '25rem'
       }
     }
   },

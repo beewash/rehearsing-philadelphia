@@ -65,6 +65,7 @@ export const query = graphql`
           hoverColor
           roleList
           moduleList
+          rosterColor
           headshot {
             alt
             asset {
@@ -110,6 +111,10 @@ export const query = graphql`
           externalContent
           linkUrl
         }
+        bgColor
+        bgHoverColor
+        textColor
+        textHoverColor
       }
     }
   }

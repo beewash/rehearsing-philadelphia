@@ -8,14 +8,23 @@ const GridBuilderTileArtist = ({block, raw, globalStyles}) => {
   return (
     <div
       id="tileArtistSpotlight"
-      className={`bg-${tileColor} ${colLayoutSection.colSm} md:${colLayoutSection.colMd} lg:${colLayoutSection.colLg} md:${rowLayoutSection.rowMd} lg:${rowLayoutSection.rowLg} hover:bg-${tileColor}`}
+      className={`
+        min-h-400
+        bg-${tileColor} 
+        ${colLayoutSection.colSm} 
+        md:${colLayoutSection.colMd} 
+        lg:${colLayoutSection.colLg} 
+        md:${rowLayoutSection.rowMd} 
+        lg:${rowLayoutSection.rowLg} 
+        hover:bg-${tileColor}
+      `}
     >
       {tileItem.map(item => (
       <Link to={`/${item.slug.current}`}>
         <BackgroundImage
           Tag="section"
           id="tileLocation"
-          className={`relative z-20 flex p-4 w-full h-full  text-white items-end rounded-full`}
+          className={`relative z-20 flex p-4 w-full min-h-200 h-full  text-white items-end rounded-full`}
           fluid={item.headshot.asset.fluid}
           backgroundColor={`#fff`}
           grayscale={true}

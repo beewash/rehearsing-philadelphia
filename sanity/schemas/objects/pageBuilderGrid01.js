@@ -9,6 +9,16 @@ export default {
       type: 'string'
     },
     {
+      name: 'gridCol',
+      title: 'Column Layout (Width)',
+      type: 'gridCols'
+    },
+    {
+      name: 'gridRow',
+      title: 'Row Layout (Height)',
+      type: 'gridRow'
+    },
+    {
       title: 'Grid Items',
       name: 'gridItems',
       description: 'Add tiles to the grid',

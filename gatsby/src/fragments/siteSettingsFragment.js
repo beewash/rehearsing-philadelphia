@@ -8,6 +8,14 @@ export const query = graphql`
         _key
         _type
         _rawGridItems(resolveReferences: {maxDepth: 10})
+        gridCol {
+          colsLg
+          colsMd
+          colsSm
+        }
+        gridRow {
+          rowLg
+        }
         gridItems {
           ... on SanityTileAbout {
             _key
