@@ -9,6 +9,9 @@ const HiddenPage = () => (
     <div className="w-full h-full text-orchestra-green bg-orchestra-green hover:bg-orchestra-green hover:text-orchestra-green"></div>
     <div className="row-span-1 md:row-span-1 lg:row-span-1"></div>
     <div className="row-span-2 md:row-span-2 lg:row-span-2"></div>
+    <div className="row-span-3 md:row-span-3 lg:row-span-3"></div>
+    <div className="row-span-4 md:row-span-4 lg:row-span-4"></div>
+    <div className="row-span-5 md:row-span-5 lg:row-span-5"></div>
     <div className="col-span-1 md:col-span-1 lg:col-span-1 "></div>
     <div className="col-span-2 md:col-span-2 lg:col-span-2"></div>
     <div className="col-span-3 md:col-span-3 lg:col-span-3"></div>
