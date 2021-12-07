@@ -1,6 +1,28 @@
 export default {
   widgets: [
-    {name: 'structure-menu'},
+    {
+      name: 'project-users',
+      layout: {
+        width: 'small'
+      }
+    },
+    {
+      name: 'structure-menu',
+      layout: {
+        width: 'medium'
+      }
+    },
+    {
+      name: 'document-list',
+      options: {
+        title: 'Recently created pages',
+        order: '_createdAt desc',
+        types: ['page']
+      },
+      layout: {
+        width: 'medium'
+      }
+    },
     {
       name: 'project-info',
       options: {
@@ -29,19 +51,16 @@ export default {
           }
           // Add your own hosted website url here if you'd like a quick link to the frontend
           // {title: 'Frontend', value: 'https://jaydanurwin.com', category: 'apps'}
-        ]
+        ],
+        layout: {
+          width: 'medium'
+        }
       }
-    },
-    {name: 'project-users', layout: {height: 'auto'}},
-    {
-      name: 'document-list',
-      options: {title: 'Recently created pages', order: '_createdAt desc', types: ['page']},
-      layout: {width: 'medium'}
     },
     {
       name: 'vercel',
       layout: {
-        width: 'full'
+        width: 'large'
       }
     }
   ]
