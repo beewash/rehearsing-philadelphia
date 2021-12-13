@@ -141,6 +141,22 @@
     animation: ticker-kf 18s linear infinite;
   }
 
+  .instrument {
+    display: none;
+  }
+
+  .rosterParent:hover .instrument {
+    display: block;
+  }
+
+  .rosterParent:hover .artistName {
+    display: none;
+  }
+
+  /* .hover-trigger:hover .hover-target {
+      display: block;
+  } */
+
   /* #locationInfo {
     display: none;
   }

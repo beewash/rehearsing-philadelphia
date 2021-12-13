@@ -50,14 +50,7 @@ export default {
       title: 'Role list',
       name: 'roleList',
       description: 'Used for internal indexing',
-      type: 'string',
-      options: {
-        list: [
-          {title: 'Composer', value: 'composer'},
-          {title: 'Participating Artist', value: 'participating_artist'}
-        ],
-        layout: 'radio'
-      }
+      type: 'string'
     },
     {
       title: 'Module',
