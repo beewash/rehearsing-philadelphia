@@ -13,7 +13,7 @@ function Roster({rosterItem}) {
                     <p className="text-cfsSM2 md:text-cfsSM font-acuminPro font-medium text-center">{rosterItem.personName}</p>
                   </div>
                 </Link> */}
-                <div className="">
+                <div className="max-w-32.5 break-word">
                   <p className="artistName text-cfsSM2 md:text-cfsSM font-acuminPro font-medium text-center">{rosterItem.personName}</p>
                   <p className="instrument w-full text-cfsSM2 md:text-cfsSM font-acuminPro font-medium text-center capitalize">{rosterItem.roleList}</p>
                 </div>
