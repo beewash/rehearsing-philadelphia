@@ -23,6 +23,10 @@ const HiddenPage = () => (
     <div className="grid-cols-4 md:grid-cols-4 lg:grid-cols-4"></div>
     <div className="grid-cols-5 md:grid-cols-1 lg:grid-cols-5"></div>
     <div className="hover:text-black"></div> 
+    <div className="hover:bg-solo focus:bg-solo"></div> 
+    <div className="hover:bg-duet focus:bg-duet"></div> 
+    <div className="hover:bg-ensemble focus:bg-ensemble"></div> 
+    <div className="hover:bg-orchestra focus:bg-orchestra"></div> 
     <h1>h1</h1>
     <h2>h2</h2>
     <h3>h3</h3>
