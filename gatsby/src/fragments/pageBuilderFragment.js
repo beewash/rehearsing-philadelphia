@@ -59,6 +59,11 @@ export const query = graphql`
         _key
         _type
         title
+        summary {
+          _key
+          _type
+        }
+        _rawSummary
         roster {
           _key
           personName

@@ -54,10 +54,12 @@ const serializers = {
   list: (props) => {
     const { type } = props;
     const bullet = type === 'bullet';
+    const numbered = type === 'number';
     if (bullet) {
       return <ul className="list-disc mb-6 ml-6">{props.children}</ul>;
-    }
-    return <ol>{props.children}</ol>;
+    } else if (numbered) {
+      return <ul className="list-decimal mb-6 ml-6">{props.children}</ul>;
+    } else return <ol>{props.children}</ol>;
   },
   listItem: (props) => <p><li className="list-item lg:ml-6">{props.children}</li></p>
 }

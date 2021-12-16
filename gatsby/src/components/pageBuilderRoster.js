@@ -1,9 +1,10 @@
 import React, {useState} from 'react'
+import PortableText from './portableText'
 import Button from './button'
 import Roster from './roster'
 
-const PageBuilderRoster = ({block}) => {
-  const {title, roster} = block
+const PageBuilderRoster = ({block, raw}) => {
+  const {title, roster, summary, _rawSummary} = block
 
   const allCategories = ['All', ...new Set(roster.map(roster => roster.moduleList))]
 
@@ -29,6 +30,11 @@ const PageBuilderRoster = ({block}) => {
         <div className="mb-8">
           <h4 className="normal-case" >{title}</h4>
         </div>
+        {summary ? (
+          <div className="mb-8">
+            <PortableText blocks={_rawSummary} />
+          </div>
+        ) : null}
         <Button button={buttons} filter={filter} roster={roster} />
         <div className="h-0.5 w-16 bg-black mb-8"></div>
         <Roster rosterItem={rosterItem} />

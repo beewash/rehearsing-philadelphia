@@ -5,6 +5,12 @@ export default {
   fields: [
     {name: 'title', type: 'string', title: 'Title'},
     {
+      name: 'summary',
+      title: 'Summary',
+      description: 'Optional text to describe what this section is about.',
+      type: 'bodyPortableText'
+    },
+    {
       title: 'Roster',
       name: 'roster',
       description: 'Add all appropriate artists for this list.',
