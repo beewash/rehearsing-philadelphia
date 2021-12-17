@@ -61,7 +61,7 @@ const serializers = {
       return <ul className="list-decimal mb-6 ml-6">{props.children}</ul>;
     } else return <ol>{props.children}</ol>;
   },
-  listItem: (props) => <p><li className="list-item lg:ml-6">{props.children}</li></p>
+  listItem: (props) => <p><li className="list-item mb-5 lg:ml-6">{props.children}</li></p>
 }
 
 export default serializers
