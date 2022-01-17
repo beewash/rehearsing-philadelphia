@@ -1,10 +1,7 @@
-import {RiArticleFill} from 'react-icons/ri'
-
 export default {
   name: 'press',
   title: 'Press',
   type: 'document',
-  icon: RiArticleFill,
   fields: [
     {
       name: 'pressTitle',
