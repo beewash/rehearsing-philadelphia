@@ -55,6 +55,17 @@ export const query = graphql`
           }
         }
       }
+      ... on SanityPageBuilderPressClippings {
+        _key
+        _type
+        pressItem {
+          _key
+          pressTitle
+          pressLink
+          pressAuthor
+          publishDate
+        }
+      }
       ... on SanityPageBuilderRoster {
         _key
         _type

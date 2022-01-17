@@ -15,6 +15,7 @@ import sponsors from './documents/sponsors'
 import locations from './documents/locations'
 import legal from './documents/legal'
 import artistPortal from './documents/artistPortal'
+import press from './documents/press'
 
 // Object types
 import bodyPortableText from './objects/bodyPortableText'
@@ -33,6 +34,7 @@ import pageBuilderPageBreak from './objects/pageBuilderPageBreak'
 import pageBuilderLineBreak from './objects/pageBuilderLineBreak'
 import pageBuilderGrid01 from './objects/pageBuilderGrid01'
 import pageBuilderSocial from './objects/pageBuilderSocial'
+import pageBuilderPressClippings from './objects/pageBuilderPressClippings'
 import column from './objects/column'
 import link from './objects/link'
 // import navBuilder from './objects/navBuilder'
@@ -71,6 +73,7 @@ export default createSchema({
     artistPortal,
     page,
     people,
+    press,
     performanceModules,
     locations,
     performances,
@@ -92,6 +95,7 @@ export default createSchema({
     pageBuilderPageBreak,
     pageBuilderLineBreak,
     pageBuilderSocial,
+    pageBuilderPressClippings,
     column,
     mainImage,
     bodyPortableText,

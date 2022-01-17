@@ -54,6 +54,10 @@ export default {
     {
       type: 'docAttachment',
       title: 'Document'
+    },
+    {
+      type: 'pageBuilderPressClippings',
+      title: 'Press Clippings'
     }
   ]
 }

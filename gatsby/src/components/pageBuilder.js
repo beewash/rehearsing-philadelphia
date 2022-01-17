@@ -11,6 +11,7 @@ import PageBuilderArtistHero from "./pageBuilderArtistHero"
 import PageBuilderSocial from "./pageBuilderSocial"
 import PageBuilderGrid01 from "./pageBuilderGrid01"
 import PageBuilderDocAttachment from "./pageBuilderDocAttachment"
+import PageBuilderPressClippings from "./pageBuilderPressClippings"
 import CTA from "./cta"
 
 function PageBuilder(props) {
@@ -31,6 +32,7 @@ function PageBuilder(props) {
     pageBuilderLineBreak: PageBuilderLineBreak,
     pageBuilderSocial: PageBuilderSocial,
     pageBuilderGrid01: PageBuilderGrid01,
+    pageBuilderPressClippings: PageBuilderPressClippings,
     docAttachment: PageBuilderDocAttachment,
     cta: CTA
   }
