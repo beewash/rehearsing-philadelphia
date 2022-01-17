@@ -10,10 +10,6 @@ import nav from './documents/navigation'
 import page from './documents/page'
 import people from './documents/people'
 import performanceModules from './documents/performanceModules'
-import performances from './documents/performances'
-import sponsors from './documents/sponsors'
-import locations from './documents/locations'
-import legal from './documents/legal'
 import artistPortal from './documents/artistPortal'
 import press from './documents/press'
 
@@ -53,7 +49,6 @@ import tileDescription from './objects/tileDescription'
 import tileLocation from './objects/tileLocation'
 import role from './objects/role'
 import imgLink from './objects/imgLink'
-import performanceObject from './objects/performanceObject'
 import docAttachment from './objects/docAttachment'
 import moduleSection from './objects/moduleSection'
 import cta from './objects/cta'
@@ -75,10 +70,6 @@ export default createSchema({
     people,
     press,
     performanceModules,
-    locations,
-    performances,
-    sponsors,
-    legal,
     link,
     // navBuilder,
     navItem,
@@ -114,7 +105,6 @@ export default createSchema({
     tileLocation,
     role,
     imgLink,
-    performanceObject,
     docAttachment,
     moduleSection,
     cta,

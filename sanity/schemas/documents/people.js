@@ -129,13 +129,6 @@ export default {
       type: 'array',
       of: [{type: 'reference',
         to: [{type: 'performanceModules'}]}]
-    },
-    {
-      title: 'List of Performances',
-      name: 'performanceList',
-      description: 'Add all performances associated with this person',
-      type: 'array',
-      of: [{type: 'performanceObject'}]
     }
   ]
 }
