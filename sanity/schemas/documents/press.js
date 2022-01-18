@@ -1,10 +1,10 @@
-import {BsPen} from 'react-icons/all'
+import {FaPenAlt} from 'react-icons/fa'
 
 export default {
   name: 'press',
   title: 'Press',
   type: 'document',
-  icon: BsPen,
+  icon: FaPenAlt,
   preview: {
     select: {
       title: 'pressTitle',
