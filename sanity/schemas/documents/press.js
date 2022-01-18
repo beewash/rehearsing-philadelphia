@@ -1,13 +1,14 @@
-import {FaPenAlt} from 'react-icons/fa'
+// import {FaPenAlt} from 'react-icons/fa'
 
 export default {
   name: 'press',
   title: 'Press',
   type: 'document',
-  icon: FaPenAlt,
+  // icon: FaPenAlt,
   preview: {
     select: {
       title: 'pressTitle',
+      // media: 'icon',
       subtitle: 'publishDate'
     },
     prepare ({title, subtitle}) {
