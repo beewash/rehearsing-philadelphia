@@ -22,6 +22,15 @@ export const query = graphql`
         _type
         title
       }
+      ... on SanityPageBuilderFAQ {
+        _key
+        _type
+        faqItems {
+          _key
+          _rawAnswer
+          question
+        }
+      }
       ... on SanityPageBuilderPageTitle {
         _key
         _type

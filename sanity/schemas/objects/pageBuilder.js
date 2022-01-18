@@ -58,6 +58,10 @@ export default {
     {
       type: 'pageBuilderPressClippings',
       title: 'Press Clippings'
+    },
+    {
+      type: 'pageBuilderFAQ',
+      title: 'FAQ'
     }
   ]
 }

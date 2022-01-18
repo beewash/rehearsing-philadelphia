@@ -12,6 +12,7 @@ import people from './documents/people'
 import performanceModules from './documents/performanceModules'
 import artistPortal from './documents/artistPortal'
 import press from './documents/press'
+import faq from './documents/faq'
 
 // Object types
 import bodyPortableText from './objects/bodyPortableText'
@@ -31,6 +32,7 @@ import pageBuilderLineBreak from './objects/pageBuilderLineBreak'
 import pageBuilderGrid01 from './objects/pageBuilderGrid01'
 import pageBuilderSocial from './objects/pageBuilderSocial'
 import pageBuilderPressClippings from './objects/pageBuilderPressClippings'
+import pageBuilderFAQ from './objects/pageBuilderFAQ'
 import column from './objects/column'
 import link from './objects/link'
 // import navBuilder from './objects/navBuilder'
@@ -70,6 +72,7 @@ export default createSchema({
     people,
     press,
     performanceModules,
+    faq,
     link,
     // navBuilder,
     navItem,
@@ -87,6 +90,7 @@ export default createSchema({
     pageBuilderLineBreak,
     pageBuilderSocial,
     pageBuilderPressClippings,
+    pageBuilderFAQ,
     column,
     mainImage,
     bodyPortableText,

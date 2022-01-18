@@ -14,5 +14,17 @@ export default {
         }
       ]
     }
-  ]
+  ],
+  preview: {
+    select: {
+      pressItems: 'pressItem'
+    },
+    prepare ({pressItems = []}) {
+      const titles = []
+      pressItems.forEach(item => titles.push(item.pressTitle))
+      return {
+        title: pressItems.length === 1 ? `1 Press Item` : `${pressItems.length} Press Items`
+      }
+    }
+  }
 }

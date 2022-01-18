@@ -40,6 +40,7 @@
     "leaflet": "^1.7.1",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
+    "react-accessible-accordion": "^4.0.0",
     "react-cookie-consent": "^6.4.1",
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",

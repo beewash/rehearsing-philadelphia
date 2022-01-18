@@ -1,7 +1,22 @@
+import {BsPen} from 'react-icons/bs'
+
 export default {
   name: 'press',
   title: 'Press',
   type: 'document',
+  icon: BsPen,
+  preview: {
+    select: {
+      title: 'pressTitle',
+      subtitle: 'publishDate'
+    },
+    prepare ({title, subtitle}) {
+      return {
+        title,
+        subtitle
+      }
+    }
+  },
   fields: [
     {
       name: 'pressTitle',
