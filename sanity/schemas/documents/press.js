@@ -1,4 +1,4 @@
-import {BsPen} from 'react-icons/bs'
+import {BsPen} from 'react-icons/all'
 
 export default {
   name: 'press',
