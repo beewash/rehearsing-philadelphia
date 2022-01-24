@@ -157,13 +157,13 @@ function MapComp() {
               />
               <PointLayer data={locations} selectedIndex={selected} />
               <GeoJSON data={baltimore_ave_route} key="baltimore_ave_route" pathOptions={duetOptions}>
-                <Tooltip sticky>Baltimore Ave Route</Tooltip>
+                <Tooltip sticky>Baltimore Ave between 40th and 50th</Tooltip>
               </GeoJSON>
               <GeoJSON data={washington_sq_route} key="washington_sq_route" pathOptions={duetOptions}>
-                <Tooltip sticky>Washington Square Route</Tooltip>
+                <Tooltip sticky>Perimeter of Independence Historic Park</Tooltip>
               </GeoJSON>
               <GeoJSON data={lovepark_route} key="lovepark_route" pathOptions={duetOptions}>
-                <Tooltip sticky>Love Park Route</Tooltip>
+                <Tooltip sticky>City Hall to the PMA along the Parkway</Tooltip>
               </GeoJSON>
             </MapContainer>
             ) : null}

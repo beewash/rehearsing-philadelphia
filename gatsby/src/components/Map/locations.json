@@ -106,7 +106,7 @@
     },
     "properties": {
       "name": "University of The Sciences in Philadelphia",
-      "address": "Baltimore Ave Route: Stop 1 of 2",
+      "address": "Baltimore Ave between 40th and 50th",
       "module": "Duet",
       "icon": "/static/duetPin-634975594205a79a9716a0bd64c82b7d.png",
       "color": "duet-red",
@@ -128,7 +128,7 @@
     },
     "properties": {
       "name": "52nd and Baltimore",
-      "address": "Baltimore Ave Route: Stop 2 of 2",
+      "address": "Baltimore Ave between 40th and 50th",
       "module": "Duet",
       "icon": "/static/duetPin-634975594205a79a9716a0bd64c82b7d.png",
       "color": "duet-red",
@@ -150,7 +150,7 @@
     },
     "properties": {
       "name": "Washington Square",
-      "address": "Washington Sq Route: Stop 1 of 5",
+      "address": "Perimeter of Independence Historic Park",
       "module": "Duet",
       "icon": "/static/duetPin-634975594205a79a9716a0bd64c82b7d.png",
       "color": "duet-red",
@@ -172,7 +172,7 @@
     },
     "properties": {
       "name": "Franklin Square",
-      "address": "Washington Sq Route: Stop 2 of 5",
+      "address": "Perimeter of Independence Historic Park",
       "module": "Duet",
       "icon": "/static/duetPin-634975594205a79a9716a0bd64c82b7d.png",
       "color": "duet-red",
@@ -194,7 +194,7 @@
     },
     "properties": {
       "name": "Independence Hall",
-      "address": "Washington Sq Route: Stop 3 of 5",
+      "address": "Perimeter of Independence Historic Park",
       "module": "Duet",
       "icon": "/static/duetPin-634975594205a79a9716a0bd64c82b7d.png",
       "color": "duet-red",
@@ -216,7 +216,7 @@
     },
     "properties": {
       "name": "The Olde Bar",
-      "address": "Washington Sq Route: Stop 4 of 5",
+      "address": "Perimeter of Independence Historic Park",
       "module": "Duet",
       "icon": "/static/duetPin-634975594205a79a9716a0bd64c82b7d.png",
       "color": "duet-red",
@@ -238,7 +238,7 @@
     },
     "properties": {
       "name": "Christ Church",
-      "address": "Washington Sq Route: Stop 5 of 5",
+      "address": "Perimeter of Independence Historic Park",
       "module": "Duet",
       "icon": "/static/duetPin-634975594205a79a9716a0bd64c82b7d.png",
       "color": "duet-red",
@@ -260,7 +260,7 @@
     },
     "properties": {
       "name": "Benjamin Franklin Parkway",
-      "address": "Love Park Route: Stop 1 of 2",
+      "address": "City Hall to the PMA along the Parkway",
       "module": "Duet",
       "icon": "/static/duetPin-634975594205a79a9716a0bd64c82b7d.png",
       "color": "duet-red",
@@ -282,7 +282,7 @@
     },
     "properties": {
       "name": "Philadelphia Museum of Art",
-      "address": "Love Park Route: Stop 2 of 2",
+      "address": "City Hall to the PMA along the Parkway",
       "module": "Duet",
       "icon": "/static/duetPin-634975594205a79a9716a0bd64c82b7d.png",
       "color": "duet-red",
