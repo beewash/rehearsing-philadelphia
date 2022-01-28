@@ -7,7 +7,7 @@ const {title, tileColor, image, colLayoutSection, rowLayoutSection} = block
   return (
     <div
       id="tileLocation"
-      className={`bg-${tileColor} ${colLayoutSection.colSm} md:${colLayoutSection.colMd} lg:${colLayoutSection.colLg} md:${rowLayoutSection.rowMd} lg:${rowLayoutSection.rowLg} hover:bg-${tileColor}`}
+      className={`bg-${tileColor} ${colLayoutSection.colSm} md:${colLayoutSection.colMd} lg:${colLayoutSection.colLg} md:${rowLayoutSection.rowMd} lg:${rowLayoutSection.rowLg} hover:bg-${tileColor} rounded-lg`}
     >
     <BackgroundImage
       Tag="section"

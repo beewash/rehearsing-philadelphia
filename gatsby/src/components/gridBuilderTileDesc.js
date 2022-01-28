@@ -7,7 +7,7 @@ const {textBlocks, tileColor, textColor, colLayoutSection, rowLayoutSection} = b
   return (
     <section 
       id="tileDesc"
-      className={`border-${tileColor} border-2 ${globalStyles} ${colLayoutSection.colSm} md:${colLayoutSection.colMd} lg:${colLayoutSection.colLg} md:${rowLayoutSection.rowMd} lg:${rowLayoutSection.rowLg}`}
+      className={`border-${tileColor} border-2 ${globalStyles} ${colLayoutSection.colSm} md:${colLayoutSection.colMd} lg:${colLayoutSection.colLg} md:${rowLayoutSection.rowMd} lg:${rowLayoutSection.rowLg} rounded-lg`}
     >
       <div className={`h-full flex flex-col justify-between space-y-8 text-${textColor}`}>
         {textBlocks.map((text, index) => (

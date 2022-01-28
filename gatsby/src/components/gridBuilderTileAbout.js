@@ -10,7 +10,7 @@ const GridBuilderTileAbout = ({block, raw, globalStyles}) => {
   return (
     <section 
       id="tileAbout" 
-      className={`border-${textColor} border-2 bg-${tileColor} ${globalStyles} ${colLayoutSection.colSm} md:${colLayoutSection.colMd} lg:${colLayoutSection.colLg} md:${rowLayoutSection.rowMd} lg:${rowLayoutSection.rowLg}`} 
+      className={`border-${textColor} border-2 bg-${tileColor} ${globalStyles} ${colLayoutSection.colSm} md:${colLayoutSection.colMd} lg:${colLayoutSection.colLg} md:${rowLayoutSection.rowMd} lg:${rowLayoutSection.rowLg} rounded-lg`} 
     >
       <div className={`text-${textColor}`}>
         <div className="mb-8">

@@ -12,7 +12,7 @@ const PageBuilderColumns = ({block, raw}) => {
           <div 
             key={index}
             id="column" 
-            className={`bg-${column.bgColor} text-${column.textColor} w-full h-full p-8 mx-auto flex flex-col lg:flex-row lg:odd:flex-row-reverse lg:last:flex-col items-center`}
+            className={`bg-${column.bgColor} text-${column.textColor} w-full h-full p-8 mx-auto flex flex-col lg:flex-row lg:odd:flex-row-reverse lg:last:flex-col items-center rounded-lg`}
             data-sal="slide-up"
             data-sal-delay="300"
             data-sal-easing="ease"  

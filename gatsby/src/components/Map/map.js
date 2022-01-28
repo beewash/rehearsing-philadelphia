@@ -110,7 +110,7 @@ function MapComp() {
   return (
     <section id="mapComponent" className="w-full">
       <div className="flex flex-col md:flex-row px-4 pb-4 space-y-4 md:space-x-4 md:space-y-0">
-        <div className="w-full md:w-1/2 h-m-174 flex flex-col border-2 border-black">
+        <div className="w-full md:w-1/2 h-m-174 flex flex-col border-2 border-black rounded-lg">
           <div className="h-1/2 p-4 overflow-hidden flex flex-col space-y-6 md:space-y-0">
             <div className="flex-grow">
               <div className="mb-6">
@@ -150,7 +150,7 @@ function MapComp() {
         <div className="w-full md:w-1/2 h-m-174">
           <div id="map" className="w-full h-full">
             {(typeof window !== 'undefined') ? (
-            <MapContainer id="mapEl" center={location} zoom={zoom} scrollWheelZoom={false} className="z-10 h-m-174">
+            <MapContainer id="mapEl" center={location} zoom={zoom} scrollWheelZoom={false} className="z-10 h-m-174 rounded-lg">
               <TileLayer 
                 url="https://api.mapbox.com/styles/v1/gentry19/ckst13rdw3r9q17nkjcoagb88/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiZ2VudHJ5MTkiLCJhIjoiY2tzcWg4ZmxuMGNzNDJ1bzVuZTJpNWl4byJ9.Dbjod75IraKTOV48WuQjNQ" 
                 attribution="© <a href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>" 

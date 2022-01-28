@@ -7,7 +7,7 @@ const GridBuilderTileBasic = ({block, raw, globalStyles}) => {
   return (
     <section
       id="basicTile"
-      className={`bg-${tileColor} ${globalStyles} ${colLayoutSection.colSm} md:${colLayoutSection.colMd} lg:${colLayoutSection.colLg} md:${rowLayoutSection.rowMd} lg:${rowLayoutSection.rowLg}`}
+      className={`bg-${tileColor} ${globalStyles} ${colLayoutSection.colSm} md:${colLayoutSection.colMd} lg:${colLayoutSection.colLg} md:${rowLayoutSection.rowMd} lg:${rowLayoutSection.rowLg} rounded-lg`}
     >
       <div id="basicTileContainer" className={`h-full flex flex-col justify-between space-y-8`}>
         {tileItem.map((item, index) => (

@@ -10,6 +10,7 @@ const GridBuilderTileArtist = ({block, raw, globalStyles}) => {
       id="tileArtistSpotlight"
       className={`
         min-h-400
+        rounded-lg
         bg-${tileColor} 
         ${colLayoutSection.colSm} 
         md:${colLayoutSection.colMd} 
