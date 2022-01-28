@@ -9,7 +9,7 @@ export default {
     select: {
       title: 'personName',
       media: 'headshot',
-      subtitle: 'title'
+      subtitle: 'roleList'
     },
     prepare ({title, media, subtitle}) {
       return {
