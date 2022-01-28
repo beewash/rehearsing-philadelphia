@@ -42,9 +42,9 @@ const Header = props => {
       query={HEADER_QUERY}
       render={data => (
         <>
-        <header className="w-screen sticky top-0 z-30 flex shadow-lg bg-white flex-wrap">
+        <header className={`sticky top-0 z-30 flex transition-all delay-75 ease-in-out ${ isExpanded ? `w-full p-8 drop-shadow-2xl` : `w-screen` }`}>
         {data && data.headernav.edges.map(({node: headernav}) => (
-          <nav key={headernav.title} role='navigation' className="z-45 w-full flex flex-wrap relative">
+          <nav key={headernav.title} role='navigation' className={`z-45 w-full bg-white flex flex-wrap relative ${ isExpanded ? `rounded-t-lg` : `shadow-lg` }`}>
             <div id="navMain" className="w-full flex relative justify-between p-4">
               <div className="flex items-center">
                 {headernav.rhLogo ? (
@@ -75,9 +75,9 @@ const Header = props => {
             </div>
             <div 
               id="navMenu"
-              className={`z-40 w-full relative transition delay-150 duration-300 ease-in-out ${ isExpanded ? `block` : `hidden` }`}
+              className={`z-40 w-full relative ${ isExpanded ? `inline-block` : `hidden` }`}
             >
-              <div className="w-full absolute top-0 flex text-center p-4 bg-white shadow-lg transform">
+              <div className="w-full absolute top-0 flex text-center p-4 bg-white rounded-b-lg">
                 <ul className="w-full flex flex-col mx-auto space-y-8 last:mb-8">
                 {headernav.mainNavigation ? (
                   <>
