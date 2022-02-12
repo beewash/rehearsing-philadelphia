@@ -100,6 +100,30 @@
     "geometry": {
       "type": "Point",
       "coordinates": {
+        "lat": 39.95099324074824,
+        "lon":-75.16524448633822
+      }
+    },
+    "properties": {
+      "name": "Community Legal Services",
+      "address": "1424 Chestnut St",
+      "module": "Solo",
+      "icon": "/static/soloPin-0135cace3d16e8847a85f83420e070f7.png",
+      "color": "solo-yellow",
+      "facts": [
+        {"fact": "Fact 1"},
+        {"fact": "Fact 2"},
+        {"fact": "Fact 3"}
+      ],
+      "question": "Question?  ",
+      "statement": "Statement."
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": {
         "lat": 39.94769029015476,
         "lon": -75.20697475576824
       }
