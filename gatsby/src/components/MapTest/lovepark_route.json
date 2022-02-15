@@ -1,0 +1,19 @@
+[
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Polygon",
+      "modType": "Duet",
+      "coordinates": [[
+        [-75.16564901958411, 39.95428925975284],
+        [-75.18101974596968, 39.965758806037464]
+      ]]
+    },
+    "properties": {
+      "name": "Love Park to Philadelphia Museum of Art",
+      "address": "Love Park, Franklin Square, Philadelphia Museum of Art",
+      "module": "Duet",
+      "description": "At the heart of Center City Philadelphia, the Benjamin Franklin Parkway today exists as an animated, pedestrian friendly cultural campus. The DUET walk will begin at John F. Kennedy Plaza, also known as Love Park, home of Robert Indiana’s iconic (and highly Instagrammable!) LOVE statue and located near City Hall. The walk will travel north on the Parkway, passing many cultural institutions, residences, restaurants and more, to culminate at the Philadelphia Museum of Art, known world-wide not only for its impressive collection, but also as the site of the famous Rocky steps run in the ROCKY movie starring Sylvester Stallone."
+    }
+  }
+]

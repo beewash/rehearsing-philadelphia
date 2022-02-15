@@ -1,0 +1,21 @@
+[
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Polygon",
+      "modType": "Duet",
+      "coordinates": [[
+        [-75.1591884585702, 39.94505843808253],
+        [-75.1504394729576, 39.95575795649635],
+        [-75.14413894195299, 39.95116669707763],
+        [-75.14404878645148, 39.947089157677496]
+      ]]
+    },
+    "properties": {
+      "name": "Washington Square and Old City",
+      "address": "Washington Square, Franklin Square, Independence Hall, The Olde Bar, Christ Church",
+      "module": "Duet",
+      "description": "The Washington Square West district follows the early development of the city from the eighteenth century. As the Delaware riverfront and adjacent lands became increasingly crowded, residents and businesses moved further west. The neighborhood is a dense patchwork composed of mostly residential rowhouses  alongside some commercial properties, places of worship, and restaurants. The DUET walk will travel north east toward Old City, Philadelphia's most historic square mile. Home to attractions like Independence Hall and the Liberty Bell, Old City today also features an array of restaurants, bars, and nightlife."
+    }
+  }
+]

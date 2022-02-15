@@ -62,6 +62,10 @@ export default {
     {
       type: 'pageBuilderFAQ',
       title: 'FAQ'
+    },
+    {
+      type: 'pageBuilderCalendar',
+      title: 'Calendar'
     }
   ]
 }

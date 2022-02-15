@@ -13,6 +13,7 @@ import PageBuilderGrid01 from "./pageBuilderGrid01"
 import PageBuilderDocAttachment from "./pageBuilderDocAttachment"
 import PageBuilderPressClippings from "./pageBuilderPressClippings"
 import PageBuilderFAQ from "./pageBuilderFAQ"
+import PageBuilderCalendar from "./pageBuilderCalendar"
 import CTA from "./cta"
 
 function PageBuilder(props) {
@@ -35,6 +36,7 @@ function PageBuilder(props) {
     pageBuilderGrid01: PageBuilderGrid01,
     pageBuilderPressClippings: PageBuilderPressClippings,
     pageBuilderFAQ: PageBuilderFAQ,
+    pageBuilderCalendar: PageBuilderCalendar,
     docAttachment: PageBuilderDocAttachment,
     cta: CTA
   }

@@ -22,6 +22,25 @@ export const query = graphql`
         _type
         title
       }
+      ... on SanityPageBuilderCalendar {
+        _key
+        _type
+        events {
+          _key
+          title
+          calEvent {
+            title
+            time
+            summary
+            slug {
+              current
+            }
+            id
+            date
+            _id
+          }
+        }
+      }
       ... on SanityPageBuilderFAQ {
         _key
         _type

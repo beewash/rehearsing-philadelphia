@@ -13,6 +13,7 @@ import performanceModules from './documents/performanceModules'
 import artistPortal from './documents/artistPortal'
 import press from './documents/press'
 import faq from './documents/faq'
+import calendar from './documents/calendar'
 
 // Object types
 import bodyPortableText from './objects/bodyPortableText'
@@ -33,6 +34,8 @@ import pageBuilderGrid01 from './objects/pageBuilderGrid01'
 import pageBuilderSocial from './objects/pageBuilderSocial'
 import pageBuilderPressClippings from './objects/pageBuilderPressClippings'
 import pageBuilderFAQ from './objects/pageBuilderFAQ'
+import pageBuilderCalendar from './objects/pageBuilderCalendar'
+import event from './objects/event'
 import column from './objects/column'
 import link from './objects/link'
 // import navBuilder from './objects/navBuilder'
@@ -70,6 +73,7 @@ export default createSchema({
     artistPortal,
     page,
     people,
+    calendar,
     press,
     performanceModules,
     faq,
@@ -91,6 +95,8 @@ export default createSchema({
     pageBuilderSocial,
     pageBuilderPressClippings,
     pageBuilderFAQ,
+    pageBuilderCalendar,
+    event,
     column,
     mainImage,
     bodyPortableText,
