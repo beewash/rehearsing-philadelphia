@@ -88,7 +88,11 @@ function PointLayer(props) {
           content={
             <>
               <div className={`mb-2 uppercase font-acuminPro text-${item.properties.color}`}>{item.properties.module}</div>
-              <div className="mb-2 text-sm font-semibold font-sainteColombe">{item.properties.name} <span>{`(${item.properties.zip})`}</span></div>
+              <div className="mb-2 text-sm font-semibold font-sainteColombe">{item.properties.name}
+                {item.properties.zip ? (
+                  <span>{` (${item.properties.zip})`}</span>
+                ) : null}
+              </div>
               <div className="mb-2 font-sainteColombe">{item.properties.description}</div>
             </>
           }
