@@ -1,10 +1,24 @@
 import React from 'react'
 import Figure from './Figure/Figure'
+import { Link } from 'gatsby'
 
 const serializers = {
   types: {
     authorReference: ({ node }) => <span>{node.author.name}</span>,
     mainImage: Figure,
+    cta: ({ node }) => {
+      return (
+        <section id="cta" className='pt-2 pb-8'>
+          <div className={`w-max py-2 text-cfsSM font-acuminPro font-medium text-center text-${node.textColor} bg-${node.bgColor} border-black border-2 rounded-full hover:bg-${node.bgHoverColor} hover:text-${node.textHoverColor}`}>
+            {node.linkTo.externalContent ? (
+              <a href={node.linkTo.linkUrl} target='_blank' rel="noreferrer" className="px-8">{node.linkText}</a>
+            ) 
+              : <Link to={`/${node.linkTo.linkUrl}`} className="px-16">{node.linkText}</Link>
+            }
+          </div>
+        </section>
+      )
+    },
     block(props) {
       switch (props.node.style) {
         case "h1":

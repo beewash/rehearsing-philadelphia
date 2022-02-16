@@ -4,15 +4,11 @@ import L from 'leaflet'
 import { MapContainer, TileLayer, GeoJSON, Marker, Popup, Tooltip } from 'react-leaflet'
 import 'leaflet/dist/leaflet.css'
 import locations from './locations.json'
-import baltimore_ave_route from './baltimore_ave_route.json'
-import washington_sq_route from './washington_sq_route.json'
-import lovepark_route from './lovepark_route.json'
 import soloFlatIcon from '../../images/soloFlatIcon.png'
 import duetFlatIcon from '../../images/duetFlatIcon.png'
 import ensembleFlatIcon from '../../images/ensembleFlatIcon.png'
 import orchestraFlatIcon from '../../images/orchestraFlatIcon.png'
-import communityPin from '../../images/communityPin.png'
-import communityShadow from '../../images/communityShadow.png'
+import communityFlatIcon from '../../images/communityFlaticon.png'
 
 // Unordered List of locations
 function PointList(props) {
@@ -21,17 +17,23 @@ function PointList(props) {
     <div>
       <ul className="grid grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-10">
         {data.map((item, index) => (
-          <li
-            key={index}
-            onClick={e => {
-              onItemClick(index);
-            }}
-            className="cursor-pointer"
-          >
-            <p className={`mb-2 uppercase font-acuminPro text-${item.properties.color} text-xs`}>{item.properties.module}</p>
-            <p className="mb-1 text-base font-semibold">{item.properties.name}</p>
-            <p className="text-xs">{item.properties.site}</p>
-          </li>
+          <>
+          {item.properties.module !== 'community' ? (
+            <li
+              key={index}
+              onClick={e => {
+                onItemClick(index);
+              }}
+              className="cursor-pointer"
+            >
+              <p className={`mb-2 uppercase font-acuminPro text-${item.properties.color} text-xs`}>{item.properties.module}</p>
+              <p className="mb-1 text-base font-semibold">{item.properties.name}</p>
+              {item.properties.address ? (
+                <p className="text-xs">{item.properties.address}</p>
+              ) : <p className="text-xs">{item.properties.site}</p>}
+            </li>
+          ) : null}
+          </>
         ))}
       </ul>
     </div>
@@ -44,7 +46,7 @@ function PointLayer(props) {
 
   return data.map((item, index) => (
     <>
-    {item.properties.module !== 'community' ? (
+    {item.properties.module !== 'community' && item.properties.module !== 'Duet' ? (
       <>
         <PointMarker
           key={index}
@@ -52,15 +54,20 @@ function PointLayer(props) {
             iconUrl: item.properties.icon,
             iconRetinaUrl: item.properties.icon,
             iconAnchor: [0, 0],
-            popupAnchor: [5, 0],
-            iconSize: [10, 10],
+            popupAnchor: [12, 0],
+            iconSize: [15, 15],
           })}
           content={
             <>
               <div className={`mb-2 uppercase font-acuminPro text-${item.properties.color}`}>{item.properties.module}</div>
               <div className="mb-2 text-sm font-semibold font-sainteColombe">{item.properties.name}</div>
-              <p className="text-sm">{item.properties.site}</p>
-              <p className="text-sm">{item.properties.description}</p>
+              <div className="mb-2 font-sainteColombe">{item.properties.address}</div>
+              <ol className="mt-3.5 pt-3.5 pl-3.5 list-outside list-decimal font-sainteColombe border-t-2 border-black">
+                {item.properties.facts?.map((fact, index) => (
+                  <li key={index} className="mb-2.5">{fact.fact}</li>
+                ))}
+              </ol>
+              <div className="mb-2 font-sainteColombe">{item.properties.question}  <span className="font-semibold">{item.properties.statement}</span></div>
             </>
           }
           position={[item.geometry.coordinates.lat, item.geometry.coordinates.lon]} 
@@ -74,12 +81,9 @@ function PointLayer(props) {
           icon={new L.Icon({
             iconUrl: item.properties.icon,
             iconRetinaUrl: item.properties.icon,
-            shadowUrl: communityShadow,
             iconAnchor: [0, 0],
             popupAnchor: [12, 0],
-            iconSize: [25, 25],
-            shadowSize: [50, 55],
-            shadowAnchor: [12, 14]
+            iconSize: [15, 15],
           })}
           content={
             <>
@@ -129,7 +133,7 @@ function MapCompTest() {
   // const orchestraOptions = { color: '#009245' }
 
   const location = [39.9526, -75.1652]
-  const zoom = 16
+  const zoom = 14
 
   return (
     <section id="mapComponent" className="w-full mt-10">
@@ -165,7 +169,7 @@ function MapCompTest() {
                   <p className="font-acuminPro uppercase text-cfsSM1">Orchestra</p>
                 </li>
                 <li className="flex flex-row items-center space-x-2 mb-4">
-                  <img src={communityPin} className="w-4 h-auto" alt="community" />
+                  <img src={communityFlatIcon} className="w-4 h-auto" alt="community" />
                   <p className="font-acuminPro uppercase text-cfsSM1">Artist Neighborhoods</p>
                 </li>
               </ul>
@@ -184,10 +188,10 @@ function MapCompTest() {
                 attribution="© <a href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>" 
               />
               <PointLayer data={locations} selectedIndex={selected} />
-              <GeoJSON data={baltimore_ave_route} key="baltimore_ave_route" pathOptions={duetOptions}>
+              {/*<GeoJSON data={baltimore_ave_route} key="baltimore_ave_route" pathOptions={duetOptions}>
                 <Tooltip sticky>Baltimore Ave between 40th and 50th</Tooltip>
               </GeoJSON>
-              {/* <GeoJSON data={washington_sq_route} key="washington_sq_route" pathOptions={duetOptions}>
+               <GeoJSON data={washington_sq_route} key="washington_sq_route" pathOptions={duetOptions}>
                 <Tooltip sticky>Perimeter of Independence Historic Park</Tooltip>
               </GeoJSON>
               <GeoJSON data={lovepark_route} key="lovepark_route" pathOptions={duetOptions}>
