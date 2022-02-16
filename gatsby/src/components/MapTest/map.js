@@ -8,7 +8,7 @@ import soloFlatIcon from '../../images/soloFlatIcon.png'
 import duetFlatIcon from '../../images/duetFlatIcon.png'
 import ensembleFlatIcon from '../../images/ensembleFlatIcon.png'
 import orchestraFlatIcon from '../../images/orchestraFlatIcon.png'
-import communityFlatIcon from '../../images/communityFlaticon.png'
+import communityFlatIcon from '../../images/communityFlatIcon.png'
 
 // Unordered List of locations
 function PointList(props) {
