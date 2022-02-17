@@ -9,6 +9,8 @@ import duetFlatIcon from '../../images/duetFlatIcon.png'
 import ensembleFlatIcon from '../../images/ensembleFlatIcon.png'
 import orchestraFlatIcon from '../../images/orchestraFlatIcon.png'
 import communityFlatIcon from '../../images/communityFlatIcon.png'
+import duetIcon from '../../images/duetPin.png'
+import pinShadow from '../../images/pinShadow.png'
 
 // Unordered List of locations
 function PointList(props) {
@@ -18,7 +20,6 @@ function PointList(props) {
       <ul className="grid grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-10">
         {data.map((item, index) => (
           <>
-          {item.properties.module !== 'community' ? (
             <li
               key={index}
               onClick={e => {
@@ -26,13 +27,16 @@ function PointList(props) {
               }}
               className="cursor-pointer"
             >
-              <p className={`mb-2 uppercase font-acuminPro text-${item.properties.color} text-xs`}>{item.properties.module}</p>
+              {item.properties.moduleListName ? (
+                <div className={`mb-2 uppercase font-acuminPro text-${item.properties.color}`}>{item.properties.moduleListName}</div>
+              ) : (
+                <div className={`mb-2 uppercase font-acuminPro text-${item.properties.color}`}>{item.properties.module}</div>
+              )}
               <p className="mb-1 text-base font-semibold">{item.properties.name}</p>
               {item.properties.address ? (
                 <p className="text-xs">{item.properties.address}</p>
               ) : <p className="text-xs">{item.properties.site}</p>}
             </li>
-          ) : null}
           </>
         ))}
       </ul>
@@ -46,27 +50,38 @@ function PointLayer(props) {
 
   return data.map((item, index) => (
     <>
-    {item.properties.module !== 'community' && item.properties.module !== 'Duet' ? (
+    {item.properties.module !== 'artist neighborhoods' && item.properties.module !== 'Duet' ? (
       <>
         <PointMarker
           key={index}
           icon={new L.Icon({
             iconUrl: item.properties.icon,
             iconRetinaUrl: item.properties.icon,
-            iconAnchor: [0, 0],
-            popupAnchor: [12, 0],
-            iconSize: [15, 15],
+            shadowUrl: pinShadow,
+            iconAnchor: [12, 38],
+            popupAnchor: [1, -37],
+            iconSize: [25, 38],
+            shadowSize: [18, 25],
+            shadowAnchor: [0, 25]
           })}
           content={
             <>
-              <div className={`mb-2 uppercase font-acuminPro text-${item.properties.color}`}>{item.properties.module}</div>
+              {item.properties.moduleListName ? (
+                <div className={`mb-2 uppercase font-acuminPro text-${item.properties.color}`}>{item.properties.moduleListName}</div>
+              ) : (
+                <div className={`mb-2 uppercase font-acuminPro text-${item.properties.color}`}>{item.properties.module}</div>
+              )}
               <div className="mb-2 text-sm font-semibold font-sainteColombe">{item.properties.name}</div>
               <div className="mb-2 font-sainteColombe">{item.properties.address}</div>
-              <ol className="mt-3.5 pt-3.5 pl-3.5 list-outside list-decimal font-sainteColombe border-t-2 border-black">
-                {item.properties.facts?.map((fact, index) => (
-                  <li key={index} className="mb-2.5">{fact.fact}</li>
-                ))}
-              </ol>
+              {item.properties.facts ? (
+                <ol className="mt-3.5 pt-3.5 pl-3.5 list-outside list-decimal font-sainteColombe border-t-2 border-black">
+                  {item.properties.facts?.map((fact, index) => (
+                    <li key={index} className="mb-2.5">{fact.fact}</li>
+                  ))}
+                </ol>
+              ) : (
+                <div className="mb-2 font-sainteColombe">{item.properties.description}</div>
+              )}
               <div className="mb-2 font-sainteColombe">{item.properties.question}  <span className="font-semibold">{item.properties.statement}</span></div>
             </>
           }
@@ -82,8 +97,8 @@ function PointLayer(props) {
             iconUrl: item.properties.icon,
             iconRetinaUrl: item.properties.icon,
             iconAnchor: [0, 0],
-            popupAnchor: [12, 0],
-            iconSize: [15, 15],
+            popupAnchor: [5, -1],
+            iconSize: [8, 8],
           })}
           content={
             <>
@@ -142,7 +157,7 @@ function MapCompTest() {
   return (
     <section id="mapComponent" className="w-full mt-10">
       <div className="flex flex-col md:flex-row px-4 pb-4 space-y-4 md:space-x-4 md:space-y-0">
-        <div className="w-full md:w-1/2 h-m-174 flex flex-col border-2 border-black rounded-lg">
+        <div className="w-full md:w-1/3 h-m-174 flex flex-col border-2 border-black rounded-lg">
           <div className="h-1/2 p-4 overflow-hidden flex flex-col space-y-6 md:space-y-0">
             <div className="flex-grow">
               <div className="mb-6">
@@ -183,7 +198,7 @@ function MapCompTest() {
             <PointList data={locations} onItemClick={handleItemClick} />
           </div>
         </div>
-        <div className="w-full md:w-1/2 h-m-174">
+        <div className="w-full md:w-2/3 h-m-174">
           <div id="map" className="w-full h-full">
             {(typeof window !== 'undefined') ? (
             <MapContainer id="mapEl" center={location} zoom={zoom} scrollWheelZoom={false} className="z-10 h-m-174 rounded-lg">

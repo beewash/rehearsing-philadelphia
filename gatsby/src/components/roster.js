@@ -13,10 +13,12 @@ function Roster({rosterItem}) {
                     <p className="text-cfsSM2 md:text-cfsSM font-acuminPro font-medium text-center">{rosterItem.personName}</p>
                   </div>
                 </Link> */}
-                <div className="max-w-32.5 break-word">
-                  <p className="artistName text-cfsSM2 md:text-cfsSM font-acuminPro font-medium text-center">{rosterItem.personName}</p>
-                  <p className="instrument w-full text-cfsSM2 md:text-cfsSM font-acuminPro font-medium text-center capitalize">{rosterItem.roleList ? rosterItem.roleList : rosterItem.personName}</p>
-                </div>
+                <Link to={`/${rosterItem.slug.current}`}>
+                  <div className="max-w-32.5 break-word">
+                    <p className="artistName text-cfsSM2 md:text-cfsSM font-acuminPro font-medium text-center">{rosterItem.personName}</p>
+                    <p className="instrument w-full text-cfsSM2 md:text-cfsSM font-acuminPro font-medium text-center capitalize">{rosterItem.roleList ? rosterItem.roleList : rosterItem.personName}</p>
+                  </div>
+                </Link>
               </div>
               <div id="popUp" className="hidden absolute top-50 bottom-50 right-100 w-full z-50 bg-white border-black border-2 rounded-3xl hover-target overflow-hidden flex-column">
                 <div className="w-300 h-500">
