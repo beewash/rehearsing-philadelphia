@@ -158,7 +158,7 @@ function MapCompTest() {
     <section id="mapComponent" className="w-full mt-10">
       <div className="flex flex-col md:flex-row px-4 pb-4 space-y-4 md:space-x-4 md:space-y-0">
         <div className="w-full md:w-1/3 h-m-174 flex flex-col border-2 border-black rounded-lg">
-          <div className="h-1/2 p-4 overflow-hidden flex flex-col space-y-6 md:space-y-0">
+          <div className="h-1/2 p-4 overflow-hidden flex flex-col space-y-4">
             <div className="flex-grow">
               <div className="mb-6">
                 <p className="text-4xl md:text-6xl">Locations</p>
@@ -170,24 +170,24 @@ function MapCompTest() {
               </Modal>
             </div>
             <div className="mb-2 max-w-xl">
-              <ul className="flex flex-row flex-wrap justify-between">
-                <li className="flex flex-row items-center space-x-2 mb-4">
+              <ul className="flex flex-row flex-wrap justify-between space-y-2">
+                <li className="flex flex-row items-center space-x-2 w-1/2 lg:w-1/3">
                   <img src={soloFlatIcon} className="w-4 h-auto" alt="solo" />
                   <p className="font-acuminPro uppercase text-cfsSM1">Solo</p>
                 </li>
-                <li className="flex flex-row items-center space-x-2 mb-4">
+                <li className="flex flex-row items-center space-x-2 w-1/2 lg:w-1/3">
                   <img src={duetFlatIcon} className="w-4 h-auto" alt="duet" />
                   <p className="font-acuminPro uppercase text-cfsSM1">Duet</p>
                 </li>
-                <li className="flex flex-row items-center space-x-2 mb-4">
+                <li className="flex flex-row items-center space-x-2 w-1/2 lg:w-1/3">
                   <img src={ensembleFlatIcon} className="w-4 h-auto" alt="ensemble" />
                   <p className="font-acuminPro uppercase text-cfsSM1">Ensemble</p>
                 </li>
-                <li className="flex flex-row items-center space-x-2 mb-4">
+                <li className="flex flex-row items-center space-x-2 w-1/2 lg:w-1/3">
                   <img src={orchestraFlatIcon} className="w-4 h-auto" alt="orchestra" />
                   <p className="font-acuminPro uppercase text-cfsSM1">Orchestra</p>
                 </li>
-                <li className="flex flex-row items-center space-x-2 mb-4">
+                <li className="flex flex-row items-center space-x-2">
                   <img src={communityFlatIcon} className="w-4 h-auto" alt="community" />
                   <p className="font-acuminPro uppercase text-cfsSM1">Artist Neighborhoods</p>
                 </li>
