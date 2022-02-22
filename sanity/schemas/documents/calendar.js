@@ -21,6 +21,11 @@ export default {
       }
     },
     {
+      name: 'location',
+      title: 'Location',
+      type: 'string'
+    },
+    {
       name: 'summary',
       title: 'Summary',
       type: 'text'
@@ -50,6 +55,24 @@ export default {
       name: 'time',
       title: 'Time',
       type: 'string'
+    },
+    {
+      name: 'module',
+      title: 'Module',
+      type: 'string',
+      options: {
+        list: [
+          {title: 'Solo', value: 'solo-yellow'},
+          {title: 'Duet', value: 'duet-red'},
+          {title: 'Ensemble', value: 'ensemble-blue'},
+          {title: 'Orchestra', value: 'orchestra-green'}
+        ]
+      }
+    },
+    {
+      name: 'icon',
+      title: 'Icon',
+      type: 'mainImage'
     }
   ]
 }

@@ -35,8 +35,14 @@ const PageBuilderRoster = ({block, raw}) => {
             <PortableText blocks={_rawSummary} />
           </div>
         ) : null}
-        <Button button={buttons} filter={filter} roster={roster} />
-        <div className="h-0.5 w-16 bg-black mb-8"></div>
+        {allCategories.length > 2 ? (
+          <>
+            <Button button={buttons} filter={filter} roster={roster} />
+            <div className="h-0.5 w-16 bg-black mb-8"></div>
+          </>
+        ) : (
+          null
+        )}
         <Roster rosterItem={rosterItem} />
       </div>
     </section>

@@ -66,6 +66,10 @@ export default {
     {
       type: 'pageBuilderCalendar',
       title: 'Calendar'
+    },
+    {
+      type: 'event',
+      title: 'Event'
     }
   ]
 }

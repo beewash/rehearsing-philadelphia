@@ -9,6 +9,7 @@ import duetFlatIcon from '../../images/duetFlatIcon.png'
 import ensembleFlatIcon from '../../images/ensembleFlatIcon.png'
 import orchestraFlatIcon from '../../images/orchestraFlatIcon.png'
 import communityFlatIcon from '../../images/communityFlatIcon.png'
+import communityPin from '../../images/communityPin.png'
 import duetIcon from '../../images/duetPin.png'
 import pinShadow from '../../images/pinShadow.png'
 
@@ -89,6 +90,37 @@ function PointLayer(props) {
           openPopup={selectedIndex === index}
         />
       </>
+    ) : item.properties.module == 'artist neighborhoods' ? (
+      <>
+        <PointMarker
+          key={index}
+          icon={new L.Icon({
+            iconUrl: item.properties.icon,
+            iconRetinaUrl: item.properties.icon,
+            iconAnchor: [0, 0],
+            popupAnchor: [5, -1],
+            iconSize: [15, 15],
+          })}
+          content={
+            <>
+              <div className={`mb-2 uppercase font-acuminPro text-${item.properties.color}`}>{item.properties.module}</div>
+              <div className="mb-2 text-sm font-semibold font-sainteColombe">{item.properties.name}
+                {item.properties.zip ? (
+                  <span>{` (${item.properties.zip})`}</span>
+                ) : null}
+              </div>
+              {item.properties.site ? (
+                <div className="mb-2 font-sainteColombe">{item.properties.site}</div>
+              ) : null}
+              <div className="mt-3.5 pt-3.5 border-t-2 border-black">
+                <div className="mb-2 font-sainteColombe">{item.properties.description}</div>
+              </div>
+            </>
+          }
+          position={[item.geometry.coordinates.lat, item.geometry.coordinates.lon]} 
+          openPopup={selectedIndex === index}
+        />
+      </>
     ) : (
       <>
         <PointMarker
@@ -108,7 +140,12 @@ function PointLayer(props) {
                   <span>{` (${item.properties.zip})`}</span>
                 ) : null}
               </div>
-              <div className="mb-2 font-sainteColombe">{item.properties.description}</div>
+              {item.properties.site ? (
+                <div className="mb-2 font-sainteColombe">{item.properties.site}</div>
+              ) : null}
+              <div className="mt-3.5 pt-3.5 border-t-2 border-black">
+                <div className="mb-2 font-sainteColombe">{item.properties.description}</div>
+              </div>
             </>
           }
           position={[item.geometry.coordinates.lat, item.geometry.coordinates.lon]} 
@@ -157,7 +194,7 @@ function MapCompTest() {
   return (
     <section id="mapComponent" className="w-full mt-10">
       <div className="flex flex-col md:flex-row px-4 pb-4 space-y-4 md:space-x-4 md:space-y-0">
-        <div className="w-full md:w-1/3 h-m-174 flex flex-col border-2 border-black rounded-lg">
+        <div className="w-full md:w-1/3 min-h-[650px] h-m-174 flex flex-col border-2 border-black rounded-lg">
           <div className="h-1/2 p-4 overflow-hidden flex flex-col space-y-4">
             <div className="flex-grow">
               <div className="mb-6">
@@ -201,7 +238,7 @@ function MapCompTest() {
         <div className="w-full md:w-2/3 h-m-174">
           <div id="map" className="w-full h-full">
             {(typeof window !== 'undefined') ? (
-            <MapContainer id="mapEl" center={location} zoom={zoom} scrollWheelZoom={false} className="z-10 h-m-174 rounded-lg">
+            <MapContainer id="mapEl" center={location} zoom={zoom} scrollWheelZoom={false} className="z-10 h-m-174 min-h-[650px] rounded-lg">
               <TileLayer 
                 url="https://api.mapbox.com/styles/v1/gentry19/ckst13rdw3r9q17nkjcoagb88/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiZ2VudHJ5MTkiLCJhIjoiY2tzcWg4ZmxuMGNzNDJ1bzVuZTJpNWl4byJ9.Dbjod75IraKTOV48WuQjNQ" 
                 attribution="© <a href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>" 

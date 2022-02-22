@@ -14,6 +14,7 @@ import PageBuilderDocAttachment from "./pageBuilderDocAttachment"
 import PageBuilderPressClippings from "./pageBuilderPressClippings"
 import PageBuilderFAQ from "./pageBuilderFAQ"
 import PageBuilderCalendar from "./pageBuilderCalendar"
+import PageBuilderEvents from "./pageBuilderEvents"
 import CTA from "./cta"
 
 function PageBuilder(props) {
@@ -37,6 +38,7 @@ function PageBuilder(props) {
     pageBuilderPressClippings: PageBuilderPressClippings,
     pageBuilderFAQ: PageBuilderFAQ,
     pageBuilderCalendar: PageBuilderCalendar,
+    event: PageBuilderEvents,
     docAttachment: PageBuilderDocAttachment,
     cta: CTA
   }

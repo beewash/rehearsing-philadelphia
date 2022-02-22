@@ -1,25 +1,35 @@
 import React from "react"
 import { Link } from "gatsby"
+import Image from "gatsby-image"
 
 const PageBuilderCalendar = ({ block, raw }) => {
   const { events } = block
-  console.log(events)
   return (
     <>
-      <div className="max-w-6xl mx-auto px-6 pb-28">
-        <div className="flex flex-wrap">
+      <div className="max-w-6xl mx-auto px-6">
+        <div className="flex flex-wrap md:border-t-2 md:border-black">
           {events.map((event) => 
-          <div className="event w-full md:w-1/2 lg:w-1/3 mb-24">
+          <div className={`event w-full md:w-[14.28%] pt-2 px-2 mb-24 ${event.calEvent.length == 0 ? 'hidden md:block' : ''}`}>
             <div className="mx-auto text-center border-b-2 border-black pb-2 mb-4">
-              <h3>{event.title}</h3>
+              <p className="font-acuminPro font-bold text-cfs w-20 mx-auto">{event.title}</p>
             </div>
-            <div className="md:w-2/3 mx-auto space-y-8">
+            <div className="space-y-4">
               {event.calEvent.map((event) =>
-                <div className="">
-                  <Link to={`/${event.slug?.current}`}>
-                    <p className="font-semibold">{event.title}</p>
-                    <p className="">{event.time}</p>
-                  </Link>
+                <div className={`flex p-2 pl-4 pb-4 bg-${event.module} rounded-md`}>
+                  {event.icon ? (
+                    <div className="hidden w-4 h-8 items-center mr-2">
+                      <Image fluid={event.icon?.asset.fluid} alt={event.icon?.alt} className="w-full" />
+                    </div>
+                  ) : null}
+                  <div className={`w-full ${event.module == 'solo' ? 'text-black' : 'text-white'}`}>
+                    <Link to={`/${event.slug?.current}`}>
+                      <p className=" text-cfsSM2 font-semibold mb-2">{event.title}</p>
+                      {event.location ? (
+                        <p className="text-cfsSM2 mb-2">{event.location}</p>
+                      ) : null}
+                      <p className="text-cfsSM2">{event.time}</p>
+                    </Link>
+                  </div>
                 </div>
               )}
             </div>

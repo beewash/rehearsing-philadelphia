@@ -31,7 +31,17 @@ export const query = graphql`
           calEvent {
             title
             time
+            location
             summary
+            module
+            icon {
+              alt
+              asset {
+                fluid(maxWidth: 800) {
+                  ...GatsbySanityImageFluid
+                }
+              }
+            }
             slug {
               current
             }
@@ -39,6 +49,22 @@ export const query = graphql`
             date
             _id
           }
+        }
+      }
+      ... on SanityEvent {
+        _key
+        _type
+        title
+        calEvent {
+          _id
+          _key
+          _rawDescription
+          slug {
+            current
+          }
+          title
+          date(formatString: "MMMM DD, YYYY")
+          time
         }
       }
       ... on SanityPageBuilderFAQ {
@@ -59,6 +85,7 @@ export const query = graphql`
         _key
         _type
         title
+        layout
         image {
           alt
           asset {
