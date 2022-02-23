@@ -1649,7 +1649,7 @@
     "properties": {
       "module": "artist neighborhoods",
       "zip": "19104",
-      "name": "Need Name",
+      "name": "Belmont",
       "icon": "/static/communityPin-f1ddc6ff914be9469d2c7fbf8a29632d.png",
       "color": "black",
       "description": "This is one the 22 neighborhoods that are represented by the artists of Rehearsing Philadelphia across all four modules."
@@ -1667,7 +1667,7 @@
     "properties": {
       "module": "artist neighborhoods",
       "zip": "19107",
-      "name": "Need Name",
+      "name": "Washington Square West",
       "icon": "/static/communityPin-f1ddc6ff914be9469d2c7fbf8a29632d.png",
       "color": "black",
       "description": "This is one the 22 neighborhoods that are represented by the artists of Rehearsing Philadelphia across all four modules."
@@ -1685,7 +1685,7 @@
     "properties": {
       "module": "artist neighborhoods",
       "zip": "19119",
-      "name": "Need Name",
+      "name": "West Mount Airy",
       "icon": "/static/communityPin-f1ddc6ff914be9469d2c7fbf8a29632d.png",
       "color": "black",
       "description": "This is one the 22 neighborhoods that are represented by the artists of Rehearsing Philadelphia across all four modules."
@@ -1703,7 +1703,7 @@
     "properties": {
       "module": "artist neighborhoods",
       "zip": "19121",
-      "name": "Need Name",
+      "name": "Brewerytown",
       "icon": "/static/communityPin-f1ddc6ff914be9469d2c7fbf8a29632d.png",
       "color": "black",
       "description": "This is one the 22 neighborhoods that are represented by the artists of Rehearsing Philadelphia across all four modules."
@@ -1721,7 +1721,7 @@
     "properties": {
       "module": "artist neighborhoods",
       "zip": "19123",
-      "name": "Need Name",
+      "name": "Northern Liberties",
       "icon": "/static/communityPin-f1ddc6ff914be9469d2c7fbf8a29632d.png",
       "color": "black",
       "description": "This is one the 22 neighborhoods that are represented by the artists of Rehearsing Philadelphia across all four modules."
@@ -1739,7 +1739,7 @@
     "properties": {
       "module": "artist neighborhoods",
       "zip": "19125",
-      "name": "Need Name",
+      "name": "Kensington",
       "icon": "/static/communityPin-f1ddc6ff914be9469d2c7fbf8a29632d.png",
       "color": "black",
       "description": "This is one the 22 neighborhoods that are represented by the artists of Rehearsing Philadelphia across all four modules."
@@ -1757,7 +1757,7 @@
     "properties": {
       "module": "artist neighborhoods",
       "zip": "19126",
-      "name": "Need Name",
+      "name": "East Oak Lane",
       "icon": "/static/communityPin-f1ddc6ff914be9469d2c7fbf8a29632d.png",
       "color": "black",
       "description": "This is one the 22 neighborhoods that are represented by the artists of Rehearsing Philadelphia across all four modules."
@@ -1775,7 +1775,7 @@
     "properties": {
       "module": "artist neighborhoods",
       "zip": "19130",
-      "name": "Need Name",
+      "name": "Fairmount District",
       "icon": "/static/communityPin-f1ddc6ff914be9469d2c7fbf8a29632d.png",
       "color": "black",
       "description": "This is one the 22 neighborhoods that are represented by the artists of Rehearsing Philadelphia across all four modules."
@@ -1811,7 +1811,7 @@
     "properties": {
       "module": "artist neighborhoods",
       "zip": "19134",
-      "name": "Need Name",
+      "name": "Richmond",
       "icon": "/static/communityPin-f1ddc6ff914be9469d2c7fbf8a29632d.png",
       "color": "black",
       "description": "This is one the 22 neighborhoods that are represented by the artists of Rehearsing Philadelphia across all four modules."
@@ -1829,7 +1829,7 @@
     "properties": {
       "module": "artist neighborhoods",
       "zip": "19139",
-      "name": "Need Name",
+      "name": "Haddington",
       "icon": "/static/communityPin-f1ddc6ff914be9469d2c7fbf8a29632d.png",
       "color": "black",
       "description": "This is one the 22 neighborhoods that are represented by the artists of Rehearsing Philadelphia across all four modules."
@@ -1847,7 +1847,7 @@
     "properties": {
       "module": "artist neighborhoods",
       "zip": "19141",
-      "name": "Need Name",
+      "name": "Ogontz",
       "icon": "/static/communityPin-f1ddc6ff914be9469d2c7fbf8a29632d.png",
       "color": "black",
       "description": "This is one the 22 neighborhoods that are represented by the artists of Rehearsing Philadelphia across all four modules."
@@ -1865,7 +1865,7 @@
     "properties": {
       "module": "artist neighborhoods",
       "zip": "19143",
-      "name": "Need Name",
+      "name": "Kingsessing",
       "icon": "/static/communityPin-f1ddc6ff914be9469d2c7fbf8a29632d.png",
       "color": "black",
       "description": "This is one the 22 neighborhoods that are represented by the artists of Rehearsing Philadelphia across all four modules."
@@ -1883,7 +1883,7 @@
     "properties": {
       "module": "artist neighborhoods",
       "zip": "19144",
-      "name": "Need Name",
+      "name": "East Germantown",
       "icon": "/static/communityPin-f1ddc6ff914be9469d2c7fbf8a29632d.png",
       "color": "black",
       "description": "This is one the 22 neighborhoods that are represented by the artists of Rehearsing Philadelphia across all four modules."
@@ -1901,7 +1901,7 @@
     "properties": {
       "module": "artist neighborhoods",
       "zip": "19145",
-      "name": "Need Name",
+      "name": "Girard Estates",
       "icon": "/static/communityPin-f1ddc6ff914be9469d2c7fbf8a29632d.png",
       "color": "black",
       "description": "This is one the 22 neighborhoods that are represented by the artists of Rehearsing Philadelphia across all four modules."
@@ -1919,7 +1919,7 @@
     "properties": {
       "module": "artist neighborhoods",
       "zip": "19146",
-      "name": "Need Name",
+      "name": "Point Breeze",
       "icon": "/static/communityPin-f1ddc6ff914be9469d2c7fbf8a29632d.png",
       "color": "black",
       "description": "This is one the 22 neighborhoods that are represented by the artists of Rehearsing Philadelphia across all four modules."
@@ -1937,7 +1937,7 @@
     "properties": {
       "module": "artist neighborhoods",
       "zip": "19147",
-      "name": "Need Name",
+      "name": "Bella Vista",
       "icon": "/static/communityPin-f1ddc6ff914be9469d2c7fbf8a29632d.png",
       "color": "black",
       "description": "This is one the 22 neighborhoods that are represented by the artists of Rehearsing Philadelphia across all four modules."
@@ -1955,7 +1955,7 @@
     "properties": {
       "module": "artist neighborhoods",
       "zip": "19148",
-      "name": "Need Name",
+      "name": "Central South Philadelphia",
       "icon": "/static/communityPin-f1ddc6ff914be9469d2c7fbf8a29632d.png",
       "color": "black",
       "description": "This is one the 22 neighborhoods that are represented by the artists of Rehearsing Philadelphia across all four modules."
@@ -1973,7 +1973,7 @@
     "properties": {
       "module": "artist neighborhoods",
       "zip": "19150",
-      "name": "Need Name",
+      "name": "Cedarbrook",
       "icon": "/static/communityPin-f1ddc6ff914be9469d2c7fbf8a29632d.png",
       "color": "black",
       "description": "This is one the 22 neighborhoods that are represented by the artists of Rehearsing Philadelphia across all four modules."
@@ -1991,7 +1991,7 @@
     "properties": {
       "module": "artist neighborhoods",
       "zip": "19153",
-      "name": "Need Name",
+      "name": "Eastwick",
       "icon": "/static/communityPin-f1ddc6ff914be9469d2c7fbf8a29632d.png",
       "color": "black",
       "description": "This is one the 22 neighborhoods that are represented by the artists of Rehearsing Philadelphia across all four modules."
