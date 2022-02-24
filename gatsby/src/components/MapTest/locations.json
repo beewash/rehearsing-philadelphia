@@ -9,18 +9,12 @@
       }
     },
     "properties": {
-      "name": "School District of Philadelphia",
+      "name": "Philadelphia School District",
       "address": "440 N. Broad Street",
       "module": "Solo",
       "icon": "/static/soloPin-0135cace3d16e8847a85f83420e070f7.png",
       "color": "solo-yellow",
-      "facts": [
-        {"fact": "The School District of Philadelphia serves over 200,000 students in 339 schools and is the 8th largest in the nation."},
-        {"fact": "The School District of Philadelphia’s annual budget is 3 billion dollars."},
-        {"fact": "As of the 2014–2015 school year, there were 107 languages other than English spoken at home by district students."}
-      ],
-      "question": "Who learns, who teaches?  ",
-      "statement": "Performance as knowledge production."
+      "description": "Born in the midst of the COVID 19 pandemic, this module explores isolation and the idea that through technology, each one of us shared a glimpse into what would otherwise have been a private space. Serving over 200,000 students in 339 schools, speaking 107 languages, the School District of Philadelphia is the 8th largest in the nation, with annual budget of 3 billion dollars. Rehearsing Philadelphia makes this location of power accessible through a solo performance by Frank Machos created by Fred Schmidt-Arenales."
     }
   },
   {
@@ -38,13 +32,7 @@
       "module": "Solo",
       "icon": "/static/soloPin-0135cace3d16e8847a85f83420e070f7.png",
       "color": "solo-yellow",
-      "facts": [
-        {"fact": "The Philadelphia Police Department is the fourth largest in the nation."},
-        {"fact": "The department proposed an annual budget of $270 million for the 2022 year."},
-        {"fact": "The department employs more than 6,300 sworn members and 800 civilian personnel."}
-      ],
-      "question": "A transfer of power through an unlikely transformation of performer.  ",
-      "statement": "Performance as agency."
+      "description": "Born in the midst of the COVID 19 pandemic, this module explores isolation and the idea that through technology, each one of us shared a glimpse into what would otherwise have been a private space. The fourth largest police force in the nation, the Philadelphia Police Department employs more than 6,300 sworn members and 800 civilian personnel. Rehearsing Philadelphia makes this location of power accessible through a solo performance by Officer Stephanie Velasquez created by Ei Arakawa."
     }
   },
   {
@@ -62,13 +50,7 @@
       "module": "Solo",
       "icon": "/static/soloPin-0135cace3d16e8847a85f83420e070f7.png",
       "color": "solo-yellow",
-      "facts": [
-        {"fact": "The University of Pennsylvania was the nation’s first hospital, founded in 1751, and the first medical school in the US opening in 1765."},
-        {"fact": "The hospital of the University of Pennsylvania is the #1 ranked hospital in the US."},
-        {"fact": "In Philadelphia, nearly 40 percent of non-citizen immigrants are uninsured — over four times the rate of the general population."}
-      ],
-      "question": "The medical laboratory as a metabolic theater of the body.",
-      "statement": "Performance as experiment."
+      "description": "Born in the midst of the COVID 19 pandemic, this module explores isolation and the idea that through technology, each one of us shared a glimpse into what would otherwise have been a private space. The hospital of the University of Pennsylvania, the number one ranked hospital in the United States, is also the nation’s first hospital (1751) and medical school (1765). Rehearsing Philadelphia makes this location of power accessible through a solo performance by Dr. Andrea Apter created by Germaine Ingram."
     }
   },
   {
@@ -86,13 +68,7 @@
       "module": "Solo",
       "icon": "/static/soloPin-0135cace3d16e8847a85f83420e070f7.png",
       "color": "solo-yellow",
-      "facts": [
-        {"fact": "City Hall was the tallest habitable building in the world from 1894 to 1908."},
-        {"fact": "The building structure used over 88 million bricks and thousands of tons of marble and granite. With almost 700 rooms, City Hall is the largest municipal building in the United States and one of the largest in the world."},
-        {"fact": "The building houses three branches of government: the city's executive branch (Mayor’s Office), its legislature (Philadelphia City Council), and a substantial portion of the judicial activity in the city."}
-      ],
-      "question": "Who speaks for whom, who performs for whom?",
-      "statement": "Performance as civic duty."
+      "description": "Born in the midst of the COVID 19 pandemic, this module explores isolation and the idea that through technology, each one of us shared a glimpse into what would otherwise have been a private space. With over 700 rooms, Philadelphia’s City Hall is the largest municipal building in the United States and one of the largest in the world, housing all three branches of government, the city’s executive branch (Mayor’s Office), its legislature (Philadelphia City Council), and a substantial portion of the judicial activity in the city. Rehearsing Philadelphia makes this location of power accessible through a solo performance by Reverend Naomi Washington-Leapheart created by Yolanda Wisher."
     }
   },
   {
@@ -106,17 +82,11 @@
     },
     "properties": {
       "name": "Community Legal Services",
-      "address": "1424 Chestnut St",
+      "address": "1424 Chestnut Street",
       "module": "Solo",
       "icon": "/static/soloPin-0135cace3d16e8847a85f83420e070f7.png",
       "color": "solo-yellow",
-      "facts": [
-        {"fact": "Community Legal Services has provided free civil legal assistance to more than one million low-income Philadelphians since 1966."},
-        {"fact": "One of CLS’ largest funders in 2020 was the Pennsylvania Legal Aid Network (PLAN)."},
-        {"fact": "CLS co-developed The Clean Slate Screening Project, which has already sealed more than 40 million cases, or over half of the charges in the Pennsylvania court’s entire database."}
-      ],
-      "question": "Question?  ",
-      "statement": "Statement."
+      "description": "Born in the midst of the COVID 19 pandemic, this module explores isolation and the idea that through technology, each one of us shared a glimpse into what would otherwise have been a private space. Founded by the Philadelphia Bar Association in 1966, CLS has provided free legal assistance to more than one million low-income Philadelphians facing the threat of losing their homes, incomes, health care and even families. Rehearsing Philadelphia makes this location of power accessible through a solo performance by Jonathan Stein created by CA Conrad."
     }
   },
   {
@@ -1574,13 +1544,7 @@
       "module": "Orchestra",
       "icon": "/static/orchestraPin-89ca3010a2dd4992a6820b222db19d42.png",
       "color": "orchestra-green",
-      "facts": [
-        {"fact": "Cherry Street Peer was originally built as a shipping peer in 1919."},
-        {"fact": "The 5.5 mile Delaware River Trail project connects to the Cherry Street Peer."},
-        {"fact": "Cherry Street Peer houses close to a dozen artist studios in addition to an outdoor restaurant and bar and open performance venue."}
-      ],
-      "question": "A transparent space open to all, a framework on the water.  ",
-      "statement": "The first public home of the Public Orchestra of Philadelphia."
+      "description": "The largest unit of the project, analogous to the society at large, this module introduces the first ever public orchestra, the Public Orchestra of Philadelphia. Representing the sonic diversity of the city, the 50 musicians orchestra includes instrumentation and musical traditions from across the city; everything from Bouzouki and Oud, to DJing, to French Horn to Korean Percussion. The Public Orchestra’s public rehearsals will take place at the Cherry Street Pier, originally built as a shipping pier in 1919, now housing close to a dozen artist studios in addition to an outdoor restaurant and open performance venue."
     }
   },
   {
