@@ -198,7 +198,7 @@ function MapCompTest() {
           <div className="h-1/2 p-4 overflow-hidden flex flex-col space-y-4">
             <div className="flex-grow">
               <div className="mb-6">
-                <p className="text-4xl md:text-6xl">Locations</p>
+                <p className="text-4xl md:text-6xl">Locations!</p>
               </div>
               <p className="text-base line-clamp-3">Addressing the question “What can be the space today for coming together?” the four modules of the project intersect conceptually within the city-space of Philadelphia: Solo and Duet spanning across the entire city, each with a different focus on private and public spaces; Ensemble existing as both a seminar and durational exhibition in three discrete locations; and Orchestra culminating in one large, open gathering place. This use of space is designed to symbolically activate the city and then gather it together. Take a peek into some of the locations on the map below. All locations to be announced January 2022.</p>
               <button className="p-1 px-2 mt-4 uppercase font-acuminPro text-xs border-2 border-black rounded-full hover:text-white hover:bg-black" onClick={() => modalRef1.current.openModal()}>Read More</button>
