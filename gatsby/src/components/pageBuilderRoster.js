@@ -2,27 +2,53 @@ import React, {useState} from 'react'
 import PortableText from './portableText'
 import Button from './button'
 import Roster from './roster'
+import ModuleDescription from './moduleDescriptions'
 
 const PageBuilderRoster = ({block, raw}) => {
-  const {title, roster, summary, _rawSummary} = block
+  const {title, roster, summary, _rawSummary, optionalDescriptions} = block
+  
 
   const allCategories = ['All', ...new Set(roster.map(roster => roster.moduleList))]
 
   const [rosterItem, setRosterItem] = useState(roster)
   // const [buttons, setButtons] = useState(allCategories)
   const [buttons] = useState(allCategories)
+  const [isDescription, setDescription] = useState(false)
 
   //Filter Function
   const filter = (button) =>{
 
     if(button === 'All'){
       setRosterItem(roster);
-      return;
-    }
+      setDescription(false);
+      return
+    } else if (button === 'orchestra') {
+      setDescription(true)
+    } else if (button !== 'orchestra') {
+      setDescription(false)
+    } else {return}
 
-    const filteredData = roster.filter(roster => roster.moduleList ===  button)
+    // if(button !== 'orchestra'){
+    //   setDescription(false)
+    //   return;
+    // }
+
+    // if(button === 'orchestra'){
+    //   setDescription(true)
+    //   return;
+    // }
+
+    const filteredData = roster.filter(roster => roster.moduleList === button)
     setRosterItem(filteredData)
   }
+
+  const renderDescription = () => (
+    <>
+      <div >
+        <PortableText blocks={optionalDescriptions?._rawOrchestraDescription} />
+      </div>
+    </>
+  )
 
   return (
     <section id="Roster" className='max-w-6xl mx-auto px-6 pb-28'>
@@ -43,6 +69,7 @@ const PageBuilderRoster = ({block, raw}) => {
         ) : (
           null
         )}
+        <ModuleDescription isDescription={isDescription} description={optionalDescriptions}  />
         <Roster rosterItem={rosterItem} />
       </div>
     </section>

@@ -11,7 +11,13 @@ export default {
       type: 'bodyPortableText'
     },
     {
-      title: 'Roster',
+      name: 'optionalDescriptions',
+      title: 'Optional Descriptions',
+      description: 'Optional text to describe what each module is about.',
+      type: 'moduleDescriptions'
+    },
+    {
+      title: 'Artists',
       name: 'roster',
       description: 'Add all appropriate artists for this list.',
       type: 'array',
@@ -23,9 +29,9 @@ export default {
     select: {
       title: 'title'
     },
-    prepare () {
+    prepare ({title}) {
       return {
-        title: 'Roster'
+        title: title
       }
     }
   }

@@ -125,6 +125,36 @@ export const query = graphql`
         _key
         _type
         title
+        optionalDescriptions {
+          _rawDuetDescription
+          _rawEnsembleDescription
+          _rawOrchestraDescription
+          _rawSoloDescription
+        }
+        rosterSegment {
+          _key
+          module
+          _rawSummary
+          artists {
+            _id
+            personName
+            hoverColor
+            roleList
+            moduleList
+            rosterColor
+            headshot {
+              alt
+              asset {
+                fluid(maxWidth: 800) {
+                  ...GatsbySanityImageFluid
+                }
+              }
+            }
+            slug {
+              current
+            }
+          }
+        }
         summary {
           _key
           _type

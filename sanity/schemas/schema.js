@@ -35,6 +35,8 @@ import pageBuilderSocial from './objects/pageBuilderSocial'
 import pageBuilderPressClippings from './objects/pageBuilderPressClippings'
 import pageBuilderFAQ from './objects/pageBuilderFAQ'
 import pageBuilderCalendar from './objects/pageBuilderCalendar'
+import roster from './objects/roster'
+import moduleDescriptions from './objects/moduleDescriptions'
 import event from './objects/event'
 import column from './objects/column'
 import link from './objects/link'
@@ -96,6 +98,8 @@ export default createSchema({
     pageBuilderPressClippings,
     pageBuilderFAQ,
     pageBuilderCalendar,
+    roster,
+    moduleDescriptions,
     event,
     column,
     mainImage,
