@@ -61,8 +61,8 @@ const serializers = {
       // Read https://css-tricks.com/use-target_blank/
       const { blank, href } = mark
       return blank ?
-        <a href={href} target="_blank" rel="noopener noreferrer">{children}</a>
-        : <a href={href}>{children}</a>
+        <a href={href} className="hover:underline" target="_blank" rel="noopener noreferrer">{children}</a>
+        : <a href={href} className="hover:underline">{children}</a>
     }
   },
   list: (props) => {

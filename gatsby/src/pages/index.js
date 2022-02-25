@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
+import { Link } from "gatsby"
 import Image from 'gatsby-image'
 import Container from "../components/Container/Container"
 import GraphQLErrorList from "../components/graphql-error-list"
@@ -114,6 +115,9 @@ const IndexPage = (props) => {
           >
             <MapComp />
           </motion.div> */}
+          <section id="calendarCTA" className="w-full text-center my-36 hover:underline">
+            <h3><Link to="/calendar">Vist the Calendar</Link></h3>
+          </section>
         </Container>
       </Layout>
     </>
