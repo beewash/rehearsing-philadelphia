@@ -115,8 +115,8 @@ const IndexPage = (props) => {
           >
             <MapComp />
           </motion.div> */}
-          <section id="calendarCTA" className="w-full text-center my-36 hover:underline">
-            <h3><Link to="/calendar">Vist the Calendar</Link></h3>
+          <section id="calendarCTA" className="w-full text-center my-28">
+            <h3 className="w-fit border-2 border-black rounded-full bg-white hover:bg-black text-black hover:text-white px-8 py-4 mx-auto"><Link to="/calendar">Vist the Calendar</Link></h3>
           </section>
         </Container>
       </Layout>

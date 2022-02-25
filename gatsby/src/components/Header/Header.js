@@ -79,9 +79,9 @@ const Header = props => {
                       {mainNav.navItems.map(navItems => (
                       <li key={navItems._key} className="w-full">
                         {navItems.navItemUrl.externalContent ? (
-                          <a href={navItems.navItemUrl.linkUrl} target='_blank' rel="noreferrer" className="text-4xl md:text-6xl">{navItems.text}</a>
+                          <a href={navItems.navItemUrl.linkUrl} target='_blank' rel="noreferrer" className="text-3xl">{navItems.text}</a>
                         )
-                          : <Link to={`/${navItems.navItemUrl.linkUrl}`} className="text-3xl md:text-5xl lg:text-6xl">{navItems.text}</Link>
+                          : <Link to={`/${navItems.navItemUrl.linkUrl}`} className="text-3xl">{navItems.text}</Link>
                         }
                       </li>
                       ))}
