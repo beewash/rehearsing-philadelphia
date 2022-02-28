@@ -10,7 +10,9 @@ import ensembleFlatIcon from '../../images/ensembleFlatIcon.png'
 import orchestraFlatIcon from '../../images/orchestraFlatIcon.png'
 import communityFlatIcon from '../../images/communityFlatIcon.png'
 import communityPin from '../../images/communityPin.png'
+import soloPin from '../../images/soloPin.png'
 import duetIcon from '../../images/duetPin.png'
+import orchestraPin from '../../images/orchestraPin.png'
 import pinShadow from '../../images/pinShadow.png'
 
 // Unordered List of locations

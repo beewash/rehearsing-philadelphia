@@ -105,7 +105,9 @@ const IndexPage = (props) => {
             </div>
           </div>
           <PageBuilder pageBuilder={pageBuilder} _rawPageBuilder={_rawPageBuilder} />
-          <MapComp />
+          <Link to="#map">
+            <MapComp />
+          </Link>
           {/* <motion.div
             animate={inView ? 'visible' : 'hidden'}
             variants={variants}
