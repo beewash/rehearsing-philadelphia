@@ -1022,7 +1022,10 @@
       "moduleListName": "Duet",
       "icon": "/static/duetPin-634975594205a79a9716a0bd64c82b7d.png",
       "color": "duet-red",
-      "description": "'Duet: Old City' takes place around Independence Historic Park from 11am-2pm on Saturday, April 2, 2022.  Explore all the different locations along this route."
+      "description": "'Duet: Old City' takes place around Independence Historic Park from 11am-2pm on Saturday, April 2, 2022.  Explore all the different locations along this route.",
+      "date": "03/07/2022",
+      "startTime": "14",
+      "endTime": "19"
     }
   },
   {

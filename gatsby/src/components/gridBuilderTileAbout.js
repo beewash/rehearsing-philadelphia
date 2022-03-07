@@ -5,8 +5,6 @@ import {Link} from 'gatsby'
 const GridBuilderTileAbout = ({block, raw, globalStyles}) => {
   const {title, tileColor, tileBorderColor, textColor, cta, colLayoutSection, rowLayoutSection} = block
 
-  console.log(tileBorderColor)
-
   return (
     <section 
       id="tileAbout" 
