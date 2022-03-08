@@ -2,7 +2,6 @@ import React from "react"
 import {motion} from 'framer-motion'
 import Header from "../Header/Header"
 import Footer from "../Footer/Footer"
-import Radio from "../Radio/radio"
 
 class Layout extends React.Component {
   render() {
@@ -23,7 +22,6 @@ class Layout extends React.Component {
         >
           {children}
         </motion.div>
-        {this.props.noRadio ? null : <Radio />}
         {this.props.noFooter ? null : <Footer />}
       </>
     )
