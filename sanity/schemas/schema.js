@@ -14,6 +14,7 @@ import artistPortal from './documents/artistPortal'
 import press from './documents/press'
 import faq from './documents/faq'
 import calendar from './documents/calendar'
+import radio from './documents/radio'
 
 // Object types
 import bodyPortableText from './objects/bodyPortableText'
@@ -79,6 +80,7 @@ export default createSchema({
     press,
     performanceModules,
     faq,
+    radio,
     link,
     // navBuilder,
     navItem,
