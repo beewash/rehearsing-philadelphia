@@ -1,8 +1,7 @@
 import React, {useState} from 'react'
-import { StaticQuery, graphql, useStaticQuery } from 'gatsby'
-import AudioPlayer, { RHAP_UI } from 'react-h5-audio-player';
-import 'react-h5-audio-player/lib/styles.css';
-import { IoPlayCircleOutline } from 'react-icons/io'
+import { graphql, useStaticQuery } from 'gatsby'
+import AudioPlayer, { RHAP_UI } from 'react-h5-audio-player'
+import 'react-h5-audio-player/lib/styles.css'
 
 export const queryRadio = graphql`
 {
@@ -20,7 +19,6 @@ export const queryRadio = graphql`
     }
   }
 }`
-
 
 const Radio = () => {
   const data = useStaticQuery(queryRadio)
