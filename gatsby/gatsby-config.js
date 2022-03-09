@@ -63,7 +63,8 @@ module.exports = {
         ignore: [
           '/node_modules/slick-carousel/slick/slick.css',
           '/node_modules/slick-carousel/slick/slick-theme.css',
-          '/node_modules/sal.js/dist/sal.css'
+          '/node_modules/sal.js/dist/sal.css',
+          'react-h5-audio-player/lib/styles.css'
         ]
       }
     },
