@@ -106,17 +106,9 @@ const IndexPage = (props) => {
           </div>
           <PageBuilder pageBuilder={pageBuilder} _rawPageBuilder={_rawPageBuilder} />
           <Link to="#map">
-            <MapComp />
+            <div aria-hidden="true" className="absolute top-[calc(0px_-_80px)] opacity-0 pointer-events-none" />
           </Link>
-          {/* <motion.div
-            animate={inView ? 'visible' : 'hidden'}
-            variants={variants}
-            transition={{ duration: 2, ease: 'easeOut' }}
-            ref={ref}
-            className="magic"
-          >
-            <MapComp />
-          </motion.div> */}
+          <MapComp />
           <section id="calendarCTA" className="w-full text-center my-28">
             <h3 className="w-fit border-2 border-black rounded-full bg-white hover:bg-black text-black hover:text-white px-8 py-4 mx-auto"><Link to="/calendar">Visit the Calendar</Link></h3>
           </section>
