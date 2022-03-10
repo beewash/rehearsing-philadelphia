@@ -1,41 +1,7 @@
-import React from 'react'
-import { StaticQuery, graphql } from 'gatsby'
+import React, {useState} from 'react'
+import { StaticQuery, graphql, useStaticQuery } from 'gatsby'
 import AudioPlayer, { RHAP_UI } from 'react-h5-audio-player';
 import 'react-h5-audio-player/lib/styles.css';
-
-
-const Radio = props => {
-
-  return (
-    <StaticQuery
-      key="radio_query"
-      query={queryRadio}
-      render={data => (
-        <section id="radio" className="z-30 h-12 sticky bottom-0 bg-white border-t-2 border-black w-full flex justify-items-center items-center overflow-hidden">
-            {data && data.radio.edges.map(({ node: audio }, index) => (
-              <>
-              {index > 0 ? (
-                <div key={index} className="w-full">
-                  <AudioPlayer
-                    src={audio.audio.asset.url}
-                    layout="horizontal-reverse"
-                    customControlsSection={
-                      [
-                        RHAP_UI.MAIN_CONTROLS,
-                        <div>{audio.title}</div>,
-                        RHAP_UI.VOLUME_CONTROLS,
-                      ]
-                    }
-                  />
-                </div>
-              ) :null}
-              </>
-            ))}
-        </section>
-      )}
-    />
-  )
-}
 
 export const queryRadio = graphql`
 {
@@ -53,5 +19,47 @@ export const queryRadio = graphql`
     }
   }
 }`
+
+
+const Radio = () => {
+  const data = useStaticQuery(queryRadio)
+  const playlist = data.radio.edges.map(edges => edges.node)
+  
+  const [currentMusicIndex, setSong] = useState(0)
+
+  const handleClickPrevious = () => {
+    const previousSong = currentMusicIndex === 0 ? playlist.length -1 : currentMusicIndex -1
+    setSong(previousSong)
+  }
+
+  const handleClickNext = () => {
+    const nextSong = currentMusicIndex < playlist.length -1 ? currentMusicIndex + 1 : 0
+    setSong(nextSong)
+  }
+
+  return (
+    <section id="radio" className="z-30 h-12 sticky bottom-0 bg-white border-t-2 border-black w-full flex justify-items-center items-center overflow-hidden">
+      <div className="w-full">
+        <AudioPlayer
+          src={playlist[currentMusicIndex].audio.asset.url}
+          layout="horizontal-reverse"
+          customControlsSection={
+            [
+              RHAP_UI.MAIN_CONTROLS,
+              <div>{playlist[currentMusicIndex].title}</div>,
+              RHAP_UI.VOLUME_CONTROLS,
+            ]
+          }
+          autoPlayAfterSrcChange={true}
+          showSkipControls={true}
+          showJumpControls={false}
+          onClickPrevious={handleClickPrevious}
+          onClickNext={handleClickNext}
+          onEnded={() => setSong(currentMusicIndex < playlist.length -1 ? currentMusicIndex + 1 : 0)}
+        />
+      </div>
+    </section>
+  )
+}
 
 export default Radio
