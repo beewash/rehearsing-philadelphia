@@ -7,14 +7,11 @@ export default {
   icon: BsMusicNoteBeamed,
   preview: {
     select: {
-      title: 'pressTitle',
-      // media: 'icon',
-      subtitle: 'publishDate'
+      title: 'title'
     },
-    prepare ({title, subtitle}) {
+    prepare ({title}) {
       return {
-        title,
-        subtitle
+        title
       }
     }
   },
