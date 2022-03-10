@@ -1,39 +1,64 @@
-import React from 'react'
+import React, {useState} from 'react'
+import { StaticQuery, graphql, useStaticQuery } from 'gatsby'
+import AudioPlayer, { RHAP_UI } from 'react-h5-audio-player';
+import 'react-h5-audio-player/lib/styles.css';
+import { IoPlayCircleOutline } from 'react-icons/io'
+
+export const queryRadio = graphql`
+{
+  radio: allSanityRadio {
+    edges {
+      node {
+        title
+        module
+        audio {
+          asset {
+            url
+          }
+        }
+      }
+    }
+  }
+}`
+
 
 const Radio = () => {
+  const data = useStaticQuery(queryRadio)
+  const playlist = data.radio.edges.map(edges => edges.node)
+  
+  const [currentMusicIndex, setSong] = useState(0)
+
+  const handleClickPrevious = () => {
+    const previousSong = currentMusicIndex === 0 ? playlist.length -1 : currentMusicIndex -1
+    setSong(previousSong)
+  }
+
+  const handleClickNext = () => {
+    const nextSong = currentMusicIndex < playlist.length -1 ? currentMusicIndex + 1 : 0
+    setSong(nextSong)
+  }
 
   return (
     <section id="radio" className="z-30 h-12 sticky bottom-0 bg-white border-t-2 border-black w-full flex justify-items-center items-center overflow-hidden">
-      {/* <View>
-        <MarqueeText
-          duration={3000}
-          marqueeOnStart
-          loop
-          marqueeDelay={1000}
-          marqueeResetDelay={1000}
-        >
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry and typesetting industry.
-        </MarqueeText>
-      </View> */}
-      <div className="w-full text-center whitespace-nowrap radio-ticker">
-          <p className="inline font-acuminPro uppercase text-cfsSM1 mr-2">
-            REHEARSAL RADIO COMING SOON — MARCH 2022 — HOW CAN WE BE TOGETHER? — HOW ARE YOU REHEARSING EVERY DAY? — 
-          </p>
-          <p className="inline font-acuminPro uppercase text-cfsSM1 mr-2">
-            REHEARSAL RADIO COMING SOON — MARCH 2022 — HOW CAN WE BE TOGETHER? — HOW ARE YOU REHEARSING EVERY DAY? — 
-          </p>
-          <p className="inline font-acuminPro uppercase text-cfsSM1 mr-2">
-            REHEARSAL RADIO COMING SOON — MARCH 2022 — HOW CAN WE BE TOGETHER? — HOW ARE YOU REHEARSING EVERY DAY? — 
-          </p>
-          <p className="inline font-acuminPro uppercase text-cfsSM1 mr-2">
-            REHEARSAL RADIO COMING SOON — MARCH 2022 — HOW CAN WE BE TOGETHER? — HOW ARE YOU REHEARSING EVERY DAY? — 
-          </p>
-          <p className="inline font-acuminPro uppercase text-cfsSM1 mr-2">
-            REHEARSAL RADIO COMING SOON — MARCH 2022 — HOW CAN WE BE TOGETHER? — HOW ARE YOU REHEARSING EVERY DAY? — 
-          </p>
-          <p className="inline font-acuminPro uppercase text-cfsSM1 mr-2">
-            REHEARSAL RADIO COMING SOON — MARCH 2022 — HOW CAN WE BE TOGETHER? — HOW ARE YOU REHEARSING EVERY DAY? — 
-          </p>
+      <div className="w-full max-w-6xl mx-auto">
+        <AudioPlayer
+          src={playlist[currentMusicIndex].audio.asset.url}
+          layout="horizontal-reverse"
+          customControlsSection={
+            [
+              RHAP_UI.MAIN_CONTROLS,
+              <div>{playlist[currentMusicIndex].title}</div>,
+              RHAP_UI.VOLUME_CONTROLS,
+              RHAP_UI.SKIP_CONTROLS
+            ]
+          }
+          autoPlayAfterSrcChange={true}
+          showSkipControls={true}
+          showJumpControls={false}
+          onClickPrevious={handleClickPrevious}
+          onClickNext={handleClickNext}
+          onEnded={() => setSong(currentMusicIndex < playlist.length -1 ? currentMusicIndex + 1 : 0)}
+        />
       </div>
     </section>
   )
