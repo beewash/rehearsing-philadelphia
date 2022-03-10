@@ -9,6 +9,7 @@ export const query = graphql`
     event: sanityCalendar(id: {eq: $id}) {
       id
       title
+      location
       slug {
         current
       }
@@ -32,7 +33,8 @@ const EventTemplate = props => {
       <SEO title={event.slug.current} />
       <section className="w-screen mb-20 md:mb-48">
         <div className='text-center px-4 mt-16 md:px-8 md:mt-32'>
-          <h1>{event.title}</h1>
+          <h1>{event.location}</h1>
+          <p>{event.date}, {event.time}</p>
         </div>
       </section>
       <section className="eventTemplateContainer max-w-6xl mx-auto px-6 pb-28">

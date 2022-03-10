@@ -5,6 +5,21 @@ export default {
   type: 'document',
   title: 'Calendar',
   icon: AiOutlineCalendar,
+  preview: {
+    select: {
+      title: 'location',
+      module: 'title',
+      date: 'date',
+      time: 'time'
+    },
+    prepare (selection) {
+      const {title, module, date, time} = selection
+      return {
+        title,
+        subtitle: `${module}: ${date}, ${time}`
+      }
+    }
+  },
   fields: [
     {
       name: 'title',
