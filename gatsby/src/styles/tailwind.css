@@ -153,6 +153,10 @@
     display: none;
   }
 
+  .rhap_container {
+    box-shadow: none !important;
+  }
+
   /* .hover-trigger:hover .hover-target {
       display: block;
   } */

@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import { StaticQuery, graphql, useStaticQuery } from 'gatsby'
 import AudioPlayer, { RHAP_UI } from 'react-h5-audio-player';
 import 'react-h5-audio-player/lib/styles.css';
+import { IoPlayCircleOutline } from 'react-icons/io'
 
 export const queryRadio = graphql`
 {
@@ -39,7 +40,7 @@ const Radio = () => {
 
   return (
     <section id="radio" className="z-30 h-12 sticky bottom-0 bg-white border-t-2 border-black w-full flex justify-items-center items-center overflow-hidden">
-      <div className="w-full">
+      <div className="w-full max-w-6xl mx-auto">
         <AudioPlayer
           src={playlist[currentMusicIndex].audio.asset.url}
           layout="horizontal-reverse"
@@ -48,6 +49,7 @@ const Radio = () => {
               RHAP_UI.MAIN_CONTROLS,
               <div>{playlist[currentMusicIndex].title}</div>,
               RHAP_UI.VOLUME_CONTROLS,
+              RHAP_UI.SKIP_CONTROLS
             ]
           }
           autoPlayAfterSrcChange={true}
