@@ -1,6 +1,11 @@
 import React, {useRef, useEffect} from "react"
 import { Marker, Popup } from 'react-leaflet'
 import L from 'leaflet'
+import soloPin from '../../images/soloPin.png'
+import duetPin from '../../images/duetPin.png'
+import ensemblePin from '../../images/ensemblePin.png'
+import orchestraPin from '../../images/orchestraPin.png'
+import communityPin from '../../images/communityPin.png'
 import pinShadow from '../../images/pinShadow.png'
 
 // Marker popup function
