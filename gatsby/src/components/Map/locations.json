@@ -9,7 +9,7 @@
       }
     },
     "properties": {
-      "name": "Philadelphia School District",
+      "name": "School District of Philadelphia",
       "address": "440 N. Broad Street",
       "module": "Solo",
       "icon": "/static/soloPin-0135cace3d16e8847a85f83420e070f7.png",
@@ -27,7 +27,7 @@
       }
     },
     "properties": {
-      "name": "Philadelphia Police Department",
+      "name": "Philadelphia Police Department Headquarters",
       "address": "400 N. Broad Street",
       "module": "Solo",
       "icon": "/static/soloPin-0135cace3d16e8847a85f83420e070f7.png",
@@ -45,7 +45,7 @@
       }
     },
     "properties": {
-      "name": "Penn Medicine",
+      "name": "Perelman School of Medicine at the University of Pennsylvania",
       "address": "3400 Civic Center Blvd",
       "module": "Solo",
       "icon": "/static/soloPin-0135cace3d16e8847a85f83420e070f7.png",
