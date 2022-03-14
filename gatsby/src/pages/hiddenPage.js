@@ -35,6 +35,7 @@ const HiddenPage = () => (
     <div class="slick-prev"></div>
     <div class="slick-next"></div>
     <div class="slick-dots"></div>
+    <div class="rhap_container"></div>
     <div class="w-1/2"></div>
     <div class="w-3/5"></div>
     <div class="w-2/5"></div>
