@@ -23,11 +23,11 @@ const PageBuilderCalendar = ({ block, raw }) => {
                   ) : null}
                   <div className={`w-full ${event.module == 'solo' ? 'text-black' : 'text-white'}`}>
                     <Link to={`/${event.slug?.current}`}>
-                      <p className=" text-cfsSM2 font-semibold mb-2">{event.title}</p>
+                      <p className=" text-xs font-semibold mb-1">{event.title}</p>
                       {event.location ? (
-                        <p className="text-cfsSM2 mb-2">{event.location}</p>
+                        <p className="text-xs mb-1">{event.location}</p>
                       ) : null}
-                      <p className="text-cfsSM2">{event.time}</p>
+                      <p className="text-xs">{event.time}</p>
                     </Link>
                   </div>
                 </div>
