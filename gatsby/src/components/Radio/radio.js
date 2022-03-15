@@ -16,6 +16,7 @@ export const queryRadio = graphql`
             url
           }
         }
+        position
       }
     }
   }
@@ -47,7 +48,7 @@ const Radio = () => {
           customControlsSection={
             [
               RHAP_UI.MAIN_CONTROLS,
-              <div>{playlist[currentMusicIndex].title}</div>,
+              <div className="">{playlist[currentMusicIndex].title}</div>,
               RHAP_UI.VOLUME_CONTROLS,
               RHAP_UI.SKIP_CONTROLS
             ]
