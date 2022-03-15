@@ -16,6 +16,6 @@ import Radio from './src/components/Radio/radio'
 export const wrapPageElement = ({element}) => (
   <>
   <AnimatePresence exitBeforeEnter>{element}</AnimatePresence>
-  <Radio />
+  {/* <Radio /> */}
   </>
 )
