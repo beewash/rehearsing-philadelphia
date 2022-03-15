@@ -59,6 +59,7 @@ function PointLayer({ data, selectedIndex }) {
               ) : (
                 <div className="mt-3.5 mb-2 pt-3.5 font-sainteColombe border-t-2 border-black">{item.properties.description}</div>
               )}
+              {item.properties.notes ? (<div className="font-sainteColombe">{item.properties.notes}</div>) : null}
               <div className="mb-2 font-sainteColombe">{item.properties.question}  <span className="font-semibold">{item.properties.statement}</span></div>
             </>
           }

@@ -46,11 +46,12 @@
     },
     "properties": {
       "name": "Perelman School of Medicine at the University of Pennsylvania",
-      "address": "3400 Civic Center Blvd",
+      "address": "1 Convention Ave, Philadelphia, PA 19104",
       "module": "Solo",
       "icon": "/static/soloPin-0135cace3d16e8847a85f83420e070f7.png",
       "color": "solo-yellow",
-      "description": "Born in the midst of the COVID 19 pandemic, this module explores isolation and the idea that through technology, each one of us shared a glimpse into what would otherwise have been a private space. The hospital of the University of Pennsylvania, the number one ranked hospital in the United States, is also the nation’s first hospital (1751) and medical school (1765). Rehearsing Philadelphia makes this location of power accessible through a solo performance by Dr. Andrea Apter created by Germaine Ingram."
+      "description": "Born in the midst of the COVID 19 pandemic, this module explores isolation and the idea that through technology, each one of us shared a glimpse into what would otherwise have been a private space. The hospital of the University of Pennsylvania, the number one ranked hospital in the United States, is also the nation’s first hospital (1751) and medical school (1765). Rehearsing Philadelphia makes this location of power accessible through a solo performance by Dr. Andrea Apter created by Germaine Ingram.",
+      "notes": "Entrance is in the brown building on the north side of Convention Avenue between Health Science Dr. and Civic Center Blvd (33rd/34th Street).  Look for the Pavilion at the Hospital of the University Of Pennsylvania - 1 Convention Ave, Philadelphia, PA 19104."
     }
   },
   {
