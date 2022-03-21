@@ -26,6 +26,7 @@ export const queryRadio = graphql`
 const Radio = () => {
   const data = useStaticQuery(queryRadio)
   const playlist = data.radio.edges.map(edges => edges.node)
+  playlist.sort((a,b) => (a.position > b.position) ? 1 : -1)
   
   const [currentMusicIndex, setSong] = useState(0)
 

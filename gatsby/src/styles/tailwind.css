@@ -157,6 +157,14 @@
     box-shadow: none !important;
   }
 
+  @media (max-width: 767px) {
+    .rhap_skip-button,
+    .rhap_progress-section,
+    .rhap_volume-controls {
+      display: none !important;
+    }
+  }
+
   /* .hover-trigger:hover .hover-target {
       display: block;
   } */
