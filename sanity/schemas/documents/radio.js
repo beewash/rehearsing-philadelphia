@@ -15,6 +15,15 @@ export default {
       }
     }
   },
+  orderings: [
+    {
+      title: 'List Order',
+      name: 'listOrder',
+      by: [
+        {field: 'position', direction: 'asc'}
+      ]
+    }
+  ],
   fields: [
     {
       name: 'title',
@@ -38,6 +47,14 @@ export default {
       name: 'audio',
       title: 'Audio',
       type: 'file'
+    },
+    {
+      name: 'position',
+      title: 'Position',
+      type: 'number',
+      options: {
+        layout: 'dropdown'
+      }
     }
   ]
 }
