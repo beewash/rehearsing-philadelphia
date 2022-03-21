@@ -117,6 +117,9 @@ function PointLayer({ data, selectedIndex }) {
                   <span>{` (${item.properties.zip})`}</span>
                 ) : null}
               </div>
+              {item.properties.address ? (
+                <div className="mb-2 font-sainteColombe">{item.properties.address}</div>
+              ) : null}
               {item.properties.site ? (
                 <div className="mb-2 font-sainteColombe">{item.properties.site}</div>
               ) : null}
