@@ -1833,6 +1833,24 @@
     "geometry": {
       "type": "Point",
       "coordinates": {
+        "lat": 39.95734774891404,
+        "lon": -75.19276251517375
+      }
+    },
+    "properties": {
+      "name": "Pearlstein Gallery",
+      "address": "3401 Filbert St",
+      "module": "Ensemble",
+      "icon": "/static/ensemblePin-1a50f2c5316c51c0c1642809c23d8a5e.png",
+      "color": "ensemble-blue",
+      "description": "The Leonard Pearlstein Gallery, located in the URBN Annex at 3401 Filbert Street in West Philadelphia on the Drexel University campus, is committed to cultivating engagement with emerging artists, community partners, and contemporary culture. The gallery is a free, open, and inclusive space for visitors to experience and reflect on current socio-cultural climates."
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": {
         "lat": 39.95270111977888, 
         "lon": -75.13972703050233
       }
