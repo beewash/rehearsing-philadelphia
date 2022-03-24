@@ -10,6 +10,7 @@ import LiveFilter from './liveFilter'
 import ModuleButton from './moduleButtons'
 import locations from './locations.json'
 import { control } from './leafletStyles'
+import { map } from 'leaflet'
 
 // Map Component
 function MapCompTest() {
@@ -36,17 +37,20 @@ function MapCompTest() {
 
     const currentDate = mm + '/' + dd + '/' + yyyy;
 
-    const validEvent = locations.filter(location => location.properties.name === 'Old City' && location.properties.module === 'Duet-Hero')
-    // console.log(validEvent.properties.date)
+    // const liveEvent = validEvent.filter(event => eventDate == currentDate && hour >= startTime && hour <= endTime)
 
-    const eventDate = validEvent.map(event => event.properties.date)
-    const startTime = validEvent.map(event => event.properties.startTime)
-    const endTime = validEvent.map(event => event.properties.endTime)
+    const filteredLocations = locations.filter(locations => {
+      return locations.properties.eventDetails?.some((event) => {
+        if (event.date !== currentDate) {
+          delete event.date
+        } else if (event.date == currentDate && hour >= event.startTime && hour <= event.endTime) {
+          return true
+        } else return false
+      })
+    })
 
-    const liveEvent = validEvent.filter(event => eventDate == currentDate && hour >= startTime && hour <= endTime)
-
-    {liveEvent ? 
-      (setMapPoints(liveEvent)) 
+    {filteredLocations ? 
+      (setMapPoints(filteredLocations)) 
       : (<div>There are no live events currently</div>)}
 
   }
@@ -115,7 +119,7 @@ function MapCompTest() {
           <div className="h-1/2 p-4 border-t-2 border-black overflow-y-scroll">
             {mapPoints.length == 0 ? (
               <div className="space-y-4">
-              <div>Either the module you selected does not have any scheduled events or there are no events currently scheduled at this time.</div>
+              <div>There are currently no events in progress.</div>
               <div>Check the <Link to="/calendar" className="underline">calendar</Link> for the full schedule of events.</div>
             </div>
             ) : (
