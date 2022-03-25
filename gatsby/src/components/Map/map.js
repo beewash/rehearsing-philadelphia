@@ -120,7 +120,7 @@ function MapCompTest() {
             {mapPoints.length == 0 ? (
               <div className="space-y-4">
               <div>There are currently no events in progress.</div>
-              <div>Check the <Link to="/calendar" className="underline">calendar</Link> for the full schedule of events.</div>
+              <div>Check the <Link to="/schedule-and-tickets" className="underline">calendar</Link> for the full schedule of events.</div>
             </div>
             ) : (
               <MarkerList data={mapPoints} onItemClick={handleItemClick} />

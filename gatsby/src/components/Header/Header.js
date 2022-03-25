@@ -59,6 +59,13 @@ const Header = props => {
                 ) : null}
               </div>
               <div className="flex flex-row space-x-2.5 lg:space-x-10 items-center justify-items-center justify-center">
+                <div>
+                  <button className="flex">
+                    <Link to="https://drexelperformingarts.universitytickets.com/w/default.aspx?cid=174" target="_blank" className="py-1 px-4 font-acuminPro font-medium uppercase leading-none text-white text-xs md:text-sm bg-duet-red border-black border-2 rounded-full hover:bg-black hover:text-white">
+                      Tickets
+                    </Link>
+                  </button>
+                </div>
                 <div className="flex">
                   <button onClick={() => toggleExpansion(!isExpanded)}>
                     <Hamburger toggled={isOpen} toggle={setOpen} size={28} />
