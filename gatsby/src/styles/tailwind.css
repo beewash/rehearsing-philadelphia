@@ -53,6 +53,9 @@
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
   }
+  body {
+    overflow: auto;
+  }
   .h-screen-80 {
     height: calc(100vh - 80px);
   }

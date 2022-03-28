@@ -10,7 +10,6 @@ import LiveFilter from './liveFilter'
 import ModuleButton from './moduleButtons'
 import locations from './locations.json'
 import { control } from './leafletStyles'
-import { map } from 'leaflet'
 
 // Map Component
 function MapCompTest() {
@@ -120,10 +119,10 @@ function MapCompTest() {
             {mapPoints.length == 0 ? (
               <div className="space-y-4">
               <div>There are currently no events in progress.</div>
-              <div>Check the <Link to="/schedule-and-tickets" className="underline">calendar</Link> for the full schedule of events.</div>
+              <div>Check the <Link to="/schedule-and-tickets" className="underline">schedule</Link> for the full list of events.</div>
             </div>
             ) : (
-              <MarkerList data={mapPoints} onItemClick={handleItemClick} />
+              <MarkerList data={mapPoints} onItemClick={handleItemClick} /> 
             ) }
           </div>
         </div>

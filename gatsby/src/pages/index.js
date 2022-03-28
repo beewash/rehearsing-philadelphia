@@ -10,6 +10,7 @@ import PageBuilder from "../components/pageBuilder"
 import MapComp from "../components/Map/map"
 import Helmet from 'react-helmet'
 import logo from '../images/Logo_Symbols.png'
+import { BsChevronDown } from 'react-icons/bs'
 
 export const query = graphql`
   query IndexPageQuery {
@@ -69,8 +70,8 @@ const IndexPage = (props) => {
           keywords={site.keywords}
         />
         <Container>
-          <div className="my-16 lg:m-0 lg:min-h-screen flex justify-items-center items-center">
-            <div className="w-screen h-full">
+          <div className="my-16 lg:m-0 lg:min-h-screen flex justify-items-center items-center relative">
+            <div className="w-screen h-full relative">
               <div className="w-10/12 mx-auto">
                 <img src={logo} alt="Rehearsing Philadelphia Logo" />
               </div>
@@ -79,8 +80,16 @@ const IndexPage = (props) => {
                 <p>Philadelphia, PA</p>
               </div>
             </div>
+            <div className="hidden absolute bottom-[18%] left-0 right-0 w-full lg:flex justify-center">
+                <Link to="#about-section" className="hover:animate-bounce">
+                  <div className="uppercase font-acuminPro text-sm tracking-wide">Scroll</div>
+                  <div className="w-fit mx-auto">
+                    <BsChevronDown />
+                  </div>
+                </Link>
+              </div>
           </div>
-          <div className="min-h-screen p-4 mb-32 flex flex-col  justify-items-center items-center lg:m-0 lg:flex-row lg:space-x-4">
+          <div id="about-section" className="min-h-screen p-4 mb-32 flex flex-col  justify-items-center items-center lg:m-0 lg:flex-row lg:space-x-4">
             <div className="w-full h-full lg:w-1/2 items-stretch">
               <div className="w-full h-full grid grid-cols-2 grid-rows-2 gap-4 p-8 md:p-28">
                 {site.moduleIcons.map((icon, index) => (
