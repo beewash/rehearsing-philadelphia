@@ -119,7 +119,7 @@ const IndexPage = (props) => {
           </Link>
           <MapComp />
           <section id="calendarCTA" className="w-full text-center my-28">
-            <h3 className="w-fit border-2 border-black rounded-full bg-white hover:bg-black text-black hover:text-white px-8 py-4 mx-auto"><Link to="/schedule-and-tickets">Visit the Calendar</Link></h3>
+            <h3 className="w-fit border-2 border-black rounded-full bg-white hover:bg-black text-black hover:text-white px-8 py-4 mx-auto"><Link to="/schedule-and-tickets">Schedule &amp; Tickets</Link></h3>
           </section>
         </Container>
       </Layout>
