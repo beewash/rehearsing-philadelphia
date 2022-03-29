@@ -62,7 +62,7 @@ const Header = props => {
                 <div>
                   <button className="flex">
                     <Link to="https://drexelperformingarts.universitytickets.com/w/default.aspx?cid=174" target="_blank" className="py-1 px-4 font-acuminPro font-medium uppercase leading-none text-white text-xs md:text-sm bg-duet-red border-black border-2 rounded-full hover:bg-black hover:text-white">
-                      Tickets
+                      RSVP
                     </Link>
                   </button>
                 </div>
