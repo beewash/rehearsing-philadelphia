@@ -26,7 +26,11 @@ const HiddenPage = () => (
     <div className="hover:bg-solo focus:bg-solo"></div> 
     <div className="hover:bg-duet focus:bg-duet"></div> 
     <div className="hover:bg-ensemble focus:bg-ensemble"></div> 
-    <div className="hover:bg-orchestra focus:bg-orchestra"></div> 
+    <div className="hover:bg-orchestra focus:bg-orchestra"></div>
+    <div className="border-solo-yellow hover:border-solo-yellow"></div>
+    <div className="border-duet-red hover:border-duet-red"></div>
+    <div className="border-ensemble-blue hover:border-ensemble-blue"></div>
+    <div className="border-orchestra-green hover:border-orchestra-green"></div>
     <h1>h1</h1>
     <h2>h2</h2>
     <h3>h3</h3>

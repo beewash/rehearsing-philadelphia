@@ -14,14 +14,14 @@ const PageBuilderCalendar = ({ block, raw }) => {
               <p className="font-acuminPro font-bold text-cfs w-20 mx-auto">{event.title}</p>
             </div>
             <div className="space-y-4">
-              {event.calEvent.map((event) =>
-                <div className={`flex p-2 pl-4 pb-4 bg-${event.module} rounded-md`}>
+              {event.calEvent.map((event) => 
+                <div className={`flex p-2 pl-4 pb-4 border-${event.module} border-2 bg-${event.module} hover:bg-white hover:text-black ${event.module == 'solo' ? 'text-black' : 'text-white'} rounded-md`}>
                   {event.icon ? (
                     <div className="hidden w-4 h-8 items-center mr-2">
                       <Image fluid={event.icon?.asset.fluid} alt={event.icon?.alt} className="w-full" />
                     </div>
                   ) : null}
-                  <div className={`w-full ${event.module == 'solo' ? 'text-black' : 'text-white'}`}>
+                  <div className={`w-full`}>
                     <Link to={`/${event.slug?.current}`}>
                       <p className=" text-xs font-semibold mb-1">{event.title}</p>
                       {event.location ? (

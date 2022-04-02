@@ -42,7 +42,7 @@ function MapCompTest() {
       return locations.properties.eventDetails?.some((event) => {
         if (event.date !== currentDate) {
           delete event.date
-        } else if (event.date == currentDate && hour >= event.startTime && hour <= event.endTime) {
+        } else if (event.date == currentDate) {
           return true
         } else return false
       })
