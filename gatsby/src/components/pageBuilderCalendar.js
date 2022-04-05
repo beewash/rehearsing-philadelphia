@@ -14,8 +14,10 @@ const PageBuilderCalendar = ({ block, raw }) => {
               <p className="font-acuminPro font-bold text-cfs w-20 mx-auto">{event.title}</p>
             </div>
             <div className="space-y-4">
-              {event.calEvent.map((event) => 
-                <div className={`flex p-2 pl-4 pb-4 border-${event.module} border-2 bg-${event.module} hover:bg-white hover:text-black ${event.module == 'solo' ? 'text-black' : 'text-white'} rounded-md`}>
+              {event.calEvent.map((event) => {
+                console.log(event)
+                return (
+                <div className={`flex p-4 border-${event.module} border-2 bg-${event.module} hover:bg-white hover:text-black ${event.module == 'solo' ? 'text-black' : 'text-white'} rounded-md`}>
                   {event.icon ? (
                     <div className="hidden w-4 h-8 items-center mr-2">
                       <Image fluid={event.icon?.asset.fluid} alt={event.icon?.alt} className="w-full" />
@@ -23,15 +25,18 @@ const PageBuilderCalendar = ({ block, raw }) => {
                   ) : null}
                   <div className={`w-full`}>
                     <Link to={`/${event.slug?.current}`}>
-                      <p className=" text-xs font-semibold mb-1">{event.title}</p>
+                      <p className=" text-xs font-semibold mb-2">{event.title}</p>
+                      {event.featuredArtist ? (
+                        <p className="text-xs mb-2 italic">{event.featuredArtist}</p>
+                      ) : null}
                       {event.location ? (
-                        <p className="text-xs mb-1">{event.location}</p>
+                        <p className="text-xs mb-2">{event.location}</p>
                       ) : null}
                       <p className="text-xs">{event.time}</p>
                     </Link>
                   </div>
-                </div>
-              )}
+                </div>)
+              })}
             </div>
           </div>
           )}

@@ -32,6 +32,7 @@ export const query = graphql`
             title
             time
             location
+            featuredArtist
             summary
             module
             icon {

@@ -41,6 +41,11 @@ export default {
       type: 'string'
     },
     {
+      name: 'featuredArtist',
+      title: 'Featured Artists',
+      type: 'string'
+    },
+    {
       name: 'summary',
       title: 'Summary',
       type: 'text'
