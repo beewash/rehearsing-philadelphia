@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, createRef} from "react";
 import { graphql, useStaticQuery } from 'gatsby'
 
 export const RadioContext = React.createContext();
@@ -41,6 +41,16 @@ const RadioContextProvider = ({children}) => {
   playlist.sort((a,b) => (a.position > b.position) ? 1 : -1)
   
   const [currentMusicIndex, setSong] = useState(0)
+  const [isPlaying, setPlay] = useState(false)
+  
+  const radioRef = createRef()
+
+  const handlePlay = position => () => {
+    setSong(position)
+    if (isPlaying == true) {
+      radioRef.current.audio.current.pause();
+    }
+  }
 
   const handleClickPrevious = () => {
     const previousSong = currentMusicIndex === 0 ? playlist.length -1 : currentMusicIndex -1
@@ -53,7 +63,7 @@ const RadioContextProvider = ({children}) => {
   }
 
   return (
-    <RadioContext.Provider value={{playlist, currentMusicIndex, setSong, handleClickNext, handleClickPrevious}}>
+    <RadioContext.Provider value={{playlist, radioRef, currentMusicIndex, isPlaying, setPlay, setSong, handlePlay, handleClickNext, handleClickPrevious}}>
       {children}
     </RadioContext.Provider>
   )
