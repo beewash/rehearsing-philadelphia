@@ -36,6 +36,8 @@ import pageBuilderSocial from './objects/pageBuilderSocial'
 import pageBuilderPressClippings from './objects/pageBuilderPressClippings'
 import pageBuilderFAQ from './objects/pageBuilderFAQ'
 import pageBuilderCalendar from './objects/pageBuilderCalendar'
+import pageBuilderRadio from './objects/pageBuilderRadio'
+import gallery from './objects/imageGallery'
 import roster from './objects/roster'
 import moduleDescriptions from './objects/moduleDescriptions'
 import event from './objects/event'
@@ -100,6 +102,8 @@ export default createSchema({
     pageBuilderPressClippings,
     pageBuilderFAQ,
     pageBuilderCalendar,
+    pageBuilderRadio,
+    gallery,
     roster,
     moduleDescriptions,
     event,

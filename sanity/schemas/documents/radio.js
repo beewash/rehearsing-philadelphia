@@ -31,6 +31,26 @@ export default {
       type: 'string'
     },
     {
+      name: 'audio',
+      title: 'Audio',
+      type: 'file'
+    },
+    {
+      name: 'thumbnail',
+      title: 'Thumbnail Image',
+      type: 'mainImage'
+    },
+    {
+      name: 'secondaryTitle',
+      title: 'Thumbnail Title',
+      type: 'string'
+    },
+    {
+      name: 'date',
+      title: 'Date',
+      type: 'string'
+    },
+    {
       name: 'module',
       title: 'Module',
       type: 'string',
@@ -42,11 +62,6 @@ export default {
           {title: 'Orchestra', value: 'orchestra-green'}
         ]
       }
-    },
-    {
-      name: 'audio',
-      title: 'Audio',
-      type: 'file'
     },
     {
       name: 'position',

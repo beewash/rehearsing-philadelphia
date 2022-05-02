@@ -17,10 +17,53 @@ export const query = graphql`
           }
         }
       }
+      ... on SanityGallery {
+        _key
+        _type
+        images {
+          alt
+          _key
+          asset {
+            url
+            fluid(maxWidth: 800) {
+              ...GatsbySanityImageFluid
+            }
+          }
+          moduleList
+        }
+      }
       ... on SanityPageBuilderBody {
         _key
         _type
         title
+      }
+      ... on SanityPageBuilderRadio {
+        _key
+        _type
+        radioFiles {
+          _id
+          _type
+          title
+          secondaryTitle
+          date
+          module
+          position
+          audio {
+            asset {
+              url
+            }
+          }
+          thumbnail {
+            alt
+            _key
+            asset {
+              url
+              fluid(maxWidth: 800) {
+                ...GatsbySanityImageFluid
+              }
+            }
+          }
+        }
       }
       ... on SanityPageBuilderCalendar {
         _key

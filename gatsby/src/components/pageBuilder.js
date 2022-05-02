@@ -15,7 +15,9 @@ import PageBuilderPressClippings from "./pageBuilderPressClippings"
 import PageBuilderFAQ from "./pageBuilderFAQ"
 import PageBuilderCalendar from "./pageBuilderCalendar"
 import PageBuilderEvents from "./pageBuilderEvents"
+import PageBuilderRadio from "./pageBuilderRadio"
 import CTA from "./cta"
+import ImageGallery from "./imageGallery"
 
 function PageBuilder(props) {
   const { type, pageBuilder, _rawPageBuilder } = props
@@ -38,7 +40,9 @@ function PageBuilder(props) {
     pageBuilderPressClippings: PageBuilderPressClippings,
     pageBuilderFAQ: PageBuilderFAQ,
     pageBuilderCalendar: PageBuilderCalendar,
+    pageBuilderRadio: PageBuilderRadio,
     event: PageBuilderEvents,
+    gallery: ImageGallery,
     docAttachment: PageBuilderDocAttachment,
     cta: CTA
   }

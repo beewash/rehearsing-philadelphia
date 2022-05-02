@@ -1,7 +1,18 @@
-/**
- * Implement Gatsby's SSR (Server Side Rendering) APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/ssr-apis/
- */
+const React = require('react')
+const { AnimatePresence } = require('framer-motion')
+const Radio = require('./src/components/Radio/radio')
+const SimpleReactLightbox = require('simple-react-lightbox')
+const RadioContextProvider = require('./src/context/RadioContextProvider')
 
-// You can delete this file if you're not using it
+exports.wrapPageElement = ({element}) => {
+  return (
+  <RadioContextProvider>
+    <AnimatePresence exitBeforeEnter>
+      <SimpleReactLightbox>
+      {element}
+      </SimpleReactLightbox>
+    </AnimatePresence>
+    <Radio />
+  </RadioContextProvider>
+  )
+}

@@ -14,6 +14,21 @@ export default {
       options: {
         isHighlighted: true
       }
+    },
+    {
+      title: 'Module',
+      name: 'moduleList',
+      type: 'string',
+      options: {
+        isHighlighted: true,
+        list: [
+          {title: 'Solo', value: 'solo'},
+          {title: 'Duet', value: 'duet'},
+          {title: 'Ensemble', value: 'ensemble'},
+          {title: 'Orchestra', value: 'orchestra'}
+        ],
+        layout: 'radio'
+      }
     }
   ],
   preview: {

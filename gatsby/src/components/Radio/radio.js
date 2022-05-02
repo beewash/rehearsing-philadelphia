@@ -1,42 +1,18 @@
-import React, {useState} from 'react'
+import React, { useState, useContext } from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import AudioPlayer, { RHAP_UI } from 'react-h5-audio-player'
 import 'react-h5-audio-player/lib/styles.css'
-
-export const queryRadio = graphql`
-{
-  radio: allSanityRadio {
-    edges {
-      node {
-        title
-        module
-        audio {
-          asset {
-            url
-          }
-        }
-        position
-      }
-    }
-  }
-}`
+import { RadioContext } from '../../context/RadioContextProvider'
 
 const Radio = () => {
-  const data = useStaticQuery(queryRadio)
-  const playlist = data.radio.edges.map(edges => edges.node)
-  playlist.sort((a,b) => (a.position > b.position) ? 1 : -1)
-  
-  const [currentMusicIndex, setSong] = useState(0)
-
-  const handleClickPrevious = () => {
-    const previousSong = currentMusicIndex === 0 ? playlist.length -1 : currentMusicIndex -1
-    setSong(previousSong)
-  }
-
-  const handleClickNext = () => {
-    const nextSong = currentMusicIndex < playlist.length -1 ? currentMusicIndex + 1 : 0
-    setSong(nextSong)
-  }
+  const radioContext = useContext(RadioContext)
+  const {
+    playlist,
+    currentMusicIndex,
+    setSong,
+    handleClickNext,
+    handleClickPrevious
+  } = radioContext
 
   return (
     <section id="radio" className="z-30 h-12 sticky bottom-0 bg-white border-t-2 border-black w-full flex justify-items-center items-center overflow-hidden">

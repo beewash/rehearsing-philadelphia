@@ -44,6 +44,10 @@ export default {
       title: 'Line Break'
     },
     {
+      type: 'gallery',
+      title: 'Image Gallery'
+    },
+    {
       type: 'cta',
       title: 'CTA'
     },
@@ -66,6 +70,10 @@ export default {
     {
       type: 'pageBuilderCalendar',
       title: 'Calendar'
+    },
+    {
+      type: 'pageBuilderRadio',
+      title: 'Radio'
     },
     {
       type: 'event',

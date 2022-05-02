@@ -127,6 +127,19 @@
     bottom: 10px !important;
   }
 
+  .galleryItem {
+    margin: 0;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    margin-bottom: 10px;
+    break-inside: avoid;
+  }
+
+  .galleryItem  img {
+    grid-row: 1 / -1;
+    grid-column: 1;
+  }
+
   @keyframes ticker-kf {
     0% {
       transform: translate3d(0, 0, 0);

@@ -11,8 +11,6 @@ const PageBuilderRoster = ({block, raw}) => {
   const allCategories = ['All', ...new Set(roster.map(roster => roster.moduleList))]
 
   const [rosterItem, setRosterItem] = useState(roster)
-  // const [buttons, setButtons] = useState(allCategories)
-  const [buttons] = useState(allCategories)
   const [isDescription, setDescription] = useState(false)
 
   //Filter Function
@@ -63,7 +61,7 @@ const PageBuilderRoster = ({block, raw}) => {
         ) : null}
         {allCategories.length > 2 ? (
           <>
-            <Button button={buttons} filter={filter} roster={roster} />
+            <Button button={allCategories} filter={filter} />
             <div className="h-0.5 w-16 bg-black mb-8"></div>
           </>
         ) : (
