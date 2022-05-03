@@ -15,7 +15,7 @@ const PageBuilderRadio = () => {
   return (
     <section className="class=max-w-6xl mx-auto px-6 pb-28">
       <div className="max-w-6xl mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-4">
         {playlist.map(radioItem => (
           <div key={radioItem._id} className="border-2 rounded-md border-black group cursor-pointer" onClick={handlePlay(radioItem.position)} aria-lable={`${radioItem.title} button`}>
             <div className="md:h-60 lg:h-48 relative">

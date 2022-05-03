@@ -34,7 +34,7 @@ const Radio = () => {
           customControlsSection={
             [
               RHAP_UI.MAIN_CONTROLS,
-              <div className="">{playlist[currentMusicIndex].title}</div>,
+              <div className="ml-5">{playlist[currentMusicIndex].secondaryTitle}</div>,
               RHAP_UI.VOLUME_CONTROLS,
               RHAP_UI.SKIP_CONTROLS
             ]

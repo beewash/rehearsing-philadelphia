@@ -178,6 +178,10 @@
     }
   }
 
+  .rhap_main .rhap_controls-section {
+    justify-content: unset !important;
+  }
+
   /* .hover-trigger:hover .hover-target {
       display: block;
   } */
