@@ -237,6 +237,11 @@ export const query = graphql`
         textColor
         textHoverColor
       }
+      ... on SanityPageBuilderVideoEmbed {
+        _key
+        _type
+        videoUrl
+      }
     }
   }
 `;

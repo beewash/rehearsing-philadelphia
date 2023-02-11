@@ -227,6 +227,11 @@ export const query = graphql`
           }
         }
       }
+      ... on SanityPageBuilderVideoEmbed {
+        _key
+        _type
+        videoUrl
+      }
     }
   }
 `;

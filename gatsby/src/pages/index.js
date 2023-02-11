@@ -51,6 +51,8 @@ const IndexPage = (props) => {
     )
   }
 
+  console.log(pageBuilder)
+
   return (
     <>
       <Helmet>

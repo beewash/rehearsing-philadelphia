@@ -62,7 +62,7 @@ import imgLink from './objects/imgLink'
 import docAttachment from './objects/docAttachment'
 import moduleSection from './objects/moduleSection'
 import cta from './objects/cta'
-import video from './objects/video'
+import VideoEmbed from './objects/pageBuilderVideoEmbed'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -128,7 +128,7 @@ export default createSchema({
     docAttachment,
     moduleSection,
     cta,
-    video
+    VideoEmbed
     // When added to this list, object types can be used as
     // { type: 'typename' } in other document schemas
   ])

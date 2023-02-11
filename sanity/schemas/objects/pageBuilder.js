@@ -78,6 +78,10 @@ export default {
     {
       type: 'event',
       title: 'Event'
+    },
+    {
+      type: 'pageBuilderVideoEmbed',
+      title: 'Video Embed'
     }
   ]
 }

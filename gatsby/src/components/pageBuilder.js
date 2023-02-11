@@ -16,6 +16,7 @@ import PageBuilderFAQ from "./pageBuilderFAQ"
 import PageBuilderCalendar from "./pageBuilderCalendar"
 import PageBuilderEvents from "./pageBuilderEvents"
 import PageBuilderRadio from "./pageBuilderRadio"
+import PageBuilderVideoEmbed from "./pageBuilderVideoEmbed"
 import CTA from "./cta"
 import ImageGallery from "./imageGallery"
 
@@ -41,6 +42,7 @@ function PageBuilder(props) {
     pageBuilderFAQ: PageBuilderFAQ,
     pageBuilderCalendar: PageBuilderCalendar,
     pageBuilderRadio: PageBuilderRadio,
+    pageBuilderVideoEmbed: PageBuilderVideoEmbed,
     event: PageBuilderEvents,
     gallery: ImageGallery,
     docAttachment: PageBuilderDocAttachment,

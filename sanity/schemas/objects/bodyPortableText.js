@@ -72,6 +72,9 @@ export default {
       options: {hotspot: true}
     },
     {
+      type: 'pageBuilderVideoEmbed'
+    },
+    {
       type: 'cta'
     }
   ]
